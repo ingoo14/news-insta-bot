@@ -50,7 +50,7 @@ jobs:
           ups = json.load(urllib.request.urlopen(q, timeout=20)).get("result", [])
           has = bool(re.search(r"https?://", url_in)) or any(
               str((u.get("message") or {}).get("chat", {}).get("id")) == chat
-              and re.search(r"https?://", (u.get("message") or {}).get("text", "") or "") for u in ups)
+              and re.search(r"https?://", (u.get("message") or {}).get("text") or (u.get("message") or {}).get("caption") or "") for u in ups)
           print("새 링크:", has)
           open(os.environ["GITHUB_OUTPUT"], "a").write(f"work={'true' if has else 'false'}\n")
           EOF
