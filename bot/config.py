@@ -42,6 +42,9 @@ IG_AI_LABEL = env("IG_AI_LABEL", "false").lower() == "true"
 # 카드 디자인
 BRAND_HANDLE = env("BRAND_HANDLE", "@your_account")
 BRAND_NAME = env("BRAND_NAME", "연예 브리핑")
+TITLE_FONT = (env("TITLE_FONT", "serif") or "serif").lower()  # serif(명조) / sans(고딕)
+# 매거진 표지 상단 큰 로고 (영문 추천). 비우면 계정명에서 자동 생성 (@ibduck_music → IBDUCK)
+MASTHEAD = env("MASTHEAD") or BRAND_HANDLE.lstrip("@").split("_")[0].upper()
 ACCENT_COLOR = env("ACCENT_COLOR", "#FFD43B")
 
 # 승인 대기 만료 시간

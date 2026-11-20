@@ -96,15 +96,33 @@ def _gemini(prompt: str) -> dict:
     raise RuntimeError(f"Gemini 호출 실패 (모든 모델): {err}")
 
 
-def pick(candidates: list[dict], n: int, recent_topics: list[str]) -> list[int]:
-    lines = [f"{i}. [{c['press']}] {c['title']} — {c['snippet'][:80]}" for i, c in enumerate(candidates[:50])]
+def pick(candidates: list[dict], n: int, recent_topics: list[str], trend_text: str = "", live_text: str = "") -> list[int]:
+    lines = []
+    for i, c in enumerate(candidates[:50]):
+        hot = f" 🔥{', '.join(c.get('trend_hits', []))}" if c.get("trend_hits") else ""
+        live = f" ⚡실시간:{','.join(c['live_hits'])}" if c.get("live_hits") else ""
+        age = c.get("age_min")
+        age_s = f"{age}분 전" if age is not None and age < 120 else f"{age // 60}시간 전" if age is not None else ""
+        lines.append(f"{i}. [{age_s}][{c['press']}] {c['title']} — {c['snippet'][:60]}{hot}{live}")
     recent = "\n".join(f"- {t}" for t in recent_topics[-30:]) or "(없음)"
-    prompt = f"""너는 한국 연예뉴스 인스타그램 계정의 편집자야.
-아래 최근 기사 목록에서 인스타 게시물(기사 1건 = 게시물 1개)로 만들 기사를 우선순위대로 {n}개 골라.
-앞 순위일수록 화제성 있고 사람들이 반응할 만한 소식. 서로 다른 인물·사건으로 고를 것.
-유명 가수·배우·그룹 소식을 우선 (사진을 찾기 쉬움).
-최근에 이미 올린 소식과 같은 사건·같은 인물의 같은 이슈는 제외.
+    prompt = f"""너는 트래픽을 최우선으로 하는 한국 연예뉴스 인스타그램 계정의 편집장이야.
+아래 기사 목록에서 게시물(기사 1건 = 게시물 1개)로 만들 기사를 우선순위대로 {n}개 골라.
+
+[선정 기준 — 중요도 순]
+1. 실시간성: 지금 벌어지는 일 (⚡ = 지금 기사가 몰리는 실시간 이벤트, 예: 시상식·콘서트·쇼케이스 진행 중). 최근 1~2시간 기사 우선.
+2. 분야: 음악(가수·아이돌·시상식·차트·컴백) 최우선 → 드라마 → 영화 → 예능 순.
+3. 트래픽: 구글 검색/유튜브 급상승 인물·작품 (🔥 = 트렌드와 일치), 인지도 높은 스타.
+4. 사람들이 댓글·공유할 만한 화제성 (수상, 무대, 컴백, 캐스팅, 흥행, 재미있는 에피소드).
+- 서로 다른 인물로 고를 것. 실시간 이벤트(예: 시상식)는 같은 행사라도 인물·수상·무대가 다르면 각각 골라도 됨.
+- 최근에 이미 올린 소식과 같은 인물의 같은 이슈는 제외.
+- 정치·사회·스포츠 기사는 연예인이 중심이 아니면 제외.
 {RULES}
+[지금 기사가 몰리는 실시간 이벤트 키워드 (최근 2시간)]
+{live_text or "(없음)"}
+
+[지금 뜨는 검색/유튜브 키워드]
+{trend_text or "(없음)"}
+
 [최근에 이미 올린 소식]
 {recent}
 
@@ -119,17 +137,19 @@ JSON으로만 답해: {{"picks": [번호, ...]}}"""
 def write_story(a: dict) -> dict:
     prompt = f"""너는 한국 연예뉴스 인스타그램 계정의 에디터야. 아래 기사 1건으로 게시물을 만든다.
 {RULES}
-[카드 이미지 문구]
+[카드 이미지 문구] — 기사 제목처럼 짧고 명확하게, 사진 아래에 큰 글씨로 들어감
+- headline_top: 흰 글씨. 작은따옴표는 ‘ ’ 사용. '누가, 무엇' (예: "탑, '다중관점'", "김향기·차학연 '로맨스의 절댓값'"). 14자 이내.
+- headline_bottom: 컬러 강조 글씨. 핵심 소식 (예: "트랙리스트 공개", "새 연프 패널 합류", "4월 17일 공개"). 12자 이내.
 - tag: 분야 한 단어 (연예/음악/드라마/영화/예능 중)
-- headline_top: 카드 1줄째 흰 글씨. 인물의 재치 있는 한마디(짧은 따옴표)나 핵심 상황. 16자 이내.
-- headline_bottom: 카드 2줄째 강조(노란) 글씨. '누가 무엇을' 핵심. 14자 이내.
-- subline: 카드 하단 부제. 22자 이내.
+- subline: 한 줄 부제 (캡션용). 22자 이내.
 [인스타 캡션]
 - title: 캡션 첫 줄 제목. '"짧은 인용"... 누가 무엇' 형식 추천. 40자 이내.
 - body: 본문 4~6문단. 문단당 1~3문장, '~했습니다' 체. 기사 사실만 자기 말로 재구성. 마지막 문단은 앞으로의 일정/의미. 이모지는 전체에 1~2개만.
 - hashtags: 8~12개, '#' 포함. 인물명(한글/영문), 프로그램명 등.
 [사진 검색어]
-- photo_queries: 이 기사의 핵심 인물 사진을 찾을 검색어 2~3개. 영문 공식 표기 우선 (예: "Epik High", "Tablo"), 마지막에 한글 이름. 인물이 없으면 [].
+- photo_queries: 이 기사의 핵심 인물(또는 그룹) 이름 2~4개. 기사 사진으로 쓸 사람 순서대로.
+  한글 공식 이름 먼저, 그다음 영문 공식 표기 (예: ["에픽하이", "Epik High", "타블로", "Tablo"]). 인물이 없으면 [].
+- person: 표지에 나올 핵심 인물 한글 이름 1개 (예: "에픽하이").
 - scene_queries: 인물 사진이 없을 때 쓸 분위기 사진 영어 검색어 2개. 기사 장면과 어울리게 (예: "Han River park Seoul", "concert stage lights").
 기사 내용이 부실하거나 원칙 위반 소지가 있으면 ok를 false로.
 
@@ -139,7 +159,7 @@ def write_story(a: dict) -> dict:
 {a['body']}
 
 JSON으로만 답해:
-{{"ok": true, "tag": "...", "headline_top": "...", "headline_bottom": "...", "subline": "...", "title": "...", "body": "...", "hashtags": ["#..."], "photo_queries": ["..."], "scene_queries": ["..."]}}"""
+{{"ok": true, "tag": "...", "headline_top": "...", "headline_bottom": "...", "subline": "...", "title": "...", "body": "...", "hashtags": ["#..."], "photo_queries": ["..."], "person": "...", "scene_queries": ["..."]}}"""
     s = _gemini(prompt)
     s["press"], s["url"], s["source_title"] = a["press"], a["url"], a["title"]
     return s

@@ -1,4 +1,5 @@
-"""카드 이미지 생성 (1080x1350, 인스타 4:5): 인물 사진 + 하단 그라데이션 + 큰 헤드라인."""
+"""매거진 커버 스타일 카드 (1080x1350, 인스타 4:5)."""
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
@@ -17,17 +18,25 @@ FALLBACK = {"Black": ["Black", "Bold"], "Bold": ["Bold", "Black", "Regular"],
 _cache = {}
 
 
-def font(weight: str, size: int):
-    key = (weight, size)
+SERIF_FALLBACK = {"Black": ["Black", "Bold", "SemiBold"], "Bold": ["Bold", "SemiBold", "Black"]}
+
+
+def font(weight: str, size: int, family: str = "Sans"):
+    """family: Sans(고딕) / Serif(명조). 서버에 없는 굵기는 비슷한 굵기로 대체."""
+    key = (weight, size, family)
     if key in _cache:
         return _cache[key]
-    for w in FALLBACK.get(weight, [weight, "Regular", "Bold"]):
+    tries = []
+    if family == "Serif":
+        tries += [f"NotoSerifCJK-{w}.ttc" for w in SERIF_FALLBACK.get(weight, [weight, "Bold"])]
+    tries += [f"NotoSansCJK-{w}.ttc" for w in FALLBACK.get(weight, [weight, "Regular", "Bold"])]
+    for fn in tries:
         try:
-            _cache[key] = ImageFont.truetype(f"{FONT_DIR}/NotoSansCJK-{w}.ttc", size, index=KR)
+            _cache[key] = ImageFont.truetype(f"{FONT_DIR}/{fn}", size, index=KR)
             return _cache[key]
         except OSError:
             continue
-    raise OSError("한글 폰트(Noto Sans CJK)를 찾을 수 없음 — 워크플로의 '한글 폰트 설치' 단계 확인")
+    raise OSError("한글 폰트(Noto CJK)를 찾을 수 없음 — 워크플로의 '한글 폰트 설치' 단계 확인")
 
 
 def accent():
@@ -59,17 +68,17 @@ def wrap(draw, text, fnt, max_w):
     return lines
 
 
-def fit(draw, text, weight, sizes, max_w, max_lines):
+def fit(draw, text, weight, sizes, max_w, max_lines, family="Sans"):
     """1줄에 들어가는 가장 큰 크기 우선 → 안 되면 2줄을 균형 있게 나눔."""
     text = text.strip()
     for s in sizes:
-        f = font(weight, s)
+        f = font(weight, s, family)
         if draw.textlength(text, font=f) <= max_w:
             return f, [text]
     if max_lines >= 2:
         words = text.split(" ")
         for s in sizes:
-            f = font(weight, s)
+            f = font(weight, s, family)
             best = None
             for i in range(1, len(words)):
                 a, b = " ".join(words[:i]), " ".join(words[i:])
@@ -78,7 +87,7 @@ def fit(draw, text, weight, sizes, max_w, max_lines):
                     best = (max(wa, wb), [a, b])
             if best:
                 return f, best[1]
-    f = font(weight, sizes[-1])
+    f = font(weight, sizes[-1], family)
     return f, wrap(draw, text, f, max_w)[:max_lines]
 
 
@@ -98,69 +107,212 @@ def center_text(img, y, lines, fnt, fill, line_gap=1.18, shadow=True):
     return y
 
 
-def photo_layer(path: str) -> Image.Image:
+def _grad(h, top_alpha, bottom_alpha, power=1.0):
+    g = Image.new("L", (1, h))
+    for y in range(h):
+        t = (y / max(h - 1, 1)) ** power
+        g.putpixel((0, y), int(top_alpha + (bottom_alpha - top_alpha) * t))
+    return g.resize((W, h))
+
+
+MAST_BOTTOM = 90  # 얼굴 윗부분이 이 아래로 오게 (상단 여백)
+
+
+def _faces(im: Image.Image):
+    """얼굴 위치 찾기 (OpenCV). 실패하면 빈 리스트."""
+    try:
+        import cv2
+        import numpy as np
+        g = cv2.cvtColor(np.array(im), cv2.COLOR_RGB2GRAY)
+        cc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+        min_side = max(40, int(min(im.size) * 0.06))
+        fs = cc.detectMultiScale(g, scaleFactor=1.1, minNeighbors=6, minSize=(min_side, min_side))
+        return [tuple(map(int, f)) for f in fs]
+    except Exception as e:
+        print(f"[얼굴 인식 건너뜀] {e}")
+        return []
+
+
+def base_photo(path: str) -> Image.Image:
     im = ImageOps.exif_transpose(Image.open(path)).convert("RGB")
-    # 얼굴이 보통 위쪽에 있으므로 위쪽 기준으로 자르기
-    im = ImageOps.fit(im, (W, int(H * 0.78)), method=Image.LANCZOS, centering=(0.5, 0.2))
-    canvas = Image.new("RGBA", (W, H), BG + (255,))
-    canvas.paste(im, (0, 0))
-    # 아래로 갈수록 어두워지는 그라데이션
-    grad = Image.new("L", (1, H), 0)
-    start, end = int(H * 0.38), int(H * 0.74)
-    for y in range(H):
-        a = 0 if y < start else 255 if y > end else int(255 * ((y - start) / (end - start)) ** 1.3)
-        grad.putpixel((0, y), a)
-    shade = Image.new("RGBA", (W, H), BG + (255,))
-    shade.putalpha(grad.resize((W, H)))
-    canvas.alpha_composite(shade)
+    sc = max(W / im.width, H / im.height)  # 화면을 꽉 채우는 배율
+    faces = _faces(im)
+    if faces:
+        x0 = min(f[0] for f in faces); y0 = min(f[1] for f in faces)
+        x1 = max(f[0] + f[2] for f in faces); y1 = max(f[1] + f[3] for f in faces)
+        span = (x1 - x0) * 1.5  # 어깨까지 여유
+        if span * sc > W:  # 단체 사진: 전원이 들어오도록 축소 (빈 곳은 흐린 배경)
+            sc = max(W / span, H * 0.66 / im.height)  # 너무 작아지지 않게 (화면 높이 66% 이상)
+        elif (y1 - y0) * sc < H * 0.12:  # 멀리 찍힌 사진: 살짝 확대
+            sc *= min(1.6, (H * 0.14) / max((y1 - y0) * sc, 1))
+    im2 = im.resize((max(1, int(im.width * sc + 0.5)), max(1, int(im.height * sc + 0.5))), Image.LANCZOS)
+
+    # 배경: 같은 사진을 크게 흐리게 (사진이 화면을 다 못 채울 때 대비)
+    bg_sc = max(W / im.width, H / im.height)
+    bg = im.resize((int(im.width * bg_sc) + 1, int(im.height * bg_sc) + 1)).crop((0, 0, W, H))
+    canvas = bg.filter(ImageFilter.GaussianBlur(40)).convert("RGBA")
+    canvas.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, 90)))
+
+    if faces:
+        cx = (x0 + x1) / 2 * sc
+        left = int(cx - W / 2)
+        top = int(y0 * sc - (MAST_BOTTOM + 30))  # 얼굴 윗부분이 로고 아래에 오도록
+    else:
+        left = (im2.width - W) // 2
+        top = int((im2.height - H) * 0.28)
+    left = min(max(left, 0), max(im2.width - W, 0)) if im2.width >= W else -(W - im2.width) // 2
+    top = min(top, max(im2.height - H, 0))
+    photo = ImageEnhance_safe(im2).convert("RGBA")
+    if im2.width < W or im2.height < H:  # 배경과 경계가 자연스럽게 섞이도록 가장자리 페더
+        m = Image.new("L", photo.size, 0)
+        ImageDraw.Draw(m).rectangle([30, 30, photo.width - 30, photo.height - 30], fill=255)
+        photo.putalpha(m.filter(ImageFilter.GaussianBlur(28)))
+    canvas.paste(photo, (-left, -top), photo)
+    # 위: 로고 가독성용 어둡게 / 아래: 헤드라인용 진하게
+    bh = int(H * 0.5)
+    bot = Image.new("RGBA", (W, bh), (0, 0, 0, 255)); bot.putalpha(_grad(bh, 0, 190, 1.4))
+    canvas.alpha_composite(bot, (0, H - bh))
     return canvas
 
 
-def text_layer() -> Image.Image:
-    """사진 없을 때: 어두운 배경 + 큰 포인트 원."""
-    canvas = Image.new("RGBA", (W, H), BG + (255,))
-    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    a = accent()
-    ImageDraw.Draw(glow).ellipse([W * 0.15, 80, W * 0.85, 80 + W * 0.7], fill=a + (70,))
-    canvas.alpha_composite(glow.filter(ImageFilter.GaussianBlur(120)))
-    return canvas
+def ImageEnhance_safe(im):
+    from PIL import ImageEnhance
+    im = ImageEnhance.Contrast(im).enhance(1.06)
+    return ImageEnhance.Color(im).enhance(1.05)
+
+
+def _spaced(d, xy, text, fnt, fill, spacing):
+    x, y = xy
+    for ch in text:
+        d.text((x, y), ch, font=fnt, fill=fill)
+        x += d.textlength(ch, font=fnt) + spacing
+    return x
+
+
+def _spaced_len(d, text, fnt, spacing):
+    return sum(d.textlength(ch, font=fnt) for ch in text) + spacing * (len(text) - 1)
+
+
+def _shadow_text(img, xy, text, fnt, fill, blur=6, off=(0, 4), alpha=170):
+    sh = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ImageDraw.Draw(sh).text((xy[0] + off[0], xy[1] + off[1]), text, font=fnt, fill=(0, 0, 0, alpha))
+    img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(blur)))
+    ImageDraw.Draw(img).text(xy, text, font=fnt, fill=fill)
+
+
+def masthead(img, text):
+    """상단 큰 영문 로고 — 폭에 맞춰 최대 크기."""
+    d = ImageDraw.Draw(img)
+    text = (text or "NEWS").upper()[:10]
+    max_w = W - 120
+    size = 260
+    while size > 80:
+        f = font("Black", size)
+        sp = -size * 0.02
+        if _spaced_len(d, text, f, sp) <= max_w:
+            break
+        size -= 6
+    tw = _spaced_len(d, text, f, sp)
+    x = (W - tw) / 2
+    bb = d.textbbox((0, 0), text, font=f)
+    y = 40 - bb[1]
+    sh = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    _spaced(ImageDraw.Draw(sh), (x + 2, y + 5), text, f, (0, 0, 0, 120), sp)
+    img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(8)))
+    _spaced(ImageDraw.Draw(img), (x, y), text, f, WHITE, sp)
+    return y + bb[3] + 18
+
+
+def barcode(img, x, y, w=150, h=58, seed=7):
+    d = ImageDraw.Draw(img)
+    d.rectangle([x - 8, y - 8, x + w + 8, y + h + 30], fill=(255, 255, 255, 235))
+    import random
+    rnd = random.Random(seed)
+    cx = x
+    while cx < x + w:
+        bw = rnd.choice([2, 2, 3, 4, 6])
+        if rnd.random() > 0.35:
+            d.rectangle([cx, y, cx + bw - 1, y + h], fill=(10, 10, 10))
+        cx += bw + rnd.choice([1, 2, 3])
+    nf = font("Bold", 18)
+    num = f"8 801{seed:04d} {seed * 37 % 100000:05d}"
+    d.text((x + (w - d.textlength(num, font=nf)) / 2, y + h + 4), num, font=nf, fill=(10, 10, 10))
+
+
+# 포인트 컬러 (게시물마다 돌아가며 사용) — 하늘·핑크·라임·블루·옐로
+PALETTE = [(170, 205, 255), (255, 150, 185), (205, 245, 110), (90, 170, 255), (255, 225, 110)]
+
+
+def _glow_text(img, xy, text, fnt, fill, glow):
+    """은은한 번짐(글로우) + 그림자 — 사진 위에서도 잘 읽히게."""
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ImageDraw.Draw(layer).text((xy[0], xy[1] + 3), text, font=fnt, fill=(0, 0, 0, 150))
+    img.alpha_composite(layer.filter(ImageFilter.GaussianBlur(9)))
+    if glow:
+        g = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        ImageDraw.Draw(g).text(xy, text, font=fnt, fill=glow + (150,))
+        img.alpha_composite(g.filter(ImageFilter.GaussianBlur(14)))
+    ImageDraw.Draw(img).text(xy, text, font=fnt, fill=fill)
+
+
+def photo_color(path: str):
+    """사진에서 가장 눈에 띄는 색을 뽑아 밝은 파스텔톤 포인트 컬러로 변환.
+    흑백·무채색 사진이면 레퍼런스처럼 연하늘색."""
+    import colorsys
+    im = Image.open(path).convert("RGB").resize((80, 80))
+    buckets = {}
+    for r, g, b in im.getdata():
+        h, sat, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
+        if sat < 0.25 or v < 0.25:  # 무채색·어두운 부분 제외
+            continue
+        k = int(h * 18)  # 색상 18구간
+        w = sat * v
+        acc = buckets.setdefault(k, [0.0, 0.0, 0.0])
+        acc[0] += w; acc[1] += h * w; acc[2] += 1
+    total = sum(1 for _ in im.getdata())
+    if not buckets or max(a[2] for a in buckets.values()) < total * 0.04:
+        return (170, 205, 255)
+    k, acc = max(buckets.items(), key=lambda kv: kv[1][0])
+    hue = acc[1] / acc[0]
+    r, g, b = colorsys.hsv_to_rgb(hue, 0.45, 1.0)  # 파스텔 (사진 위에서 잘 읽히는 밝기)
+    return (int(r * 255), int(g * 255), int(b * 255))
 
 
 def render_story(story: dict, photo: dict | None, out_dir: Path) -> list[Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
-    img = photo_layer(photo["path"]) if photo else text_layer()
+    img = base_photo(photo["path"]) if photo else text_layer()
     d = ImageDraw.Draw(img)
-    a = accent()
+    color = photo_color(photo["path"]) if photo else PALETTE[int(story.get("issue_no", 0)) % len(PALETTE)]
 
-    # 왼쪽 위 분야 태그
-    tag = (story.get("tag") or "연예")[:4]
-    tf = font("Black", 52)
-    tw = d.textlength(tag, font=tf)
-    box = [60, 60, 60 + tw + 56, 60 + 92]
-    d.rectangle(box, fill=(0, 0, 0, 150), outline=a, width=6)
-    d.text((60 + 28, 60 + 12), tag, font=tf, fill=WHITE)
-    # 오른쪽 위 계정명
-    hf = font("Bold", 30)
-    hw = d.textlength(config.BRAND_HANDLE, font=hf)
-    d.text((W - 60 - hw, 88), config.BRAND_HANDLE, font=hf, fill=(255, 255, 255, 220))
+    # 아래 왼쪽: 흰색 타이틀 + 포인트 컬러 타이틀 (각 최대 2줄)
+    x, max_w = 80, W - 160
+    fam = "Serif" if config.TITLE_FONT == "serif" else "Sans"
+    f1, l1 = fit(d, story.get("headline_top", ""), "Black", [120, 112, 104, 96, 88, 80], max_w, 2, fam)
+    f2, l2 = fit(d, story.get("headline_bottom", ""), "Black", [120, 112, 104, 96, 88, 80], max_w, 2, fam)
+    lh1, lh2 = int(f1.size * 1.2), int(f2.size * 1.2)
+    y = H - 150 - (len(l1) * lh1 + len(l2) * lh2)
+    for ln in l1:
+        _glow_text(img, (x, y), ln, f1, WHITE, None)
+        y += lh1
+    for ln in l2:
+        _glow_text(img, (x, y), ln, f2, color, color)
+        y += lh2
 
-    # 아래쪽 헤드라인
-    max_w = W - 140
-    f1, l1 = fit(d, story.get("headline_top", ""), "Black", [104, 96, 88, 80, 72], max_w, 2)
-    f2, l2 = fit(d, story.get("headline_bottom", ""), "Black", [104, 96, 88, 80, 72], max_w, 2)
-    f3, l3 = fit(d, story.get("subline", ""), "Bold", [48, 44, 40], max_w, 1)
-    block = (len(l1) * f1.size + len(l2) * f2.size) * 1.18 + f3.size * 1.18 + 40
-    y = H - 110 - block
-    y = center_text(img, y, l1, f1, WHITE)
-    y = center_text(img, y, l2, f2, a)
-    center_text(img, y + 40, l3, f3, a)
-
-    # 사진 출처 (CC 라이선스 표기)
+    # 사진 출처 (CC 라이선스 표기 — 오른쪽 아래 작게)
     if photo:
-        cf = font("Regular", 22)
-        credit = f"Photo: {photo['credit']} / {photo['license']} / {photo.get('source', 'Wikimedia Commons')}"[:95]
-        ImageDraw.Draw(img).text((40, H - 46), credit, font=cf, fill=(200, 200, 200))
+        credit = f"Photo: {photo['credit']} / {photo['license']}"[:70]
+        cf = font("Regular", 18)
+        d = ImageDraw.Draw(img)
+        d.text((W - 40 - d.textlength(credit, font=cf), H - 44), credit, font=cf, fill=(255, 255, 255, 150))
 
     p = out_dir / "01.jpg"
-    img.convert("RGB").save(p, "JPEG", quality=90, optimize=True)
+    img.convert("RGB").save(p, "JPEG", quality=92, optimize=True)
     return [p]
+
+
+def text_layer() -> Image.Image:
+    canvas = Image.new("RGBA", (W, H), BG + (255,))
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(glow).ellipse([W * 0.1, 200, W * 0.9, 200 + W * 0.8], fill=accent() + (60,))
+    canvas.alpha_composite(glow.filter(ImageFilter.GaussianBlur(140)))
+    return canvas
