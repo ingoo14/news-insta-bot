@@ -15,7 +15,7 @@ def load_seen() -> list[str]:
 
 
 def main():
-    for k in ["NAVER_CLIENT_ID", "NAVER_CLIENT_SECRET", "GEMINI_API_KEY", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"]:
+    for k in ["GEMINI_API_KEY", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"]:
         config.env(k, required=True)
 
     seen = load_seen()
