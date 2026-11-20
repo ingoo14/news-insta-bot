@@ -57,6 +57,24 @@ def publish_carousel(image_urls: list[str], caption: str) -> str:
         return ""
 
 
+def publish_single(image_url: str, caption: str) -> str:
+    uid = config.IG_USER_ID
+    params = {"image_url": image_url, "caption": caption[:2200]}
+    if config.IG_AI_LABEL:
+        params["is_ai_generated"] = "true"
+    c = _post(f"{uid}/media", **params)["id"]
+    _wait(c)
+    media_id = _post(f"{uid}/media_publish", creation_id=c)["id"]
+    try:
+        return _get(media_id, fields="permalink").get("permalink", "")
+    except Exception:
+        return ""
+
+
+def publish(image_urls: list[str], caption: str) -> str:
+    return publish_single(image_urls[0], caption) if len(image_urls) == 1 else publish_carousel(image_urls, caption)
+
+
 def refresh_token() -> str:
     """장기 토큰(60일) 연장. 새 토큰 문자열을 돌려줌."""
     r = requests.get("https://graph.instagram.com/refresh_access_token",

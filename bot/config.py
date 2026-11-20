@@ -9,6 +9,7 @@ POSTS_DIR = ROOT / "docs" / "posts"
 SEEN_FILE = STATE_DIR / "seen.json"
 OFFSET_FILE = STATE_DIR / "tg_offset.txt"
 TOKEN_CHECK_FILE = STATE_DIR / "ig_token_checked.txt"
+TOPICS_FILE = STATE_DIR / "recent_topics.json"  # 최근 올린 소식 (같은 사건 중복 방지)
 
 
 def env(name, default=None, required=False):
@@ -18,18 +19,15 @@ def env(name, default=None, required=False):
     return v
 
 
-# 뉴스 수집 (네이버 검색 API — 무료, 하루 25,000회)
-NAVER_CLIENT_ID = env("NAVER_CLIENT_ID")
-NAVER_CLIENT_SECRET = env("NAVER_CLIENT_SECRET")
-NEWS_QUERIES = [q.strip() for q in env("NEWS_QUERIES", "연예,아이돌 컴백,드라마 출연,가수 신곡,예능").split(",") if q.strip()]
+# 뉴스 수집 (언론사 연예 RSS — bot/news.py)
 NEWS_LOOKBACK_HOURS = int(env("NEWS_LOOKBACK_HOURS", "8"))
-ITEMS_PER_POST = int(env("ITEMS_PER_POST", "4"))
+POSTS_PER_RUN = int(env("POSTS_PER_RUN", "2"))  # 회차당 게시물 수 (2시간마다 2건)
 
 # 요약 (Gemini 무료 티어)
 GEMINI_API_KEY = env("GEMINI_API_KEY")
 GEMINI_MODEL = env("GEMINI_MODEL", "gemini-flash-latest")
 
-# 텔레그램 (승인용 — OpenClaw와 별개의 새 봇 사용)
+# 텔레그램 (업로드 완료 알림용 — OpenClaw와 별개의 새 봇)
 TELEGRAM_BOT_TOKEN = env("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = env("TELEGRAM_CHAT_ID")
 
@@ -44,7 +42,7 @@ IG_AI_LABEL = env("IG_AI_LABEL", "false").lower() == "true"
 # 카드 디자인
 BRAND_HANDLE = env("BRAND_HANDLE", "@your_account")
 BRAND_NAME = env("BRAND_NAME", "연예 브리핑")
-ACCENT_COLOR = env("ACCENT_COLOR", "#FF3D6E")
+ACCENT_COLOR = env("ACCENT_COLOR", "#FFD43B")
 
 # 승인 대기 만료 시간
 PENDING_EXPIRE_HOURS = int(env("PENDING_EXPIRE_HOURS", "24"))

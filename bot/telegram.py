@@ -37,6 +37,12 @@ def send_album(paths: list[Path]):
             f[1].close()
 
 
+def send_photo(path: Path, caption: str = ""):
+    with open(path, "rb") as f:
+        return _api("sendPhoto", data={"chat_id": config.TELEGRAM_CHAT_ID, "caption": caption[:1000]},
+                    files={"photo": (path.name, f, "image/jpeg")})
+
+
 def get_updates(offset: int):
     return _api("getUpdates", json={"offset": offset, "timeout": 0, "allowed_updates": ["callback_query", "message"]})
 

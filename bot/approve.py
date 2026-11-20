@@ -55,7 +55,7 @@ def handle(cb):
         sha = head_sha()
         urls = [image_url(p, sha) for p in rec["images"]]
         try:
-            link = instagram.publish_carousel(urls, rec["caption"])
+            link = instagram.publish(urls, rec["caption"])
         except Exception as e:
             telegram.send_message(f"⚠️ [{post_id}] 업로드 실패 — 버튼 다시 누르면 재시도\n{e}", reply_to=msg_id)
             return
