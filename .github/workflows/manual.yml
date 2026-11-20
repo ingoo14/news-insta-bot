@@ -33,7 +33,19 @@ jobs:
           python-version: "3.12"
           cache: pip
       - name: 한글 폰트 설치
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+        run: |
+          # 1차: 바로 설치 (최대 90초) → 2차: 목록 갱신 후 설치 (최대 90초) → 3차: GitHub에서 폰트 파일 직접 받기
+          if timeout 90 sudo apt-get install -y -qq fonts-noto-cjk; then echo "apt 설치 완료"; exit 0; fi
+          if timeout 90 sudo apt-get update -qq && timeout 90 sudo apt-get install -y -qq fonts-noto-cjk; then echo "apt 설치 완료"; exit 0; fi
+          echo "apt 실패 → 폰트 직접 다운로드"
+          mkdir -p fonts
+          for f in Sans/SubsetOTF/KR/NotoSansKR-Regular.otf Sans/SubsetOTF/KR/NotoSansKR-Bold.otf Sans/SubsetOTF/KR/NotoSansKR-Black.otf Serif/SubsetOTF/KR/NotoSerifKR-Bold.otf Serif/SubsetOTF/KR/NotoSerifKR-Black.otf; do
+            n=$(basename "$f")
+            curl -fsSL --max-time 60 -o "fonts/$n" "https://github.com/notofonts/noto-cjk/raw/main/$f" \
+              || curl -fsSL --max-time 60 -o "fonts/$n" "https://cdn.jsdelivr.net/gh/notofonts/noto-cjk@main/$f" \
+              || echo "다운로드 실패: $n"
+          done
+          ls -la fonts
       - run: pip install -r requirements.txt
 
       - name: 1. 링크 → 요약 → 카드 생성
@@ -63,7 +75,7 @@ jobs:
       - name: 2. 카드 이미지 저장소에 올리기
         if: always()
         run: |
-          git add -A
+          git add -A -- . ':!fonts'
           git diff --cached --quiet && exit 0
           git commit -m "manual: $(date -u +%Y%m%d-%H%M%S)"
           for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; sleep $((RANDOM % 10 + 3)); done
@@ -90,7 +102,7 @@ jobs:
       - name: 4. 결과 저장
         if: always()
         run: |
-          git add -A
+          git add -A -- . ':!fonts'
           git diff --cached --quiet && exit 0
           git commit -m "manual published: $(date -u +%Y%m%d-%H%M%S)"
           for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; sleep $((RANDOM % 10 + 3)); done
