@@ -307,7 +307,56 @@ def render_story(story: dict, photo: dict | None, out_dir: Path) -> list[Path]:
 
     p = out_dir / "01.jpg"
     img.convert("RGB").save(p, "JPEG", quality=92, optimize=True)
-    return [p]
+    paths = [p]
+    if story.get("card_summary"):
+        p2 = out_dir / "02.jpg"
+        render_summary(story, photo, color).convert("RGB").save(p2, "JPEG", quality=92, optimize=True)
+        paths.append(p2)
+    return paths
+
+
+def render_summary(story: dict, photo: dict | None, color) -> Image.Image:
+    """2장째: 같은 사진을 흐리게 깔고 기사 요약."""
+    fam = "Serif" if config.TITLE_FONT == "serif" else "Sans"
+    if photo:
+        im = ImageOps.fit(Image.open(photo["path"]).convert("RGB"), (W, H), method=Image.LANCZOS)
+        img = im.filter(ImageFilter.GaussianBlur(38)).convert("RGBA")
+        img.alpha_composite(Image.new("RGBA", (W, H), (10, 10, 14, 205)))
+    else:
+        img = text_layer()
+    d = ImageDraw.Draw(img)
+    x, max_w = 90, W - 180
+
+    # 내용 높이를 먼저 계산해서 화면 가운데 배치
+    lf = font("Bold", 32, "Sans")
+    title = f"{story.get('headline_top', '')} {story.get('headline_bottom', '')}".strip()
+    tf, tl = fit(d, title, "Black", [76, 70, 64, 58], max_w, 3, fam)
+    bf, nf = font("Regular", 46, "Sans"), font("Bold", 46, "Sans")
+    items = [wrap(d, line, bf, max_w)[:3] for line in story.get("card_summary", [])[:4]]
+    lh = 70
+    block = 60 + len(tl) * int(tf.size * 1.3) + 70 + sum(len(it) * lh + 46 for it in items)
+    y = max(110, (H - 200 - block) // 2 + 40)
+
+    d.text((x, y), story.get("tag") or "NEWS", font=lf, fill=color)
+    d.line([x, y + 48, x + 64, y + 48], fill=color, width=4)
+    y += 76
+    for ln in tl:
+        d.text((x, y), ln, font=tf, fill=WHITE)
+        y += int(tf.size * 1.3)
+    y += 56
+    for lines in items:  # 번호 없이 문단으로
+        for ln in lines:
+            d.text((x, y), ln, font=bf, fill=(235, 235, 240))
+            y += lh
+        y += 46
+
+    # 하단: 출처
+    sf = font("Regular", 24, "Sans")
+    d.line([x, H - 170, W - x, H - 170], fill=(255, 255, 255, 60), width=2)
+    d.text((x, H - 145), f"기사 출처 · {story.get('press', '')}", font=sf, fill=(200, 200, 205))
+    if photo:
+        d.text((x, H - 108), f"사진 · {photo['credit']} / {photo['license']}"[:60], font=sf, fill=(170, 170, 178))
+    return img
 
 
 def text_layer() -> Image.Image:

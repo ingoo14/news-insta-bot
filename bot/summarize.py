@@ -142,6 +142,8 @@ def write_story(a: dict) -> dict:
 - headline_bottom: 컬러 강조 글씨. 핵심 소식 (예: "트랙리스트 공개", "새 연프 패널 합류", "4월 17일 공개"). 12자 이내.
 - tag: 분야 한 단어 (연예/음악/드라마/영화/예능 중)
 - subline: 한 줄 부제 (캡션용). 22자 이내.
+[2장째 요약 카드]
+- card_summary: 기사 핵심을 3~4문장으로. 문장당 32자 이내, '~했다/~예정' 체, 숫자·날짜·작품명 등 구체적인 사실 위주. 자기 말로.
 [인스타 캡션]
 - title: 캡션 첫 줄 제목. '"짧은 인용"... 누가 무엇' 형식 추천. 40자 이내.
 - body: 본문 4~6문단. 문단당 1~3문장, '~했습니다' 체. 기사 사실만 자기 말로 재구성. 마지막 문단은 앞으로의 일정/의미. 이모지는 전체에 1~2개만.
@@ -159,7 +161,7 @@ def write_story(a: dict) -> dict:
 {a['body']}
 
 JSON으로만 답해:
-{{"ok": true, "tag": "...", "headline_top": "...", "headline_bottom": "...", "subline": "...", "title": "...", "body": "...", "hashtags": ["#..."], "photo_queries": ["..."], "person": "...", "scene_queries": ["..."]}}"""
+{{"ok": true, "tag": "...", "headline_top": "...", "headline_bottom": "...", "subline": "...", "card_summary": ["...", "...", "..."], "title": "...", "body": "...", "hashtags": ["#..."], "photo_queries": ["..."], "person": "...", "scene_queries": ["..."]}}"""
     s = _gemini(prompt)
     s["press"], s["url"], s["source_title"] = a["press"], a["url"], a["title"]
     return s
