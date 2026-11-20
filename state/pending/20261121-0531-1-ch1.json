@@ -1,8 +1,8 @@
 {
   "id": "20261121-0531-1-ch1",
   "created": "2026-11-21T05:31:15.878392+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-0531-1-ch1/01.jpg",
     "docs/posts/20261121-0531-1-ch1/02.jpg"
@@ -65,5 +65,7 @@
     "query": "엔하이픈"
   },
   "channel": "ch1",
-  "channel_handle": "ibduck_music"
+  "channel_handle": "ibduck_music",
+  "permalink": "https://www.instagram.com/p/Df-kj7sjaLz/",
+  "done": "2026-11-20T21:00:26.371860+00:00"
 }

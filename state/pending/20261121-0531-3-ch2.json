@@ -1,8 +1,8 @@
 {
   "id": "20261121-0531-3-ch2",
   "created": "2026-11-21T05:31:15.878392+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-0531-3-ch2/01.jpg",
     "docs/posts/20261121-0531-3-ch2/02.jpg"
@@ -58,5 +58,7 @@
     "query": "Lee Chan-won"
   },
   "channel": "ch2",
-  "channel_handle": "greenlight_music"
+  "channel_handle": "greenlight_music",
+  "permalink": "https://www.instagram.com/p/Df-kpYCDa_r/",
+  "done": "2026-11-20T21:01:15.715218+00:00"
 }
