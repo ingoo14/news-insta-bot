@@ -1,0 +1,66 @@
+{
+  "id": "20261121-0145-1-ch1",
+  "created": "2026-11-21T01:45:54.651929+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261121-0145-1-ch1/01.jpg",
+    "docs/posts/20261121-0145-1-ch1/02.jpg"
+  ],
+  "caption": "📌 ‘책임감 더 커져’… 방탄소년단, 2026 MAMA 올해의 가수\n\n그룹 방탄소년단(BTS)이 2026 MAMA AWARDS에서 ‘올해의 가수(ARTIST OF THIS YEAR)’ 대상을 받았습니다. 에스파, 에이티즈, 블랙핑크, 코르티스와 함께 후보에 올랐던 가운데 영예의 주인공이 됐습니다.\n\n20일 일본 교세라 돔 오사카에서 열린 시상식에는 방탄소년단이 참석하지 못했습니다. 멤버들은 대만 가오슝에서 월드투어를 진행 중이었습니다.\n\n멤버들은 VCR을 통해 마마에서 처음 대상을 받은 지 10년이 됐다며, 올해 수상이 더 뜻깊고 오래 기억에 남을 것 같다고 전했습니다. 팬들과 멋진 무대를 만들어주는 엠넷 관계자들에게도 감사를 전했습니다.\n\n또 멋진 시상식에서 상을 받을 때마다 책임감이 더 크게 느껴진다고 말했습니다. 아미(팬덤명) 덕분에 부담감을 이겨내고 앞으로 나아갈 수 있다며, 곁을 지켜주는 아미에게 고마움을 드러냈습니다.\n\n기사 출처: 마이데일리\n사진: Coral2712 / CC BY 4.0 / Wikimedia Commons\n\n#방탄소년단 #BTS #2026MAMA #MAMA2026 #마마어워즈 #올해의가수 #에스파 #블랙핑크 #에이티즈 #코르티스 #아미 #엠넷",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "방탄소년단, 올해의 가수",
+    "headline_bottom": "MAMA 대상 영예",
+    "subline": "2026 MAMA 올해의 가수 수상",
+    "card_summary": [
+      "20일 오사카 교세라 돔에서 2026 MAMA 개최",
+      "방탄소년단이 ‘올해의 가수’ 대상을 받았다",
+      "방탄소년단은 대만 월드투어 중 현장에 불참",
+      "멤버들은 VCR로 인사를 전했다"
+    ],
+    "title": "‘책임감 더 커져’… 방탄소년단, 2026 MAMA 올해의 가수",
+    "body": "그룹 방탄소년단(BTS)이 2026 MAMA AWARDS에서 ‘올해의 가수(ARTIST OF THIS YEAR)’ 대상을 받았습니다. 에스파, 에이티즈, 블랙핑크, 코르티스와 함께 후보에 올랐던 가운데 영예의 주인공이 됐습니다.\n\n20일 일본 교세라 돔 오사카에서 열린 시상식에는 방탄소년단이 참석하지 못했습니다. 멤버들은 대만 가오슝에서 월드투어를 진행 중이었습니다.\n\n멤버들은 VCR을 통해 마마에서 처음 대상을 받은 지 10년이 됐다며, 올해 수상이 더 뜻깊고 오래 기억에 남을 것 같다고 전했습니다. 팬들과 멋진 무대를 만들어주는 엠넷 관계자들에게도 감사를 전했습니다.\n\n또 멋진 시상식에서 상을 받을 때마다 책임감이 더 크게 느껴진다고 말했습니다. 아미(팬덤명) 덕분에 부담감을 이겨내고 앞으로 나아갈 수 있다며, 곁을 지켜주는 아미에게 고마움을 드러냈습니다.",
+    "hashtags": [
+      "#방탄소년단",
+      "#BTS",
+      "#2026MAMA",
+      "#MAMA2026",
+      "#마마어워즈",
+      "#올해의가수",
+      "#에스파",
+      "#블랙핑크",
+      "#에이티즈",
+      "#코르티스",
+      "#아미",
+      "#엠넷"
+    ],
+    "photo_queries": [
+      "방탄소년단",
+      "BTS"
+    ],
+    "person": "방탄소년단",
+    "scene_queries": [
+      "award ceremony stage lights",
+      "Kyocera Dome Osaka concert"
+    ],
+    "fact_checked": true,
+    "press": "마이데일리",
+    "url": "https://www.mydaily.co.kr/page/view/2026112022190535366",
+    "source_title": "방탄소년단, 에스파·블핑 제치고 대상 영예 \"책임감 더 커져\" [2026 MAMA]",
+    "trend_label": "",
+    "issue_no": 13
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261121-0145-1-ch1/_src.jpg",
+    "credit": "Coral2712",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bt21mexicomerchcoppel.png",
+    "source": "Wikimedia Commons",
+    "kind": "인물",
+    "query": "방탄소년단"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
