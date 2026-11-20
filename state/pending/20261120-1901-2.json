@@ -1,0 +1,52 @@
+{
+  "id": "20261120-1901-2",
+  "created": "2026-11-20T19:01:15.901224+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261120-1901-2/01.jpg"
+  ],
+  "caption": "📌 핑클 명곡 '화이트', 온앤오프 목소리로 재탄생\n\n그룹 온앤오프가 겨울을 대표하는 명곡을 새롭게 선보입니다.\n\n소속사 케이아이 엔터테인먼트는 온앤오프가 오는 12월 2일 스페셜 앨범 '화이트(White)'를 발매한다고 20일 밝혔습니다. 이번 신보는 각종 온라인 음원 사이트를 통해 공개될 예정입니다.\n\n타이틀곡 '화이트'는 선배 그룹 핑클(Fin.K.L.)의 동명 히트곡을 온앤오프만의 색깔로 재해석한 리메이크 곡입니다. 원곡의 따뜻한 감성에 온앤오프 특유의 보컬 매력이 더해질 것으로 기대를 모읍니다.\n\n연말 시즌을 맞아 리메이크 스페셜 앨범으로 돌아오는 온앤오프가 어떤 겨울 감성을 선사할지 관심이 집중됩니다. ❄️\n\n기사 출처: 조선일보\n사진: GlacierNPS / Public domain / Wikimedia Commons\n\n#온앤오프 #ONF #화이트 #White #핑클 #FinKL #리메이크 #스페셜앨범 #겨울노래 #케이팝",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "겨울 명곡의 새로운 변신",
+    "headline_bottom": "온앤오프 '화이트' 발매",
+    "subline": "12월 2일 스페셜 앨범으로 팬들 만난다",
+    "title": "핑클 명곡 '화이트', 온앤오프 목소리로 재탄생",
+    "body": "그룹 온앤오프가 겨울을 대표하는 명곡을 새롭게 선보입니다.\n\n소속사 케이아이 엔터테인먼트는 온앤오프가 오는 12월 2일 스페셜 앨범 '화이트(White)'를 발매한다고 20일 밝혔습니다. 이번 신보는 각종 온라인 음원 사이트를 통해 공개될 예정입니다.\n\n타이틀곡 '화이트'는 선배 그룹 핑클(Fin.K.L.)의 동명 히트곡을 온앤오프만의 색깔로 재해석한 리메이크 곡입니다. 원곡의 따뜻한 감성에 온앤오프 특유의 보컬 매력이 더해질 것으로 기대를 모읍니다.\n\n연말 시즌을 맞아 리메이크 스페셜 앨범으로 돌아오는 온앤오프가 어떤 겨울 감성을 선사할지 관심이 집중됩니다. ❄️",
+    "hashtags": [
+      "#온앤오프",
+      "#ONF",
+      "#화이트",
+      "#White",
+      "#핑클",
+      "#FinKL",
+      "#리메이크",
+      "#스페셜앨범",
+      "#겨울노래",
+      "#케이팝"
+    ],
+    "photo_queries": [
+      "ONF",
+      "ONF Kpop",
+      "온앤오프"
+    ],
+    "scene_queries": [
+      "winter snow aesthetic",
+      "recording studio microphone"
+    ],
+    "press": "조선일보",
+    "url": "https://www.chosun.com/entertainments/music/2026/11/20/MI4WCZRRHFRTOYLGMZRGGMBVGM/",
+    "source_title": "온앤오프, 핑클 명곡 ‘화이트’ 리메이크..12월 2일 발매 [공식]"
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261120-1901-2/_src.jpg",
+    "credit": "GlacierNPS",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:A_Waning_Winter_Exhibit_(2022)_(55505610567).jpg",
+    "source": "Wikimedia Commons",
+    "kind": "분위기",
+    "query": "winter snow aesthetic"
+  }
+}
