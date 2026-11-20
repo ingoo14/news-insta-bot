@@ -1,0 +1,63 @@
+{
+  "id": "20261120-230341-m-ch2",
+  "created": "2026-11-20T23:03:41.064522+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "images": [
+    "docs/posts/20261120-230341-m-ch2/01.jpg",
+    "docs/posts/20261120-230341-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"좋은 영향력 감사\"…아이브, MAMA 베스트 피메일 수상\n\n그룹 아이브가 '2026 MAMA 어워즈'에서 베스트 피메일 그룹을 수상했습니다. 20일 일본 교세라 돔 오사카에서 열린 시상식에서 트로피를 안았습니다.\n\n안유진은 감사한 상을 준 팬들에게 진심으로 고마움을 전했습니다. 장원영은 월드투어로 다이브를 만났으며 앞으로도 기회를 만들겠다고 밝혔습니다.\n\n가을은 좋은 영향력과 노래에 감사하다고 말했고, 리즈는 진심을 다하는 아티스트가 되겠다고 전했습니다.\n\n기사 출처: entertain.naver.com\n\n#아이브 #IVE #안유진 #장원영 #가을 #리즈 #2026MAMA #MAMAWARDS #KPOP",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "아이브",
+    "headline_bottom": "베스트 피메일",
+    "subline": "2026 MAMA 어워즈서 트로피 영예",
+    "card_summary": [
+      "아이브가 2026 MAMA 어워즈에서 베스트 피메일 그룹을 수상했다.",
+      "20일 일본 교세라 돔 오사카에서 시상식이 열렸다.",
+      "멤버들은 팬들에게 감사와 앞으로의 각오를 전했다."
+    ],
+    "title": "\"좋은 영향력 감사\"…아이브, MAMA 베스트 피메일 수상",
+    "body": "그룹 아이브가 '2026 MAMA 어워즈'에서 베스트 피메일 그룹을 수상했습니다. 20일 일본 교세라 돔 오사카에서 열린 시상식에서 트로피를 안았습니다.\n\n안유진은 감사한 상을 준 팬들에게 진심으로 고마움을 전했습니다. 장원영은 월드투어로 다이브를 만났으며 앞으로도 기회를 만들겠다고 밝혔습니다.\n\n가을은 좋은 영향력과 노래에 감사하다고 말했고, 리즈는 진심을 다하는 아티스트가 되겠다고 전했습니다.",
+    "hashtags": [
+      "#아이브",
+      "#IVE",
+      "#안유진",
+      "#장원영",
+      "#가을",
+      "#리즈",
+      "#2026MAMA",
+      "#MAMAWARDS",
+      "#KPOP"
+    ],
+    "photo_queries": [
+      "아이브",
+      "IVE",
+      "안유진",
+      "장원영"
+    ],
+    "person": "아이브",
+    "scene_queries": [
+      "music awards ceremony stage",
+      "kpop concert lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/home/article/477/0000640129",
+    "source_title": "아이브 \"좋은 영향력 감사\"…'베스트 피메일' 주인공[2026 MAMA]",
+    "issue_no": 11
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261120-230341-m-ch2/_src.jpg",
+    "credit": "",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "직접 전송"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
