@@ -31,7 +31,7 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
       - run: pip install -r requirements.txt
 
-      - name: 1. 수집 → 요약 → 사진 카드 생성
+      - name: 1. 트렌드·뉴스 수집 → 선별·요약 → 매거진 카드 생성
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
@@ -40,6 +40,9 @@ jobs:
           ACCENT_COLOR: ${{ vars.ACCENT_COLOR }}
           NEWS_FEEDS: ${{ vars.NEWS_FEEDS }}
           POSTS_PER_RUN: ${{ vars.POSTS_PER_RUN }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          MASTHEAD: ${{ vars.MASTHEAD }}
+          PHOTO_STRICT: ${{ vars.PHOTO_STRICT }}
         run: python -m bot.collect
 
       - name: 2. 카드 이미지 저장소에 올리기
