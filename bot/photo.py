@@ -88,8 +88,10 @@ def openverse_search(query: str) -> list[dict]:
     return out
 
 
-def _try(results, need_tokens, save_to):
+def _try(results, need_tokens, save_to, check=None):
     for c in results:
+        if check and not check(c):
+            continue
         if not c["ok_type"] or c["width"] < 700 or not c["url"]:
             continue
         if not OK_LICENSE.search(c["license"]) or BAD_LICENSE.search(c["license"]):
@@ -158,8 +160,76 @@ def wikidata_person(name: str) -> dict | None:
             def val(p):
                 c = claims.get(p)
                 return c[0]["mainsnak"].get("datavalue", {}).get("value") if c else None
-            return {"qid": qid, "image": val("P18"), "category": val("P373"), "desc": d.strip()}
+            info = {"qid": qid, "image": val("P18"), "category": val("P373"), "desc": d.strip()}
+            info.update(group_members(claims))
+            return info
     return None
+
+
+def _time(v):
+    """위키데이터 시간값 '+2022-08-01T00:00:00Z' → '2022-08-01'"""
+    try:
+        return v["time"].lstrip("+")[:10].replace("-00", "-01")
+    except Exception:
+        return ""
+
+
+def group_members(claims: dict) -> dict:
+    """그룹이면 멤버 목록 (P527 '구성원', 종료일 P582 있으면 탈퇴 멤버)."""
+    former, current, last_change = [], [], ""
+    for c in claims.get("P527", []):
+        mid = c["mainsnak"].get("datavalue", {}).get("value", {}).get("id")
+        if not mid:
+            continue
+        q = c.get("qualifiers", {})
+        end = _time(q["P582"][0]["datavalue"]["value"]) if q.get("P582") and q["P582"][0].get("datavalue") else ""
+        start = _time(q["P580"][0]["datavalue"]["value"]) if q.get("P580") and q["P580"][0].get("datavalue") else ""
+        (former if end else current).append(mid)
+        last_change = max(last_change, end, start)  # 마지막 멤버 변동(탈퇴·합류) 날짜
+    if not (former or current):
+        return {}
+    names = _labels(former) if former else {}
+    return {"former_ids": former, "former_names": names, "member_change": last_change}
+
+
+def _labels(qids: list[str]) -> dict:
+    """QID → [한글 이름, 영문 이름, 별칭들]"""
+    out = {}
+    try:
+        e = requests.get(WIKIDATA, headers=UA, timeout=20, params={
+            "action": "wbgetentities", "ids": "|".join(qids[:40]), "props": "labels|aliases",
+            "languages": "ko|en", "format": "json"}).json().get("entities", {})
+        for q, ent in e.items():
+            names = [v["value"] for v in ent.get("labels", {}).values()]
+            names += [a["value"] for lst in ent.get("aliases", {}).values() for a in lst][:6]
+            out[q] = [n for n in names if len(n) >= 2]
+    except Exception as ex:
+        print(f"[멤버 이름 조회 실패] {ex}")
+    return out
+
+
+def former_member_ok(c: dict, wd: dict) -> bool:
+    """탈퇴 멤버가 찍혔을 수 있는 사진 거르기:
+    1) 파일명/설명에 탈퇴 멤버 이름이 있으면 제외
+    2) 멤버 변동이 있었던 그룹이면 '마지막 변동일 이후' 찍힌 사진만 사용 (날짜 모르면 제외)"""
+    text = c.get("text", "").lower()
+
+    def hit(n):
+        n = n.lower()
+        if n.isascii():  # 영문 이름은 단어 단위로만 (짧은 성씨 'Kim' 같은 오탐 방지)
+            return len(n) >= 4 and re.search(rf"(?<![a-z]){re.escape(n)}(?![a-z])", text)
+        return n in text
+    for names in (wd.get("former_names") or {}).values():
+        if any(hit(n) for n in names):
+            print(f"[탈퇴 멤버 이름 포함 → 제외] {c.get('page')}")
+            return False
+    change = wd.get("member_change")
+    if wd.get("former_ids") and change:
+        date = (c.get("date") or "")[:10]
+        if not re.match(r"\d{4}-\d{2}-\d{2}", date) or date < change:
+            print(f"[멤버 변동({change}) 이전/날짜 불명 사진 → 제외] {c.get('page')} ({date or '날짜 없음'})")
+            return False
+    return True
 
 
 def commons_category_files(category: str, limit: int = 30) -> list[str]:
@@ -177,6 +247,7 @@ def _pack(hit, save_to, kind, q):
 
 
 def find_person_photo(names: list[str], save_to: Path) -> dict | None:
+    known = {}
     for name in [n for n in names if n and n.strip()]:
         try:
             wd = wikidata_person(name)
@@ -184,6 +255,10 @@ def find_person_photo(names: list[str], save_to: Path) -> dict | None:
             print(f"[위키데이터 실패] {name}: {e}")
             wd = None
         if wd:
+            known[name] = wd
+            if wd.get("former_ids"):
+                fn_ = ", ".join(v[0] for v in wd.get("former_names", {}).values() if v)
+                print(f"[그룹 멤버 변동] 탈퇴: {fn_} / 마지막 변동일: {wd.get('member_change')}")
             print(f"[위키데이터] {name} → {wd['qid']} {wd['desc'][:40]} / 사진:{wd['image']} / 폴더:{wd['category']}")
             try:
                 # 사진 폴더의 최신 사진 우선(요즘 모습), 없으면 대표 사진
@@ -192,16 +267,20 @@ def find_person_photo(names: list[str], save_to: Path) -> dict | None:
                 cands.sort(key=lambda c: c.get("date", ""), reverse=True)
                 if wd.get("image"):
                     cands += _commons_files([f"File:{wd['image']}"])
-                hit = _try(cands, [], save_to)
+                hit = _try(cands, [], save_to, check=lambda c, wd=wd: former_member_ok(c, wd))
                 if hit:
                     return _pack(hit, save_to, "인물", name)
             except Exception as e:
                 print(f"[커먼즈 실패] {name}: {e}")
     # 위키데이터에 없으면 이름 검색 (파일명/태그에 이름 포함된 것만)
     for name in names or []:
+        wd_known = known.get(name)
         for fn in (commons_search, openverse_search):
+            if wd_known and wd_known.get("former_ids") and fn is openverse_search:
+                continue  # 탈퇴 멤버 있는 그룹은 날짜 확인이 어려운 Openverse 사진은 안 씀
             try:
-                hit = _try(fn(name), _tokens(name), save_to)
+                hit = _try(fn(name), _tokens(name), save_to,
+                           check=(lambda c, wd=wd_known: former_member_ok(c, wd)) if wd_known else None)
             except Exception as e:
                 print(f"[사진 검색 실패] {fn.__name__} '{name}': {e}")
                 continue

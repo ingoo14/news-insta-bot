@@ -162,6 +162,38 @@ def write_story(a: dict) -> dict:
 
 JSON으로만 답해:
 {{"ok": true, "tag": "...", "headline_top": "...", "headline_bottom": "...", "subline": "...", "card_summary": ["...", "...", "..."], "title": "...", "body": "...", "hashtags": ["#..."], "photo_queries": ["..."], "person": "...", "scene_queries": ["..."]}}"""
-    s = _gemini(prompt)
+    s = normalize(_gemini(prompt))
     s["press"], s["url"], s["source_title"] = a["press"], a["url"], a["title"]
+    return s
+
+
+def normalize(s) -> dict:
+    """모델마다 형식이 달라도(문자열↔목록) 항상 같은 형태로 맞춤."""
+    if isinstance(s, list):  # [{...}] 로 감싸서 오는 경우
+        s = next((x for x in s if isinstance(x, dict)), {})
+    if not isinstance(s, dict):
+        return {}
+    def to_text(v, sep="\n\n"):
+        if isinstance(v, list):
+            return sep.join(to_text(x, " ") for x in v if x)
+        if isinstance(v, dict):
+            return " ".join(to_text(x, " ") for x in v.values() if x)
+        return "" if v is None else str(v).strip()
+    def to_list(v):
+        if isinstance(v, str):
+            parts = [x.strip(" -•\t") for x in v.replace("\r", "").split("\n")]
+            return [x for x in parts if x]
+        if isinstance(v, list):
+            return [to_text(x, " ") for x in v if to_text(x, " ")]
+        return []
+    for k in ("tag", "headline_top", "headline_bottom", "subline", "title", "person"):
+        s[k] = to_text(s.get(k), " ")
+    s["body"] = to_text(s.get("body"))
+    for k in ("card_summary", "photo_queries", "scene_queries"):
+        s[k] = to_list(s.get(k))
+    tags = s.get("hashtags")
+    if isinstance(tags, str):
+        tags = tags.replace(",", " ").split()
+    s["hashtags"] = [t if t.startswith("#") else "#" + t for t in (to_list(tags) if isinstance(tags, list) else []) if t]
+    s["ok"] = s.get("ok") not in (False, "false", "False", 0)
     return s

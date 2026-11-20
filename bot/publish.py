@@ -34,9 +34,12 @@ def main():
     sha = head_sha()
     first = os.environ.get("IMAGE_HOST") or "jsdelivr"
     hosts = [first] + [h for h in ("jsdelivr", "raw") if h != first]
+    kind = (os.environ.get("PUBLISH_KIND") or "all").lower()  # auto / manual / all
     for p in sorted(config.PENDING_DIR.glob("*.json")):
         rec = json.loads(p.read_text())
         if rec.get("status") != "pending":
+            continue
+        if kind == "auto" and rec.get("manual") or kind == "manual" and not rec.get("manual"):
             continue
         rec["attempts"] = rec.get("attempts", 0) + 1
         title = rec.get("story", {}).get("title", rec["id"])
