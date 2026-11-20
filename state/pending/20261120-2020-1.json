@@ -1,8 +1,8 @@
 {
   "id": "20261120-2020-1",
   "created": "2026-11-20T20:20:22.954121+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261120-2020-1/01.jpg",
     "docs/posts/20261120-2020-1/02.jpg"
@@ -54,5 +54,7 @@
     "source": "Wikimedia Commons",
     "kind": "인물",
     "query": "김혜수"
-  }
+  },
+  "permalink": "https://www.instagram.com/p/Df9jAsADQHh/",
+  "done": "2026-11-20T11:27:40.886716+00:00"
 }
