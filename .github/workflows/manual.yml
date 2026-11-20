@@ -18,6 +18,9 @@ on:
 permissions:
   contents: write
 
+env:
+  PYTHONUNBUFFERED: "1"   # 로그를 실시간으로 보이게
+
 jobs:
   manual:
     runs-on: ubuntu-latest
@@ -54,6 +57,8 @@ jobs:
           TG_TEXT: ${{ github.event.inputs.text }}
           TG_FILE_ID: ${{ github.event.inputs.file_id }}
           MANUAL_URL: ${{ github.event.inputs.url }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
