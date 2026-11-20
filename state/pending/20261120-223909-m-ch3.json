@@ -1,0 +1,64 @@
+{
+  "id": "20261120-223909-m-ch3",
+  "created": "2026-11-20T22:39:09.574630+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "images": [
+    "docs/posts/20261120-223909-m-ch3/01.jpg",
+    "docs/posts/20261120-223909-m-ch3/02.jpg"
+  ],
+  "caption": "📌 빅뱅, 신곡 '기립' 발표\n\n그룹 빅뱅이 20일 새 디지털 싱글 '기립'을 발표했습니다. 신곡 '기립'은 타격감 있는 비트와 강렬한 일렉트로닉 사운드가 돋보이는 힙합 곡입니다. 지드래곤과 태양이 작사에 참여하고, 프로듀서 테디가 의기투합해 완성도를 높였습니다. 이 곡은 발표 직후 멜론 핫100 1위에 올랐습니다.\n\n기사 출처: entertain.naver.com\n\n#빅뱅 #BIGBANG #지드래곤 #GD #태양 #TAEYANG #테디 #기립 #신곡 #음악",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "빅뱅, '기립'",
+    "headline_bottom": "차트 정상 직행",
+    "subline": "테디와 손잡은 신곡 발표",
+    "card_summary": [
+      "빅뱅이 새 디지털 싱글 '기립'을 발표했다.",
+      "'기립'은 발표 직후 멜론 핫100 1위에 올랐다.",
+      "지드래곤과 태양, 테디가 곡 작업에 참여했다."
+    ],
+    "title": "빅뱅, 신곡 '기립' 발표",
+    "body": "그룹 빅뱅이 20일 새 디지털 싱글 '기립'을 발표했습니다. 신곡 '기립'은 타격감 있는 비트와 강렬한 일렉트로닉 사운드가 돋보이는 힙합 곡입니다. 지드래곤과 태양이 작사에 참여하고, 프로듀서 테디가 의기투합해 완성도를 높였습니다. 이 곡은 발표 직후 멜론 핫100 1위에 올랐습니다.",
+    "hashtags": [
+      "#빅뱅",
+      "#BIGBANG",
+      "#지드래곤",
+      "#GD",
+      "#태양",
+      "#TAEYANG",
+      "#테디",
+      "#기립",
+      "#신곡",
+      "#음악"
+    ],
+    "photo_queries": [
+      "빅뱅",
+      "BIGBANG",
+      "지드래곤",
+      "태양"
+    ],
+    "person": "빅뱅",
+    "scene_queries": [
+      "concert stage lights",
+      "hip hop concert crowd"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/home/article/477/0000640047",
+    "source_title": "빅뱅, 신곡 제목은 '기립'…테디 손잡고 음원 차트 정상 직행",
+    "issue_no": 9
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261120-223909-m-ch3/_src.jpg",
+    "credit": "",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "직접 전송"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
