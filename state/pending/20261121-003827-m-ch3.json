@@ -1,0 +1,62 @@
+{
+  "id": "20261121-003827-m-ch3",
+  "created": "2026-11-21T00:38:27.383122+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "images": [
+    "docs/posts/20261121-003827-m-ch3/01.jpg",
+    "docs/posts/20261121-003827-m-ch3/02.jpg"
+  ],
+  "caption": "📌 리센느 원이, 이선민과 약속 지켰다…눈물의 ‘엔딩 요정’\n\n그룹 리센느 멤버 원이가 개그맨 이선민과의 약속을 지켰습니다. 리센느는 20일 일본 교세라 돔 오사카에서 열린 '2026 MAMA AWARDS' 무대에 올랐습니다.\n\n기사 출처: 스포츠동아\n\n#리센느 #RESCENE #원이 #Woni #2026MAMA #마마어워즈 #아이돌 #음악방송",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "리센느 원이",
+    "headline_bottom": "약속 지켰다",
+    "subline": "MAMA 무대에서 감동의 엔딩 요정 등극",
+    "card_summary": [
+      "그룹 리센느 멤버 원이가 약속을 지켰다.",
+      "20일 일본 교세라 돔 오사카에서 무대에 올랐다.",
+      "이날 리센느는 미니 앨범 활동을 이어갔다."
+    ],
+    "title": "리센느 원이, 이선민과 약속 지켰다…눈물의 ‘엔딩 요정’",
+    "body": "그룹 리센느 멤버 원이가 개그맨 이선민과의 약속을 지켰습니다. 리센느는 20일 일본 교세라 돔 오사카에서 열린 '2026 MAMA AWARDS' 무대에 올랐습니다.",
+    "hashtags": [
+      "#리센느",
+      "#RESCENE",
+      "#원이",
+      "#Woni",
+      "#2026MAMA",
+      "#마마어워즈",
+      "#아이돌",
+      "#음악방송"
+    ],
+    "photo_queries": [
+      "리센느",
+      "RESCENE",
+      "원이",
+      "Woni"
+    ],
+    "person": "리센느 원이",
+    "scene_queries": [
+      "Kpop concert stage lights",
+      "idol performance award show"
+    ],
+    "fact_checked": true,
+    "press": "스포츠동아",
+    "url": "https://sports.donga.com/ent/article/all/20261120/135063718/1",
+    "source_title": "리센느 원이, 이선민과 약속 지켰다…눈물의 ‘엔딩 요정’",
+    "issue_no": 12
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261121-003827-m-ch3/_src.jpg",
+    "credit": "",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "직접 전송"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
