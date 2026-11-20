@@ -15,8 +15,24 @@ FONT_DIR = "/usr/share/fonts/opentype/noto"
 KR = 1  # NotoSansCJK .ttc 안에서 한국어(KR) 서체 인덱스
 
 
+# 서버에 따라 일부 굵기만 설치돼 있음 → 없으면 비슷한 굵기로 대체
+FALLBACK = {"Black": ["Black", "Bold"], "Bold": ["Bold", "Black", "Regular"],
+            "Medium": ["Medium", "Regular", "Bold"], "Regular": ["Regular", "Medium", "Bold"]}
+_cache = {}
+
+
 def font(weight: str, size: int):
-    return ImageFont.truetype(f"{FONT_DIR}/NotoSansCJK-{weight}.ttc", size, index=KR)
+    key = (weight, size)
+    if key in _cache:
+        return _cache[key]
+    for w in FALLBACK.get(weight, [weight, "Regular", "Bold"]):
+        for path in (f"{FONT_DIR}/NotoSansCJK-{w}.ttc", f"/usr/share/fonts/opentype/noto/NotoSansCJK-{w}.ttc"):
+            try:
+                _cache[key] = ImageFont.truetype(path, size, index=KR)
+                return _cache[key]
+            except OSError:
+                continue
+    raise OSError("한글 폰트(Noto Sans CJK)를 찾을 수 없음 — 워크플로의 '한글 폰트 설치' 단계 확인")
 
 
 def wrap(draw, text, fnt, max_w):
