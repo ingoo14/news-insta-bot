@@ -29,8 +29,9 @@ def notify(text):
 
 
 def main():
-    for k in ["IG_USER_ID", "IG_ACCESS_TOKEN"]:
-        config.env(k, required=True)
+    chans = {c["key"]: c for c in config.channels()}
+    if not chans:
+        raise SystemExit("[설정 누락] IG_USER_ID / IG_ACCESS_TOKEN 확인")
     sha = head_sha()
     first = os.environ.get("IMAGE_HOST") or "jsdelivr"
     hosts = [first] + [h for h in ("jsdelivr", "raw") if h != first]
@@ -41,6 +42,11 @@ def main():
             continue
         if kind == "auto" and rec.get("manual") or kind == "manual" and not rec.get("manual"):
             continue
+        ch = chans.get(rec.get("channel", "ch1"))
+        if not ch:
+            print(f"[채널 설정 없음 → 건너뜀] {rec['id']} ({rec.get('channel')})")
+            continue
+        config.IG_USER_ID, config.IG_ACCESS_TOKEN = ch["user_id"], ch["token"]  # 이 게시물의 계정으로 전환
         rec["attempts"] = rec.get("attempts", 0) + 1
         title = rec.get("story", {}).get("title", rec["id"])
         link, err = None, None
@@ -55,13 +61,13 @@ def main():
             rec["status"], rec["permalink"] = "published", link
             shutil.rmtree(config.POSTS_DIR / rec["id"], ignore_errors=True)
             ph = rec.get("photo") or {}
-            notify(f"✅ 인스타 업로드 완료\n{title}\n{link}\n사진: {ph.get('kind', '')} / {ph.get('page', '')}")
+            notify(f"✅ [{ch['handle']}] 업로드 완료\n{title}\n{link}\n사진: {ph.get('page', '')}")
         elif rec["attempts"] >= MAX_ATTEMPTS:
             rec["status"] = "failed"
             shutil.rmtree(config.POSTS_DIR / rec["id"], ignore_errors=True)
-            notify(f"⚠️ 업로드 {MAX_ATTEMPTS}번 실패해서 포기함\n{title}\n{err}")
+            notify(f"⚠️ [{ch['handle']}] 업로드 {MAX_ATTEMPTS}번 실패해서 포기함\n{title}\n{err}")
         else:
-            notify(f"⚠️ 업로드 실패 (다음 회차에 재시도)\n{title}\n{err}")
+            notify(f"⚠️ [{ch['handle']}] 업로드 실패 (다음 회차에 재시도)\n{title}\n{err}")
         rec["done"] = datetime.now(timezone.utc).isoformat()
         p.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
 

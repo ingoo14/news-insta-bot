@@ -69,9 +69,11 @@ def main():
         print("새 기사가 없어서 이번 회차는 건너뜀")
         return
 
-    want = config.POSTS_PER_RUN
+    chans = config.channels() or [{"key": "ch1", "handle": "메인", "posts": config.POSTS_PER_RUN}]
+    slots = [c for c in chans for _ in range(c["posts"])]  # 예: [메인, 메인, 채널2, 채널3]
+    want = len(slots)
     live = ", ".join(f"{w}({n}건)" for w, n in hot) or "(없음)"
-    picks = summarize.pick(cands, want + 4, topics, trends.summary_for_prompt(tr), live)
+    picks = summarize.pick(cands, want + 6, topics, trends.summary_for_prompt(tr), live)
     now = datetime.now(KST)
     made = 0
     for i in picks:
@@ -85,7 +87,8 @@ def main():
         if not (s.get("ok") and s.get("headline_top") and s.get("body")):
             print(f"[건너뜀] 내용 부실/원칙 위반: {a['title']}")
             continue
-        post_id = f"{now:%Y%m%d-%H%M}-{made + 1}"
+        ch = slots[made]
+        post_id = f"{now:%Y%m%d-%H%M}-{made + 1}-{ch['key']}"
         out_dir = config.POSTS_DIR / post_id
         names = [s.get("person", "")] + list(s.get("photo_queries", []))
         ph = photo.find_photo([n for i, n in enumerate(names) if n and n not in names[:i]],
@@ -101,12 +104,13 @@ def main():
             "id": post_id, "created": now.isoformat(), "status": "pending", "attempts": 0,
             "images": [str(p.relative_to(config.ROOT)) for p in paths],
             "caption": build_caption(s, ph), "story": s, "photo": ph,
+            "channel": ch["key"], "channel_handle": ch.get("handle", ""),
         }
         config.PENDING_DIR.mkdir(parents=True, exist_ok=True)
         (config.PENDING_DIR / f"{post_id}.json").write_text(json.dumps(record, ensure_ascii=False, indent=2))
         topics.append(f"{s.get('title', '')} ({now:%m/%d})")
         made += 1
-        print(f"[준비 완료] {post_id}: {s.get('title')}")
+        print(f"[준비 완료] {post_id} → {ch.get('handle')}: {s.get('title')}")
 
     config.SEEN_FILE.write_text(json.dumps(seen[-3000:], ensure_ascii=False))
     config.TOPICS_FILE.write_text(json.dumps(topics[-60:], ensure_ascii=False, indent=1))

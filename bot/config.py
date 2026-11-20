@@ -35,7 +35,20 @@ TELEGRAM_CHAT_ID = env("TELEGRAM_CHAT_ID")
 IG_USER_ID = env("IG_USER_ID")
 IG_ACCESS_TOKEN = env("IG_ACCESS_TOKEN")
 IG_API_VERSION = env("IG_API_VERSION", "v26.0")
-IG_GRAPH_HOST = env("IG_GRAPH_HOST", "graph.facebook.com")  # 예전 인스타 로그인 방식이면 graph.instagram.com
+IG_GRAPH_HOST = env("IG_GRAPH_HOST", "graph.facebook.com")
+
+
+def channels() -> list[dict]:
+    """업로드할 인스타 채널 목록. 1번=메인(회차당 POSTS_PER_RUN건), 2·3번=회차당 1건.
+    Secrets: IG_USER_ID / IG_ACCESS_TOKEN, IG_USER_ID_2 / IG_ACCESS_TOKEN_2, IG_USER_ID_3 / IG_ACCESS_TOKEN_3"""
+    out = []
+    for n, sfx in enumerate(["", "_2", "_3", "_4", "_5"], 1):
+        uid, tok = env("IG_USER_ID" + sfx), env("IG_ACCESS_TOKEN" + sfx)
+        if uid and tok:
+            out.append({"key": f"ch{n}", "user_id": uid, "token": tok,
+                        "handle": env(f"IG_HANDLE_{n}", f"채널{n}"),
+                        "posts": int(env(f"POSTS_PER_RUN_{n}", str(POSTS_PER_RUN if n == 1 else 1)))})
+    return out  # 예전 인스타 로그인 방식이면 graph.instagram.com
 IG_TOKEN_REFRESH = env("IG_TOKEN_REFRESH", "false").lower() == "true"  # 시스템 사용자 토큰은 갱신 불필요
 IG_AI_LABEL = env("IG_AI_LABEL", "false").lower() == "true"
 
