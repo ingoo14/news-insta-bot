@@ -1,0 +1,66 @@
+{
+  "id": "20261121-0331-2-ch1",
+  "created": "2026-11-21T03:31:09.953454+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261121-0331-2-ch1/01.jpg",
+    "docs/posts/20261121-0331-2-ch1/02.jpg"
+  ],
+  "caption": "📌 \"귀여움 한도 초과\"... 최예나, 가챠숍서 신곡 열창\n\n가수 최예나가 1theK(원더케이)의 라이브 콘텐츠 '야외녹음실'을 통해 신곡 '사쿠란보' 무대를 선보였습니다.\n\n'야외녹음실'은 스튜디오를 벗어나 다양한 공간에서 아티스트의 생생한 목소리와 현장감을 담아내는 콘텐츠입니다.\n\n최예나는 18일 공개된 영상에서 핑크빛 조명의 가챠숍을 배경으로 인형뽑기 기계 앞에서 '사쿠란보'를 불렀습니다. 네온 조명과 키치한 분위기가 곡과 어우러졌습니다.\n\n한해·문세윤·제나는 23일 오후 6시 공개되는 '야외녹음실'에서 신곡 'Love Again'을 선보입니다. 책으로 가득한 서점을 배경으로 크리스마스 트리와 따뜻한 조명을 더해 라이브를 진행합니다.\n\n최예나의 '야외녹음실' 영상은 1theK Live 공식 유튜브 채널에서 확인할 수 있습니다.\n\n기사 출처: 마이데일리\n사진: 티비텐 (TV10) / CC BY 3.0 / Wikimedia\n\n#최예나 #사쿠란보 #야외녹음실 #1theK #원더케이 #한해 #문세윤 #제나 #LoveAgain #가챠숍 #K팝 #신곡",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "최예나, '사쿠란보'",
+    "headline_bottom": "가챠숍 라이브 공개",
+    "subline": "네온 핑크 가챠숍에서 신곡 열창",
+    "card_summary": [
+      "최예나가 신곡 '사쿠란보' 라이브 영상을 공개했다",
+      "1theK '야외녹음실'에서 가챠숍을 배경으로 열창했다",
+      "한해·문세윤·제나, 23일 'Love Again' 공개",
+      "영상은 1theK Live 공식 유튜브 채널에서 볼 수 있다"
+    ],
+    "title": "\"귀여움 한도 초과\"... 최예나, 가챠숍서 신곡 열창",
+    "body": "가수 최예나가 1theK(원더케이)의 라이브 콘텐츠 '야외녹음실'을 통해 신곡 '사쿠란보' 무대를 선보였습니다.\n\n'야외녹음실'은 스튜디오를 벗어나 다양한 공간에서 아티스트의 생생한 목소리와 현장감을 담아내는 콘텐츠입니다.\n\n최예나는 18일 공개된 영상에서 핑크빛 조명의 가챠숍을 배경으로 인형뽑기 기계 앞에서 '사쿠란보'를 불렀습니다. 네온 조명과 키치한 분위기가 곡과 어우러졌습니다.\n\n한해·문세윤·제나는 23일 오후 6시 공개되는 '야외녹음실'에서 신곡 'Love Again'을 선보입니다. 책으로 가득한 서점을 배경으로 크리스마스 트리와 따뜻한 조명을 더해 라이브를 진행합니다.\n\n최예나의 '야외녹음실' 영상은 1theK Live 공식 유튜브 채널에서 확인할 수 있습니다.",
+    "hashtags": [
+      "#최예나",
+      "#사쿠란보",
+      "#야외녹음실",
+      "#1theK",
+      "#원더케이",
+      "#한해",
+      "#문세윤",
+      "#제나",
+      "#LoveAgain",
+      "#가챠숍",
+      "#K팝",
+      "#신곡"
+    ],
+    "photo_queries": [
+      "최예나",
+      "Choi Yena"
+    ],
+    "person": "최예나",
+    "scene_queries": [
+      "gachapon machine neon pink",
+      "bookstore Christmas tree warm lights"
+    ],
+    "fact_checked": true,
+    "press": "마이데일리",
+    "url": "https://www.mydaily.co.kr/page/view/2026112102164583035",
+    "source_title": "최예나, 귀여움 한도 초과 \"가챠솝서 '사쿠란보' 열창\"",
+    "trend_label": "",
+    "issue_no": 17
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261121-0331-2-ch1/_src.jpg",
+    "credit": "티비텐 (TV10)",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/w/index.php?curid=169842566",
+    "source": "Wikimedia",
+    "kind": "인물",
+    "query": "최예나"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}

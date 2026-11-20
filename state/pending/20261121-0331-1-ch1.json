@@ -1,0 +1,63 @@
+{
+  "id": "20261121-0331-1-ch1",
+  "created": "2026-11-21T03:31:09.953454+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261121-0331-1-ch1/01.jpg",
+    "docs/posts/20261121-0331-1-ch1/02.jpg"
+  ],
+  "caption": "📌 이브, 기묘한 신보 'Cute & Anxiety'\n\n이브가 지난 20일 오후 2시 각종 온라인 음원 사이트를 통해 다섯 번째 EP 'Cute & Anxiety'를 발매했습니다. 이 앨범은 귀여움과 불안이 맞닿는 모호한 경계에서 벌어지는 감정의 순간들을 음악으로 풀어냈습니다.\n\n타이틀곡 'Polaroid'는 피아노를 중심으로 전개되는 미드템포 트립합 곡입니다. 후반부로 갈수록 거칠게 일그러지는 베이스 사운드가 특징이며, 오래된 폴라로이드 사진처럼 점차 흐려지는 기억을 밤에 홀로 되짚는 감정을 담았습니다.\n\n함께 공개된 뮤직비디오는 기묘한 분위기 속에서 현실과 애니메이션을 오가는 연출로 구성됐습니다.\n\n앨범에는 총 5곡이 수록됐습니다. 'Too Much'에는 칠레 출신 아티스트 아크릴라가 피처링으로 참여했습니다. 이브는 앞서 핑크팬서리스, 언더스코어스 등 해외 아티스트들과 협업해 왔습니다.\n\n기사 출처: 마이데일리\n사진: The Heart Truth / Public domain / Wikimedia Commons\n\n#이브 #Yves #CuteAndAnxiety #큐트앤앵자이어티 #Polaroid #이달의소녀 #이달의소녀이브 #아크릴라 #AKRIILA #신보",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "이브, 다섯 번째 EP",
+    "headline_bottom": "신보 발매",
+    "subline": "귀여움과 불안이 맞닿은 감정을 담은 앨범",
+    "card_summary": [
+      "이브가 다섯 번째 EP 'Cute & Anxiety'를 발매했다.",
+      "타이틀곡 'Polaroid'는 미드템포 트립합 곡이다.",
+      "앨범 5곡 중 'Too Much'에 아크릴라가 참여했다."
+    ],
+    "title": "이브, 기묘한 신보 'Cute & Anxiety'",
+    "body": "이브가 지난 20일 오후 2시 각종 온라인 음원 사이트를 통해 다섯 번째 EP 'Cute & Anxiety'를 발매했습니다. 이 앨범은 귀여움과 불안이 맞닿는 모호한 경계에서 벌어지는 감정의 순간들을 음악으로 풀어냈습니다.\n\n타이틀곡 'Polaroid'는 피아노를 중심으로 전개되는 미드템포 트립합 곡입니다. 후반부로 갈수록 거칠게 일그러지는 베이스 사운드가 특징이며, 오래된 폴라로이드 사진처럼 점차 흐려지는 기억을 밤에 홀로 되짚는 감정을 담았습니다.\n\n함께 공개된 뮤직비디오는 기묘한 분위기 속에서 현실과 애니메이션을 오가는 연출로 구성됐습니다.\n\n앨범에는 총 5곡이 수록됐습니다. 'Too Much'에는 칠레 출신 아티스트 아크릴라가 피처링으로 참여했습니다. 이브는 앞서 핑크팬서리스, 언더스코어스 등 해외 아티스트들과 협업해 왔습니다.",
+    "hashtags": [
+      "#이브",
+      "#Yves",
+      "#CuteAndAnxiety",
+      "#큐트앤앵자이어티",
+      "#Polaroid",
+      "#이달의소녀",
+      "#이달의소녀이브",
+      "#아크릴라",
+      "#AKRIILA",
+      "#신보"
+    ],
+    "photo_queries": [
+      "이브",
+      "Yves"
+    ],
+    "person": "이브",
+    "scene_queries": [
+      "vintage polaroid photos night",
+      "music studio microphone"
+    ],
+    "fact_checked": true,
+    "press": "마이데일리",
+    "url": "https://www.mydaily.co.kr/page/view/2026112102214096135",
+    "source_title": "이브, 기묘한 신보 'Cute & Anxiety'",
+    "trend_label": "",
+    "issue_no": 16
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261121-0331-1-ch1/_src.jpg",
+    "credit": "The Heart Truth",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Eve_in_David_Meister_2.jpg",
+    "source": "Wikimedia Commons",
+    "kind": "인물",
+    "query": "이브"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
