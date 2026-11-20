@@ -33,10 +33,12 @@ GEMINI_MODEL = env("GEMINI_MODEL", "gemini-flash-latest")
 TELEGRAM_BOT_TOKEN = env("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = env("TELEGRAM_CHAT_ID")
 
-# 인스타그램 (Instagram API with Instagram Login)
+# 인스타그램 (통합 로그인 + 시스템 사용자 토큰: 만료 없음)
 IG_USER_ID = env("IG_USER_ID")
 IG_ACCESS_TOKEN = env("IG_ACCESS_TOKEN")
 IG_API_VERSION = env("IG_API_VERSION", "v26.0")
+IG_GRAPH_HOST = env("IG_GRAPH_HOST", "graph.facebook.com")  # 예전 인스타 로그인 방식이면 graph.instagram.com
+IG_TOKEN_REFRESH = env("IG_TOKEN_REFRESH", "false").lower() == "true"  # 시스템 사용자 토큰은 갱신 불필요
 IG_AI_LABEL = env("IG_AI_LABEL", "false").lower() == "true"
 
 # 카드 디자인

@@ -1,4 +1,4 @@
-"""인스타그램 캐러셀 업로드 (Instagram API with Instagram Login, graph.instagram.com)."""
+"""인스타그램 캐러셀 업로드 (통합 로그인 + 시스템 사용자 토큰 → graph.facebook.com)."""
 import time
 
 import requests
@@ -7,7 +7,7 @@ from . import config
 
 
 def _url(path):
-    return f"https://graph.instagram.com/{config.IG_API_VERSION}/{path}"
+    return f"https://{config.IG_GRAPH_HOST}/{config.IG_API_VERSION}/{path}"
 
 
 def _post(path, **params):

@@ -77,7 +77,9 @@ def expire_old():
 
 
 def maybe_refresh_token():
-    """인스타 토큰은 60일 만료 → 7일마다 자동 연장."""
+    """(인스타 로그인 방식 토큰일 때만) 60일 만료 → 7일마다 자동 연장. 시스템 사용자 토큰은 건너뜀."""
+    if not config.IG_TOKEN_REFRESH:
+        return
     f = config.TOKEN_CHECK_FILE
     last = date.fromisoformat(f.read_text().strip()) if f.exists() else date.min
     if (date.today() - last).days < 7:
