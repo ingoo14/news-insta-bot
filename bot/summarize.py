@@ -17,35 +17,83 @@ RULES = """
 """
 
 
-def _gemini(prompt: str, retries: int = 4) -> dict:
-    url = API.format(model=config.GEMINI_MODEL)
+_fallbacks = None
+SKIP = ("embedding", "tts", "image", "live", "audio", "veo", "imagen", "aqa", "learnlm", "gemma", "robotics", "computer")
+
+
+def _fallback_models() -> list[str]:
+    """혼잡할 때 갈아탈 다른 텍스트 모델 목록 (API에서 사용 가능한 모델을 조회)."""
+    global _fallbacks
+    if _fallbacks is not None:
+        return _fallbacks
+    names = [m.strip() for m in (config.env("GEMINI_FALLBACK_MODELS", "") or "").split(",") if m.strip()]
+    try:
+        r = requests.get("https://generativelanguage.googleapis.com/v1beta/models",
+                         params={"key": config.GEMINI_API_KEY, "pageSize": 200}, timeout=30)
+        for m in r.json().get("models", []):
+            n = m.get("name", "").removeprefix("models/")
+            if "generateContent" not in m.get("supportedGenerationMethods", []):
+                continue
+            if any(k in n.lower() for k in SKIP) or n in names:
+                continue
+            names.append(n)
+    except Exception as e:
+        print(f"[모델 목록 조회 실패] {e}")
+    # 가벼운 모델(flash/lite) 우선, 최신 이름 우선
+    names.sort(key=lambda n: (0 if ("flash" in n or "lite" in n or "hydrogen" in n) else 1,
+                              "preview" in n or "exp" in n, [-ord(c) for c in n]))
+    _fallbacks = [n for n in names if n != config.GEMINI_MODEL][:5]
+    print(f"[대체 모델 후보] {_fallbacks}")
+    return _fallbacks
+
+
+def _call(model: str, prompt: str, tries: int):
+    url = API.format(model=model)
     gen = {"responseMimeType": "application/json", "temperature": 0.5,
            "thinkingConfig": {"thinkingLevel": "low"}}  # 깊은 생각 끄기 → 빠르게
     last = None
-    for i in range(retries):
+    i = 0
+    while i < tries:
         body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}], "generationConfig": gen}
         try:
             r = requests.post(url, params={"key": config.GEMINI_API_KEY}, json=body, timeout=240)
-        except requests.exceptions.RequestException as e:  # 시간 초과 등 → 잠시 후 재시도
+        except requests.exceptions.RequestException as e:  # 시간 초과 등
             last = str(e)
-            print(f"[Gemini 재시도 {i + 1}] {e}")
+            print(f"[{model} 재시도 {i + 1}] {e}")
+            i += 1
             time.sleep(10)
             continue
         if r.status_code == 400 and "thinking" in r.text.lower() and "thinkingConfig" in gen:
-            gen = {k: v for k, v in gen.items() if k != "thinkingConfig"}  # 모델이 옵션 미지원이면 빼고 재시도
+            gen = {k: v for k, v in gen.items() if k != "thinkingConfig"}  # 옵션 미지원 모델이면 빼고 재시도
             continue
-        if r.status_code == 429 or r.status_code >= 500:  # 무료 티어 한도/서버 혼잡 → 잠시 대기
-            last = r.text[:300]
-            print(f"[Gemini 대기 {i + 1}] {r.status_code}")
-            time.sleep(20 * (i + 1))
+        if r.status_code in (404, 403):  # 모델 없음/권한 없음 → 바로 다음 모델
+            return None, f"{r.status_code} {r.text[:200]}"
+        if r.status_code == 429 or r.status_code >= 500:  # 한도/혼잡 → 잠시 대기
+            last = f"{r.status_code} {r.text[:200]}"
+            print(f"[{model} 대기 {i + 1}] {r.status_code}")
+            i += 1
+            time.sleep(15 * i)
             continue
         if r.status_code >= 400:
             raise RuntimeError(f"Gemini 오류 {r.status_code}: {r.text[:500]}")
         parts = r.json()["candidates"][0]["content"]["parts"]
         text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
         text = text.strip().removeprefix("```json").removesuffix("```").strip()
-        return json.loads(text)
-    raise RuntimeError(f"Gemini 호출 실패: {last}")
+        return json.loads(text), None
+    return None, last
+
+
+def _gemini(prompt: str) -> dict:
+    """기본 모델 → 혼잡하면 다른 무료 모델로 자동 전환."""
+    data, err = _call(config.GEMINI_MODEL, prompt, tries=3)
+    if data is not None:
+        return data
+    for m in _fallback_models():
+        print(f"[모델 전환] {config.GEMINI_MODEL} 혼잡 → {m}")
+        data, err = _call(m, prompt, tries=2)
+        if data is not None:
+            return data
+    raise RuntimeError(f"Gemini 호출 실패 (모든 모델): {err}")
 
 
 def pick(candidates: list[dict], n: int, recent_topics: list[str]) -> list[int]:
