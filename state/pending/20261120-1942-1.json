@@ -1,8 +1,8 @@
 {
   "id": "20261120-1942-1",
   "created": "2026-11-20T19:42:28.042129+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261120-1942-1/01.jpg"
   ],
@@ -49,5 +49,7 @@
     "source": "Wikimedia Commons",
     "kind": "인물",
     "query": "ENHYPEN"
-  }
+  },
+  "permalink": "https://www.instagram.com/p/Df9eay4l999/",
+  "done": "2026-11-20T10:47:35.537940+00:00"
 }
