@@ -1,8 +1,8 @@
 {
   "id": "20261121-0331-4-ch3",
   "created": "2026-11-21T03:31:09.953454+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-0331-4-ch3/01.jpg",
     "docs/posts/20261121-0331-4-ch3/02.jpg"
@@ -62,5 +62,7 @@
     "query": "Kim Jong-kook"
   },
   "channel": "ch3",
-  "channel_handle": "gaem_seong_1spoon"
+  "channel_handle": "gaem_seong_1spoon",
+  "permalink": "https://www.instagram.com/p/Df-W_hhmCkB/",
+  "done": "2026-11-20T19:01:55.341458+00:00"
 }
