@@ -17,27 +17,39 @@ RULES = """
 """
 
 
-def _gemini(prompt: str, retries: int = 3) -> dict:
+def _gemini(prompt: str, retries: int = 4) -> dict:
     url = API.format(model=config.GEMINI_MODEL)
-    body = {
-        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-        "generationConfig": {"responseMimeType": "application/json", "temperature": 0.4},
-    }
+    gen = {"responseMimeType": "application/json", "temperature": 0.4,
+           "thinkingConfig": {"thinkingLevel": "low"}}  # 깊은 생각 끄기 → 빠르게
     last = None
     for i in range(retries):
-        r = requests.post(url, params={"key": config.GEMINI_API_KEY}, json=body, timeout=90)
+        body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}], "generationConfig": gen}
+        try:
+            r = requests.post(url, params={"key": config.GEMINI_API_KEY}, json=body, timeout=240)
+        except requests.exceptions.RequestException as e:  # 시간 초과 등 → 잠시 후 재시도
+            last = str(e)
+            print(f"[Gemini 재시도 {i + 1}] {e}")
+            time.sleep(10)
+            continue
+        if r.status_code == 400 and "thinking" in r.text.lower() and "thinkingConfig" in gen:
+            gen = {k: v for k, v in gen.items() if k != "thinkingConfig"}  # 모델이 옵션 미지원이면 빼고 재시도
+            continue
         if r.status_code == 429 or r.status_code >= 500:  # 무료 티어 분당 한도 → 잠시 대기
-            last = r.text
+            last = r.text[:300]
+            print(f"[Gemini 대기 {i + 1}] {r.status_code}")
             time.sleep(20 * (i + 1))
             continue
-        r.raise_for_status()
-        text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+        if r.status_code >= 400:
+            raise RuntimeError(f"Gemini 오류 {r.status_code}: {r.text[:500]}")
+        parts = r.json()["candidates"][0]["content"]["parts"]
+        text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
+        text = text.strip().removeprefix("```json").removesuffix("```").strip()
         return json.loads(text)
     raise RuntimeError(f"Gemini 호출 실패: {last}")
 
 
 def pick(candidates: list[dict], n: int) -> list[int]:
-    lines = [f"{i}. [{c['press']}] {c['title']} — {c['snippet'][:120]}" for i, c in enumerate(candidates[:60])]
+    lines = [f"{i}. [{c['press']}] {c['title']} — {c['snippet'][:80]}" for i, c in enumerate(candidates[:50])]
     prompt = f"""너는 한국 연예뉴스 인스타그램 계정의 편집자야.
 아래 최근 기사 목록에서 카드뉴스로 올릴 기사 {n}개를 골라.
 서로 다른 인물/주제로 고르고, 같은 사건을 다룬 기사는 하나만.
