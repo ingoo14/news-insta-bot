@@ -2,9 +2,10 @@ name: 연예뉴스 자동 업로드
 
 on:
   schedule:
-    # 한국시간 06·08·10·12·14·16·18·20·22·00·02·04시 정각 업로드 (하루 12회 × 2건)
-    # → 15분 전(05:45 등)에 시작해서 카드 준비 후 정각까지 대기. (cron은 UTC 기준)
-    - cron: "45 0-22/2 * * *"
+    # 한국시간 06·08·10·12·14·16·18·20·22·00·02·04시 정각 업로드
+    # 회차당: ibduck_music 2건 + greenlight_music 1건 + gaem_seong_1spoon 1건
+    # → 30분 전(05:30 등)에 시작해서 카드 준비 후 정각까지 대기. (cron은 UTC 기준)
+    - cron: "30 0-22/2 * * *"
   workflow_dispatch: {}   # Actions 탭에서 수동 실행 가능
 
 permissions:
@@ -17,7 +18,7 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - name: git 사용자 설정
@@ -44,6 +45,15 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           MASTHEAD: ${{ vars.MASTHEAD }}
           PHOTO_STRICT: ${{ vars.PHOTO_STRICT }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID_2: ${{ secrets.IG_USER_ID_2 }}
+          IG_ACCESS_TOKEN_2: ${{ secrets.IG_ACCESS_TOKEN_2 }}
+          IG_USER_ID_3: ${{ secrets.IG_USER_ID_3 }}
+          IG_ACCESS_TOKEN_3: ${{ secrets.IG_ACCESS_TOKEN_3 }}
+          IG_HANDLE_1: ibduck_music
+          IG_HANDLE_2: greenlight_music
+          IG_HANDLE_3: gaem_seong_1spoon
         run: python -m bot.collect
 
       - name: 2. 카드 이미지 저장소에 올리기
@@ -64,7 +74,7 @@ jobs:
           now = datetime.now(timezone(timedelta(hours=9)))
           target = now.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
           wait = (target - now).total_seconds()
-          if target.hour % 2 == 0 and 0 < wait <= 40 * 60:
+          if target.hour % 2 == 0 and 0 < wait <= 55 * 60:
               print(f"{target:%H:%M} 정각까지 {int(wait)}초 대기")
               time.sleep(wait)
           else:
@@ -77,6 +87,13 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID_2: ${{ secrets.IG_USER_ID_2 }}
+          IG_ACCESS_TOKEN_2: ${{ secrets.IG_ACCESS_TOKEN_2 }}
+          IG_USER_ID_3: ${{ secrets.IG_USER_ID_3 }}
+          IG_ACCESS_TOKEN_3: ${{ secrets.IG_ACCESS_TOKEN_3 }}
+          IG_HANDLE_1: ibduck_music
+          IG_HANDLE_2: greenlight_music
+          IG_HANDLE_3: gaem_seong_1spoon
           IG_AI_LABEL: ${{ vars.IG_AI_LABEL }}
           IMAGE_HOST: ${{ vars.IMAGE_HOST }}
           PUBLISH_KIND: auto
