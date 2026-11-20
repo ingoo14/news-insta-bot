@@ -37,12 +37,20 @@ def article_from_url(url: str) -> dict:
     return item
 
 
+# 채널 별명 (메시지에 이 단어가 있으면 그 채널로)
+ALIASES = {
+    "ibduck_music": ["입덕", "ibduck"],
+    "greenlight_music": ["그린", "greenlight"],
+    "gaem_seong_1spoon": ["갬성", "겜성", "gaem"],
+}
+
+
 def pick_channel(text: str) -> dict:
     chans = config.channels()
     t = (text or "").lower()
     for c in chans:
         h = c.get("handle", "").lower()
-        keys = [h] + [w for w in h.replace(".", "_").split("_") if len(w) >= 4]
+        keys = [h] + ALIASES.get(h, []) + [w for w in h.replace(".", "_").split("_") if len(w) >= 4]
         if any(k and k in t for k in keys):
             return c
     return chans[0] if chans else {"key": "ch1", "handle": "메인"}
