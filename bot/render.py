@@ -133,8 +133,32 @@ def _faces(im: Image.Image):
         return []
 
 
-def base_photo(path: str) -> Image.Image:
+def contain_photo(im: Image.Image) -> Image.Image:
+    """자르지 않고 사진 전체를 넣기: 폭에 맞춰 위쪽에 배치, 남는 공간은 같은 사진을 흐리게."""
+    bg_sc = max(W / im.width, H / im.height)
+    bg = im.resize((int(im.width * bg_sc) + 1, int(im.height * bg_sc) + 1))
+    bx, by = (bg.width - W) // 2, (bg.height - H) // 2
+    canvas = bg.crop((bx, by, bx + W, by + H)).filter(ImageFilter.GaussianBlur(45)).convert("RGBA")
+    canvas.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, 120)))
+    sc = min(W / im.width, (H * 0.72) / im.height)
+    ph = ImageEnhance_safe(im.resize((int(im.width * sc), int(im.height * sc)), Image.LANCZOS)).convert("RGBA")
+    m = Image.new("L", ph.size, 0)
+    ImageDraw.Draw(m).rectangle([18, 18, ph.width - 18, ph.height - 18], fill=255)
+    ph.putalpha(m.filter(ImageFilter.GaussianBlur(14)))
+    x = (W - ph.width) // 2
+    y = max(0, int(H * 0.40 - ph.height / 2))
+    canvas.alpha_composite(ph, (x, y))
+    bh = int(H * 0.5)
+    bot = Image.new("RGBA", (W, bh), (0, 0, 0, 255)); bot.putalpha(_grad(bh, 0, 200, 1.4))
+    canvas.alpha_composite(bot, (0, H - bh))
+    return canvas
+
+
+def base_photo(path: str, keep_all: bool = False) -> Image.Image:
     im = ImageOps.exif_transpose(Image.open(path)).convert("RGB")
+    # 직접 보낸 사진, 또는 가로가 긴 사진에 여러 명이 나오면 → 자르지 않음
+    if keep_all or (im.width / im.height > 0.95 and len(_faces(im)) >= 2):
+        return contain_photo(im)
     sc = max(W / im.width, H / im.height)  # 화면을 꽉 채우는 배율
     faces = _faces(im)
     if faces:
@@ -280,7 +304,7 @@ def photo_color(path: str):
 
 def render_story(story: dict, photo: dict | None, out_dir: Path) -> list[Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
-    img = base_photo(photo["path"]) if photo else text_layer()
+    img = base_photo(photo["path"], keep_all=photo.get("kind") == "직접 전송") if photo else text_layer()
     d = ImageDraw.Draw(img)
     color = photo_color(photo["path"]) if photo else PALETTE[int(story.get("issue_no", 0)) % len(PALETTE)]
 
