@@ -1,8 +1,8 @@
 {
   "id": "20261120-2040-2",
   "created": "2026-11-20T20:40:10.657494+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261120-2040-2/01.jpg",
     "docs/posts/20261120-2040-2/02.jpg"
@@ -54,5 +54,7 @@
     "source": "Wikimedia",
     "kind": "인물",
     "query": "ENHYPEN SUNGHOON"
-  }
+  },
+  "permalink": "https://www.instagram.com/p/Df9kseil3fw/",
+  "done": "2026-11-20T11:42:21.528138+00:00"
 }

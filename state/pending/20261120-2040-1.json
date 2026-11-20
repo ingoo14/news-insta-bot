@@ -1,8 +1,8 @@
 {
   "id": "20261120-2040-1",
   "created": "2026-11-20T20:40:10.657494+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261120-2040-1/01.jpg",
     "docs/posts/20261120-2040-1/02.jpg"
@@ -58,5 +58,7 @@
     "source": "Wikimedia Commons",
     "kind": "인물",
     "query": "리센느"
-  }
+  },
+  "permalink": "https://www.instagram.com/p/Df9kpjZl8k7/",
+  "done": "2026-11-20T11:41:58.019915+00:00"
 }
