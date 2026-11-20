@@ -1,0 +1,58 @@
+{
+  "id": "20261120-2040-2",
+  "created": "2026-11-20T20:40:10.657494+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261120-2040-2/01.jpg",
+    "docs/posts/20261120-2040-2/02.jpg"
+  ],
+  "caption": "📌 '바람의 왕자님'... 엔하이픈 성훈 MAMA 출국길 포착\n\n그룹 엔하이픈의 멤버 성훈이 일본에서 열린 글로벌 음악 시상식 레드카펫을 빛냈습니다.\n\n성훈은 20일 일본 교세라 돔 오사카 인근에서 개최된 '2026 MAMA AWARDS' 레드카펫 행사에 참석했습니다.\n\n올해 시상식은 양일간 진행되며 음악으로 하나 되는 특별한 무대들을 선보일 예정입니다.\n\n성훈은 훈훈한 비주얼과 완벽한 자태로 현장 분위기를 뜨겁게 달궜습니다.\n\n앞으로도 다채로운 글로벌 활동을 이어갈 엔하이픈의 행보에 기대가 모입니다.\n\n기사 출처: 조선일보\n사진: K-POPIT 케이팝잇 / CC BY 4.0 / Wikimedia\n\n#엔하이픈 #ENHYPEN #성훈 #SUNGHOON #2026MAMAAWARDS #마마어워즈 #KPOP #아이돌",
+  "story": {
+    "ok": true,
+    "tag": "연예",
+    "headline_top": "엔하이픈 성훈",
+    "headline_bottom": "‘바람의 왕자님’",
+    "subline": "2026 MAMA 레드카펫 참석",
+    "card_summary": [
+      "엔하이픈 성훈이 일본 오사카에서 열린 MAMA AWARDS 레드카펫에 참석했다.",
+      "이번 행사는 20일부터 21일까지 양일간 교세라 돔 오사카에서 개최된다.",
+      "올해 마마 어워즈는 '뮤직 인터스텔라'를 콘셉트로 진행될 예정이다."
+    ],
+    "title": "'바람의 왕자님'... 엔하이픈 성훈 MAMA 출국길 포착",
+    "body": "그룹 엔하이픈의 멤버 성훈이 일본에서 열린 글로벌 음악 시상식 레드카펫을 빛냈습니다.\n\n성훈은 20일 일본 교세라 돔 오사카 인근에서 개최된 '2026 MAMA AWARDS' 레드카펫 행사에 참석했습니다.\n\n올해 시상식은 양일간 진행되며 음악으로 하나 되는 특별한 무대들을 선보일 예정입니다.\n\n성훈은 훈훈한 비주얼과 완벽한 자태로 현장 분위기를 뜨겁게 달궜습니다.\n\n앞으로도 다채로운 글로벌 활동을 이어갈 엔하이픈의 행보에 기대가 모입니다.",
+    "hashtags": [
+      "#엔하이픈",
+      "#ENHYPEN",
+      "#성훈",
+      "#SUNGHOON",
+      "#2026MAMAAWARDS",
+      "#마마어워즈",
+      "#KPOP",
+      "#아이돌"
+    ],
+    "photo_queries": [
+      "엔하이픈 성훈",
+      "ENHYPEN SUNGHOON"
+    ],
+    "person": "엔하이픈 성훈",
+    "scene_queries": [
+      "red carpet event",
+      "music awards stage"
+    ],
+    "press": "조선일보",
+    "url": "https://www.chosun.com/entertainments/entertain_photo/2026/11/20/HE3TOMTCGYZTQNDCGMZDKMBZHA/",
+    "source_title": "[사진]엔하이픈 성훈 '바람의 왕자님'",
+    "trend_label": "",
+    "issue_no": 7
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261120-2040-2/_src.jpg",
+    "credit": "K-POPIT 케이팝잇",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/w/index.php?curid=184750549",
+    "source": "Wikimedia",
+    "kind": "인물",
+    "query": "ENHYPEN SUNGHOON"
+  }
+}
