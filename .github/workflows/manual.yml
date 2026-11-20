@@ -1,20 +1,18 @@
 name: 링크로 바로 올리기
 
+# 텔레그램 단톡방에 링크를 올리면 → Cloudflare 중계 → 즉시 실행 (repository_dispatch)
+# 급할 때는 Actions에서 Run workflow → 링크 입력으로도 실행 가능
 on:
-  schedule:
-    - cron: "*/5 * * * *"   # 5분마다 텔레그램에 새 링크 왔는지 확인 (GitHub 사정으로 늦어질 수 있음)
+  repository_dispatch:
+    types: [telegram_link]
   workflow_dispatch:
     inputs:
       url:
-        description: "올릴 기사 링크"
-        required: false
+        description: "올릴 기사 링크 (앞에 greenlight / gaem 을 쓰면 그 채널로)"
+        required: true
 
 permissions:
   contents: write
-
-concurrency:
-  group: news-bot-manual
-  cancel-in-progress: false
 
 jobs:
   manual:
@@ -30,45 +28,20 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
-
-      - name: 텔레그램 새 링크 확인
-        id: check
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          MANUAL_URL: ${{ github.event.inputs.url }}
-        run: |
-          python - <<'EOF'
-          import json, os, re, urllib.request
-          url_in = os.environ.get("MANUAL_URL") or ""
-          tok, chat = os.environ["TELEGRAM_BOT_TOKEN"], os.environ["TELEGRAM_CHAT_ID"]
-          try:
-              off = int(open("state/tg_offset.txt").read().strip() or 0)
-          except Exception:
-              off = 0
-          q = f"https://api.telegram.org/bot{tok}/getUpdates?timeout=0&offset={off + 1 if off else 0}"
-          ups = json.load(urllib.request.urlopen(q, timeout=20)).get("result", [])
-          has = bool(re.search(r"https?://", url_in)) or any(
-              str((u.get("message") or {}).get("chat", {}).get("id")) == chat
-              and re.search(r"https?://", (u.get("message") or {}).get("text") or (u.get("message") or {}).get("caption") or "") for u in ups)
-          print("새 링크:", has)
-          open(os.environ["GITHUB_OUTPUT"], "a").write(f"work={'true' if has else 'false'}\n")
-          EOF
-
       - name: 한글 폰트 설치
-        if: steps.check.outputs.work == 'true'
         run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
-      - if: steps.check.outputs.work == 'true'
-        run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt
 
       - name: 1. 링크 → 요약 → 카드 생성
-        if: steps.check.outputs.work == 'true'
         env:
+          TG_WEBHOOK: "1"
+          TG_TEXT: ${{ github.event.client_payload.text }}
+          TG_FILE_ID: ${{ github.event.client_payload.file_id }}
+          MANUAL_URL: ${{ github.event.inputs.url }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          MANUAL_URL: ${{ github.event.inputs.url }}
           BRAND_HANDLE: ${{ vars.BRAND_HANDLE }}
           ACCENT_COLOR: ${{ vars.ACCENT_COLOR }}
           PHOTO_STRICT: ${{ vars.PHOTO_STRICT }}
@@ -84,16 +57,15 @@ jobs:
         run: python -m bot.manual
 
       - name: 2. 카드 이미지 저장소에 올리기
-        if: always() && steps.check.outputs.work == 'true'
+        if: always()
         run: |
           git add -A
           git diff --cached --quiet && exit 0
-          git commit -m "manual: $(date -u +%Y%m%d-%H%M)"
-          for i in 1 2 3; do git pull --rebase -X theirs -q && git push -q && break; sleep 5; done
+          git commit -m "manual: $(date -u +%Y%m%d-%H%M%S)"
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; sleep $((RANDOM % 10 + 3)); done
           sleep 20
 
       - name: 3. 인스타 업로드 → 텔레그램 알림
-        if: steps.check.outputs.work == 'true'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -112,9 +84,9 @@ jobs:
         run: python -m bot.publish
 
       - name: 4. 결과 저장
-        if: always() && steps.check.outputs.work == 'true'
+        if: always()
         run: |
           git add -A
           git diff --cached --quiet && exit 0
-          git commit -m "manual published: $(date -u +%Y%m%d-%H%M)"
-          for i in 1 2 3; do git pull --rebase -X theirs -q && git push -q && break; sleep 5; done
+          git commit -m "manual published: $(date -u +%Y%m%d-%H%M%S)"
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs -q && git push -q && break; sleep $((RANDOM % 10 + 3)); done
