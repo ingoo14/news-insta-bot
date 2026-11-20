@@ -2,15 +2,16 @@ name: 연예뉴스 자동 업로드
 
 on:
   schedule:
-    # 2시간마다 (하루 12회 × 2건 = 24건) — 한국시간 매 홀수시 17분
-    - cron: "17 */2 * * *"
+    # 한국시간 06·08·10·12·14·16·18·20·22·00·02·04시 정각 업로드 (하루 12회 × 2건)
+    # → 15분 전(05:45 등)에 시작해서 카드 준비 후 정각까지 대기. (cron은 UTC 기준)
+    - cron: "45 0-22/2 * * *"
   workflow_dispatch: {}   # Actions 탭에서 수동 실행 가능
 
 permissions:
   contents: write
 
 concurrency:
-  group: news-bot
+  group: news-bot-auto
   cancel-in-progress: false
 
 jobs:
@@ -51,8 +52,24 @@ jobs:
           git add -A
           git diff --cached --quiet && exit 0
           git commit -m "cards: $(date -u +%Y%m%d-%H%M)"
-          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+          for i in 1 2 3; do git pull --rebase -X theirs -q && git push -q && break; sleep 5; done
           sleep 20   # 이미지 주소가 열릴 때까지 잠깐 대기
+
+      - name: 정각까지 대기 (예약 실행일 때만)
+        if: github.event_name == 'schedule'
+        run: |
+          python - <<'EOF'
+          import time
+          from datetime import datetime, timedelta, timezone
+          now = datetime.now(timezone(timedelta(hours=9)))
+          target = now.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
+          wait = (target - now).total_seconds()
+          if target.hour % 2 == 0 and 0 < wait <= 40 * 60:
+              print(f"{target:%H:%M} 정각까지 {int(wait)}초 대기")
+              time.sleep(wait)
+          else:
+              print("정각이 이미 지났거나 범위 밖 → 바로 업로드")
+          EOF
 
       - name: 3. 인스타 자동 업로드 → 텔레그램 알림
         env:
@@ -62,6 +79,7 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_AI_LABEL: ${{ vars.IG_AI_LABEL }}
           IMAGE_HOST: ${{ vars.IMAGE_HOST }}
+          PUBLISH_KIND: auto
         run: python -m bot.publish
 
       - name: 4. 결과 저장
@@ -70,4 +88,4 @@ jobs:
           git add -A
           git diff --cached --quiet && exit 0
           git commit -m "published: $(date -u +%Y%m%d-%H%M)"
-          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+          for i in 1 2 3; do git pull --rebase -X theirs -q && git push -q && break; sleep 5; done
