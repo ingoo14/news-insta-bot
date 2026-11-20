@@ -1,0 +1,53 @@
+{
+  "id": "20261120-1942-1",
+  "created": "2026-11-20T19:42:28.042129+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261120-1942-1/01.jpg"
+  ],
+  "caption": "📌 엔하이픈, '2026 MAMA' 레드카펫 빛냈다\n\n그룹 엔하이픈이 ‘2026 MAMA AWARDS’ 레드카펫 현장에 모습을 드러냈습니다.\n\n20일 일본 교세라 돔 오사카 인근에서 ‘2026 MAMA AWARDS’ 레드카펫 행사가 진행됐습니다. 엔하이픈은 이날 행사에 참석해 자리를 빛냈습니다. ✨\n\n이번 시상식은 20일과 21일 양일간 일본 교세라 돔 오사카에서 열립니다.\n\n‘A MUSIC INTERSTELLAR’를 콘셉트로 삼아 음악을 통해 연결되는 새로운 세계를 선보일 예정입니다. 글로벌 무대에서 활약할 엔하이픈의 행보에도 기대가 모입니다.\n\n기사 출처: 조선일보\n사진: Ten Asia / CC BY 3.0 / Wikimedia Commons\n\n#엔하이픈 #ENHYPEN #2026MAMA #MAMAAWARDS #마마어워즈 #레드카펫 #교세라돔오사카 #K팝 #아이돌",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "엔하이픈, ‘우리가 왔다’",
+    "headline_bottom": "마마 레드카펫 출격",
+    "subline": "오사카 교세라 돔에서 열린 2026 마마",
+    "title": "엔하이픈, '2026 MAMA' 레드카펫 빛냈다",
+    "body": "그룹 엔하이픈이 ‘2026 MAMA AWARDS’ 레드카펫 현장에 모습을 드러냈습니다.\n\n20일 일본 교세라 돔 오사카 인근에서 ‘2026 MAMA AWARDS’ 레드카펫 행사가 진행됐습니다. 엔하이픈은 이날 행사에 참석해 자리를 빛냈습니다. ✨\n\n이번 시상식은 20일과 21일 양일간 일본 교세라 돔 오사카에서 열립니다.\n\n‘A MUSIC INTERSTELLAR’를 콘셉트로 삼아 음악을 통해 연결되는 새로운 세계를 선보일 예정입니다. 글로벌 무대에서 활약할 엔하이픈의 행보에도 기대가 모입니다.",
+    "hashtags": [
+      "#엔하이픈",
+      "#ENHYPEN",
+      "#2026MAMA",
+      "#MAMAAWARDS",
+      "#마마어워즈",
+      "#레드카펫",
+      "#교세라돔오사카",
+      "#K팝",
+      "#아이돌"
+    ],
+    "photo_queries": [
+      "엔하이픈",
+      "ENHYPEN"
+    ],
+    "person": "엔하이픈",
+    "scene_queries": [
+      "red carpet awards show",
+      "concert dome stage"
+    ],
+    "press": "조선일보",
+    "url": "https://www.chosun.com/entertainments/entertain_photo/2026/11/20/GUZGMOBUHE4GMMZTMVRTGZRSHE/",
+    "source_title": "[사진]엔하이픈 '우리가 왔다'",
+    "trend_label": "",
+    "issue_no": 1
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261120-1942-1/_src.jpg",
+    "credit": "Ten Asia",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:241014_Enhypen.jpg",
+    "source": "Wikimedia Commons",
+    "kind": "인물",
+    "query": "ENHYPEN"
+  }
+}
