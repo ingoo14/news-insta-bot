@@ -128,7 +128,18 @@ def main():
     for k in ["GEMINI_API_KEY", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"]:
         config.env(k, required=True)
     manual_in = os.environ.get("MANUAL_URL", "")
-    urls = [(u, manual_in, None) for u in URL_RE.findall(manual_in)] + telegram_links()
+    urls = [(u, manual_in, None) for u in URL_RE.findall(manual_in)]
+    # 텔레그램 → Cloudflare → GitHub 로 바로 들어온 메시지
+    tg_text, tg_file = os.environ.get("TG_TEXT", ""), os.environ.get("TG_FILE_ID", "")
+    if tg_text:
+        up = None
+        if tg_file:
+            m = CREDIT_RE.search(tg_text)
+            up = {"file_id": tg_file, "credit": m.group(1).strip() if m else ""}
+        urls += [(u, tg_text, up) for u in URL_RE.findall(tg_text)]
+    # (예전 방식) webhook을 안 쓸 때만 텔레그램에서 직접 새 메시지 가져오기
+    if os.environ.get("TG_WEBHOOK") != "1":
+        urls += telegram_links()
     if not urls:
         print("새 링크 없음")
         return
