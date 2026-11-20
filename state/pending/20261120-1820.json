@@ -1,7 +1,7 @@
 {
   "id": "20261120-1820",
   "created": "2026-11-20T18:20:01.838484+09:00",
-  "status": "pending",
+  "status": "published",
   "images": [
     "docs/posts/20261120-1820/01.jpg",
     "docs/posts/20261120-1820/02.jpg",
@@ -56,5 +56,8 @@
       "title": "장나라·김혜윤, 믿고 보는 '굿파트너2'…\"부담보다 설렘으로\" [MD현장](종합)"
     }
   ],
-  "tg_message_id": 9
+  "tg_message_id": 9,
+  "attempts": 1,
+  "permalink": "https://www.instagram.com/p/Df9aK9LFFW6/",
+  "done": "2026-11-20T10:10:28.328062+00:00"
 }
