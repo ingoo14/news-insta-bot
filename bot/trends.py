@@ -177,7 +177,10 @@ def score_freshness(cands: list[dict], hot: list[tuple[str, int]]) -> None:
     now = datetime.now(timezone.utc)
     hotset = {w for w, _ in hot}
     for c in cands:
-        mins = max(0, (now - datetime.fromisoformat(c["published"])).total_seconds() / 60)
+        raw = (now - datetime.fromisoformat(c["published"])).total_seconds() / 60
+        if raw < -5:  # 미래 시각 = 언론사 RSS 시간대 표기 오류 → 9시간 보정
+            raw += 540
+        mins = max(0, raw)
         c["age_min"] = int(mins)
         fresh = 30000 if mins <= 60 else 18000 if mins <= 120 else 8000 if mins <= 240 else 0
         t = c["title"] + " " + c.get("snippet", "")

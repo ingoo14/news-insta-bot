@@ -113,7 +113,7 @@ def pick(candidates: list[dict], n: int, recent_topics: list[str], trend_text: s
 2. 분야: 음악(가수·아이돌·시상식·차트·컴백) 최우선 → 드라마 → 영화 → 예능 순.
 3. 트래픽: 구글 검색/유튜브 급상승 인물·작품 (🔥 = 트렌드와 일치), 인지도 높은 스타.
 4. 사람들이 댓글·공유할 만한 화제성 (수상, 무대, 컴백, 캐스팅, 흥행, 재미있는 에피소드).
-- 서로 다른 인물로 고를 것. 실시간 이벤트(예: 시상식)는 같은 행사라도 인물·수상·무대가 다르면 각각 골라도 됨.
+- 서로 다른 인물로 고를 것. 같은 소식이면 여러 언론사 중 하나만, 가능하면 언론사도 골고루. 실시간 이벤트(예: 시상식)는 같은 행사라도 인물·수상·무대가 다르면 각각 골라도 됨.
 - 최근에 이미 올린 소식과 같은 인물의 같은 이슈는 제외.
 - 정치·사회·스포츠 기사는 연예인이 중심이 아니면 제외.
 {RULES}
@@ -143,10 +143,12 @@ def write_story(a: dict) -> dict:
 - tag: 분야 한 단어 (연예/음악/드라마/영화/예능 중)
 - subline: 한 줄 부제 (캡션용). 22자 이내.
 [2장째 요약 카드]
-- card_summary: 기사 핵심을 3~4문장으로. 문장당 32자 이내, '~했다/~예정' 체, 숫자·날짜·작품명 등 구체적인 사실 위주. 자기 말로.
+- card_summary: 기사 핵심 사실 3~4문장. 문장당 32자 이내, '~했다/~예정' 체. 누가·언제·어디서·무엇을 위주, 해석·추측 금지.
 [인스타 캡션]
 - title: 캡션 첫 줄 제목. '"짧은 인용"... 누가 무엇' 형식 추천. 40자 이내.
-- body: 본문 4~6문단. 문단당 1~3문장, '~했습니다' 체. 기사 사실만 자기 말로 재구성. 마지막 문단은 앞으로의 일정/의미. 이모지는 전체에 1~2개만.
+- body: 본문 3~5문단. 문단당 1~2문장, '~했습니다' 체. 기사에 적힌 사실만 자기 말로 재구성.
+  ⚠️ 해석·추측·의미 부여·과장 금지 (예: "~를 앞당겨 이룬 셈", "~할 것으로 보인다", "기대가 모인다" 같은 문장 쓰지 말 것).
+  ⚠️ 이름·날짜·장소·숫자·작품명은 기사 표기 그대로. 기사에 없는 정보는 절대 추가하지 말 것. 이모지는 1개까지.
 - hashtags: 8~12개, '#' 포함. 인물명(한글/영문), 프로그램명 등.
 [사진 검색어]
 - photo_queries: 이 기사의 핵심 인물(또는 그룹) 이름 2~4개. 기사 사진으로 쓸 사람 순서대로.
@@ -163,7 +165,39 @@ def write_story(a: dict) -> dict:
 JSON으로만 답해:
 {{"ok": true, "tag": "...", "headline_top": "...", "headline_bottom": "...", "subline": "...", "card_summary": ["...", "...", "..."], "title": "...", "body": "...", "hashtags": ["#..."], "photo_queries": ["..."], "person": "...", "scene_queries": ["..."]}}"""
     s = normalize(_gemini(prompt))
+    if s.get("ok") and s.get("body"):
+        s = fact_check(s, a)
     s["press"], s["url"], s["source_title"] = a["press"], a["url"], a["title"]
+    return s
+
+
+def fact_check(s: dict, a: dict) -> dict:
+    """작성된 문구를 기사 원문과 대조해서 기사에 없는 내용·해석·오류를 고침 (같은 키로 돌려받음)."""
+    keys = ["headline_top", "headline_bottom", "card_summary", "title", "body"]
+    draft = {k: s.get(k) for k in keys}
+    prompt = f"""너는 깐깐한 뉴스 교열기자야. 아래 [초안]을 [기사 원문]과 한 문장씩 대조해서 고쳐.
+- 기사에 없는 내용, 해석·추측·의미 부여·과장("~한 셈", "~로 보인다", "기대가 모인다" 등)은 삭제.
+- 이름·날짜·장소·숫자·작품명·행사명이 기사와 다르면 기사대로 수정.
+- 어색한 한국어는 자연스럽게 다듬되, 기사 문장을 그대로 베끼지는 말 것.
+- 길이 규칙 유지: headline_top 14자, headline_bottom 12자 이내, card_summary 문장당 32자 이내.
+- 내용이 맞으면 그대로 둬.
+
+[기사 원문]
+제목: {a['title']}
+{a['body']}
+
+[초안]
+{json.dumps(draft, ensure_ascii=False, indent=1)}
+
+같은 키의 JSON으로만 답해."""
+    try:
+        fixed = normalize(_gemini(prompt))
+        for k in keys:
+            if fixed.get(k):
+                s[k] = fixed[k]
+        s["fact_checked"] = True
+    except Exception as e:
+        print(f"[팩트체크 건너뜀] {e}")
     return s
 
 

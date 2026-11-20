@@ -15,6 +15,24 @@ def _load(path, default):
         return default
 
 
+def diversify(cands: list[dict], per_press: int = 6) -> list[dict]:
+    """한 언론사가 후보를 독점하지 않게: 점수 순서는 유지하되 언론사별로 번갈아 섞고, 언론사당 최대 N건."""
+    from collections import Counter, defaultdict
+    groups = defaultdict(list)
+    for c in cands:
+        groups[c["press"]].append(c)
+    stat = Counter(c["press"] for c in cands)
+    print("[언론사별 후보] " + ", ".join(
+        f"{p} {n}건(최신 {min(x.get('age_min', 0) for x in groups[p])}분 전)" for p, n in stat.most_common()))
+    out, rnd = [], 0
+    while len(out) < len(cands) and rnd < per_press:
+        for p in sorted(groups, key=lambda p: -groups[p][0].get("score", 0) if groups[p] else 0):
+            if len(groups[p]) > rnd:
+                out.append(groups[p][rnd])
+        rnd += 1
+    return out
+
+
 def _next_issue() -> int:
     f = config.STATE_DIR / "issue_no.txt"
     try:
@@ -45,6 +63,7 @@ def main():
     trends.score_freshness(cands, hot)
     # 종합 점수(실시간성 + 음악 우선 + 실시간 이벤트 + 구글/유튜브 트렌드) 높은 순
     cands.sort(key=lambda c: (c.get("score", 0), c["published"]), reverse=True)
+    cands = diversify(cands)
     print(f"후보 기사 {len(cands)}건 / 실시간 이벤트 키워드: {hot} / 트렌드 일치 {sum(1 for c in cands if c.get('trend_score'))}건")
     if not cands:
         print("새 기사가 없어서 이번 회차는 건너뜀")
