@@ -45,9 +45,9 @@ def _next_issue() -> int:
 
 def build_caption(s: dict, ph: dict) -> str:
     tags = " ".join(s.get("hashtags", [])[:15])
+    credit = " / ".join(x for x in (ph.get("credit"), ph.get("license"), ph.get("source")) if x)
     return (f"📌 {s.get('title', '').strip()}\n\n{s.get('body', '').strip()}\n\n"
-            f"기사 출처: {s['press']}\n"
-            f"사진: {ph['credit']} / {ph['license']} / {ph['source']}\n\n{tags}").strip()
+            f"기사 출처: {s['press']}\n" + (f"사진: {credit}\n" if credit else "") + f"\n{tags}").strip()
 
 
 def main():

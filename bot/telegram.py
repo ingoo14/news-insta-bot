@@ -62,3 +62,14 @@ def edit_buttons(message_id, label):
         })
     except Exception:
         pass
+
+
+def download_file(file_id: str, dest: Path) -> Path:
+    """텔레그램으로 받은 사진을 파일로 저장."""
+    info = _api("getFile", json={"file_id": file_id})
+    url = f"https://api.telegram.org/file/bot{config.TELEGRAM_BOT_TOKEN}/{info['file_path']}"
+    r = requests.get(url, timeout=60)
+    r.raise_for_status()
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_bytes(r.content)
+    return dest

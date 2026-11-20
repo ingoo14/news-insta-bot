@@ -299,8 +299,9 @@ def render_story(story: dict, photo: dict | None, out_dir: Path) -> list[Path]:
         y += lh2
 
     # 사진 출처 (CC 라이선스 표기 — 오른쪽 아래 작게)
-    if photo:
-        credit = f"Photo: {photo['credit']} / {photo['license']}"[:70]
+    credit_txt = " / ".join(x for x in ((photo or {}).get("credit"), (photo or {}).get("license")) if x)
+    if photo and credit_txt:
+        credit = f"Photo: {credit_txt}"[:70]
         cf = font("Regular", 18)
         d = ImageDraw.Draw(img)
         d.text((W - 40 - d.textlength(credit, font=cf), H - 44), credit, font=cf, fill=(255, 255, 255, 150))
@@ -308,7 +309,7 @@ def render_story(story: dict, photo: dict | None, out_dir: Path) -> list[Path]:
     p = out_dir / "01.jpg"
     img.convert("RGB").save(p, "JPEG", quality=92, optimize=True)
     paths = [p]
-    if story.get("card_summary"):
+    if story.get("body") or story.get("card_summary"):
         p2 = out_dir / "02.jpg"
         render_summary(story, photo, color).convert("RGB").save(p2, "JPEG", quality=92, optimize=True)
         paths.append(p2)
@@ -327,15 +328,25 @@ def render_summary(story: dict, photo: dict | None, color) -> Image.Image:
     d = ImageDraw.Draw(img)
     x, max_w = 90, W - 180
 
-    # 내용 높이를 먼저 계산해서 화면 가운데 배치
+    # 캡션 요약 본문을 그대로 사용 (이모지는 폰트에 없어서 제거)
+    import re as _re
+    body = _re.sub(r"[\U0001F000-\U0001FAFF\u2600-\u27BF\uFE0F\u200D]", "", story.get("body") or "")
+    paras = [p.strip() for p in body.split("\n") if p.strip()]
+    if not paras:
+        paras = story.get("card_summary") or []
     lf = font("Bold", 32, "Sans")
-    title = f"{story.get('headline_top', '')} {story.get('headline_bottom', '')}".strip()
-    tf, tl = fit(d, title, "Black", [76, 70, 64, 58], max_w, 3, fam)
-    bf, nf = font("Regular", 46, "Sans"), font("Bold", 46, "Sans")
-    items = [wrap(d, line, bf, max_w)[:3] for line in story.get("card_summary", [])[:4]]
-    lh = 70
-    block = 60 + len(tl) * int(tf.size * 1.3) + 70 + sum(len(it) * lh + 46 for it in items)
-    y = max(110, (H - 200 - block) // 2 + 40)
+    title = (story.get("title") or f"{story.get('headline_top', '')} {story.get('headline_bottom', '')}").strip()
+    tf, tl = fit(d, title, "Black", [64, 58, 54, 50, 46], max_w, 3, fam)
+    top, bottom = 110, H - 200
+    # 본문 글자 크기: 영역에 다 들어가는 가장 큰 크기
+    for size in (44, 42, 40, 38, 36, 34, 32, 30, 28):
+        bf = font("Regular", size, "Sans")
+        lh, gap = int(size * 1.55), int(size * 0.9)
+        lines = [wrap(d, p, bf, max_w) for p in paras]
+        block = 76 + len(tl) * int(tf.size * 1.3) + 50 + sum(len(l) * lh for l in lines) + gap * (len(lines) - 1)
+        if top + block <= bottom:
+            break
+    y = max(top, (bottom - block) // 2 + 30)
 
     d.text((x, y), story.get("tag") or "NEWS", font=lf, fill=color)
     d.line([x, y + 48, x + 64, y + 48], fill=color, width=4)
@@ -343,19 +354,22 @@ def render_summary(story: dict, photo: dict | None, color) -> Image.Image:
     for ln in tl:
         d.text((x, y), ln, font=tf, fill=WHITE)
         y += int(tf.size * 1.3)
-    y += 56
-    for lines in items:  # 번호 없이 문단으로
-        for ln in lines:
-            d.text((x, y), ln, font=bf, fill=(235, 235, 240))
+    y += 50
+    for li, lines_ in enumerate(lines):
+        for ln in lines_:
+            if y + lh > bottom + 20:
+                break
+            d.text((x, y), ln, font=bf, fill=(232, 232, 238))
             y += lh
-        y += 46
+        y += gap
 
     # 하단: 출처
     sf = font("Regular", 24, "Sans")
     d.line([x, H - 170, W - x, H - 170], fill=(255, 255, 255, 60), width=2)
     d.text((x, H - 145), f"기사 출처 · {story.get('press', '')}", font=sf, fill=(200, 200, 205))
-    if photo:
-        d.text((x, H - 108), f"사진 · {photo['credit']} / {photo['license']}"[:60], font=sf, fill=(170, 170, 178))
+    pc = " / ".join(x for x in ((photo or {}).get("credit"), (photo or {}).get("license")) if x)
+    if pc:
+        d.text((x, H - 108), f"사진 · {pc}"[:60], font=sf, fill=(170, 170, 178))
     return img
 
 

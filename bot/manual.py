@@ -48,7 +48,11 @@ def pick_channel(text: str) -> dict:
     return chans[0] if chans else {"key": "ch1", "handle": "메인"}
 
 
-def make_post(url: str, ch: dict | None = None) -> tuple[bool, str]:
+CREDIT_RE = re.compile(r"(?:사진|photo)\s*[:：]\s*([^\n]+)", re.I)
+
+
+def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) -> tuple[bool, str]:
+    """user_photo = {"file_id": ..., "credit": ...} 이면 자동 검색 대신 보내준 사진 사용."""
     ch = ch or pick_channel("")
     try:
         a = article_from_url(url)
@@ -62,9 +66,17 @@ def make_post(url: str, ch: dict | None = None) -> tuple[bool, str]:
     now = datetime.now(KST)
     post_id = f"{now:%Y%m%d-%H%M%S}-m-{ch['key']}"
     out_dir = config.POSTS_DIR / post_id
-    names = [s.get("person", "")] + list(s.get("photo_queries", []))
-    ph = photo.find_photo([n for i, n in enumerate(names) if n and n not in names[:i]],
-                          s.get("scene_queries", []), s.get("tag", "연예"), out_dir / "_src.jpg")
+    if user_photo:
+        try:
+            telegram.download_file(user_photo["file_id"], out_dir / "_src.jpg")
+            ph = {"path": str(out_dir / "_src.jpg"), "credit": user_photo.get("credit", ""), "license": "",
+                  "page": "", "source": "", "kind": "직접 전송"}
+        except Exception as e:
+            return False, f"보내준 사진을 못 받았어: {e}"
+    else:
+        names = [s.get("person", "")] + list(s.get("photo_queries", []))
+        ph = photo.find_photo([n for i, n in enumerate(names) if n and n not in names[:i]],
+                              s.get("scene_queries", []), s.get("tag", "연예"), out_dir / "_src.jpg")
     if not ph:
         return False, f"‘{s.get('person') or a['title']}’ 인물의 무료 사진을 못 찾아서 못 올렸어"
     s["issue_no"] = collect._next_issue()
@@ -84,8 +96,9 @@ def make_post(url: str, ch: dict | None = None) -> tuple[bool, str]:
     return True, s.get("title", a["title"])
 
 
-def telegram_links() -> list[tuple[str, str]]:
-    """내 채팅방에서 봇에게 보낸 새 메시지 중 (링크, 메시지 전체) 꺼냄."""
+def telegram_links() -> list[tuple[str, str, dict | None]]:
+    """내 채팅방에서 봇에게 보낸 새 메시지 중 (링크, 메시지 전체, 첨부 사진) 꺼냄.
+    사진을 보낼 땐 사진 설명(캡션)에 링크를 같이 넣기. '사진: 출처' 를 쓰면 출처로 표기."""
     try:
         offset = int(config.OFFSET_FILE.read_text().strip() or 0)
     except Exception:
@@ -98,7 +111,15 @@ def telegram_links() -> list[tuple[str, str]]:
         if str(msg.get("chat", {}).get("id")) != str(config.TELEGRAM_CHAT_ID):
             continue  # 다른 사람이 보낸 건 무시
         text = msg.get("text", "") or msg.get("caption", "") or ""
-        urls += [(u, text) for u in URL_RE.findall(text)]
+        up = None
+        if msg.get("photo"):  # 압축 사진 → 가장 큰 크기
+            up = {"file_id": msg["photo"][-1]["file_id"]}
+        elif (msg.get("document") or {}).get("mime_type", "").startswith("image/"):  # 파일로 보낸 원본 사진
+            up = {"file_id": msg["document"]["file_id"]}
+        if up:
+            m = CREDIT_RE.search(text)
+            up["credit"] = m.group(1).strip() if m else ""
+        urls += [(u, text, up) for u in URL_RE.findall(text)]
     config.OFFSET_FILE.write_text(str(offset))
     return urls
 
@@ -107,18 +128,18 @@ def main():
     for k in ["GEMINI_API_KEY", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"]:
         config.env(k, required=True)
     manual_in = os.environ.get("MANUAL_URL", "")
-    urls = [(u, manual_in) for u in URL_RE.findall(manual_in)] + telegram_links()
+    urls = [(u, manual_in, None) for u in URL_RE.findall(manual_in)] + telegram_links()
     if not urls:
         print("새 링크 없음")
         return
     done = set()
-    for url, text in urls:
+    for url, text, up in urls:
         if url in done:
             continue
         done.add(url)
         ch = pick_channel(text)
-        telegram.send_message(f"🛠 접수! [{ch.get('handle')}] 카드 만드는 중…\n{url}")
-        ok, msg = make_post(url, ch)
+        telegram.send_message(f"🛠 접수! [{ch.get('handle')}] 카드 만드는 중…" + (" (보낸 사진 사용)" if up else "") + f"\n{url}")
+        ok, msg = make_post(url, ch, up)
         print(("[준비 완료] " if ok else "[실패] ") + msg)
         if not ok:
             telegram.send_message(f"⚠️ {msg}\n{url}")
