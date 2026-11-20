@@ -1,15 +1,19 @@
 name: 링크로 바로 올리기
 
-# 텔레그램 단톡방에 링크를 올리면 → Cloudflare 중계 → 즉시 실행 (repository_dispatch)
+# 텔레그램 단톡방에 링크를 올리면 → Cloudflare 중계 → 즉시 실행
 # 급할 때는 Actions에서 Run workflow → 링크 입력으로도 실행 가능
 on:
-  repository_dispatch:
-    types: [telegram_link]
   workflow_dispatch:
     inputs:
       url:
         description: "올릴 기사 링크 (앞에 greenlight / gaem 을 쓰면 그 채널로)"
-        required: true
+        required: false
+      text:
+        description: "(텔레그램 자동 입력용 — 비워두기)"
+        required: false
+      file_id:
+        description: "(텔레그램 자동 입력용 — 비워두기)"
+        required: false
 
 permissions:
   contents: write
@@ -35,8 +39,8 @@ jobs:
       - name: 1. 링크 → 요약 → 카드 생성
         env:
           TG_WEBHOOK: "1"
-          TG_TEXT: ${{ github.event.client_payload.text }}
-          TG_FILE_ID: ${{ github.event.client_payload.file_id }}
+          TG_TEXT: ${{ github.event.inputs.text }}
+          TG_FILE_ID: ${{ github.event.inputs.file_id }}
           MANUAL_URL: ${{ github.event.inputs.url }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
