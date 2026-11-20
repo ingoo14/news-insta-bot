@@ -26,13 +26,16 @@ def font(weight: str, size: int, family: str = "Sans"):
     key = (weight, size, family)
     if key in _cache:
         return _cache[key]
-    tries = []
+    local = Path(__file__).resolve().parent.parent / "fonts"  # apt 설치 실패 시 받아둔 폰트
+    tries = []  # (경로, ttc 인덱스)
     if family == "Serif":
-        tries += [f"NotoSerifCJK-{w}.ttc" for w in SERIF_FALLBACK.get(weight, [weight, "Bold"])]
-    tries += [f"NotoSansCJK-{w}.ttc" for w in FALLBACK.get(weight, [weight, "Regular", "Bold"])]
-    for fn in tries:
+        for w in SERIF_FALLBACK.get(weight, [weight, "Bold"]):
+            tries += [(f"{FONT_DIR}/NotoSerifCJK-{w}.ttc", KR), (str(local / f"NotoSerifKR-{w}.otf"), 0)]
+    for w in FALLBACK.get(weight, [weight, "Regular", "Bold"]):
+        tries += [(f"{FONT_DIR}/NotoSansCJK-{w}.ttc", KR), (str(local / f"NotoSansKR-{w}.otf"), 0)]
+    for path, idx in tries:
         try:
-            _cache[key] = ImageFont.truetype(f"{FONT_DIR}/{fn}", size, index=KR)
+            _cache[key] = ImageFont.truetype(path, size, index=idx)
             return _cache[key]
         except OSError:
             continue
