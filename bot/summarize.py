@@ -56,12 +56,12 @@ def _call(model: str, prompt: str, tries: int):
     while i < tries:
         body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}], "generationConfig": gen}
         try:
-            r = requests.post(url, params={"key": config.GEMINI_API_KEY}, json=body, timeout=240)
+            r = requests.post(url, params={"key": config.GEMINI_API_KEY}, json=body, timeout=(10, 75))
         except requests.exceptions.RequestException as e:  # 시간 초과 등
             last = str(e)
-            print(f"[{model} 재시도 {i + 1}] {e}")
+            print(f"[{model} 응답 지연 {i + 1}] {e}", flush=True)
             i += 1
-            time.sleep(10)
+            time.sleep(3)
             continue
         if r.status_code == 400 and "thinking" in r.text.lower() and "thinkingConfig" in gen:
             gen = {k: v for k, v in gen.items() if k != "thinkingConfig"}  # 옵션 미지원 모델이면 빼고 재시도
@@ -70,28 +70,87 @@ def _call(model: str, prompt: str, tries: int):
             return None, f"{r.status_code} {r.text[:200]}"
         if r.status_code == 429 or r.status_code >= 500:  # 한도/혼잡 → 잠시 대기
             last = f"{r.status_code} {r.text[:200]}"
-            print(f"[{model} 대기 {i + 1}] {r.status_code}")
+            print(f"[{model} 대기 {i + 1}] {r.status_code}", flush=True)
             i += 1
-            time.sleep(15 * i)
+            time.sleep(8 * i)
             continue
         if r.status_code >= 400:
             raise RuntimeError(f"Gemini 오류 {r.status_code}: {r.text[:500]}")
         parts = r.json()["candidates"][0]["content"]["parts"]
         text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
-        text = text.strip().removeprefix("```json").removesuffix("```").strip()
-        return json.loads(text), None
+        return _parse_json(text), None
     return None, last
 
 
+CLAUDE_API = "https://api.anthropic.com/v1/messages"
+
+
+def _parse_json(text: str):
+    text = text.strip().removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+    try:
+        return json.loads(text)
+    except Exception:
+        import re
+        m = re.search(r"[\[{].*[\]}]", text, re.S)  # 앞뒤에 말이 붙어 있어도 JSON 부분만
+        if m:
+            return json.loads(m.group(0))
+        raise
+
+
+def _claude(prompt: str, tries: int = 3):
+    """Claude Haiku (유료, 기본). 실패하면 None → Gemini로 넘어감."""
+    key = config.env("ANTHROPIC_API_KEY")
+    if not key:
+        return None
+    model = config.env("CLAUDE_MODEL", "claude-haiku-5-5")
+    body = {"model": model, "max_tokens": 4096,
+            "messages": [{"role": "user", "content": prompt + "\n\n설명 없이 JSON만 출력해."}]}
+    headers = {"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"}
+    t0 = time.time()
+    for i in range(tries):
+        try:
+            r = requests.post(CLAUDE_API, headers=headers, json=body, timeout=(10, 90))
+        except requests.exceptions.RequestException as e:
+            print(f"[Claude 응답 지연 {i + 1}] {e}", flush=True)
+            time.sleep(3)
+            continue
+        if r.status_code in (429, 500, 502, 503, 529):  # 혼잡 → 잠깐 쉬고 재시도
+            print(f"[Claude 대기 {i + 1}] {r.status_code}", flush=True)
+            time.sleep(5 * (i + 1))
+            continue
+        if r.status_code >= 400:
+            print(f"[Claude 오류 → Gemini로 전환] {r.status_code} {r.text[:200]}", flush=True)
+            return None
+        text = "".join(b.get("text", "") for b in r.json().get("content", []) if b.get("type") == "text")
+        try:
+            data = _parse_json(text)
+            print(f"[Claude] {model} {time.time() - t0:.0f}초", flush=True)
+            return data
+        except Exception as e:
+            print(f"[Claude 응답 형식 오류 {i + 1}] {e}", flush=True)
+    return None
+
+
 def _gemini(prompt: str) -> dict:
-    """기본 모델 → 혼잡하면 다른 무료 모델로 자동 전환."""
-    data, err = _call(config.GEMINI_MODEL, prompt, tries=3)
+    """1순위 Claude Haiku → 막히면 Gemini (여러 무료 모델 자동 전환)."""
+    data = _claude(prompt)
     if data is not None:
+        return data
+    return _gemini_only(prompt)
+
+
+def _gemini_only(prompt: str) -> dict:
+    """Gemini 기본 모델 → 혼잡하면 다른 무료 모델로 자동 전환."""
+    t0 = time.time()
+    data, err = _call(config.GEMINI_MODEL, prompt, tries=2)  # 느리면 빨리 다른 모델로
+    if data is not None:
+        print(f"[Gemini] {config.GEMINI_MODEL} {time.time() - t0:.0f}초", flush=True)
         return data
     for m in _fallback_models():
         print(f"[모델 전환] {config.GEMINI_MODEL} 혼잡 → {m}")
-        data, err = _call(m, prompt, tries=2)
+        data, err = _call(m, prompt, tries=1)
         if data is not None:
+            print(f"[Gemini] {m} 사용 (총 {time.time() - t0:.0f}초)", flush=True)
             return data
     raise RuntimeError(f"Gemini 호출 실패 (모든 모델): {err}")
 
