@@ -88,8 +88,49 @@ def openverse_search(query: str) -> list[dict]:
     return out
 
 
-def _try(results, need_tokens, save_to, check=None):
+USED_FILE = Path(__file__).resolve().parent.parent / "state" / "used_photos.json"
+
+
+def _used() -> list[str]:
+    try:
+        import json
+        return json.loads(USED_FILE.read_text())
+    except Exception:
+        return []
+
+
+def mark_used(page: str):
+    import json
+    used = [u for u in _used() if u != page] + [page]
+    USED_FILE.parent.mkdir(parents=True, exist_ok=True)
+    USED_FILE.write_text(json.dumps(used[-20000:], ensure_ascii=False))
+
+
+def count_faces(path) -> tuple[int, int]:
+    """(뚜렷한 얼굴 수, 전체 감지 수). 뚜렷한 얼굴 = 가장 큰 얼굴의 45% 이상 크기."""
+    try:
+        import cv2
+        img = cv2.imread(str(path))
+        g = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        cc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+        side = max(40, int(min(g.shape[:2]) * 0.05))
+        fs = cc.detectMultiScale(g, scaleFactor=1.1, minNeighbors=6, minSize=(side, side))
+        if len(fs) == 0:
+            return 0, 0
+        big = max(w for _, _, w, _ in fs)
+        return sum(1 for _, _, w, _ in fs if w >= big * 0.45), len(fs)
+    except Exception as e:
+        print(f"[얼굴 수 확인 실패] {e}")
+        return -1, -1
+
+
+def _try(results, need_tokens, save_to, check=None, solo=False):
+    """조건 맞는 첫 사진 다운로드. 한 번 쓴 사진은 절대 다시 안 씀.
+    solo=True(개인 기사)면 얼굴이 딱 1명인 사진만."""
+    used = set(_used())
     for c in results:
+        if c.get("page") in used:
+            continue
         if check and not check(c):
             continue
         if not c["ok_type"] or c["width"] < 700 or not c["url"]:
@@ -105,6 +146,11 @@ def _try(results, need_tokens, save_to, check=None):
                 continue
             save_to.parent.mkdir(parents=True, exist_ok=True)
             save_to.write_bytes(img.content)
+            if solo:
+                n, total = count_faces(save_to)
+                if n != 1:
+                    print(f"[단독 사진 아님 → 제외] 얼굴 {n}명 ({total}개 감지) {c.get('page')}")
+                    continue
             return c
         except Exception as e:
             print(f"[사진 다운로드 실패] {c['url']}: {e}")
@@ -160,7 +206,8 @@ def wikidata_person(name: str) -> dict | None:
             def val(p):
                 c = claims.get(p)
                 return c[0]["mainsnak"].get("datavalue", {}).get("value") if c else None
-            info = {"qid": qid, "image": val("P18"), "category": val("P373"), "desc": d.strip()}
+            info = {"qid": qid, "image": val("P18"), "category": val("P373"), "desc": d.strip(),
+                    "is_person": "Q5" in p31}
             info.update(group_members(claims))
             return info
     return None
@@ -242,6 +289,8 @@ def commons_category_files(category: str, limit: int = 30) -> list[str]:
 
 def _pack(hit, save_to, kind, q):
     print(f"[사진/{kind}] '{q}' → {hit['page']} ({hit['license']})")
+    if hit.get("page"):
+        mark_used(hit["page"])
     return {"path": str(save_to), "credit": hit["artist"], "license": hit["license"],
             "page": hit["page"], "source": hit["source"], "kind": kind, "query": q}
 
@@ -267,7 +316,8 @@ def find_person_photo(names: list[str], save_to: Path) -> dict | None:
                 cands.sort(key=lambda c: c.get("date", ""), reverse=True)
                 if wd.get("image"):
                     cands += _commons_files([f"File:{wd['image']}"])
-                hit = _try(cands, [], save_to, check=lambda c, wd=wd: former_member_ok(c, wd))
+                hit = _try(cands, [], save_to, check=lambda c, wd=wd: former_member_ok(c, wd),
+                           solo=wd.get("is_person", False))
                 if hit:
                     return _pack(hit, save_to, "인물", name)
             except Exception as e:
@@ -279,8 +329,10 @@ def find_person_photo(names: list[str], save_to: Path) -> dict | None:
             if wd_known and wd_known.get("former_ids") and fn is openverse_search:
                 continue  # 탈퇴 멤버 있는 그룹은 날짜 확인이 어려운 Openverse 사진은 안 씀
             try:
+                # 그룹으로 확인된 게 아니면 단독 사진만 (개인 기사에 다른 사람 섞이지 않게)
                 hit = _try(fn(name), _tokens(name), save_to,
-                           check=(lambda c, wd=wd_known: former_member_ok(c, wd)) if wd_known else None)
+                           check=(lambda c, wd=wd_known: former_member_ok(c, wd)) if wd_known else None,
+                           solo=not (wd_known and not wd_known.get("is_person")))
             except Exception as e:
                 print(f"[사진 검색 실패] {fn.__name__} '{name}': {e}")
                 continue
