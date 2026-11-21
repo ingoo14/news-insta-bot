@@ -1,0 +1,65 @@
+{
+  "id": "20261121-0931-2-ch1",
+  "created": "2026-11-21T09:31:27.741613+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261121-0931-2-ch1/01.jpg",
+    "docs/posts/20261121-0931-2-ch1/02.jpg"
+  ],
+  "caption": "📌 \"74주 연속 진입\"… 헌트릭스 '골든' 英 차트 장기 흥행\n\n넷플릭스 K-팝 애니메이션 영화 '케이팝 데몬 헌터스'의 가상 걸그룹 헌트릭스가 부른 '골든'이 영국 오피셜 차트에서 장기 흥행을 이어가고 있습니다.\n\n현지시간 20일 공개된 오피셜 싱글 톱100 최신 차트(11월 20~26일 자)에서 '골든'은 67위를 기록했습니다. 직전 주 56위보다 11계단 내려갔지만, 74주 연속 차트에 진입했습니다.\n\n영국 오피셜 차트는 미국 빌보드 차트와 함께 세계 양대 팝 차트로 꼽힙니다. '골든'은 1년이 넘는 기간 동안 꾸준히 이름을 올리며 이례적인 장기 흥행을 기록하고 있습니다.\n\n싱글 차트 정상에는 영국 싱어송라이터 제이미 밀러의 '베이비돌(BABYDOLL)'이 올랐습니다. 지난주에 이어 1위를 유지하며 5주 연속 정상을 지켰습니다. 앨범 톱100에서는 아일랜드 출신의 전설적인 록 밴드 유투(U2)가 정규 16집 '카니발 드 루즈(Carnaval De Luz)'로 1위를 차지했습니다.\n\n기사 출처: 스포츠월드\n사진: Sony Pictures Animation and McDonald's / Public domain / Wikimedia Commons\n\n#케데헌 #케이팝데몬헌터스 #KPopDemonHunters #골든 #Golden #헌트릭스 #HUNTRIX #오피셜차트 #영국차트 #제이미밀러 #유투 #U2",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "헌트릭스 '골든'",
+    "headline_bottom": "英 차트 74주 연속",
+    "subline": "영국 오피셜 싱글 차트 67위",
+    "card_summary": [
+      "‘골든’이 영국 오피셜 싱글 차트 67위에 올랐다.",
+      "직전 주보다 11계단 내려갔지만 74주 연속 진입했다.",
+      "싱글 1위 ‘베이비돌’은 5주 연속 정상을 지켰다."
+    ],
+    "title": "\"74주 연속 진입\"… 헌트릭스 '골든' 英 차트 장기 흥행",
+    "body": "넷플릭스 K-팝 애니메이션 영화 '케이팝 데몬 헌터스'의 가상 걸그룹 헌트릭스가 부른 '골든'이 영국 오피셜 차트에서 장기 흥행을 이어가고 있습니다.\n\n현지시간 20일 공개된 오피셜 싱글 톱100 최신 차트(11월 20~26일 자)에서 '골든'은 67위를 기록했습니다. 직전 주 56위보다 11계단 내려갔지만, 74주 연속 차트에 진입했습니다.\n\n영국 오피셜 차트는 미국 빌보드 차트와 함께 세계 양대 팝 차트로 꼽힙니다. '골든'은 1년이 넘는 기간 동안 꾸준히 이름을 올리며 이례적인 장기 흥행을 기록하고 있습니다.\n\n싱글 차트 정상에는 영국 싱어송라이터 제이미 밀러의 '베이비돌(BABYDOLL)'이 올랐습니다. 지난주에 이어 1위를 유지하며 5주 연속 정상을 지켰습니다. 앨범 톱100에서는 아일랜드 출신의 전설적인 록 밴드 유투(U2)가 정규 16집 '카니발 드 루즈(Carnaval De Luz)'로 1위를 차지했습니다.",
+    "hashtags": [
+      "#케데헌",
+      "#케이팝데몬헌터스",
+      "#KPopDemonHunters",
+      "#골든",
+      "#Golden",
+      "#헌트릭스",
+      "#HUNTRIX",
+      "#오피셜차트",
+      "#영국차트",
+      "#제이미밀러",
+      "#유투",
+      "#U2"
+    ],
+    "photo_queries": [
+      "헌트릭스",
+      "HUNTRIX"
+    ],
+    "person": "헌트릭스",
+    "scene_queries": [
+      "concert stage purple lights",
+      "vinyl records music store"
+    ],
+    "fact_checked": true,
+    "press": "스포츠월드",
+    "url": "https://www.sportsworldi.com/content/html/2026/11/21/20261121502909.html",
+    "source_title": "케데헌 ‘골든’, 英 오피셜 차트 74주 연속 진입…장기 흥행ing",
+    "trend_label": "",
+    "issue_no": 25
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261121-0931-2-ch1/_src.jpg",
+    "credit": "Sony Pictures Animation and McDonald's",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Huntrix_the_Meal_text_logo,_McDonald%27s_K-Pop_Demon_Hunters_Meal,_Canada_(2026).jpg",
+    "source": "Wikimedia Commons",
+    "kind": "인물",
+    "query": "HUNTRIX"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
