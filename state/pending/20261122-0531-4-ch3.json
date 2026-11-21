@@ -1,8 +1,8 @@
 {
   "id": "20261122-0531-4-ch3",
   "created": "2026-11-22T05:31:07.728251+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261122-0531-4-ch3/01.jpg",
     "docs/posts/20261122-0531-4-ch3/02.jpg"
@@ -62,5 +62,7 @@
     "query": "Sean"
   },
   "channel": "ch3",
-  "channel_handle": "gaem_seong_1spoon"
+  "channel_handle": "gaem_seong_1spoon",
+  "permalink": "https://www.instagram.com/p/DgBJeS3DCuC/",
+  "done": "2026-11-21T21:01:29.295801+00:00"
 }

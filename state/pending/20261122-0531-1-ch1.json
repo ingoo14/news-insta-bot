@@ -1,8 +1,8 @@
 {
   "id": "20261122-0531-1-ch1",
   "created": "2026-11-22T05:31:07.728251+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261122-0531-1-ch1/01.jpg",
     "docs/posts/20261122-0531-1-ch1/02.jpg"
@@ -59,5 +59,7 @@
     "query": "제로베이스원"
   },
   "channel": "ch1",
-  "channel_handle": "ibduck_music"
+  "channel_handle": "ibduck_music",
+  "permalink": "https://www.instagram.com/p/DgBJV4ElsVi/",
+  "done": "2026-11-21T21:00:19.305566+00:00"
 }
