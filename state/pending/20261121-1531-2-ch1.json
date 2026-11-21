@@ -1,8 +1,8 @@
 {
   "id": "20261121-1531-2-ch1",
   "created": "2026-11-21T15:31:07.834908+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-1531-2-ch1/01.jpg",
     "docs/posts/20261121-1531-2-ch1/02.jpg"
@@ -61,5 +61,7 @@
     "query": "김채원"
   },
   "channel": "ch1",
-  "channel_handle": "ibduck_music"
+  "channel_handle": "ibduck_music",
+  "permalink": "https://www.instagram.com/p/Df_pRtgHK3j/",
+  "done": "2026-11-21T07:00:57.713922+00:00"
 }
