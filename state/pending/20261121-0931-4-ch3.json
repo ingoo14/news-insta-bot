@@ -1,8 +1,8 @@
 {
   "id": "20261121-0931-4-ch3",
   "created": "2026-11-21T09:31:27.741613+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-0931-4-ch3/01.jpg",
     "docs/posts/20261121-0931-4-ch3/02.jpg"
@@ -61,5 +61,7 @@
     "query": "맥컬리 컬킨"
   },
   "channel": "ch3",
-  "channel_handle": "gaem_seong_1spoon"
+  "channel_handle": "gaem_seong_1spoon",
+  "permalink": "https://www.instagram.com/p/Df_ANJoEsaB/",
+  "done": "2026-11-21T01:02:05.440625+00:00"
 }
