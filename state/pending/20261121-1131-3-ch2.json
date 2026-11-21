@@ -1,0 +1,63 @@
+{
+  "id": "20261121-1131-3-ch2",
+  "created": "2026-11-21T11:31:10.197535+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261121-1131-3-ch2/01.jpg",
+    "docs/posts/20261121-1131-3-ch2/02.jpg"
+  ],
+  "caption": "📌 키스오브라이프, 'Greedy' 하이라이트 메들리 공개\n\n키스오브라이프가 지난 20일 공식 채널을 통해 디지털 싱글 'Greedy'의 하이라이트 메들리 영상을 공개했습니다.\n\n영상 속 멤버들은 각기 다른 분위기로 꾸며진 스노볼을 배경으로 함께 춤을 추고 환하게 웃었습니다. 눈 내리는 숲속 놀이공원, 크리스마스 과자와 컵케이크로 꾸며진 정원, 화려한 겨울 축제 무대 등 다양한 공간에서 짝을 이뤄 춤추는 모습이 담겼습니다.\n\n이번 디지털 싱글에는 타이틀곡 'Greedy'를 비롯해 'December Glow', 'Imperfect Christmas' 등 겨울 캐럴을 떠올리게 하는 감성적인 분위기의 3곡이 수록됩니다.\n\n디지털 싱글 'Greedy'는 25일 오후 6시 각종 온라인 음원사이트를 통해 발매됩니다.\n\n기사 출처: 스포츠월드\n사진: K-POPIT 케이팝잇 / CC BY 4.0 / Wikimedia Commons\n\n#키스오브라이프 #KISSOFLIFE #Greedy #DecemberGlow #ImperfectChristmas #디지털싱글 #하이라이트메들리 #컴백 #신곡 #겨울노래",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "키스오브라이프",
+    "headline_bottom": "싱글 메들리 영상 공개",
+    "subline": "디지털 싱글 'Greedy' 발매 예정",
+    "card_summary": [
+      "키스오브라이프가 'Greedy' 메들리 영상을 공개했다.",
+      "지난 20일 공식 채널을 통해 영상이 공개됐다.",
+      "싱글 'Greedy'는 25일 오후 6시 발매 예정이다."
+    ],
+    "title": "키스오브라이프, 'Greedy' 하이라이트 메들리 공개",
+    "body": "키스오브라이프가 지난 20일 공식 채널을 통해 디지털 싱글 'Greedy'의 하이라이트 메들리 영상을 공개했습니다.\n\n영상 속 멤버들은 각기 다른 분위기로 꾸며진 스노볼을 배경으로 함께 춤을 추고 환하게 웃었습니다. 눈 내리는 숲속 놀이공원, 크리스마스 과자와 컵케이크로 꾸며진 정원, 화려한 겨울 축제 무대 등 다양한 공간에서 짝을 이뤄 춤추는 모습이 담겼습니다.\n\n이번 디지털 싱글에는 타이틀곡 'Greedy'를 비롯해 'December Glow', 'Imperfect Christmas' 등 겨울 캐럴을 떠올리게 하는 감성적인 분위기의 3곡이 수록됩니다.\n\n디지털 싱글 'Greedy'는 25일 오후 6시 각종 온라인 음원사이트를 통해 발매됩니다.",
+    "hashtags": [
+      "#키스오브라이프",
+      "#KISSOFLIFE",
+      "#Greedy",
+      "#DecemberGlow",
+      "#ImperfectChristmas",
+      "#디지털싱글",
+      "#하이라이트메들리",
+      "#컴백",
+      "#신곡",
+      "#겨울노래"
+    ],
+    "photo_queries": [
+      "키스오브라이프",
+      "KISS OF LIFE"
+    ],
+    "person": "키스오브라이프",
+    "scene_queries": [
+      "winter snow globe stage",
+      "Christmas cupcakes decoration"
+    ],
+    "fact_checked": true,
+    "press": "스포츠월드",
+    "url": "https://www.sportsworldi.com/content/html/2026/11/21/20261121502992.html",
+    "source_title": "키스오브라이프, ‘Greedy’로 전할 겨울 설렘…하이라이트 메들리 오픈",
+    "trend_label": "",
+    "issue_no": 30
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261121-1131-3-ch2/_src.jpg",
+    "credit": "K-POPIT 케이팝잇",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:28082026_Kiss_of_Life_Newsis_Hallyu_Expo_1.png",
+    "source": "Wikimedia Commons",
+    "kind": "인물",
+    "query": "키스오브라이프"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
