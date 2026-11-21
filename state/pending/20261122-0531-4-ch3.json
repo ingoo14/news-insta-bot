@@ -1,0 +1,66 @@
+{
+  "id": "20261122-0531-4-ch3",
+  "created": "2026-11-22T05:31:07.728251+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261122-0531-4-ch3/01.jpg",
+    "docs/posts/20261122-0531-4-ch3/02.jpg"
+  ],
+  "caption": "📌 션, 관절 나이 20대 공개\n\n가수 션이 JTBC 아는 형님에 출연해 신체 나이를 공개했다. 이날 방송은 러닝 특집으로 션, 강재준, 오하영, 다영이 출연했다.\n\n강호동이 매일 러닝을 하는 션에게 진찰을 하느냐고 묻자, 션은 검사를 받았는데 관절은 20대, 혈관 나이는 10대로 나왔다고 밝혔다.\n\n오하영이 곱창은 안 먹는냐고 묻자 션은 곱창을 먹지 않으며 술도 안 마시고 담배도 안 피운다고 답했다. 샐러드나 닭가슴살을 좋아한다고도 덧붙였다.\n\n강호동이 라면은 어떠냐고 묻자 션은 이틀 전에 먹었다고 답했다. 5km 뛰어가서 라면을 먹고 다시 5km 뛰어왔다고 설명했다.\n\n기사 출처: 스포츠월드\n사진: Daniel Schwen / CC BY-SA 3.0 / Wikimedia Commons\n\n#션 #Sean #아는형님 #아형 #JTBC #강호동 #강재준 #오하영 #다영 #러닝 #신체나이 #예능",
+  "story": {
+    "ok": true,
+    "tag": "예능",
+    "headline_top": "션, 관절 나이 20대",
+    "headline_bottom": "혈관은 10대",
+    "subline": "매일 달리는 션의 건강검진 결과",
+    "card_summary": [
+      "가수 션이 아는 형님에 출연해 신체 나이를 공개했다.",
+      "검사 결과 관절 20대, 혈관 나이 10대라 밝혔다.",
+      "술과 담배를 하지 않고 샐러드를 즐긴다고 했다.",
+      "이틀 전 5km를 뛰어가 라면을 먹었다고 말했다."
+    ],
+    "title": "션, 관절 나이 20대 공개",
+    "body": "가수 션이 JTBC 아는 형님에 출연해 신체 나이를 공개했다. 이날 방송은 러닝 특집으로 션, 강재준, 오하영, 다영이 출연했다.\n\n강호동이 매일 러닝을 하는 션에게 진찰을 하느냐고 묻자, 션은 검사를 받았는데 관절은 20대, 혈관 나이는 10대로 나왔다고 밝혔다.\n\n오하영이 곱창은 안 먹는냐고 묻자 션은 곱창을 먹지 않으며 술도 안 마시고 담배도 안 피운다고 답했다. 샐러드나 닭가슴살을 좋아한다고도 덧붙였다.\n\n강호동이 라면은 어떠냐고 묻자 션은 이틀 전에 먹었다고 답했다. 5km 뛰어가서 라면을 먹고 다시 5km 뛰어왔다고 설명했다.",
+    "hashtags": [
+      "#션",
+      "#Sean",
+      "#아는형님",
+      "#아형",
+      "#JTBC",
+      "#강호동",
+      "#강재준",
+      "#오하영",
+      "#다영",
+      "#러닝",
+      "#신체나이",
+      "#예능"
+    ],
+    "photo_queries": [
+      "션",
+      "Sean"
+    ],
+    "person": "션",
+    "scene_queries": [
+      "running track morning",
+      "salad healthy food plate"
+    ],
+    "fact_checked": true,
+    "press": "스포츠월드",
+    "url": "https://www.sportsworldi.com/content/html/2026/11/21/20261121506454.html",
+    "source_title": "'아형' 션, 매일 뛴다는데…\"관절 나이 20대, 술·담배 안 해\"",
+    "trend_label": "",
+    "issue_no": 56
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261122-0531-4-ch3/_src.jpg",
+    "credit": "Daniel Schwen",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sean_Astin_1.jpg",
+    "source": "Wikimedia Commons",
+    "kind": "인물",
+    "query": "Sean"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}

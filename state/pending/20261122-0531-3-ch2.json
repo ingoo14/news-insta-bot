@@ -1,0 +1,63 @@
+{
+  "id": "20261122-0531-3-ch2",
+  "created": "2026-11-22T05:31:07.728251+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261122-0531-3-ch2/01.jpg",
+    "docs/posts/20261122-0531-3-ch2/02.jpg"
+  ],
+  "caption": "📌 '스타일리시 블루카펫'... 코르티스, MAMA 레드카펫 참석\n\n2026 MAMA AWARDS 레드카펫 행사가 11월 21일 일본 교세라 돔 오사카에서 열렸습니다.\n\n그룹 코르티스가 레드카펫을 밟고 있습니다. 관련 사진이 공개됐습니다.\n\n기사 출처: 조선일보\n사진: Republic of Korea from Seoul, Republic of Korea / CC BY-SA 4.0 / Wikimedia Commons\n\n#코르티스 #CORTIS #2026MAMAAWARDS #2026MAMA #MAMAAWARDS #레드카펫 #교세라돔 #오사카 #OSEN #연예뉴스",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "코르티스, '블루카펫'",
+    "headline_bottom": "MAMA 레드카펫 참석",
+    "subline": "오사카 레드카펫 현장 소식",
+    "card_summary": [
+      "2026 MAMA AWARDS 레드카펫 행사가 21일 열렸다.",
+      "행사 장소는 일본 교세라 돔 오사카였다.",
+      "그룹 코르티스가 레드카펫을 밟고 있다."
+    ],
+    "title": "'스타일리시 블루카펫'... 코르티스, MAMA 레드카펫 참석",
+    "body": "2026 MAMA AWARDS 레드카펫 행사가 11월 21일 일본 교세라 돔 오사카에서 열렸습니다.\n\n그룹 코르티스가 레드카펫을 밟고 있습니다. 관련 사진이 공개됐습니다.",
+    "hashtags": [
+      "#코르티스",
+      "#CORTIS",
+      "#2026MAMAAWARDS",
+      "#2026MAMA",
+      "#MAMAAWARDS",
+      "#레드카펫",
+      "#교세라돔",
+      "#오사카",
+      "#OSEN",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "코르티스",
+      "CORTIS"
+    ],
+    "person": "코르티스",
+    "scene_queries": [
+      "red carpet event stage lights",
+      "Kyocera Dome Osaka"
+    ],
+    "fact_checked": true,
+    "press": "조선일보",
+    "url": "https://www.chosun.com/entertainments/broadcast/2026/11/22/MQZWMN3BGJTGIZBRG5SDSNBVG4/",
+    "source_title": "코르티스,’스타일리시 블루카펫’ [O! STAR 숏폼]",
+    "trend_label": "",
+    "issue_no": 55
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261122-0531-3-ch2/_src.jpg",
+    "credit": "Republic of Korea from Seoul, Republic of Korea",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:World_Cup_cheering_in_Seoul_(55329888621).jpg",
+    "source": "Wikimedia Commons",
+    "kind": "인물",
+    "query": "코르티스"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
