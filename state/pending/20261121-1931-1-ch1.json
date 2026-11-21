@@ -1,8 +1,8 @@
 {
   "id": "20261121-1931-1-ch1",
   "created": "2026-11-21T19:31:34.022935+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-1931-1-ch1/01.jpg",
     "docs/posts/20261121-1931-1-ch1/02.jpg"
@@ -60,5 +60,7 @@
     "query": "코르티스"
   },
   "channel": "ch1",
-  "channel_handle": "ibduck_music"
+  "channel_handle": "ibduck_music",
+  "permalink": "https://www.instagram.com/p/DgAEstJkhXp/",
+  "done": "2026-11-21T11:00:35.002389+00:00"
 }

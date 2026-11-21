@@ -1,8 +1,8 @@
 {
   "id": "20261121-1931-4-ch3",
   "created": "2026-11-21T19:31:34.022935+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-1931-4-ch3/01.jpg",
     "docs/posts/20261121-1931-4-ch3/02.jpg"
@@ -60,5 +60,7 @@
     "query": "이주연"
   },
   "channel": "ch3",
-  "channel_handle": "gaem_seong_1spoon"
+  "channel_handle": "gaem_seong_1spoon",
+  "permalink": "https://www.instagram.com/p/DgAE3I1ErEn/",
+  "done": "2026-11-21T11:01:56.706472+00:00"
 }
