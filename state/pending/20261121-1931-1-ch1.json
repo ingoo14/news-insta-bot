@@ -1,0 +1,64 @@
+{
+  "id": "20261121-1931-1-ch1",
+  "created": "2026-11-21T19:31:34.022935+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261121-1931-1-ch1/01.jpg",
+    "docs/posts/20261121-1931-1-ch1/02.jpg"
+  ],
+  "caption": "📌 \"과분한 상 너무 감사해\"... 코르티스, MAMA 첫 대상\n\n그룹 코르티스가 데뷔 1년 3개월 만에 ‘MAMA’ 대상을 받았습니다.\n\n코르티스는 21일 일본 교세라 돔 오사카에서 열린 ‘2026 마마 어워즈(MAMA AWARDS)’에서 대상에 해당하는 ‘올해의 노래’를 수상했습니다.\n\n이날 코르티스는 ‘과분한 상 너무 감사해’라며 감사의 마음을 전했습니다.\n\n수상 대상이 된 곡은 지난 5월 발표한 미니 2집 ‘그린그린(GREENGREEN)’의 타이틀곡 ‘레드레드(REDRED)’입니다.\n\n기사 출처: 조선일보\n사진: Republic of Korea from Seoul, Republic of Korea / CC BY-SA 4.0 / Wikimedia Commons\n\n#코르티스 #CORTIS #MAMA #마마어워즈 #MAMAAWARDS #올해의노래 #그린그린 #GREENGREEN #레드레드 #REDRED #연예뉴스",
+  "story": {
+    "ok": true,
+    "tag": "음악",
+    "headline_top": "코르티스, ‘올해의 노래’",
+    "headline_bottom": "데뷔 1년 3개월 만에",
+    "subline": "MAMA 2026 올해의 노래 수상",
+    "card_summary": [
+      "그룹 코르티스가 ‘2026 마마 어워즈’ 대상을 받았다.",
+      "21일 일본 교세라 돔 오사카에서 열린 시상식이었다.",
+      "수상 소감으로 ‘과분한 상 너무 감사해’라고 전했다."
+    ],
+    "title": "\"과분한 상 너무 감사해\"... 코르티스, MAMA 첫 대상",
+    "body": "그룹 코르티스가 데뷔 1년 3개월 만에 ‘MAMA’ 대상을 받았습니다.\n\n코르티스는 21일 일본 교세라 돔 오사카에서 열린 ‘2026 마마 어워즈(MAMA AWARDS)’에서 대상에 해당하는 ‘올해의 노래’를 수상했습니다.\n\n이날 코르티스는 ‘과분한 상 너무 감사해’라며 감사의 마음을 전했습니다.\n\n수상 대상이 된 곡은 지난 5월 발표한 미니 2집 ‘그린그린(GREENGREEN)’의 타이틀곡 ‘레드레드(REDRED)’입니다.",
+    "hashtags": [
+      "#코르티스",
+      "#CORTIS",
+      "#MAMA",
+      "#마마어워즈",
+      "#MAMAAWARDS",
+      "#올해의노래",
+      "#그린그린",
+      "#GREENGREEN",
+      "#레드레드",
+      "#REDRED",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "코르티스",
+      "CORTIS"
+    ],
+    "person": "코르티스",
+    "scene_queries": [
+      "MAMA Awards stage lights",
+      "Kyocera Dome Osaka concert"
+    ],
+    "fact_checked": true,
+    "press": "조선일보",
+    "url": "https://www.chosun.com/entertainments/music/2026/11/21/GI3TGNTEG4YDIZLCHE4TKNDEGU/",
+    "source_title": "코르티스, 데뷔 1년 3개월만 'MAMA' 첫 대상..\"과분한 상 너무 감사해\"",
+    "trend_label": "",
+    "issue_no": 42
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261121-1931-1-ch1/_src.jpg",
+    "credit": "Republic of Korea from Seoul, Republic of Korea",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:World_Cup_cheering_in_Seoul_(55329888671).jpg",
+    "source": "Wikimedia Commons",
+    "kind": "인물",
+    "query": "코르티스"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
