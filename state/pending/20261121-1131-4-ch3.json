@@ -1,8 +1,8 @@
 {
   "id": "20261121-1131-4-ch3",
   "created": "2026-11-21T11:31:10.197535+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-1131-4-ch3/01.jpg",
     "docs/posts/20261121-1131-4-ch3/02.jpg"
@@ -60,5 +60,7 @@
     "query": "아일릿"
   },
   "channel": "ch3",
-  "channel_handle": "gaem_seong_1spoon"
+  "channel_handle": "gaem_seong_1spoon",
+  "permalink": "https://www.instagram.com/p/Df_N6XDjY9y/",
+  "done": "2026-11-21T03:01:48.628315+00:00"
 }

@@ -1,8 +1,8 @@
 {
   "id": "20261121-1131-2-ch1",
   "created": "2026-11-21T11:31:10.197535+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-1131-2-ch1/01.jpg",
     "docs/posts/20261121-1131-2-ch1/02.jpg"
@@ -60,5 +60,7 @@
     "query": "트레저"
   },
   "channel": "ch1",
-  "channel_handle": "ibduck_music"
+  "channel_handle": "ibduck_music",
+  "permalink": "https://www.instagram.com/p/Df_N0kCjBqZ/",
+  "done": "2026-11-21T03:00:58.439605+00:00"
 }
