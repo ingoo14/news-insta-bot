@@ -1,8 +1,8 @@
 {
   "id": "20261121-1331-2-ch1",
   "created": "2026-11-21T13:31:35.241517+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-1331-2-ch1/01.jpg",
     "docs/posts/20261121-1331-2-ch1/02.jpg"
@@ -64,5 +64,7 @@
     "query": "신민아"
   },
   "channel": "ch1",
-  "channel_handle": "ibduck_music"
+  "channel_handle": "ibduck_music",
+  "permalink": "https://www.instagram.com/p/Df_bh3Fl9dd/",
+  "done": "2026-11-21T05:00:47.394562+00:00"
 }
