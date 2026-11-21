@@ -1,8 +1,8 @@
 {
   "id": "20261121-1731-1-ch1",
   "created": "2026-11-21T17:31:08.334545+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "images": [
     "docs/posts/20261121-1731-1-ch1/01.jpg",
     "docs/posts/20261121-1731-1-ch1/02.jpg"
@@ -60,5 +60,7 @@
     "query": "TAEYANG"
   },
   "channel": "ch1",
-  "channel_handle": "ibduck_music"
+  "channel_handle": "ibduck_music",
+  "permalink": "https://www.instagram.com/p/Df_29Sglztw/",
+  "done": "2026-11-21T09:00:28.787389+00:00"
 }
