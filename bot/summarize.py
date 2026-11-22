@@ -1,5 +1,6 @@
 """Gemini(무료 티어)로 기사 1건 선별 + 카드 문구·캡션 요약 작성."""
 import json
+import re
 import time
 
 import requests
@@ -349,7 +350,8 @@ def write_capture_story(info: dict, news_items: list[dict]) -> dict:
 - subline: 22자 이내 부제
 - title: 캡션 첫 줄 제목 40자 이내
 - body: 3~4문단, 문단당 1~2문장, '~했습니다' 체, 따뜻한 톤. 이모지 1개까지.
-- hashtags: 8~12개 ('#' 포함, 아티스트 한글/영문명 포함)
+- hashtags: 8~12개 ('#' 포함). 이 게시물의 주인공(본인·소속 그룹)과 행사·작품명만.
+  ⚠️ 관련 뉴스에 같이 나온 다른 멤버·다른 연예인 이름은 절대 넣지 말 것 (사진에 없는 사람).
 - person: 아티스트 한글 이름
 - confirmed: 행사명/수상명을 관련 뉴스로 확인했으면 true
 
@@ -358,5 +360,19 @@ JSON:
     s = normalize(_gemini(prompt))
     if info.get("memo_from_sender"):
         s["confirmed"] = True  # 운영자가 적어준 내용 = 확인된 사실
+    # 뉴스 제목에 함께 나온 다른 사람 이름(예: '장원영·안유진')은 해시태그에서 제거
+    me = (info.get("person") or s.get("person") or "").replace(" ", "")
+    others = set()
+    for n in news_items:
+        for grp in re.findall(r"[가-힣]{2,4}(?:\s*[·&ㆍ]\s*[가-힣]{2,4})+", n.get("title", "")):
+            for name in re.split(r"\s*[·&ㆍ]\s*", grp):
+                if name and me and name != me and me not in name:
+                    others.add(name)
+    if others:
+        before = list(s.get("hashtags", []))
+        s["hashtags"] = [h for h in before if not any(o in h.lstrip("#") for o in others)]
+        dropped = set(before) - set(s["hashtags"])
+        if dropped:
+            print(f"[해시태그 정리] 다른 사람 이름 제거: {sorted(dropped)}")
     s["ok"] = bool(s.get("headline_top") and s.get("body"))
     return s

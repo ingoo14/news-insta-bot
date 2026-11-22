@@ -418,6 +418,12 @@ def crop_capture(path: str) -> bool:
     border = np.concatenate([a[0], a[-1], a[:, 0], a[:, -1], a[h // 2]]) // 16
     vals, cnt = np.unique(border, axis=0, return_counts=True)
     bg = vals[cnt.argmax()] * 16 + 8
+    # 진짜 '앱 화면 캡처'일 때만 자름: 테두리 대부분이 흰색/검정 단색이어야 함
+    # (그냥 사진을 보낸 경우 벽·배경색을 앱 화면으로 착각해서 사람을 잘라먹는 것 방지)
+    plain = bool((bg > 225).all() or (bg < 40).all())
+    if not plain or cnt.max() / cnt.sum() < 0.4:
+        print("[캡처 자르기] 앱 화면이 아닌 일반 사진 → 그대로 사용")
+        return False
     near = (np.abs(a - bg).sum(axis=2) < 40).mean(axis=1)  # 줄마다 배경색 비율
     photo_row = near < 0.6
     best, start, run = (0, 0), None, 0
