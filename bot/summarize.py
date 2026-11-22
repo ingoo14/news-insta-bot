@@ -376,3 +376,23 @@ JSON:
             print(f"[해시태그 정리] 다른 사람 이름 제거: {sorted(dropped)}")
     s["ok"] = bool(s.get("headline_top") and s.get("body"))
     return s
+
+
+def revise_story(s: dict, request: str) -> dict:
+    """운영자 요청('더 짧게', '수상 강조' 등)대로 글을 고침. 사실은 바꾸지 않음."""
+    keys = ["headline_top", "headline_bottom", "title", "body", "hashtags"]
+    prompt = f"""연예뉴스 인스타 게시물 초안을 운영자 요청대로 고쳐.
+- 요청: {request}
+- 초안에 있는 사실(이름·행사·수상명)은 유지하고 새 사실을 지어내지 말 것. 밝고 긍정적인 톤.
+- 길이 규칙: headline_top 14자, headline_bottom 12자 이내, 둘이 같은 단어 반복 금지.
+- 요청과 관계없는 항목은 그대로 둬.
+
+[초안]
+{json.dumps({k: s.get(k) for k in keys}, ensure_ascii=False, indent=1)}
+
+같은 키의 JSON으로만 답해."""
+    try:
+        return normalize(_gemini(prompt))
+    except Exception as e:
+        print(f"[요청 수정 실패] {e}")
+        return {}

@@ -285,7 +285,10 @@ def _send_preview(record: dict, header: str = "이대로 올릴까요?"):
     warn = "" if s.get("confirmed") else "\n(⚠️ 수상·행사명은 뉴스로 확인이 안 돼서 뺐어)"
     if record.get("publish_at"):
         header += f"\n⏰ 승인하면 {_at_label(record['publish_at'])}에 올라가"
-    tip = "\n\n✏️ 제목을 바꾸려면 이 메시지에 '답장'으로\n첫줄(흰 글씨)\n둘째줄(컬러 글씨)\n이렇게 보내줘"
+    tip = ("\n\n✏️ 고치려면 이 메시지에 '답장'으로:\n"
+           "• 표지 제목 → 그냥 두 줄 (첫줄 흰 글씨 / 둘째줄 컬러)\n"
+           "• 출처: 사진 출처\n• 캡션제목: 캡션 📌 첫 줄\n• 내용: 캡션 본문\n• 태그: #해시태그\n"
+           "• 요청: 더 짧게 / 더 밝게 같은 부탁")
     msg = telegram.send_message(f"👀 [{record.get('channel_handle')}] {header}{warn}\n\n{record['caption'][:2800]}{tip}",
                                 buttons=[[{"text": "✅ 올리기", "callback_data": f"ok:{post_id}"},
                                           {"text": "❌ 취소", "callback_data": f"no:{post_id}"}]])
@@ -322,28 +325,76 @@ def handle_edit(reply_to: str, text: str):
     if rec.get("status") != "awaiting":
         telegram.send_message(f"ℹ️ 이미 처리된 카드라 수정 못 해 ({rec.get('status')})")
         return
-    lines = [l.strip() for l in text.strip().splitlines() if l.strip()]
-    if len(lines) == 1 and "/" in lines[0]:
-        lines = [x.strip() for x in lines[0].split("/", 1)]
-    if not lines:
+    fields = parse_edit(text)
+    if not fields:
         return
     s = rec["story"]
-    s["headline_top"] = lines[0]
-    if len(lines) > 1:
-        s["headline_bottom"] = lines[1]
-    out_dir = config.ROOT / rec["images"][0]
-    out_dir = out_dir.parent
+    changed = []
+    if fields.get("request"):  # '요청: 더 짧게' 같은 자유 요청 → AI가 고쳐 씀
+        rev = summarize.revise_story(s, fields["request"])
+        for k in ("headline_top", "headline_bottom", "title", "body", "hashtags"):
+            if rev.get(k):
+                s[k] = rev[k]
+        changed.append("요청 반영")
+    if fields.get("lines"):
+        s["headline_top"] = fields["lines"][0]
+        if len(fields["lines"]) > 1:
+            s["headline_bottom"] = fields["lines"][1]
+        changed.append("표지 제목")
+    if fields.get("title"):
+        s["title"] = fields["title"]; changed.append("캡션 제목")
+    if fields.get("body") is not None:
+        s["body"] = fields["body"]; s["body_custom"] = True; changed.append("내용")
+    if fields.get("tags"):
+        s["hashtags"] = ["#" + t.lstrip("#") for t in re.split(r"[\s,]+", fields["tags"]) if t.strip("#")]
+        changed.append("해시태그")
+    if fields.get("credit") is not None:
+        rec["photo"]["credit"] = fields["credit"]; changed.append("사진 출처")
+    out_dir = (config.ROOT / rec["images"][0]).parent
     src = out_dir / "_src.jpg"
     if not src.exists():
         telegram.send_message("⚠️ 원본 사진이 없어서 다시 못 만들었어. 캡처를 다시 보내줘")
         return
     ph = dict(rec["photo"], path=str(src))
     _render_capture(s, ph, out_dir)  # 01.jpg(+02.jpg) 다시 그림, 나머지 사진 장은 그대로
+    # 캡션 다시 만들기 (여러 장이면 본문은 직접 써준 경우에만)
+    cap_story = s if (not s.get("multi") or s.get("body_custom")) else dict(s, body="")
+    rec["caption"] = collect.build_caption(cap_story, rec["photo"])
     if rec.get("preview_msg"):
         telegram.edit_buttons(rec["preview_msg"], "✏️ 수정됨 (아래 새 미리보기)")
     rec["story"] = s
-    _send_preview(rec, "제목 바꿨어! 이대로 올릴까요?")
-    print(f"[제목 수정] {rec['id']}: {lines[:2]}")
+    _send_preview(rec, f"{', '.join(changed)} 바꿨어! 이대로 올릴까요?")
+    print(f"[수정] {rec['id']}: {changed}")
+
+
+EDIT_KEYS = {"제목": "cover", "표지": "cover", "캡션제목": "title", "내용": "body", "본문": "body", "출처": "credit",
+             "사진출처": "credit", "사진": "credit", "태그": "tags", "해시태그": "tags", "요청": "request"}
+
+
+def parse_edit(text: str) -> dict:
+    """답장 내용 해석.
+    '출처: OO' / '내용: ...'(여러 줄 가능) / '제목: ...'(캡션 첫 줄) / '태그: #a #b' / '요청: 더 짧게'
+    접두어 없는 줄 = 표지 제목 (첫 줄 흰 글씨, 둘째 줄 컬러 글씨, 또는 '첫줄 / 둘째줄')."""
+    out, cur, plain = {}, None, []
+    for raw in text.strip().splitlines():
+        m = re.match(r"\s*(캡션\s*제목|제목|표지|내용|본문|사진\s*출처|출처|사진|해시태그|태그|요청)\s*[:：]\s*(.*)$", raw)
+        if m:
+            cur = EDIT_KEYS[m.group(1).replace(" ", "")]
+            out[cur] = m.group(2).strip()
+        elif cur == "body":  # 내용은 여러 줄 이어서
+            out["body"] = (out["body"] + "\n" + raw.strip()).strip() if raw.strip() else out["body"] + "\n"
+        elif raw.strip():
+            cur = None
+            plain.append(raw.strip())
+    if out.get("cover"):  # '제목: 첫줄 / 둘째줄' = 표지 제목
+        plain = [x.strip() for x in out.pop("cover").split("/", 1)] + plain
+    if "body" in out:
+        out["body"] = re.sub(r"\n{3,}", "\n\n", out["body"]).strip()
+    if len(plain) == 1 and "/" in plain[0]:
+        plain = [x.strip() for x in plain[0].split("/", 1)]
+    if plain:
+        out["lines"] = plain[:2]
+    return out
 
 
 def handle_approval(args: list[str]):
