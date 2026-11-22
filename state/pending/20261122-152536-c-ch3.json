@@ -1,0 +1,54 @@
+{
+  "id": "20261122-152536-c-ch3",
+  "created": "2026-11-22T15:25:36.734130+09:00",
+  "status": "awaiting",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-22T08:00:00+00:00",
+  "images": [
+    "docs/posts/20261122-152536-c-ch3/01.jpg",
+    "docs/posts/20261122-152536-c-ch3/02.jpg",
+    "docs/posts/20261122-152536-c-ch3/03.jpg"
+  ],
+  "caption": "📌 '성공해서 한 무대에서 만나자' 약속 이룬 원이\n\n사진 출처: 엠뚜루마뚜루 인스타그램\n\n#원이 #리센느 #전지적참견시점 #전참시 #거제합동콘서트 #거제콘서트 #같은무대 #MBC",
+  "story": {
+    "tag": "예능",
+    "headline_top": "원이, 거제 합동 콘서트",
+    "headline_bottom": "같은 무대에 올랐다",
+    "subline": "각자의 자리에서 성장해 만난 무대",
+    "title": "'성공해서 한 무대에서 만나자' 약속 이룬 원이",
+    "body": "리센느 원이가 MBC '전지적 참견 시점'을 통해 유영우, 이선민과 함께 거제 합동 콘서트 무대에 오른 근황을 전했습니다.\n\n각자의 자리에서 성장해 한 무대에서 만나자던 약속을 실제로 이뤄냈습니다. 방송에서는 200석 규모 공연에 3만 5천 명이 신청했다는 소식과 함께 세 사람이 무대를 준비하는 모습이 담겼습니다.\n\n긴 생머리에 검은 재킷을 입고 환하게 웃으며 나무 젓가락을 든 원이의 모습도 눈길을 끌었습니다. 🤝 앞으로도 더 많은 무대에서 빛나길 응원합니다.",
+    "hashtags": [
+      "#원이",
+      "#리센느",
+      "#전지적참견시점",
+      "#전참시",
+      "#거제합동콘서트",
+      "#거제콘서트",
+      "#같은무대",
+      "#MBC"
+    ],
+    "person": "원이",
+    "confirmed": true,
+    "card_summary": [],
+    "photo_queries": [],
+    "scene_queries": [],
+    "ok": true,
+    "press": "",
+    "url": "",
+    "source_title": "엠뚜루마뚜루 SNS",
+    "issue_no": 77,
+    "multi": true
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261122-152536-c-ch3/_src.jpg",
+    "credit": "엠뚜루마뚜루 인스타그램",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon",
+  "preview_msg": 281
+}
