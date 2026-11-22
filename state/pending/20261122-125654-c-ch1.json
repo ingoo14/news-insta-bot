@@ -1,0 +1,57 @@
+{
+  "id": "20261122-125654-c-ch1",
+  "created": "2026-11-22T12:56:54.579372+09:00",
+  "status": "awaiting",
+  "attempts": 0,
+  "manual": true,
+  "images": [
+    "docs/posts/20261122-125654-c-ch1/01.jpg",
+    "docs/posts/20261122-125654-c-ch1/02.jpg",
+    "docs/posts/20261122-125654-c-ch1/03.jpg",
+    "docs/posts/20261122-125654-c-ch1/04.jpg",
+    "docs/posts/20261122-125654-c-ch1/05.jpg"
+  ],
+  "caption": "📌 장원영, MAMA에서 빛난 우아한 드레스 자태\n\n사진 출처: 장원영 인스타그램\n\n#장원영 #아이브 #IVE #WonyoungJang #IVEWonyoung #장원영MAMA #MAMA #2026MAMA #장원영드레스 #안유진",
+  "story": {
+    "tag": "연예",
+    "headline_top": "장원영, MAMA 드레스룩",
+    "headline_bottom": "우아한 드레스 자태",
+    "subline": "MAMA에서 선보인 우아한 드레스 자태",
+    "title": "장원영, MAMA에서 빛난 우아한 드레스 자태",
+    "body": "아이브 장원영이 MAMA 현장에서 우아한 드레스 자태를 선보였습니다.\n\n갈색 새틴 드레스를 입고 얼룩진 콘크리트 벽 앞에 앉아, 한 손으로 긴 생머리를 잡은 포즈를 취했습니다.\n\n앞서 장원영은 안유진과 함께 'MAMA'를 휘어잡은 고혹적인 투샷으로도 주목받았습니다.\n\n장원영의 반짝이는 순간을 함께 응원해 주세요 ✨",
+    "hashtags": [
+      "#장원영",
+      "#아이브",
+      "#IVE",
+      "#WonyoungJang",
+      "#IVEWonyoung",
+      "#장원영MAMA",
+      "#MAMA",
+      "#2026MAMA",
+      "#장원영드레스",
+      "#안유진"
+    ],
+    "person": "장원영",
+    "confirmed": true,
+    "card_summary": [],
+    "photo_queries": [],
+    "scene_queries": [],
+    "ok": true,
+    "press": "",
+    "url": "",
+    "source_title": " SNS",
+    "issue_no": 63,
+    "multi": true
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261122-125654-c-ch1/_src.jpg",
+    "credit": "장원영 인스타그램",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music",
+  "preview_msg": 173
+}
