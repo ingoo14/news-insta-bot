@@ -1,0 +1,67 @@
+{
+  "id": "20261122-115522-m-ch1",
+  "created": "2026-11-22T11:55:22.877533+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "images": [
+    "docs/posts/20261122-115522-m-ch1/01.jpg",
+    "docs/posts/20261122-115522-m-ch1/02.jpg"
+  ],
+  "caption": "📌 빅뱅, 신곡 '기립' 최초 공개…지드래곤 긴 생머리\n\n빅뱅이 21일 일본 오사카 교세라 돔에서 열린 '2026 MAMA 어워즈' 챕터2 공연에서 무대를 꾸몄습니다.\n\n이날 빅뱅은 20일 깜짝 공개한 새 디지털 싱글 '기립' 무대를 처음으로 선보였습니다. 공연은 '타임 코스모스 메들리'라는 이름으로 진행됐습니다.\n\n태양은 무대의 포문을 열며 '배드'와 '리브 패스트 다이 슬로우' 무대를 이어 불렀고, 무대 아래로 내려가 팬들과 호흡했습니다. 지드래곤은 긴 생머리로 등장해 시선을 모았고, 이어 태양과 대성이 잇달아 등장했습니다.\n\n빅뱅은 아이공룡둘리와 컬래버레이션 무대도 선보였습니다. 무대에 앞서 이날 빅뱅은 '베스트 뮤직비디오 위드 유튜브' 상을 받았습니다.\n\n기사 출처: entertain.naver.com\n사진: entertain.naver.com\n\n#빅뱅 #BIGBANG #지드래곤 #GDRAGON #태양 #대성 #기립 #2026MAMA #MAMA2026 #베스트뮤직비디오위드유튜브 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "빅뱅, '기립' 최초 공개",
+    "headline_bottom": "2026 MAMA 무대",
+    "subline": "지드래곤 긴 생머리 등장",
+    "card_summary": [
+      "빅뱅, 21일 오사카 MAMA 챕터2 공연 무대",
+      "새 디지털 싱글 '기립' 무대를 처음 선보였다.",
+      "지드래곤은 긴 생머리로 등장해 눈길을 끌었다.",
+      "무대에 앞서 '베스트 뮤직비디오 위드 유튜브'를 수상했다."
+    ],
+    "title": "빅뱅, 신곡 '기립' 최초 공개…지드래곤 긴 생머리",
+    "body": "빅뱅이 21일 일본 오사카 교세라 돔에서 열린 '2026 MAMA 어워즈' 챕터2 공연에서 무대를 꾸몄습니다.\n\n이날 빅뱅은 20일 깜짝 공개한 새 디지털 싱글 '기립' 무대를 처음으로 선보였습니다. 공연은 '타임 코스모스 메들리'라는 이름으로 진행됐습니다.\n\n태양은 무대의 포문을 열며 '배드'와 '리브 패스트 다이 슬로우' 무대를 이어 불렀고, 무대 아래로 내려가 팬들과 호흡했습니다. 지드래곤은 긴 생머리로 등장해 시선을 모았고, 이어 태양과 대성이 잇달아 등장했습니다.\n\n빅뱅은 아이공룡둘리와 컬래버레이션 무대도 선보였습니다. 무대에 앞서 이날 빅뱅은 '베스트 뮤직비디오 위드 유튜브' 상을 받았습니다.",
+    "hashtags": [
+      "#빅뱅",
+      "#BIGBANG",
+      "#지드래곤",
+      "#GDRAGON",
+      "#태양",
+      "#대성",
+      "#기립",
+      "#2026MAMA",
+      "#MAMA2026",
+      "#베스트뮤직비디오위드유튜브",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "빅뱅",
+      "BIGBANG",
+      "지드래곤",
+      "G-Dragon"
+    ],
+    "person": "빅뱅",
+    "scene_queries": [
+      "concert stage lights",
+      "Kyocera Dome Osaka stage"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/music/article/477/0000640215",
+    "source_title": "지드래곤, 파격 긴 생머리…빅뱅, '기립' 무대 최초 공개[2026 MAMA]",
+    "issue_no": 60
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261122-115522-m-ch1/_src.jpg",
+    "credit": "entertain.naver.com",
+    "license": "",
+    "page": "https://m.entertain.naver.com/music/article/477/0000640215",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
