@@ -436,3 +436,18 @@ def crop_capture(path: str) -> bool:
     im.crop((left, top, right, bot)).save(path, "JPEG", quality=95)
     print(f"[캡처 자르기] {w}x{h} → {right - left}x{bot - top}")
     return True
+
+
+def photo_slide(path: str, out: Path) -> Path:
+    """글자 없이 사진만 있는 장 (자르지 않고 전체, 남는 곳은 같은 사진을 흐리게)."""
+    im = Image.open(path).convert("RGB")
+    bg_sc = max(W / im.width, H / im.height)
+    bg = im.resize((int(im.width * bg_sc) + 1, int(im.height * bg_sc) + 1))
+    bx, by = (bg.width - W) // 2, (bg.height - H) // 2
+    canvas = bg.crop((bx, by, bx + W, by + H)).filter(ImageFilter.GaussianBlur(45))
+    canvas = Image.blend(canvas, Image.new("RGB", (W, H), (0, 0, 0)), 0.35)
+    sc = min(W / im.width, H / im.height)
+    ph = im.resize((int(im.width * sc), int(im.height * sc)), Image.LANCZOS)
+    canvas.paste(ph, ((W - ph.width) // 2, (H - ph.height) // 2))
+    canvas.save(out, "JPEG", quality=92, optimize=True)
+    return out

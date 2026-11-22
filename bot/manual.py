@@ -173,14 +173,21 @@ def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) 
 
 
 def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
-    """링크 없이 SNS 캡처만 보냈을 때: 캡처 읽기 → 관련 뉴스로 사실 확인 → 긍정적인 소식 카드."""
+    """링크 없이 SNS 캡처만 보냈을 때: 캡처 읽기 → 관련 뉴스로 사실 확인 → 긍정적인 소식 카드.
+    캡처를 여러 장 보내면: 1장째 = 제목 카드, 나머지 = 사진만 (요약 카드 없음)."""
     now = datetime.now(KST)
     post_id = f"{now:%Y%m%d-%H%M%S}-c-{ch['key']}"
     out_dir = config.POSTS_DIR / post_id
     src = out_dir / "_src.jpg"
+    ids = [f for f in file_id.split(",") if f][:10]  # 인스타 슬라이드 최대 10장
+    extras = []
     try:
-        telegram.download_file(file_id, src)
-        Image.open(src).convert("RGB").save(src, "JPEG", quality=95)
+        for i, fid in enumerate(ids):
+            dest = src if i == 0 else out_dir / f"_x{i}.jpg"
+            telegram.download_file(fid, dest)
+            Image.open(dest).convert("RGB").save(dest, "JPEG", quality=95)
+            if i:
+                extras.append(dest)
     except Exception as e:
         return False, f"보내준 캡처를 못 받았어: {e}"
     info = summarize.read_capture(str(src))
@@ -190,7 +197,7 @@ def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
     for words in ALIASES.values():
         for w in words:
             hint = hint.replace(w, " ")
-    hint = CREDIT_RE.sub(" ", hint).strip()
+    hint = CREDIT_RE.sub(" ", hint).replace("캡처", " ").strip()
     if hint:  # 같이 적어 보낸 메모 (예: '리센느 마마 수상') → 검색·작성 힌트
         info["memo_from_sender"] = hint
     print(f"[캡처 정보] {json.dumps(info, ensure_ascii=False)}")
@@ -210,26 +217,81 @@ def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
     credit = m.group(1).strip() if m else f"{who} 인스타그램"
     ph = {"path": str(src), "credit": credit, "license": "", "page": "", "source": "", "kind": "기사 사진"}
     s["issue_no"] = collect._next_issue()
-    paths = render.render_story(s, ph, out_dir)
-    src.unlink(missing_ok=True)
+    s["multi"] = bool(extras)
+    paths = _render_capture(s, ph, out_dir)
+    for i, x in enumerate(extras, 2):
+        render.crop_capture(str(x))
+        paths.append(render.photo_slide(str(x), out_dir / f"{i:02d}.jpg"))
+        x.unlink(missing_ok=True)
+    # _src.jpg(표지 원본)는 제목 수정 때 다시 쓰려고 승인·취소 전까지 보관
     caption = collect.build_caption(s, ph)
     record = {"id": post_id, "created": now.isoformat(), "status": "awaiting", "attempts": 0, "manual": True,
               "images": [str(p.relative_to(config.ROOT)) for p in paths],
               "caption": caption, "story": s, "photo": ph,
               "channel": ch["key"], "channel_handle": ch.get("handle", "")}
     config.PENDING_DIR.mkdir(parents=True, exist_ok=True)
-    (config.PENDING_DIR / f"{post_id}.json").write_text(json.dumps(record, ensure_ascii=False, indent=2))
-    # 바로 올리지 않고 단톡방에 미리보기 → 버튼 눌러야 업로드
+    _send_preview(record)
+    note = "" if s.get("confirmed") else " (행사명은 뉴스로 확인 안 돼서 뺐어)"
+    return True, "미리보기 보냄 — " + s.get("title", "") + note + ("" if crop_ok else " [캡처 자르기 실패 → 원본 그대로]")
+
+
+def _render_capture(s: dict, ph: dict, out_dir) -> list:
+    """표지(+한 장일 땐 요약 카드) 만들기. 여러 장이면 요약 카드 없이 표지만."""
+    story = {k: v for k, v in s.items() if k not in ("body", "card_summary")} if s.get("multi") else s
+    return render.render_story(story, ph, out_dir)
+
+
+def _send_preview(record: dict, header: str = "이대로 올릴까요?"):
+    """단톡방에 미리보기 + 버튼. 이 메시지에 '답장'으로 새 제목을 보내면 수정됨."""
+    s, post_id = record["story"], record["id"]
     try:
-        telegram.send_album(paths)
+        telegram.send_album([config.ROOT / p for p in record["images"]])
     except Exception as e:
         print(f"[미리보기 실패] {e}")
     warn = "" if s.get("confirmed") else "\n(⚠️ 수상·행사명은 뉴스로 확인이 안 돼서 뺐어)"
-    telegram.send_message(f"👀 [{ch.get('handle')}] 이대로 올릴까요?{warn}\n\n{caption[:3000]}",
-                          buttons=[[{"text": "✅ 올리기", "callback_data": f"ok:{post_id}"},
-                                    {"text": "❌ 취소", "callback_data": f"no:{post_id}"}]])
-    note = "" if s.get("confirmed") else " (행사명은 뉴스로 확인 안 돼서 뺐어)"
-    return True, "미리보기 보냄 — " + s.get("title", "") + note + ("" if crop_ok else " [캡처 자르기 실패 → 원본 그대로]")
+    tip = "\n\n✏️ 제목을 바꾸려면 이 메시지에 '답장'으로\n첫줄(흰 글씨)\n둘째줄(컬러 글씨)\n이렇게 보내줘"
+    msg = telegram.send_message(f"👀 [{record.get('channel_handle')}] {header}{warn}\n\n{record['caption'][:2800]}{tip}",
+                                buttons=[[{"text": "✅ 올리기", "callback_data": f"ok:{post_id}"},
+                                          {"text": "❌ 취소", "callback_data": f"no:{post_id}"}]])
+    record["preview_msg"] = (msg or {}).get("message_id")
+    (config.PENDING_DIR / f"{post_id}.json").write_text(json.dumps(record, ensure_ascii=False, indent=2))
+
+
+def handle_edit(reply_to: str, text: str):
+    """미리보기 메시지에 답장으로 온 새 제목으로 표지를 다시 만듦."""
+    rec_path = rec = None
+    for p in config.PENDING_DIR.glob("*.json"):
+        r = json.loads(p.read_text())
+        if str(r.get("preview_msg")) == str(reply_to):
+            rec_path, rec = p, r
+            break
+    if not rec:
+        return  # 미리보기가 아닌 메시지에 단 답장 → 무시
+    if rec.get("status") != "awaiting":
+        telegram.send_message(f"ℹ️ 이미 처리된 카드라 수정 못 해 ({rec.get('status')})")
+        return
+    lines = [l.strip() for l in text.strip().splitlines() if l.strip()]
+    if len(lines) == 1 and "/" in lines[0]:
+        lines = [x.strip() for x in lines[0].split("/", 1)]
+    if not lines:
+        return
+    s = rec["story"]
+    s["headline_top"] = lines[0]
+    if len(lines) > 1:
+        s["headline_bottom"] = lines[1]
+    out_dir = config.ROOT / rec["images"][0]
+    out_dir = out_dir.parent
+    src = out_dir / "_src.jpg"
+    if not src.exists():
+        telegram.send_message("⚠️ 원본 사진이 없어서 다시 못 만들었어. 캡처를 다시 보내줘")
+        return
+    ph = dict(rec["photo"], path=str(src))
+    _render_capture(s, ph, out_dir)  # 01.jpg(+02.jpg) 다시 그림, 나머지 사진 장은 그대로
+    if rec.get("preview_msg"):
+        telegram.edit_buttons(rec["preview_msg"], "✏️ 수정됨 (아래 새 미리보기)")
+    rec["story"] = s
+    _send_preview(rec, "제목 바꿨어! 이대로 올릴까요?")
+    print(f"[제목 수정] {rec['id']}: {lines[:2]}")
 
 
 def handle_approval(args: list[str]):
@@ -246,6 +308,9 @@ def handle_approval(args: list[str]):
     if rec.get("status") != "awaiting":
         telegram.send_message(f"ℹ️ 이미 처리된 카드야 ({rec.get('status')})")
         return
+    post_dir = (config.ROOT / rec["images"][0]).parent if rec.get("images") else None
+    if post_dir:
+        (post_dir / "_src.jpg").unlink(missing_ok=True)
     if act == "ok":
         rec["status"] = "pending"
         rec_path.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
@@ -299,6 +364,10 @@ def main():
     if tg_text.startswith("APPROVE "):  # 미리보기 버튼 (워커가 보내줌)
         handle_approval(tg_text.split()[1:])
         return
+    if tg_text.startswith("EDIT "):  # 미리보기에 답장으로 보낸 새 제목
+        head, _, body = tg_text.partition("\n")
+        handle_edit(head.split()[1] if len(head.split()) > 1 else "", body)
+        return
     if tg_text or tg_file:
         up = None
         if tg_file:
@@ -307,11 +376,7 @@ def main():
         urls += [(u, tg_text, up) for u in URL_RE.findall(tg_text)]
     # 링크 없이 캡처만 보낸 경우 → 캡처로 소식 쓰기 (채널 이름을 같이 써야 함)
     if tg_file and not URL_RE.search(tg_text or ""):
-        low = (tg_text or "").lower()
-        if not any(w in low for ws in ALIASES.values() for w in ws):
-            print("채널 이름 없는 사진 → 무시")
-            return
-        ch = pick_channel(tg_text)
+        ch = pick_channel(tg_text)  # 채널 이름 없으면 기본 채널(입덕)
         telegram.send_message(f"🛠 캡처 접수! [{ch.get('handle')}] 내용 읽고 기사 쓰는 중…")
         try:
             ok, msg = make_capture_post(tg_text, tg_file, ch)
