@@ -18,6 +18,46 @@ KST = timezone(timedelta(hours=9))
 URL_RE = re.compile(r"https?://[^\s<>\"']+")
 
 
+PORTAL = re.compile(r"(네이버|naver|다음|daum|카카오|kakao|zum|nate|네이트)", re.I)
+
+
+def _press(soup, meta_press: str, url: str) -> str:
+    """언론사 이름. 네이버·다음 같은 포털 주소면 기사 안의 [OO뉴스=기자] 표기나 언론사 로고에서 찾음."""
+    mp = re.sub(r"\s*[|·-]\s*(네이버|NAVER|다음|Daum).*$", "", meta_press or "").strip()
+    if mp and not PORTAL.search(mp) and "." not in mp:
+        return mp
+    for img in soup.select("img[class*=press], img[class*=logo], a[class*=press] img, [class*=press_logo] img"):
+        alt = (img.get("alt") or img.get("title") or "").strip()
+        if alt and not PORTAL.search(alt) and len(alt) <= 20:
+            return alt
+    txt = soup.get_text(" ", strip=True)[:6000]
+    m = re.search(r"[\[(]\s*([가-힣A-Za-z0-9 ]{2,15}?)\s*=\s*[가-힣 ]{2,10}기자\s*[\])]", txt) or \
+        re.search(r"[\[(]\s*(?:[가-힣]{2,4}=)?([가-힣A-Za-z0-9 ]{2,15}?)\s*[\])]\s*[가-힣]{2,4} 기자", txt)
+    if m:
+        return m.group(1).strip()
+    return mp if mp and not PORTAL.search(mp) else news.press_name(url)
+
+
+CAP_RE = re.compile(r"(?:출처|사진|제공|Photo|ⓒ|©)\s*[|:=│ㅣ]?\s*([^\n▲△|]{2,40})", re.I)
+
+
+def _photo_caption(soup) -> str:
+    """기사 사진 설명에 적힌 사진 출처 (예: '▲ 지드래곤. 출처| 2026 MAMA 캡처' → '2026 MAMA 캡처')."""
+    nodes = soup.select("figcaption, em.img_desc, .img_desc, .end_photo_org em, [class*=caption], "
+                        "[class*=photo_desc], [class*=img_txt], [class*=imgtxt]")
+    for n in nodes:
+        t = n.get_text(" ", strip=True)
+        if not t or len(t) > 150:
+            continue
+        m = CAP_RE.search(t)
+        if m:
+            src = re.sub(r"^(출처|사진)\s*", "", m.group(1)).strip(" .,=")
+            src = re.sub(r"\s*(무단|재배포|Copyright).*$", "", src, flags=re.I).strip()
+            if len(src) >= 2:
+                return src[:30]
+    return ""
+
+
 def article_from_url(url: str) -> dict:
     r = requests.get(url, headers=news.UA, timeout=15)
     r.encoding = r.apparent_encoding or r.encoding
@@ -31,9 +71,10 @@ def article_from_url(url: str) -> dict:
         return ""
 
     title = meta("og:title", "twitter:title") or (soup.title.get_text(strip=True) if soup.title else "")
-    press = meta("og:article:author", "og:site_name", "twitter:creator") or news.press_name(r.url)
+    title = re.sub(r"\s*[:|\-]\s*(네이버|NAVER|Daum|다음)\s*(엔터|연예|뉴스)?\s*$", "", title)
+    press = _press(soup, meta("og:article:author", "article:author", "dable:author", "og:site_name", "twitter:creator"), r.url)
     item = {"title": title, "snippet": meta("og:description", "description"), "url": r.url,
-            "press": press, "image": meta("og:image", "twitter:image"), "published": datetime.now(timezone.utc).isoformat()}
+            "press": press, "image": meta("og:image", "twitter:image"), "photo_src": _photo_caption(soup), "published": datetime.now(timezone.utc).isoformat()}
     item["body"] = news.fetch_body(item)
     return item
 
@@ -48,10 +89,11 @@ ALIASES = {
 
 def pick_channel(text: str) -> dict:
     chans = config.channels()
-    t = (text or "").lower()
+    t = URL_RE.sub(" ", text or "").lower()  # 링크 주소 안의 글자(예: /music/)는 채널 이름으로 안 봄
+    generic = {"music", "news", "official", "daily"}
     for c in chans:
         h = c.get("handle", "").lower()
-        keys = [h] + ALIASES.get(h, []) + [w for w in h.replace(".", "_").split("_") if len(w) >= 4]
+        keys = [h] + ALIASES.get(h, []) + [w for w in h.replace(".", "_").split("_") if len(w) >= 4 and w not in generic]
         if any(k and k in t for k in keys):
             return c
     return chans[0] if chans else {"key": "ch1", "handle": "메인"}
@@ -97,7 +139,9 @@ def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) 
                 raise ValueError("사진이 너무 작음")
             (out_dir / "_src.jpg").write_bytes(rr.content)
             Image.open(out_dir / "_src.jpg").convert("RGB").save(out_dir / "_src.jpg", "JPEG", quality=95)
-            ph = {"path": str(out_dir / "_src.jpg"), "credit": a["press"], "license": "",
+            src = a.get("photo_src", "")
+            credit = src or a["press"]  # 사진 설명에 적힌 출처만 (없으면 언론사명)
+            ph = {"path": str(out_dir / "_src.jpg"), "credit": credit, "license": "",
                   "page": a["url"], "source": "", "kind": "기사 사진"}
             print(f"[기사 사진] {img}")
         except Exception as e:
