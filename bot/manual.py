@@ -246,7 +246,9 @@ def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
     crop_ok = render.crop_capture(str(src))
     who = info.get("account") or info.get("person")
     m = CREDIT_RE.search(text or "")
-    credit = m.group(1).strip() if m else f"{who} 인스타그램"
+    plat = {"instagram": "인스타그램", "youtube": "유튜브 캡처", "tiktok": "틱톡 캡처", "x": "X 캡처",
+            "tv": "방송 캡처"}.get((info.get("platform") or "").lower(), "캡처")
+    credit = m.group(1).strip() if m else f"{who} {plat}".strip()
     ph = {"path": str(src), "credit": credit, "license": "", "page": "", "source": "", "kind": "기사 사진"}
     s["issue_no"] = collect._next_issue()
     s["multi"] = bool(extras)

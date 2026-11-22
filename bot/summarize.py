@@ -305,10 +305,11 @@ def normalize(s) -> dict:
 
 def read_capture(image: str) -> dict | None:
     """인스타 등 캡처 화면에서 계정·문구·상황을 읽음 (얼굴로 사람을 판별하지 않음)."""
-    prompt = """이건 연예인/아티스트 SNS(주로 인스타그램) 게시물 캡처야. 화면에 '글자로 보이는 것'과 사진 속 '사물·상황'만 읽어.
+    prompt = """이건 연예인/아티스트 관련 화면 캡처야 (인스타그램 게시물, 유튜브 영상, 방송 화면 등). 화면에 '글자로 보이는 것'과 사진 속 '사물·상황'만 읽어.
 ⚠️ 얼굴 생김새로 누구인지 추측하지 마. 누구인지는 계정 이름, 게시글 문구, 해시태그, 음악 스티커 등 글자로만 판단해.
 JSON:
-{"account": "게시한 계정 아이디 (예: rescene_official)",
+{"platform": "캡처한 화면 종류: instagram / youtube / tiktok / x / tv(방송 화면) / other 중 하나",
+ "account": "게시한 계정·채널 이름 (예: rescene_official, 엠뚜루마뚜루)",
  "person": "계정·글자로 확인되는 아티스트 한글 이름 (예: rescene_official → 리센느). 계정 아이디가 널리 알려진 연예인 개인 계정이면 그 이름 (예: for_everyoung10 → 장원영). 확신 없으면 빈 문자열",
  "person_en": "영문 이름 (예: RESCENE)",
  "caption": "게시글 문구 그대로 (해시태그 포함)",
