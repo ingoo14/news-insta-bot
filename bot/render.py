@@ -159,10 +159,14 @@ def contain_photo(im: Image.Image) -> Image.Image:
 
 def fill_photo(im: Image.Image):
     """화면을 꽉 채우되, 얼굴이 하나도 잘리지 않을 때만. 잘릴 것 같으면 None (→ 여백 방식)."""
+    # 가로 사진(방송 캡처·단체 사진 등)은 꽉 채우면 양옆이 40% 넘게 잘림 → 얼굴 인식이 놓친 사람이
+    # 잘릴 수 있으니 무조건 전체가 보이게 (여백 방식). 세로·정사각형에 가까운 사진만 채움.
+    if im.width / im.height > 1.05:
+        return None
     sc = max(W / im.width, H / im.height)
     faces = _faces(im)
     if not faces:
-        if im.width / im.height > 0.9:  # 얼굴 못 찾은 가로 사진은 사람이 잘릴 수 있으니 안 채움
+        if im.width / im.height > 0.9:  # 얼굴 못 찾은 정사각형 사진도 안전하게 안 채움
             return None
         x0, x1, y0 = im.width * 0.5, im.width * 0.5, im.height * 0.2
     else:
