@@ -204,8 +204,19 @@ def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
     if owner:
         info["person"] = owner
     print(f"[캡처 정보] {json.dumps(info, ensure_ascii=False)}")
+    if not info.get("person") and hint:  # 보낸 메모의 첫 단어를 인물 이름으로 (예: '장원영 마마')
+        info["person"] = hint.split()[0]
     if not (info.get("person") or info.get("account")):
-        return False, "캡처에서 누구 게시물인지 못 찾았어. 계정 이름이 보이게 캡처하거나, 메시지에 이름을 같이 써줘 (예: 갬성 리센느)"
+        import shutil
+        shutil.rmtree(out_dir, ignore_errors=True)
+        # 사진은 그대로 두고, 이 메시지에 '답장'으로 이름을 받으면 이어서 진행
+        ask = telegram.send_message("🤔 사진만으로는 누군지 모르겠어.\n이 메시지에 '답장'으로 이름만 보내줘 (예: 장원영 / 장원영 마마 레드카펫)")
+        config.PENDING_DIR.mkdir(parents=True, exist_ok=True)
+        (config.PENDING_DIR / f"{post_id}-ask.json").write_text(json.dumps({
+            "id": f"{post_id}-ask", "created": now.isoformat(), "status": "need_name", "manual": True, "images": [],
+            "ask_msg": (ask or {}).get("message_id"), "file_ids": file_id, "text": text, "channel": ch["key"]},
+            ensure_ascii=False, indent=2))
+        return True, "이름 물어봄"
     items, seen_t = [], set()
     person = info.get("person", "")
     for q in [hint, info.get("search_query"), person]:  # 여러 검색어 결과를 합침
@@ -273,6 +284,20 @@ def handle_edit(reply_to: str, text: str):
     rec_path = rec = None
     for p in config.PENDING_DIR.glob("*.json"):
         r = json.loads(p.read_text())
+        if r.get("status") == "need_name" and str(r.get("ask_msg")) == str(reply_to):
+            # 이름 물어본 메시지에 답장 → 아까 사진들로 이어서 기사 쓰기
+            p.unlink()
+            ch = next((c for c in config.channels() if c["key"] == r.get("channel")), None) or pick_channel(r.get("text", ""))
+            memo = f"{r.get('text', '')} {text.strip()}".replace("캡처", " ").strip()
+            telegram.send_message(f"🛠 {text.strip()[:20]}(으)로 다시 쓰는 중… [{ch.get('handle')}]")
+            try:
+                ok, msg = make_capture_post(memo, r["file_ids"], ch)
+            except Exception as e:
+                ok, msg = False, f"처리 중 오류: {str(e)[:200]}"
+            print(("[준비 완료] " if ok else "[실패] ") + msg)
+            if not ok:
+                telegram.send_message(f"⚠️ {msg}")
+            return
         if str(r.get("preview_msg")) == str(reply_to):
             rec_path, rec = p, r
             break
