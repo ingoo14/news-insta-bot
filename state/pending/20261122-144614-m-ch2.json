@@ -1,8 +1,8 @@
 {
   "id": "20261122-144614-m-ch2",
   "created": "2026-11-22T14:46:14.270649+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "manual": true,
   "images": [
     "docs/posts/20261122-144614-m-ch2/01.jpg",
@@ -62,5 +62,7 @@
     "kind": "기사 사진"
   },
   "channel": "ch2",
-  "channel_handle": "greenlight_music"
+  "channel_handle": "greenlight_music",
+  "permalink": "https://www.instagram.com/p/DgCFn0wGkdY/",
+  "done": "2026-11-22T05:47:04.432684+00:00"
 }
