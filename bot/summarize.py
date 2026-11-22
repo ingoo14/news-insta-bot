@@ -397,3 +397,20 @@ def revise_story(s: dict, request: str) -> dict:
     except Exception as e:
         print(f"[요청 수정 실패] {e}")
         return {}
+
+
+def make_poll(s: dict) -> dict:
+    """게시물에 붙일 투표 (질문 1개 + 선택지 2~3개, 긍정적·가벼운 톤)."""
+    prompt = f"""연예뉴스 인스타 게시물에 붙일 팬 투표를 만들어.
+- question: 캡션 끝에 넣을 질문 한 문장 (예: "여러분은 지드래곤의 감사 인사를 어떻게 생각하시나요?")
+- options: 2~3개, 각 12자 이내, 모두 긍정적·응원 톤 (예: ["멋지다", "존경한다"]). 비하·논쟁 유도 금지.
+[게시물] 제목: {s.get('title', '')} / {s.get('headline_top', '')} {s.get('headline_bottom', '')}
+내용: {(s.get('body') or '')[:600]}
+JSON: {{"question": "...", "options": ["...", "..."]}}"""
+    try:
+        d = _gemini(prompt) or {}
+        opts = [str(o).strip()[:25] for o in d.get("options", []) if str(o).strip()][:4]
+        return {"question": str(d.get("question", "")).strip(), "options": opts} if len(opts) >= 2 else {}
+    except Exception as e:
+        print(f"[투표 만들기 실패] {e}")
+        return {}

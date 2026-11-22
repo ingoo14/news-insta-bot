@@ -52,7 +52,9 @@ def build_caption(s: dict, ph: dict) -> str:
     elif credit:
         photo_line = f"사진: {credit}\n"
     body = (s.get("body") or "").strip()
-    return (f"📌 {s.get('title', '').strip()}\n\n" + (f"{body}\n\n" if body else "") + photo_line + f"\n{tags}").strip()
+    q = (s.get("poll_q") or "").strip()  # 투표 질문
+    return (f"📌 {s.get('title', '').strip()}\n\n" + (f"{body}\n\n" if body else "") + (f"{q}\n\n" if q else "")
+            + photo_line + f"\n{tags}").strip()
 
 
 def main():

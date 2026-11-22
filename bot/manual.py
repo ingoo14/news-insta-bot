@@ -15,7 +15,36 @@ from bs4 import BeautifulSoup
 from . import collect, config, news, photo, render, summarize, telegram
 
 KST = timezone(timedelta(hours=9))
+POLL = None  # 투표: ['선택지1','선택지2'] / 'auto'(AI가 만들기) / None
 PUBLISH_AT = ""  # 예약 업로드 시각 (워커가 '예약 20시' 같은 문구를 읽어서 AT=... 으로 넘겨줌)
+
+
+POLL_RE = re.compile(r"투표\s*[:：]?\s*([^\n]*)")
+
+
+def extract_poll(text: str):
+    """'투표: 멋지다 / 존경한다' → (나머지 글, ['멋지다','존경한다']), '투표'만 → 'auto'."""
+    m = POLL_RE.search(text or "")
+    if not m:
+        return text, None
+    line = m.group(1)
+    opts = [o.strip() for o in re.split(r"\s*[/|,]\s*", URL_RE.sub("", line)) if o.strip()]
+    rest = (text[:m.start()] + " " + " ".join(URL_RE.findall(line)) + " " + text[m.end():])
+    return re.sub(r"[ \t]+", " ", rest).strip(), (opts[:4] if len(opts) >= 2 else "auto")
+
+
+def _apply_poll(s: dict, poll):
+    """투표 확정: 'auto'면 AI가 질문+선택지 생성. 질문은 캡션 끝에 들어감."""
+    if not poll:
+        return None
+    if poll == "auto":
+        made = summarize.make_poll(s)
+        if not made.get("options"):
+            return None
+        s["poll_q"] = made.get("question", "")
+        return made["options"][:4]
+    s.setdefault("poll_q", "여러분의 생각은? 투표해 주세요 🗳")
+    return poll
 
 
 def _at_label(iso: str) -> str:
@@ -167,7 +196,7 @@ def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) 
     paths = render.render_story(s, ph, out_dir)
     (out_dir / "_src.jpg").unlink(missing_ok=True)
     record = {"id": post_id, "created": now.isoformat(), "status": "pending", "attempts": 0, "manual": True,
-              "publish_at": PUBLISH_AT,
+              "publish_at": PUBLISH_AT, "poll": _apply_poll(s, POLL),
               "images": [str(p.relative_to(config.ROOT)) for p in paths],
               "caption": collect.build_caption(s, ph), "story": s, "photo": ph,
               "channel": ch["key"], "channel_handle": ch.get("handle", "")}
@@ -224,7 +253,7 @@ def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
         (config.PENDING_DIR / f"{post_id}-ask.json").write_text(json.dumps({
             "id": f"{post_id}-ask", "created": now.isoformat(), "status": "need_name", "manual": True, "images": [],
             "ask_msg": (ask or {}).get("message_id"), "file_ids": file_id, "text": text, "channel": ch["key"],
-            "publish_at": PUBLISH_AT},
+            "publish_at": PUBLISH_AT, "poll_req": POLL},
             ensure_ascii=False, indent=2))
         return True, "이름 물어봄"
     items, seen_t = [], set()
@@ -259,9 +288,10 @@ def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
         x.unlink(missing_ok=True)
     # _src.jpg(표지 원본)는 제목 수정 때 다시 쓰려고 승인·취소 전까지 보관
     # 사진 여러 장일 땐 캡션 = 제목 + 사진 출처 + 해시태그만 (본문 없음)
+    poll = _apply_poll(s, POLL)
     caption = collect.build_caption(dict(s, body="") if extras else s, ph)
     record = {"id": post_id, "created": now.isoformat(), "status": "awaiting", "attempts": 0, "manual": True,
-              "publish_at": PUBLISH_AT,
+              "publish_at": PUBLISH_AT, "poll": poll,
               "images": [str(p.relative_to(config.ROOT)) for p in paths],
               "caption": caption, "story": s, "photo": ph,
               "channel": ch["key"], "channel_handle": ch.get("handle", "")}
@@ -285,12 +315,14 @@ def _send_preview(record: dict, header: str = "이대로 올릴까요?"):
     except Exception as e:
         print(f"[미리보기 실패] {e}")
     warn = "" if s.get("confirmed") else "\n(⚠️ 수상·행사명은 뉴스로 확인이 안 돼서 뺐어)"
+    if record.get("poll"):
+        header += "\n🗳 투표: " + " / ".join(record["poll"])
     if record.get("publish_at"):
         header += f"\n⏰ 승인하면 {_at_label(record['publish_at'])}에 올라가"
     tip = ("\n\n✏️ 고치려면 이 메시지에 '답장'으로:\n"
            "• 표지 제목 → 그냥 두 줄 (첫줄 흰 글씨 / 둘째줄 컬러)\n"
            "• 출처: 사진 출처\n• 캡션제목: 캡션 📌 첫 줄\n• 내용: 캡션 본문\n• 태그: #해시태그\n"
-           "• 요청: 더 짧게 / 더 밝게 같은 부탁")
+           "• 투표: 멋지다 / 존경한다 (없음 = 빼기)\n• 요청: 더 짧게 / 더 밝게 같은 부탁")
     msg = telegram.send_message(f"👀 [{record.get('channel_handle')}] {header}{warn}\n\n{record['caption'][:2800]}{tip}",
                                 buttons=[[{"text": "✅ 올리기", "callback_data": f"ok:{post_id}"},
                                           {"text": "❌ 취소", "callback_data": f"no:{post_id}"}]])
@@ -306,8 +338,8 @@ def handle_edit(reply_to: str, text: str):
         if r.get("status") == "need_name" and str(r.get("ask_msg")) == str(reply_to):
             # 이름 물어본 메시지에 답장 → 아까 사진들로 이어서 기사 쓰기
             p.unlink()
-            global PUBLISH_AT
-            PUBLISH_AT = r.get("publish_at", "")
+            global PUBLISH_AT, POLL
+            PUBLISH_AT, POLL = r.get("publish_at", ""), r.get("poll_req")
             ch = next((c for c in config.channels() if c["key"] == r.get("channel")), None) or pick_channel(r.get("text", ""))
             memo = f"{r.get('text', '')} {text.strip()}".replace("캡처", " ").strip()
             telegram.send_message(f"🛠 {text.strip()[:20]}(으)로 다시 쓰는 중… [{ch.get('handle')}]")
@@ -352,6 +384,15 @@ def handle_edit(reply_to: str, text: str):
         changed.append("해시태그")
     if fields.get("credit") is not None:
         rec["photo"]["credit"] = fields["credit"]; changed.append("사진 출처")
+    if "poll" in fields:  # '투표: A / B' 설정, '투표: 없음' 삭제, '투표'만 → AI가 만들기
+        val = fields["poll"].strip()
+        s.pop("poll_q", None)
+        if val in ("없음", "삭제", "빼기", "x", "X"):
+            rec["poll"] = None
+        else:
+            _, req = extract_poll("투표: " + val)
+            rec["poll"] = _apply_poll(s, req)
+        changed.append("투표")
     out_dir = (config.ROOT / rec["images"][0]).parent
     src = out_dir / "_src.jpg"
     if not src.exists():
@@ -369,7 +410,7 @@ def handle_edit(reply_to: str, text: str):
     print(f"[수정] {rec['id']}: {changed}")
 
 
-EDIT_KEYS = {"제목": "cover", "표지": "cover", "캡션제목": "title", "내용": "body", "본문": "body", "출처": "credit",
+EDIT_KEYS = {"투표": "poll", "제목": "cover", "표지": "cover", "캡션제목": "title", "내용": "body", "본문": "body", "출처": "credit",
              "사진출처": "credit", "사진": "credit", "태그": "tags", "해시태그": "tags", "요청": "request"}
 
 
@@ -379,7 +420,7 @@ def parse_edit(text: str) -> dict:
     접두어 없는 줄 = 표지 제목 (첫 줄 흰 글씨, 둘째 줄 컬러 글씨, 또는 '첫줄 / 둘째줄')."""
     out, cur, plain = {}, None, []
     for raw in text.strip().splitlines():
-        m = re.match(r"\s*(캡션\s*제목|제목|표지|내용|본문|사진\s*출처|출처|사진|해시태그|태그|요청)\s*[:：]\s*(.*)$", raw)
+        m = re.match(r"\s*(투표|캡션\s*제목|제목|표지|내용|본문|사진\s*출처|출처|사진|해시태그|태그|요청)\s*[:：]\s*(.*)$", raw)
         if m:
             cur = EDIT_KEYS[m.group(1).replace(" ", "")]
             out[cur] = m.group(2).strip()
@@ -470,6 +511,11 @@ def main():
     if tg_text.startswith("PUBLISH_DUE"):  # 예약 시간이 된 게시물 올리기 (업로드는 다음 단계에서)
         print("예약 시간 도착 → 업로드 단계로")
         return
+    global POLL
+    if not tg_text.startswith(("EDIT ", "APPROVE ")):
+        tg_text, POLL = extract_poll(tg_text)
+        if POLL:
+            print(f"[투표] {POLL}")
     m_at = re.match(r"AT=(\S+)\s*", tg_text)
     if m_at:
         PUBLISH_AT, tg_text = m_at.group(1), tg_text[m_at.end():] or "캡처"

@@ -1,4 +1,5 @@
 """인스타그램 캐러셀 업로드 (통합 로그인 + 시스템 사용자 토큰 → graph.facebook.com)."""
+import json
 import time
 
 import requests
@@ -38,7 +39,32 @@ def _wait(container_id, tries=20):
     raise RuntimeError(f"컨테이너 {container_id} 처리 시간 초과")
 
 
-def publish_carousel(image_urls: list[str], caption: str) -> str:
+POLL_NOTE = ""  # 투표를 못 붙였을 때 이유 (알림용)
+
+
+def _poll_params(poll: list[str] | None) -> dict:
+    """투표(2~4개 선택지, 각 25자) → 인스타 caption add-on 파라미터 (2026.9 추가 기능)."""
+    opts = [o.strip()[:25] for o in (poll or []) if o and o.strip()][:4]
+    if len(opts) < 2:
+        return {}
+    keys = ["option_a", "option_b", "option_c", "option_d"]
+    return {"poll_attachment": json.dumps(dict(zip(keys, opts)), ensure_ascii=False)}
+
+
+def _create_with_poll(uid: str, params: dict, poll) -> str:
+    """투표를 붙여서 컨테이너 생성. 투표 때문에 실패하면 투표 없이 다시 (게시물은 꼭 올라가게)."""
+    global POLL_NOTE
+    pp = _poll_params(poll)
+    if pp:
+        try:
+            return _post(f"{uid}/media", **params, **pp)["id"]
+        except Exception as e:
+            POLL_NOTE = f"투표는 못 붙였어 ({str(e)[:120]})"
+            print(f"[투표 실패 → 투표 없이 업로드] {e}")
+    return _post(f"{uid}/media", **params)["id"]
+
+
+def publish_carousel(image_urls: list[str], caption: str, poll=None) -> str:
     uid = config.IG_USER_ID
     children = []
     for u in image_urls[:10]:
@@ -48,7 +74,7 @@ def publish_carousel(image_urls: list[str], caption: str) -> str:
     params = {"media_type": "CAROUSEL", "children": ",".join(children), "caption": caption[:2200]}
     if config.IG_AI_LABEL:
         params["is_ai_generated"] = "true"
-    carousel = _post(f"{uid}/media", **params)["id"]
+    carousel = _create_with_poll(uid, params, poll)
     _wait(carousel)
     media_id = _post(f"{uid}/media_publish", creation_id=carousel)["id"]
     try:
@@ -57,12 +83,12 @@ def publish_carousel(image_urls: list[str], caption: str) -> str:
         return ""
 
 
-def publish_single(image_url: str, caption: str) -> str:
+def publish_single(image_url: str, caption: str, poll=None) -> str:
     uid = config.IG_USER_ID
     params = {"image_url": image_url, "caption": caption[:2200]}
     if config.IG_AI_LABEL:
         params["is_ai_generated"] = "true"
-    c = _post(f"{uid}/media", **params)["id"]
+    c = _create_with_poll(uid, params, poll)
     _wait(c)
     media_id = _post(f"{uid}/media_publish", creation_id=c)["id"]
     try:
@@ -71,8 +97,12 @@ def publish_single(image_url: str, caption: str) -> str:
         return ""
 
 
-def publish(image_urls: list[str], caption: str) -> str:
-    return publish_single(image_urls[0], caption) if len(image_urls) == 1 else publish_carousel(image_urls, caption)
+def publish(image_urls: list[str], caption: str, poll=None) -> str:
+    global POLL_NOTE
+    POLL_NOTE = ""
+    if len(image_urls) == 1:
+        return publish_single(image_urls[0], caption, poll)
+    return publish_carousel(image_urls, caption, poll)
 
 
 def refresh_token() -> str:

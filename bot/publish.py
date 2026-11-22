@@ -60,7 +60,7 @@ def main():
         link, err = None, None
         for host in hosts:  # CDN이 안 되면 GitHub 원본 주소로 재시도
             try:
-                link = instagram.publish(image_urls(rec, sha, host), rec["caption"])
+                link = instagram.publish(image_urls(rec, sha, host), rec["caption"], rec.get("poll"))
                 break
             except Exception as e:
                 err = e
@@ -69,7 +69,10 @@ def main():
             rec["status"], rec["permalink"] = "published", link
             shutil.rmtree(config.POSTS_DIR / rec["id"], ignore_errors=True)
             ph = rec.get("photo") or {}
-            notify(f"✅ [{ch['handle']}] 업로드 완료\n{title}\n{link}\n사진: {ph.get('page', '')}")
+            poll_txt = ""
+            if rec.get("poll"):
+                poll_txt = f"\n⚠️ {instagram.POLL_NOTE}" if instagram.POLL_NOTE else "\n🗳 투표: " + " / ".join(rec["poll"])
+            notify(f"✅ [{ch['handle']}] 업로드 완료\n{title}\n{link}\n사진: {ph.get('page', '')}{poll_txt}")
         elif rec["attempts"] >= MAX_ATTEMPTS:
             rec["status"] = "failed"
             shutil.rmtree(config.POSTS_DIR / rec["id"], ignore_errors=True)
