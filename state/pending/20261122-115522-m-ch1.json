@@ -1,8 +1,8 @@
 {
   "id": "20261122-115522-m-ch1",
   "created": "2026-11-22T11:55:22.877533+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "manual": true,
   "images": [
     "docs/posts/20261122-115522-m-ch1/01.jpg",
@@ -63,5 +63,7 @@
     "kind": "기사 사진"
   },
   "channel": "ch1",
-  "channel_handle": "ibduck_music"
+  "channel_handle": "ibduck_music",
+  "permalink": "https://www.instagram.com/p/DgByE4PEnfi/",
+  "done": "2026-11-22T02:56:23.445138+00:00"
 }
