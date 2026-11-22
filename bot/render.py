@@ -157,10 +157,42 @@ def contain_photo(im: Image.Image) -> Image.Image:
     return canvas
 
 
+def fill_photo(im: Image.Image):
+    """화면을 꽉 채우되, 얼굴이 하나도 잘리지 않을 때만. 잘릴 것 같으면 None (→ 여백 방식)."""
+    sc = max(W / im.width, H / im.height)
+    faces = _faces(im)
+    if not faces:
+        if im.width / im.height > 0.9:  # 얼굴 못 찾은 가로 사진은 사람이 잘릴 수 있으니 안 채움
+            return None
+        x0, x1, y0 = im.width * 0.5, im.width * 0.5, im.height * 0.2
+    else:
+        x0 = min(f[0] for f in faces); x1 = max(f[0] + f[2] for f in faces)
+        y0 = min(f[1] for f in faces)
+        pad = max(f[2] for f in faces) * 0.9  # 얼굴 양옆으로 머리·어깨 여유
+        x0, x1 = max(0, x0 - pad), min(im.width, x1 + pad)
+        if (x1 - x0) * sc > W:  # 사람들이 가로로 넓게 퍼져 있음 → 잘리니까 안 채움
+            return None
+    im2 = im.resize((max(W, int(im.width * sc + 0.5)), max(H, int(im.height * sc + 0.5))), Image.LANCZOS)
+    left = int((x0 + x1) / 2 * sc - W / 2)
+    left = min(max(left, 0), im2.width - W)
+    top = int(y0 * sc - H * 0.18)  # 얼굴이 화면 위쪽에 오되 머리 위 여유
+    top = min(max(top, 0), im2.height - H)
+    canvas = ImageEnhance_safe(im2.crop((left, top, left + W, top + H))).convert("RGBA")
+    bh = int(H * 0.5)
+    bot = Image.new("RGBA", (W, bh), (0, 0, 0, 255)); bot.putalpha(_grad(bh, 0, 200, 1.4))
+    canvas.alpha_composite(bot, (0, H - bh))
+    return canvas
+
+
 def base_photo(path: str, keep_all: bool = False) -> Image.Image:
     im = ImageOps.exif_transpose(Image.open(path)).convert("RGB")
     # 직접 보낸 사진, 또는 가로가 긴 사진에 여러 명이 나오면 → 자르지 않음
-    if keep_all or (im.width / im.height > 0.95 and len(_faces(im)) >= 2):
+    if keep_all:
+        filled = fill_photo(im)  # 사람이 다 들어오면 여백 없이 꽉 채움
+        if filled is not None:
+            return filled
+        return contain_photo(im)
+    if im.width / im.height > 0.95 and len(_faces(im)) >= 2:
         return contain_photo(im)
     sc = max(W / im.width, H / im.height)  # 화면을 꽉 채우는 배율
     faces = _faces(im)
