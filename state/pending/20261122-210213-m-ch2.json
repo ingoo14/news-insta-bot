@@ -1,0 +1,69 @@
+{
+  "id": "20261122-210213-m-ch2",
+  "created": "2026-11-22T21:02:13.478804+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "images": [
+    "docs/posts/20261122-210213-m-ch2/01.jpg",
+    "docs/posts/20261122-210213-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"머리가 힘드네요\"... 지드래곤, 긴 생머리 파격 변신\n\n21일 일본 교세라 돔 오사카에서 열린 '2026 MAMA AWARDS' 2일 차 시상식에서 빅뱅 완전체 무대가 펼쳐졌습니다.\n\n지드래곤, 태양, 대성이 함께 무대에 올랐고, 이번주 발표된 신곡 '기립(GiiiRIP)'을 처음 들려줬습니다. 지드래곤은 관을 깨고 부활하는 콘셉트로 등장했으며, 블랙과 핫핑크가 조화를 이룬 긴 생머리 헤어스타일로 주목을 받았습니다.\n\n지드래곤이 \"머리가 힘드네요\"라며 찰랑거리는 긴 생머리를 주체하지 못하자, 옆에 있던 대성이 다가가 양손으로 형의 머리카락을 잡아 고정했습니다. 태양도 가세해 머리를 잡아줘 웃음을 안겼습니다.\n\n데뷔 20주년을 맞은 빅뱅은 전날 받은 '팬스 초이스 남자 톱 10'을 비롯해 '올해의 뮤직 비저너리', '베스트 뮤직비디오 위드 유튜브'까지 3관왕에 올랐습니다. 현재 빅뱅은 월드투어 'XX : COSMOS' 콘서트를 진행 중입니다.\n\n사진 출처: OSEN. All rights reserved.\n\n#지드래곤 #GDRAGON #빅뱅 #BIGBANG #태양 #TAEYANG #대성 #DAESUNG #MAMA2026 #마마어워즈 #기립 #XXCOSMOS",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "지드래곤, '긴 생머리'",
+    "headline_bottom": "MAMA 무대 화제",
+    "subline": "빅뱅 완전체 무대, 신곡 '기립' 공개",
+    "card_summary": [
+      "2026 MAMA 2일 차에서 빅뱅 완전체 무대가 꾸며졌다.",
+      "신곡 '기립(GiiiRIP)'을 처음 선보였다.",
+      "빅뱅은 팬스 초이스 남자 톱 10 등 3관왕에 올랐다."
+    ],
+    "title": "\"머리가 힘드네요\"... 지드래곤, 긴 생머리 파격 변신",
+    "body": "21일 일본 교세라 돔 오사카에서 열린 '2026 MAMA AWARDS' 2일 차 시상식에서 빅뱅 완전체 무대가 펼쳐졌습니다.\n\n지드래곤, 태양, 대성이 함께 무대에 올랐고, 이번주 발표된 신곡 '기립(GiiiRIP)'을 처음 들려줬습니다. 지드래곤은 관을 깨고 부활하는 콘셉트로 등장했으며, 블랙과 핫핑크가 조화를 이룬 긴 생머리 헤어스타일로 주목을 받았습니다.\n\n지드래곤이 \"머리가 힘드네요\"라며 찰랑거리는 긴 생머리를 주체하지 못하자, 옆에 있던 대성이 다가가 양손으로 형의 머리카락을 잡아 고정했습니다. 태양도 가세해 머리를 잡아줘 웃음을 안겼습니다.\n\n데뷔 20주년을 맞은 빅뱅은 전날 받은 '팬스 초이스 남자 톱 10'을 비롯해 '올해의 뮤직 비저너리', '베스트 뮤직비디오 위드 유튜브'까지 3관왕에 올랐습니다. 현재 빅뱅은 월드투어 'XX : COSMOS' 콘서트를 진행 중입니다.",
+    "hashtags": [
+      "#지드래곤",
+      "#GDRAGON",
+      "#빅뱅",
+      "#BIGBANG",
+      "#태양",
+      "#TAEYANG",
+      "#대성",
+      "#DAESUNG",
+      "#MAMA2026",
+      "#마마어워즈",
+      "#기립",
+      "#XXCOSMOS"
+    ],
+    "photo_queries": [
+      "지드래곤",
+      "G-Dragon",
+      "빅뱅",
+      "BIGBANG"
+    ],
+    "person": "지드래곤",
+    "scene_queries": [
+      "concert stage lights",
+      "Kyocera Dome Osaka"
+    ],
+    "fact_checked": true,
+    "press": "OSEN",
+    "url": "https://m.entertain.naver.com/home/article/109/0005643733",
+    "source_title": "지드래곤도 감당 안되는 5대5 긴 생머리 '파격'..수상소감 방해하자 '대성 투입' [핫피플]",
+    "issue_no": 84
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261122-210213-m-ch2/_src.jpg",
+    "credit": "OSEN. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/home/article/109/0005643733",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
