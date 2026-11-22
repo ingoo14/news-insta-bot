@@ -1,0 +1,65 @@
+{
+  "id": "20261122-0931-1-ch1",
+  "created": "2026-11-22T09:31:15.784370+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "images": [
+    "docs/posts/20261122-0931-1-ch1/01.jpg",
+    "docs/posts/20261122-0931-1-ch1/02.jpg"
+  ],
+  "caption": "📌 \"행복하고 뭉클\"... 포미닛 전지윤 결혼\n\n그룹 포미닛 출신 전지윤이 22일 결혼합니다. 지난 2024년 결혼한 현아에 이어 포미닛 멤버 가운데 두 번째 결혼입니다.\n\n전지윤은 22일 서울 모처에서 비연예인 연인과 결혼식을 올리고 부부가 됩니다.\n\n전지윤은 결혼식을 하루 앞둔 21일 자신의 SNS에 웨딩 촬영 현장 사진을 올리며 \"행복하고 뭉클하고 소중했던 기억\"이라는 글을 남겼습니다.\n\n기사 출처: 조선일보\n사진: Peter Kaminski / CC BY 2.0 / Wikimedia Commons\n\n#전지윤 #포미닛 #4Minute #현아 #결혼소식 #전지윤결혼 #연예뉴스 #핫피플 #연예인결혼",
+  "story": {
+    "ok": true,
+    "tag": "연예",
+    "headline_top": "전지윤, '행복하고 뭉클'",
+    "headline_bottom": "포미닛 두 번째 결혼",
+    "subline": "포미닛 출신 전지윤, 22일 결혼식",
+    "card_summary": [
+      "포미닛 출신 전지윤이 22일 결혼한다.",
+      "서울 모처에서 비연예인 연인과 결혼식을 올린다.",
+      "포미닛 멤버 중 현아에 이어 두 번째 결혼이다.",
+      "전지윤은 결혼식 하루 전 SNS에 웨딩 사진을 올렸다."
+    ],
+    "title": "\"행복하고 뭉클\"... 포미닛 전지윤 결혼",
+    "body": "그룹 포미닛 출신 전지윤이 22일 결혼합니다. 지난 2024년 결혼한 현아에 이어 포미닛 멤버 가운데 두 번째 결혼입니다.\n\n전지윤은 22일 서울 모처에서 비연예인 연인과 결혼식을 올리고 부부가 됩니다.\n\n전지윤은 결혼식을 하루 앞둔 21일 자신의 SNS에 웨딩 촬영 현장 사진을 올리며 \"행복하고 뭉클하고 소중했던 기억\"이라는 글을 남겼습니다.",
+    "hashtags": [
+      "#전지윤",
+      "#포미닛",
+      "#4Minute",
+      "#현아",
+      "#결혼소식",
+      "#전지윤결혼",
+      "#연예뉴스",
+      "#핫피플",
+      "#연예인결혼"
+    ],
+    "photo_queries": [
+      "포미닛",
+      "4Minute",
+      "전지윤",
+      "Jeon Jiyoon"
+    ],
+    "person": "전지윤",
+    "scene_queries": [
+      "wedding bouquet white flowers",
+      "Seoul wedding ceremony"
+    ],
+    "fact_checked": true,
+    "press": "조선일보",
+    "url": "https://www.chosun.com/entertainments/music/2026/11/22/MEZWKYLCGY2WCNJYGQYDEOLEMQ/",
+    "source_title": "\"행복하고 뭉클\" 포미닛 전지윤, 오늘(22일) 결혼..현아 이어 두 번째 [핫피플]",
+    "trend_label": "",
+    "issue_no": 58
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261122-0931-1-ch1/_src.jpg",
+    "credit": "Peter Kaminski",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:4Minute_in_KCON_2012.jpg",
+    "source": "Wikimedia Commons",
+    "kind": "인물",
+    "query": "포미닛"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
