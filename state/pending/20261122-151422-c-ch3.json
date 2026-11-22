@@ -1,0 +1,55 @@
+{
+  "id": "20261122-151422-c-ch3",
+  "created": "2026-11-22T15:14:22.390055+09:00",
+  "status": "awaiting",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-22T08:00:00+00:00",
+  "images": [
+    "docs/posts/20261122-151422-c-ch3/01.jpg",
+    "docs/posts/20261122-151422-c-ch3/02.jpg",
+    "docs/posts/20261122-151422-c-ch3/03.jpg",
+    "docs/posts/20261122-151422-c-ch3/04.jpg"
+  ],
+  "caption": "📌 리센느 원이, 전참시 거제 합동 콘서트 무대에 서다\n\n사진 출처: 원이 인스타그램\n\n#원이 #리센느 #리센느원이 #전참시 #전지적참견시점 #거제콘서트 #거제합동콘서트 #합동콘서트",
+  "story": {
+    "tag": "예능",
+    "headline_top": "리센느 원이, 거제 콘서트",
+    "headline_bottom": "깜짝 카메라 같은 하루",
+    "subline": "전참시 거제 합동 콘서트 무대",
+    "title": "리센느 원이, 전참시 거제 합동 콘서트 무대에 서다",
+    "body": "리센느 원이가 '전지적 참견 시점'에서 거제 합동 콘서트 무대에 올라 벅찬 하루를 보냈습니다.\n\n원이는 누가 깜짝 카메라를 하는 것 같다며 얼떨떨한 심경을 전했습니다. 많은 분들이 자신을 알아봐 주신다는 사실이 실감 나는 순간이었다고 합니다.\n\n응원해 주시는 분들 덕분에 뜻깊은 무대를 채웠다는 원이의 소식에 반가운 마음이 큽니다. 🎤",
+    "hashtags": [
+      "#원이",
+      "#리센느",
+      "#리센느원이",
+      "#전참시",
+      "#전지적참견시점",
+      "#거제콘서트",
+      "#거제합동콘서트",
+      "#합동콘서트"
+    ],
+    "person": "원이",
+    "confirmed": true,
+    "card_summary": [],
+    "photo_queries": [],
+    "scene_queries": [],
+    "ok": true,
+    "press": "",
+    "url": "",
+    "source_title": " SNS",
+    "issue_no": 76,
+    "multi": true
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261122-151422-c-ch3/_src.jpg",
+    "credit": "원이 인스타그램",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon",
+  "preview_msg": 273
+}
