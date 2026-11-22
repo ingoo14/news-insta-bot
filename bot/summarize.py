@@ -97,7 +97,7 @@ def _parse_json(text: str):
         raise
 
 
-def _claude(prompt: str, tries: int = 3):
+def _claude(prompt: str, tries: int = 3, image: str | None = None):
     """Claude Haiku (유료, 기본). 실패하면 None → Gemini로 넘어감."""
     key = config.env("ANTHROPIC_API_KEY")
     if not key:
@@ -105,6 +105,12 @@ def _claude(prompt: str, tries: int = 3):
     model = config.env("CLAUDE_MODEL", "claude-haiku-5-5")
     body = {"model": model, "max_tokens": 4096,
             "messages": [{"role": "user", "content": prompt + "\n\n설명 없이 JSON만 출력해."}]}
+    if image:  # 캡처 이미지 같이 보내기
+        import base64
+        b64 = base64.b64encode(open(image, "rb").read()).decode()
+        body["messages"][0]["content"] = [
+            {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": b64}},
+            {"type": "text", "text": prompt + "\n\n설명 없이 JSON만 출력해."}]
     headers = {"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"}
     t0 = time.time()
     for i in range(tries):
@@ -293,4 +299,57 @@ def normalize(s) -> dict:
         tags = tags.replace(",", " ").split()
     s["hashtags"] = [t if t.startswith("#") else "#" + t for t in (to_list(tags) if isinstance(tags, list) else []) if t]
     s["ok"] = s.get("ok") not in (False, "false", "False", 0)
+    return s
+
+
+def read_capture(image: str) -> dict | None:
+    """인스타 등 캡처 화면에서 계정·문구·상황을 읽음 (얼굴로 사람을 판별하지 않음)."""
+    prompt = """이건 연예인/아티스트 SNS(주로 인스타그램) 게시물 캡처야. 화면에 '글자로 보이는 것'과 사진 속 '사물·상황'만 읽어.
+⚠️ 얼굴 생김새로 누구인지 추측하지 마. 누구인지는 계정 이름, 게시글 문구, 해시태그, 음악 스티커 등 글자로만 판단해.
+JSON:
+{"account": "게시한 계정 아이디 (예: rescene_official)",
+ "person": "계정·글자로 확인되는 아티스트 한글 이름 (예: 리센느). 글자로 확인 안 되면 빈 문자열",
+ "person_en": "영문 이름 (예: RESCENE)",
+ "caption": "게시글 문구 그대로 (해시태그 포함)",
+ "date": "글자로 보이는 날짜 (예: 261120 → 2026-11-20). 없으면 빈 문자열",
+ "music": "음악 스티커 곡 정보 (있으면)",
+ "scene": "사진 속 상황을 사실대로 한 문장 (예: 흰 드레스를 입은 다섯 명이 트로피를 들고 포즈). 사물·옷·장소만, 사람 신원 추측 금지",
+ "search_query": "이 게시물 관련 뉴스를 찾을 검색어 2~4단어 (예: 리센느 수상)"}"""
+    data = _claude(prompt, image=image)
+    return data if isinstance(data, dict) else None
+
+
+def write_capture_story(info: dict, news_items: list[dict]) -> dict:
+    """캡처 내용 + 실제 뉴스 헤드라인으로 긍정적인 소식 글 작성."""
+    heads = "\n".join(f"- [{n.get('press', '')}] {n['title']} :: {n.get('snippet', '')[:150]}" for n in news_items) or "(관련 뉴스 없음)"
+    prompt = f"""너는 한국 연예뉴스 인스타그램 계정의 에디터야. 아티스트 SNS 게시물 캡처를 소식 게시물로 만든다.
+[원칙]
+- 밝고 긍정적인 톤 (축하·응원·반가움). 부정적·자극적·비꼬는 표현 금지.
+- 사실은 아래 [캡처 정보]와 [관련 뉴스]에 있는 것만. 수상명·행사명·날짜·곡명은 [관련 뉴스]나 캡처 글자로 확인될 때만 쓸 것.
+  예: 캡처에 트로피만 보이고 뉴스에서 '리센느 MAMA 수상'이 확인되면 → "리센느, MAMA 수상" OK.
+      뉴스로 확인 안 되면 → 행사명 없이 "리센느, 트로피 들고 환한 미소"처럼 보이는 사실만.
+- 관련 뉴스 중 이 게시물과 무관한 건 무시. 추측·해석("~로 보인다", "기대가 모인다") 금지.
+- '인스타그램 근황 공개' 같은 뻔한 제목보다, 소식 자체(수상·컴백·공연 등)를 제목으로.
+
+[캡처 정보]
+{json.dumps(info, ensure_ascii=False, indent=1)}
+
+[관련 뉴스 (최근 며칠, 제목 :: 요약)]
+{heads}
+
+[출력]
+- headline_top: 흰 글씨 '누가, 무엇' 14자 이내 (예: "리센느, MAMA 트로피")
+- headline_bottom: 컬러 강조 핵심 12자 이내 (예: "수상 인증샷 공개")
+- tag: 음악/드라마/영화/예능/연예 중 하나
+- subline: 22자 이내 부제
+- title: 캡션 첫 줄 제목 40자 이내
+- body: 3~4문단, 문단당 1~2문장, '~했습니다' 체, 따뜻한 톤. 이모지 1개까지.
+- hashtags: 8~12개 ('#' 포함, 아티스트 한글/영문명 포함)
+- person: 아티스트 한글 이름
+- confirmed: 행사명/수상명을 관련 뉴스로 확인했으면 true
+
+JSON:
+{{"tag": "...", "headline_top": "...", "headline_bottom": "...", "subline": "...", "title": "...", "body": "...", "hashtags": ["#..."], "person": "...", "confirmed": false}}"""
+    s = normalize(_gemini(prompt))
+    s["ok"] = bool(s.get("headline_top") and s.get("body"))
     return s

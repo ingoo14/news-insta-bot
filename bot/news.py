@@ -159,3 +159,16 @@ def fetch_body(item: dict, limit: int = 2000) -> str:
     except Exception as e:
         print(f"[본문 실패] {item['url']}: {e}")
     return item.get("snippet", "")
+
+
+def search_news(query: str, days: int = 5, n: int = 8) -> list[dict]:
+    """구글 뉴스 검색 (무료 RSS). 캡처 내용이 실제 소식인지 확인할 때 사용."""
+    from urllib.parse import quote
+    url = f"https://news.google.com/rss/search?q={quote(query + f' when:{days}d')}&hl=ko&gl=KR&ceid=KR:ko"
+    try:
+        items = fetch_feed(url)
+    except Exception as e:
+        print(f"[뉴스 검색 실패] {query}: {e}")
+        return []
+    print(f"[뉴스 검색] {query} → {len(items)}건")
+    return items[:n]

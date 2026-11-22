@@ -393,10 +393,9 @@ def render_summary(story: dict, photo: dict | None, color) -> Image.Image:
     # 하단: 출처
     sf = font("Regular", 24, "Sans")
     d.line([x, H - 170, W - x, H - 170], fill=(255, 255, 255, 60), width=2)
-    d.text((x, H - 145), f"기사 출처 · {story.get('press', '')}", font=sf, fill=(200, 200, 205))
     pc = " / ".join(x for x in ((photo or {}).get("credit"), (photo or {}).get("license")) if x)
     if pc:
-        d.text((x, H - 108), f"사진 · {pc}"[:60], font=sf, fill=(170, 170, 178))
+        d.text((x, H - 135), f"사진 · {pc}"[:60], font=sf, fill=(190, 190, 198))
     return img
 
 
@@ -406,3 +405,34 @@ def text_layer() -> Image.Image:
     ImageDraw.Draw(glow).ellipse([W * 0.1, 200, W * 0.9, 200 + W * 0.8], fill=accent() + (60,))
     canvas.alpha_composite(glow.filter(ImageFilter.GaussianBlur(140)))
     return canvas
+
+
+def crop_capture(path: str) -> bool:
+    """휴대폰 캡처에서 앱 화면(상단 바·버튼·글자)을 잘라내고 게시물 사진 부분만 남김.
+    배경색(흰/검정)이 아닌 줄이 가장 길게 이어지는 구간 = 사진. 못 찾으면 그대로 둠."""
+    import numpy as np
+    im = Image.open(path).convert("RGB")
+    a = np.asarray(im).astype(int)
+    h, w, _ = a.shape
+    corners = np.array([a[2, 2], a[2, w - 3], a[h - 3, 2], a[h - 3, w - 3]])
+    bg = np.median(corners, axis=0)
+    near = (np.abs(a - bg).sum(axis=2) < 40).mean(axis=1)  # 줄마다 배경색 비율
+    photo_row = near < 0.6
+    best, start, run = (0, 0), None, 0
+    for y, v in enumerate(list(photo_row) + [False]):
+        if v and start is None:
+            start = y
+        elif not v and start is not None:
+            if y - start > best[1] - best[0]:
+                best = (start, y)
+            start = None
+    top, bot = best
+    if bot - top < h * 0.25:
+        return False
+    band = a[top:bot]
+    col_near = (np.abs(band - bg).sum(axis=2) < 40).mean(axis=0)
+    cols = np.where(col_near < 0.6)[0]
+    left, right = (int(cols[0]), int(cols[-1]) + 1) if len(cols) else (0, w)
+    im.crop((left, top, right, bot)).save(path, "JPEG", quality=95)
+    print(f"[캡처 자르기] {w}x{h} → {right - left}x{bot - top}")
+    return True
