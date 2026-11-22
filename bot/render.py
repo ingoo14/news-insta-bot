@@ -450,14 +450,15 @@ def crop_capture(path: str) -> bool:
     im = Image.open(path).convert("RGB")
     a = np.asarray(im).astype(int)
     h, w, _ = a.shape
-    # 배경색 = 테두리에서 가장 많이 나오는 색 (흰/검정 앱 화면)
-    border = np.concatenate([a[0], a[-1], a[:, 0], a[:, -1], a[h // 2]]) // 16
-    vals, cnt = np.unique(border, axis=0, return_counts=True)
+    # 배경색 = 맨 위·맨 아래 줄(상태바·하단바 영역)에서 가장 많이 나오는 색
+    k = max(3, h // 40)
+    edge = np.concatenate([a[:k].reshape(-1, 3), a[-k:].reshape(-1, 3)]) // 16
+    vals, cnt = np.unique(edge, axis=0, return_counts=True)
     bg = vals[cnt.argmax()] * 16 + 8
-    # 진짜 '앱 화면 캡처'일 때만 자름: 테두리 대부분이 흰색/검정 단색이어야 함
+    # 진짜 '앱 화면 캡처'일 때만 자름: 위·아래 가장자리가 흰색/검정 단색이어야 함
     # (그냥 사진을 보낸 경우 벽·배경색을 앱 화면으로 착각해서 사람을 잘라먹는 것 방지)
     plain = bool((bg > 225).all() or (bg < 40).all())
-    if not plain or cnt.max() / cnt.sum() < 0.4:
+    if not plain or cnt.max() / cnt.sum() < 0.6:
         print("[캡처 자르기] 앱 화면이 아닌 일반 사진 → 그대로 사용")
         return False
     near = (np.abs(a - bg).sum(axis=2) < 40).mean(axis=1)  # 줄마다 배경색 비율

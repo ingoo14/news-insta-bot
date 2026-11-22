@@ -345,7 +345,7 @@ def write_capture_story(info: dict, news_items: list[dict]) -> dict:
 
 [출력]
 - headline_top: 흰 글씨 '누가, 무엇' 14자 이내 (예: "리센느, MAMA 트로피")
-- headline_bottom: 컬러 강조 핵심 12자 이내 (예: "수상 인증샷 공개")
+- headline_bottom: 컬러 강조 핵심 12자 이내 (예: "수상 인증샷 공개"). 첫 줄과 같은 단어 반복 금지 (예: 'MAMA 수상' / '베스트 오브 넥스트 수상' ✗ → 'MAMA 트로피' / '베스트 오브 넥스트' ✓)
 - tag: 음악/드라마/영화/예능/연예 중 하나
 - subline: 22자 이내 부제
 - title: 캡션 첫 줄 제목 40자 이내
