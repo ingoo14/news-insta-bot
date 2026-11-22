@@ -78,20 +78,49 @@ def _press(soup, meta_press: str, url: str) -> str:
 CAP_RE = re.compile(r"(?:출처|사진|제공|Photo|ⓒ|©)\s*[|:=│ㅣ]?\s*([^\n▲△|]{2,40})", re.I)
 
 
+TAIL_RE = re.compile(r"(?:^|[.。]\s*|\s)([가-힣A-Za-z0-9·&()\- ]{2,20}?)\s*(?:제공|캡처|캡쳐)\s*$")
+
+
+def _clean_src(src: str) -> str:
+    src = re.sub(r"^(출처|사진|제공)\s*[=|:ㅣ]?\s*", "", src).strip(" .,=|/")
+    return re.sub(r"\s*(무단|재배포|Copyright).*$", "", src, flags=re.I).strip()[:30]
+
+
+def _caption_source(t: str) -> str:
+    """사진 설명 한 줄에서 출처만: '…출처| 2026 MAMA 캡처' / '사진=연합뉴스' / '…뉴진스. 어도어 제공'."""
+    if not t or len(t) > 160:
+        return ""
+    m = CAP_RE.search(t)
+    if m and not re.match(r"\s*제공\s*$", t[m.start():]):
+        src = _clean_src(m.group(1))
+        if len(src) >= 2:
+            return src
+    m = TAIL_RE.search(t)  # 맨 끝이 'OO 제공' / 'OO 캡처'
+    if m:
+        word = t[m.end(1):].strip()
+        src = _clean_src(m.group(1) + " " + word)
+        if len(src) >= 2:
+            return src
+    return ""
+
+
 def _photo_caption(soup) -> str:
-    """기사 사진 설명에 적힌 사진 출처 (예: '▲ 지드래곤. 출처| 2026 MAMA 캡처' → '2026 MAMA 캡처')."""
-    nodes = soup.select("figcaption, em.img_desc, .img_desc, .end_photo_org em, [class*=caption], "
-                        "[class*=photo_desc], [class*=img_txt], [class*=imgtxt]")
-    for n in nodes:
-        t = n.get_text(" ", strip=True)
-        if not t or len(t) > 150:
+    """기사 사진 설명에 적힌 사진 출처."""
+    sel = ("figcaption, em.img_desc, .img_desc, .end_photo_org em, [class*=caption], [class*=photo_desc], "
+           "[class*=img_txt], [class*=imgtxt], [class*=desc]")
+    for n in soup.select(sel):
+        src = _caption_source(n.get_text(" ", strip=True))
+        if src:
+            return src
+    # 사진 설명 칸을 못 찾았으면: 짧은 글 덩어리 중 'OO 제공 / 사진=OO' 형식
+    for n in soup.find_all(["em", "span", "p", "div", "td", "strong"]):
+        if n.find(["p", "div"]):
             continue
-        m = CAP_RE.search(t)
-        if m:
-            src = re.sub(r"^(출처|사진)\s*", "", m.group(1)).strip(" .,=")
-            src = re.sub(r"\s*(무단|재배포|Copyright).*$", "", src, flags=re.I).strip()
-            if len(src) >= 2:
-                return src[:30]
+        t = n.get_text(" ", strip=True)
+        if 5 <= len(t) <= 120 and re.search(r"(제공|캡처|캡쳐)\s*$|사진\s*[=|ㅣ:]|ⓒ", t):
+            src = _caption_source(t)
+            if src:
+                return src
     return ""
 
 
@@ -109,7 +138,8 @@ def article_from_url(url: str) -> dict:
 
     title = meta("og:title", "twitter:title") or (soup.title.get_text(strip=True) if soup.title else "")
     title = re.sub(r"\s*[:|\-]\s*(네이버|NAVER|Daum|다음)\s*(엔터|연예|뉴스)?\s*$", "", title)
-    press = _press(soup, meta("og:article:author", "article:author", "dable:author", "og:site_name", "twitter:creator"), r.url)
+    m_off = re.search(r'"(?:officeName|pressName|press_name)"\s*:\s*"([^"]{2,20})"', r.text)  # 네이버 등 포털 페이지 안 언론사명
+    press = _press(soup, (m_off.group(1) if m_off else "") or meta("og:article:author", "article:author", "dable:author", "og:site_name", "twitter:creator"), r.url)
     item = {"title": title, "snippet": meta("og:description", "description"), "url": r.url,
             "press": press, "image": meta("og:image", "twitter:image"), "photo_src": _photo_caption(soup), "published": datetime.now(timezone.utc).isoformat()}
     item["body"] = news.fetch_body(item)

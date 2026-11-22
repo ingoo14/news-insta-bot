@@ -44,7 +44,14 @@ def _next_issue() -> int:
 
 
 def build_caption(s: dict, ph: dict) -> str:
-    tags = " ".join(s.get("hashtags", [])[:15])
+    # 해시태그에서 언론사 이름 빼기 (방송사·프로그램명은 그대로)
+    press_names = set(news.PRESS.values()) | {s.get("press", ""), "스포츠경향", "스포츠서울", "텐아시아", "스포티비뉴스",
+                                               "뉴스엔", "엑스포츠뉴스", "헤럴드경제", "머니투데이", "이데일리", "스타뉴스",
+                                               "OSEN", "뉴스1", "뉴시스", "연합뉴스", "조선일보", "중앙일보", "동아일보",
+                                               "한국경제", "매일경제", "세계일보", "스포츠월드", "일간스포츠", "마이데일리"}
+    tv = {"kbs", "mbc", "sbs", "jtbc", "tvn", "mnet", "ena", "tv조선", "mbn", "채널a"}  # 방송사는 프로그램 관련일 수 있어 유지
+    press_keys = {p.replace(" ", "").lower() for p in press_names if p} - tv
+    tags = " ".join([h for h in s.get("hashtags", []) if h.lstrip("#").replace(" ", "").lower() not in press_keys][:15])
     credit = " / ".join(x for x in (ph.get("credit"), ph.get("license"), ph.get("source")) if x)
     photo_line = ""
     if ph.get("kind") == "기사 사진" and credit:
