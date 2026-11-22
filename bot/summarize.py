@@ -328,6 +328,8 @@ def write_capture_story(info: dict, news_items: list[dict]) -> dict:
 - 사실은 아래 [캡처 정보]와 [관련 뉴스]에 있는 것만. 수상명·행사명·날짜·곡명은 [관련 뉴스]나 캡처 글자로 확인될 때만 쓸 것.
   예: 캡처에 트로피만 보이고 뉴스에서 '리센느 MAMA 수상'이 확인되면 → "리센느, MAMA 수상" OK.
       뉴스로 확인 안 되면 → 행사명 없이 "리센느, 트로피 들고 환한 미소"처럼 보이는 사실만.
+- ⭐ [캡처 정보]의 memo_from_sender는 운영자가 직접 확인하고 적어준 내용이야. 사실로 믿고 반드시 반영해.
+  메모에 행사명(예: MAMA)·소식이 있으면 headline_top/headline_bottom/title에 꼭 넣고 confirmed=true. 메모가 제목처럼 쓰여 있으면 그 표현을 최대한 살려.
 - 관련 뉴스 중 이 게시물과 무관한 건 무시. 추측·해석("~로 보인다", "기대가 모인다") 금지.
 - '인스타그램 근황 공개' 같은 뻔한 제목보다, 소식 자체(수상·컴백·공연·시상식 참석 등)를 제목으로.
 - [관련 뉴스]에 같은 인물의 최근 행사(시상식·레드카펫·공연 등)가 있고, 보낸 사람 메모나 게시글 문구·날짜·의상 묘사가 그 행사와 맞으면 그 행사 소식으로 써.
@@ -354,5 +356,7 @@ def write_capture_story(info: dict, news_items: list[dict]) -> dict:
 JSON:
 {{"tag": "...", "headline_top": "...", "headline_bottom": "...", "subline": "...", "title": "...", "body": "...", "hashtags": ["#..."], "person": "...", "confirmed": false}}"""
     s = normalize(_gemini(prompt))
+    if info.get("memo_from_sender"):
+        s["confirmed"] = True  # 운영자가 적어준 내용 = 확인된 사실
     s["ok"] = bool(s.get("headline_top") and s.get("body"))
     return s

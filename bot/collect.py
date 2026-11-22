@@ -51,7 +51,8 @@ def build_caption(s: dict, ph: dict) -> str:
         photo_line = f"사진 출처: {credit}\n"
     elif credit:
         photo_line = f"사진: {credit}\n"
-    return (f"📌 {s.get('title', '').strip()}\n\n{s.get('body', '').strip()}\n\n" + photo_line + f"\n{tags}").strip()
+    body = (s.get("body") or "").strip()
+    return (f"📌 {s.get('title', '').strip()}\n\n" + (f"{body}\n\n" if body else "") + photo_line + f"\n{tags}").strip()
 
 
 def main():

@@ -246,7 +246,8 @@ def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
         paths.append(render.photo_slide(str(x), out_dir / f"{i:02d}.jpg"))
         x.unlink(missing_ok=True)
     # _src.jpg(표지 원본)는 제목 수정 때 다시 쓰려고 승인·취소 전까지 보관
-    caption = collect.build_caption(s, ph)
+    # 사진 여러 장일 땐 캡션 = 제목 + 사진 출처 + 해시태그만 (본문 없음)
+    caption = collect.build_caption(dict(s, body="") if extras else s, ph)
     record = {"id": post_id, "created": now.isoformat(), "status": "awaiting", "attempts": 0, "manual": True,
               "images": [str(p.relative_to(config.ROOT)) for p in paths],
               "caption": caption, "story": s, "photo": ph,
