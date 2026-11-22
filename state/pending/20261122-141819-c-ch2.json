@@ -1,8 +1,8 @@
 {
   "id": "20261122-141819-c-ch2",
   "created": "2026-11-22T14:18:19.446961+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "manual": true,
   "images": [
     "docs/posts/20261122-141819-c-ch2/01.jpg",
@@ -50,5 +50,7 @@
   },
   "channel": "ch2",
   "channel_handle": "greenlight_music",
-  "preview_msg": 252
+  "preview_msg": 252,
+  "permalink": "https://www.instagram.com/p/DgCCmPxDzdd/",
+  "done": "2026-11-22T05:20:46.047305+00:00"
 }
