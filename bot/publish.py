@@ -3,7 +3,7 @@ import json
 import os
 import shutil
 import subprocess
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 from . import config, instagram, telegram
 
@@ -42,6 +42,14 @@ def main():
             continue
         if kind == "auto" and rec.get("manual") or kind == "manual" and not rec.get("manual"):
             continue
+        if rec.get("publish_at"):  # 예약 게시물: 시간이 안 됐으면 다음에
+            try:
+                at = datetime.fromisoformat(rec["publish_at"])
+                if datetime.now(timezone.utc) < at - timedelta(minutes=3):
+                    print(f"[예약 대기] {rec['id']} → {rec['publish_at']}")
+                    continue
+            except Exception as e:
+                print(f"[예약 시각 오류 → 바로 올림] {e}")
         ch = chans.get(rec.get("channel", "ch1"))
         if not ch:
             print(f"[채널 설정 없음 → 건너뜀] {rec['id']} ({rec.get('channel')})")

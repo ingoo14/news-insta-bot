@@ -15,6 +15,14 @@ from bs4 import BeautifulSoup
 from . import collect, config, news, photo, render, summarize, telegram
 
 KST = timezone(timedelta(hours=9))
+PUBLISH_AT = ""  # 예약 업로드 시각 (워커가 '예약 20시' 같은 문구를 읽어서 AT=... 으로 넘겨줌)
+
+
+def _at_label(iso: str) -> str:
+    try:
+        return datetime.fromisoformat(iso).astimezone(KST).strftime("%m/%d %H:%M")
+    except Exception:
+        return iso
 URL_RE = re.compile(r"https?://[^\s<>\"']+")
 
 
@@ -159,6 +167,7 @@ def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) 
     paths = render.render_story(s, ph, out_dir)
     (out_dir / "_src.jpg").unlink(missing_ok=True)
     record = {"id": post_id, "created": now.isoformat(), "status": "pending", "attempts": 0, "manual": True,
+              "publish_at": PUBLISH_AT,
               "images": [str(p.relative_to(config.ROOT)) for p in paths],
               "caption": collect.build_caption(s, ph), "story": s, "photo": ph,
               "channel": ch["key"], "channel_handle": ch.get("handle", "")}
@@ -214,7 +223,8 @@ def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
         config.PENDING_DIR.mkdir(parents=True, exist_ok=True)
         (config.PENDING_DIR / f"{post_id}-ask.json").write_text(json.dumps({
             "id": f"{post_id}-ask", "created": now.isoformat(), "status": "need_name", "manual": True, "images": [],
-            "ask_msg": (ask or {}).get("message_id"), "file_ids": file_id, "text": text, "channel": ch["key"]},
+            "ask_msg": (ask or {}).get("message_id"), "file_ids": file_id, "text": text, "channel": ch["key"],
+            "publish_at": PUBLISH_AT},
             ensure_ascii=False, indent=2))
         return True, "이름 물어봄"
     items, seen_t = [], set()
@@ -249,6 +259,7 @@ def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
     # 사진 여러 장일 땐 캡션 = 제목 + 사진 출처 + 해시태그만 (본문 없음)
     caption = collect.build_caption(dict(s, body="") if extras else s, ph)
     record = {"id": post_id, "created": now.isoformat(), "status": "awaiting", "attempts": 0, "manual": True,
+              "publish_at": PUBLISH_AT,
               "images": [str(p.relative_to(config.ROOT)) for p in paths],
               "caption": caption, "story": s, "photo": ph,
               "channel": ch["key"], "channel_handle": ch.get("handle", "")}
@@ -272,6 +283,8 @@ def _send_preview(record: dict, header: str = "이대로 올릴까요?"):
     except Exception as e:
         print(f"[미리보기 실패] {e}")
     warn = "" if s.get("confirmed") else "\n(⚠️ 수상·행사명은 뉴스로 확인이 안 돼서 뺐어)"
+    if record.get("publish_at"):
+        header += f"\n⏰ 승인하면 {_at_label(record['publish_at'])}에 올라가"
     tip = "\n\n✏️ 제목을 바꾸려면 이 메시지에 '답장'으로\n첫줄(흰 글씨)\n둘째줄(컬러 글씨)\n이렇게 보내줘"
     msg = telegram.send_message(f"👀 [{record.get('channel_handle')}] {header}{warn}\n\n{record['caption'][:2800]}{tip}",
                                 buttons=[[{"text": "✅ 올리기", "callback_data": f"ok:{post_id}"},
@@ -288,6 +301,8 @@ def handle_edit(reply_to: str, text: str):
         if r.get("status") == "need_name" and str(r.get("ask_msg")) == str(reply_to):
             # 이름 물어본 메시지에 답장 → 아까 사진들로 이어서 기사 쓰기
             p.unlink()
+            global PUBLISH_AT
+            PUBLISH_AT = r.get("publish_at", "")
             ch = next((c for c in config.channels() if c["key"] == r.get("channel")), None) or pick_channel(r.get("text", ""))
             memo = f"{r.get('text', '')} {text.strip()}".replace("캡처", " ").strip()
             telegram.send_message(f"🛠 {text.strip()[:20]}(으)로 다시 쓰는 중… [{ch.get('handle')}]")
@@ -397,7 +412,15 @@ def main():
     manual_in = os.environ.get("MANUAL_URL", "")
     urls = [(u, manual_in, None) for u in URL_RE.findall(manual_in)]
     # 텔레그램 → Cloudflare → GitHub 로 바로 들어온 메시지
+    global PUBLISH_AT
     tg_text, tg_file = os.environ.get("TG_TEXT", ""), os.environ.get("TG_FILE_ID", "")
+    if tg_text.startswith("PUBLISH_DUE"):  # 예약 시간이 된 게시물 올리기 (업로드는 다음 단계에서)
+        print("예약 시간 도착 → 업로드 단계로")
+        return
+    m_at = re.match(r"AT=(\S+)\s*", tg_text)
+    if m_at:
+        PUBLISH_AT, tg_text = m_at.group(1), tg_text[m_at.end():] or "캡처"
+        print(f"[예약] {PUBLISH_AT}")
     if tg_text.startswith("APPROVE "):  # 미리보기 버튼 (워커가 보내줌)
         handle_approval(tg_text.split()[1:])
         return
@@ -414,7 +437,8 @@ def main():
     # 링크 없이 캡처만 보낸 경우 → 캡처로 소식 쓰기 (채널 이름을 같이 써야 함)
     if tg_file and not URL_RE.search(tg_text or ""):
         ch = pick_channel(tg_text)  # 채널 이름 없으면 기본 채널(입덕)
-        telegram.send_message(f"🛠 캡처 접수! [{ch.get('handle')}] 내용 읽고 기사 쓰는 중…")
+        telegram.send_message(f"🛠 캡처 접수! [{ch.get('handle')}] 내용 읽고 기사 쓰는 중…"
+                              + (f" (⏰ {_at_label(PUBLISH_AT)} 예약)" if PUBLISH_AT else ""))
         try:
             ok, msg = make_capture_post(tg_text, tg_file, ch)
         except Exception as e:
@@ -435,9 +459,12 @@ def main():
             continue
         done.add(url)
         ch = pick_channel(text)
-        telegram.send_message(f"🛠 접수! [{ch.get('handle')}] 카드 만드는 중…" + (" (보낸 사진 사용)" if up else "") + f"\n{url}")
+        telegram.send_message(f"🛠 접수! [{ch.get('handle')}] 카드 만드는 중…" + (" (보낸 사진 사용)" if up else "")
+                              + (f" (⏰ {_at_label(PUBLISH_AT)} 예약)" if PUBLISH_AT else "") + f"\n{url}")
         try:
             ok, msg = make_post(url, ch, up)
+            if ok and PUBLISH_AT:
+                telegram.send_message(f"⏰ 카드 준비 완료! {_at_label(PUBLISH_AT)}에 [{ch.get('handle')}]에 올라가\n{msg}")
         except Exception as e:  # Gemini 전체 혼잡 등 → 조용히 죽지 말고 단톡방에 알림
             ok = False
             msg = ("AI(Gemini) 서버가 지금 전부 혼잡해서 요약을 못 만들었어. 10~30분 뒤에 링크를 다시 보내줘"
