@@ -200,13 +200,24 @@ def make_capture_post(text: str, file_id: str, ch: dict) -> tuple[bool, str]:
     hint = CREDIT_RE.sub(" ", hint).replace("캡처", " ").strip()
     if hint:  # 같이 적어 보낸 메모 (예: '리센느 마마 수상') → 검색·작성 힌트
         info["memo_from_sender"] = hint
+    owner = photo.instagram_owner(info.get("account", ""))  # 위키데이터에 등록된 인스타 주인 (정확)
+    if owner:
+        info["person"] = owner
     print(f"[캡처 정보] {json.dumps(info, ensure_ascii=False)}")
     if not (info.get("person") or info.get("account")):
         return False, "캡처에서 누구 게시물인지 못 찾았어. 계정 이름이 보이게 캡처하거나, 메시지에 이름을 같이 써줘 (예: 갬성 리센느)"
-    items = []
-    for q in [hint, info.get("search_query"), f"{info.get('person', '')} {info.get('scene', '')[:0]}".strip()]:
-        if q and not items:
-            items = news.search_news(q)
+    items, seen_t = [], set()
+    person = info.get("person", "")
+    for q in [hint, info.get("search_query"), person]:  # 여러 검색어 결과를 합침
+        if not q:
+            continue
+        if person and person not in q:
+            q = f"{person} {q}"
+        for it in news.search_news(q):
+            if it["title"] not in seen_t:
+                seen_t.add(it["title"])
+                items.append(it)
+    items = items[:15]
     s = summarize.write_capture_story(info, items)
     if not s.get("ok"):
         return False, "글을 못 만들었어 (AI 응답 오류)"

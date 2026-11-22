@@ -414,8 +414,10 @@ def crop_capture(path: str) -> bool:
     im = Image.open(path).convert("RGB")
     a = np.asarray(im).astype(int)
     h, w, _ = a.shape
-    corners = np.array([a[2, 2], a[2, w - 3], a[h - 3, 2], a[h - 3, w - 3]])
-    bg = np.median(corners, axis=0)
+    # 배경색 = 테두리에서 가장 많이 나오는 색 (흰/검정 앱 화면)
+    border = np.concatenate([a[0], a[-1], a[:, 0], a[:, -1], a[h // 2]]) // 16
+    vals, cnt = np.unique(border, axis=0, return_counts=True)
+    bg = vals[cnt.argmax()] * 16 + 8
     near = (np.abs(a - bg).sum(axis=2) < 40).mean(axis=1)  # 줄마다 배경색 비율
     photo_row = near < 0.6
     best, start, run = (0, 0), None, 0
@@ -431,8 +433,18 @@ def crop_capture(path: str) -> bool:
         return False
     band = a[top:bot]
     col_near = (np.abs(band - bg).sum(axis=2) < 40).mean(axis=0)
-    cols = np.where(col_near < 0.6)[0]
-    left, right = (int(cols[0]), int(cols[-1]) + 1) if len(cols) else (0, w)
+    # 가로도 '사진 열'이 가장 길게 이어지는 구간만 (PC 캡처의 오른쪽 댓글창 제거)
+    left, right, st = 0, w, None
+    bestc = (0, 0)
+    for x, v in enumerate(list(col_near < 0.6) + [False]):
+        if v and st is None:
+            st = x
+        elif not v and st is not None:
+            if x - st > bestc[1] - bestc[0]:
+                bestc = (st, x)
+            st = None
+    if bestc[1] - bestc[0] > w * 0.3:
+        left, right = bestc
     im.crop((left, top, right, bot)).save(path, "JPEG", quality=95)
     print(f"[캡처 자르기] {w}x{h} → {right - left}x{bot - top}")
     return True

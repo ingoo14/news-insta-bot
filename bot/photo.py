@@ -359,3 +359,26 @@ def find_photo(person_queries, scene_queries, tag, save_to: Path) -> dict | None
                 return _pack(hit, save_to, "분위기", q)
     print(f"[사진 없음] {person_queries} / {scene_queries}")
     return None
+
+
+def instagram_owner(handle: str) -> str:
+    """인스타 아이디 → 위키데이터에 등록된 주인 이름(한글 우선). 예: for_everyoung10 → 장원영"""
+    handle = (handle or "").strip().lstrip("@").lower()
+    if not handle:
+        return ""
+    try:
+        r = requests.get(WIKIDATA, headers=UA, timeout=20, params={
+            "action": "query", "list": "search", "srsearch": f"haswbstatement:P2003={handle}",
+            "srlimit": 3, "format": "json"}).json()
+        qids = [h["title"] for h in r.get("query", {}).get("search", [])]
+        if not qids:
+            return ""
+        e = requests.get(WIKIDATA, headers=UA, timeout=20, params={
+            "action": "wbgetentities", "ids": qids[0], "props": "labels", "languages": "ko|en",
+            "format": "json"}).json()["entities"][qids[0]]["labels"]
+        name = (e.get("ko") or e.get("en") or {}).get("value", "")
+        print(f"[인스타 주인] @{handle} → {name} ({qids[0]})")
+        return name
+    except Exception as ex:
+        print(f"[인스타 주인 조회 실패] {ex}")
+        return ""
