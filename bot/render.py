@@ -307,7 +307,7 @@ def photo_color(path: str):
 
 def render_story(story: dict, photo: dict | None, out_dir: Path) -> list[Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
-    img = base_photo(photo["path"], keep_all=photo.get("kind") == "직접 전송") if photo else text_layer()
+    img = base_photo(photo["path"], keep_all=photo.get("kind") in ("직접 전송", "기사 사진")) if photo else text_layer()
     d = ImageDraw.Draw(img)
     color = photo_color(photo["path"]) if photo else PALETTE[int(story.get("issue_no", 0)) % len(PALETTE)]
 

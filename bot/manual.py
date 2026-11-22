@@ -4,6 +4,7 @@
 5분마다 텔레그램 새 메시지 확인 → 링크가 있으면 처리. 업로드는 bot.publish 가 이어서 함.
 """
 import json
+from PIL import Image
 import os
 import re
 from datetime import datetime, timedelta, timezone
@@ -32,7 +33,7 @@ def article_from_url(url: str) -> dict:
     title = meta("og:title", "twitter:title") or (soup.title.get_text(strip=True) if soup.title else "")
     press = meta("og:article:author", "og:site_name", "twitter:creator") or news.press_name(r.url)
     item = {"title": title, "snippet": meta("og:description", "description"), "url": r.url,
-            "press": press, "published": datetime.now(timezone.utc).isoformat()}
+            "press": press, "image": meta("og:image", "twitter:image"), "published": datetime.now(timezone.utc).isoformat()}
     item["body"] = news.fetch_body(item)
     return item
 
@@ -86,7 +87,25 @@ def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) 
                   "page": "", "source": "", "kind": "직접 전송"}
         except Exception as e:
             return False, f"보내준 사진을 못 받았어: {e}"
+    elif a.get("image"):  # 링크 업로드: 사진을 안 보냈으면 기사 대표 사진 사용
+        try:
+            out_dir.mkdir(parents=True, exist_ok=True)
+            img = a["image"] if a["image"].startswith("http") else requests.compat.urljoin(a["url"], a["image"])
+            rr = requests.get(img, headers={**news.UA, "Referer": a["url"]}, timeout=20)
+            rr.raise_for_status()
+            if len(rr.content) < 5000:
+                raise ValueError("사진이 너무 작음")
+            (out_dir / "_src.jpg").write_bytes(rr.content)
+            Image.open(out_dir / "_src.jpg").convert("RGB").save(out_dir / "_src.jpg", "JPEG", quality=95)
+            ph = {"path": str(out_dir / "_src.jpg"), "credit": a["press"], "license": "",
+                  "page": a["url"], "source": "", "kind": "기사 사진"}
+            print(f"[기사 사진] {img}")
+        except Exception as e:
+            print(f"[기사 사진 실패] {e} → 무료 사진 검색")
+            ph = None
     else:
+        ph = None
+    if not user_photo and not ph:
         names = [s.get("person", "")] + list(s.get("photo_queries", []))
         ph = photo.find_photo([n for i, n in enumerate(names) if n and n not in names[:i]],
                               s.get("scene_queries", []), s.get("tag", "연예"), out_dir / "_src.jpg")
