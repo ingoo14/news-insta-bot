@@ -1,8 +1,8 @@
 {
   "id": "20261122-231557-m-ch3",
   "created": "2026-11-22T23:15:57.062137+09:00",
-  "status": "pending",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "manual": true,
   "publish_at": "",
   "poll": null,
@@ -64,5 +64,7 @@
     "kind": "기사 사진"
   },
   "channel": "ch3",
-  "channel_handle": "gaem_seong_1spoon"
+  "channel_handle": "gaem_seong_1spoon",
+  "permalink": "https://www.instagram.com/p/DgC_8gvD6NJ/",
+  "done": "2026-11-22T14:16:43.065426+00:00"
 }
