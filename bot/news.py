@@ -129,7 +129,7 @@ def collect_candidates(seen_urls: set[str]) -> list[dict]:
     return result
 
 
-BODY_SELECTORS = ["#articleWrap", "#articeBody", "#articleBody", "div.article-txt", "div.story-news",
+BODY_SELECTORS = ["div.art_body", "#articleWrap", "#articeBody", "#articleBody", "div.article-txt", "div.story-news",
                   "#article_txt", "div.article_body", "div#article-view-content-div", "section.article-body",
                   "div.news_body", "article"]
 

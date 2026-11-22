@@ -68,9 +68,14 @@ def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) 
         return False, f"기사를 못 불러왔어: {e}"
     if not a["title"]:
         return False, "기사 제목을 못 찾았어 (링크 확인)"
-    s = summarize.write_story(a)
+    body_len = len(a.get("body") or "")
+    print(f"[본문] {body_len}자 / {a['press']} / {a['title']}")
+    if body_len < 80:
+        return False, f"기사 본문을 못 읽었어 ({body_len}자). 이 사이트가 본문을 막아둔 것 같아 — 같은 소식의 다른 언론사 링크로 보내줘"
+    s = summarize.write_story(a, manual=True)
     if not (s.get("headline_top") and s.get("body")):
-        return False, "요약을 못 만들었어 (본문이 비어 있는 기사일 수 있음)"
+        why = s.get("reason") or "AI가 이 기사로는 글을 못 만들겠다고 함"
+        return False, f"요약을 못 만들었어 — {why}"
     now = datetime.now(KST)
     post_id = f"{now:%Y%m%d-%H%M%S}-m-{ch['key']}"
     out_dir = config.POSTS_DIR / post_id
@@ -158,7 +163,12 @@ def main():
         done.add(url)
         ch = pick_channel(text)
         telegram.send_message(f"🛠 접수! [{ch.get('handle')}] 카드 만드는 중…" + (" (보낸 사진 사용)" if up else "") + f"\n{url}")
-        ok, msg = make_post(url, ch, up)
+        try:
+            ok, msg = make_post(url, ch, up)
+        except Exception as e:  # Gemini 전체 혼잡 등 → 조용히 죽지 말고 단톡방에 알림
+            ok = False
+            msg = ("AI(Gemini) 서버가 지금 전부 혼잡해서 요약을 못 만들었어. 10~30분 뒤에 링크를 다시 보내줘"
+                   if "Gemini" in str(e) else f"처리 중 오류: {str(e)[:200]}")
         print(("[준비 완료] " if ok else "[실패] ") + msg)
         if not ok:
             telegram.send_message(f"⚠️ {msg}\n{url}")

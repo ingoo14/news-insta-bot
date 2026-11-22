@@ -193,7 +193,9 @@ JSON으로만 답해: {{"picks": [번호, ...]}}"""
     return [int(p) for p in picks if 0 <= int(p) < min(len(candidates), 50)][:n]
 
 
-def write_story(a: dict) -> dict:
+def write_story(a: dict, manual: bool = False) -> dict:
+    extra = ("\n[직접 요청 기사] 운영자가 직접 골라 보낸 기사야. 주제 때문에 거절하지 말고 ok는 true로, "
+             "기사에 적힌 사실만 담담하게 정리해 (추측·자극적 표현은 여전히 금지).\n") if manual else ""
     prompt = f"""너는 한국 연예뉴스 인스타그램 계정의 에디터야. 아래 기사 1건으로 게시물을 만든다.
 {RULES}
 [카드 이미지 문구] — 기사 제목처럼 짧고 명확하게, 사진 아래에 큰 글씨로 들어감
@@ -214,16 +216,18 @@ def write_story(a: dict) -> dict:
   한글 공식 이름 먼저, 그다음 영문 공식 표기 (예: ["에픽하이", "Epik High", "타블로", "Tablo"]). 인물이 없으면 [].
 - person: 표지에 나올 핵심 인물 한글 이름 1개 (예: "에픽하이").
 - scene_queries: 인물 사진이 없을 때 쓸 분위기 사진 영어 검색어 2개. 기사 장면과 어울리게 (예: "Han River park Seoul", "concert stage lights").
-기사 내용이 부실하거나 원칙 위반 소지가 있으면 ok를 false로.
-
+기사 내용이 부실하거나 원칙 위반 소지가 있으면 ok를 false로 하고 reason에 이유를 한 줄로.
+{extra}
 언론사: {a['press']}
 제목: {a['title']}
 본문:
 {a['body']}
 
 JSON으로만 답해:
-{{"ok": true, "tag": "...", "headline_top": "...", "headline_bottom": "...", "subline": "...", "card_summary": ["...", "...", "..."], "title": "...", "body": "...", "hashtags": ["#..."], "photo_queries": ["..."], "person": "...", "scene_queries": ["..."]}}"""
+{{"ok": true, "reason": "", "tag": "...", "headline_top": "...", "headline_bottom": "...", "subline": "...", "card_summary": ["...", "...", "..."], "title": "...", "body": "...", "hashtags": ["#..."], "photo_queries": ["..."], "person": "...", "scene_queries": ["..."]}}"""
     s = normalize(_gemini(prompt))
+    if manual and s.get("body") and s.get("headline_top"):
+        s["ok"] = True
     if s.get("ok") and s.get("body"):
         s = fact_check(s, a)
     s["press"], s["url"], s["source_title"] = a["press"], a["url"], a["title"]
