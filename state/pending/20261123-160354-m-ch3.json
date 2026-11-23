@@ -1,8 +1,8 @@
 {
   "id": "20261123-160354-m-ch3",
   "created": "2026-11-23T16:03:54.558540+09:00",
-  "status": "publishing",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "manual": true,
   "publish_at": "2026-11-23T10:00:00+00:00",
   "poll": null,
@@ -68,5 +68,7 @@
   },
   "channel": "ch3",
   "channel_handle": "gaem_seong_1spoon",
-  "claimed": "2026-11-23T10:04:32.646737+00:00"
+  "claimed": "2026-11-23T10:04:32.646737+00:00",
+  "permalink": "https://www.instagram.com/p/DgFH73wl9dC/",
+  "done": "2026-11-23T10:04:58.565887+00:00"
 }
