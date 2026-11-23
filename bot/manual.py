@@ -426,7 +426,11 @@ def make_reel_post(text: str, video_id: str, ch: dict) -> tuple[bool, str]:
         else:
             return False, f"영상을 못 받았어: {e}"
     # 인스타 규격(H.264+AAC, 빠른 시작)으로 변환. 소리 없는 영상도 OK
-    r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-c:v", "libx264", "-preset", "veryfast",
+    # 인스타 릴스 표준 9:16(1080x1920)으로 맞춤: 비율이 조금 달라도 안 자르고 남는 곳만 검은 여백
+    vf = ("scale=1080:1920:force_original_aspect_ratio=decrease:flags=lanczos,"
+          "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1,fps=30")
+    r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-vf", vf,
+                        "-c:v", "libx264", "-preset", "veryfast",
                         "-crf", "21", "-maxrate", "8M", "-bufsize", "16M", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart",
                         str(vid)], capture_output=True, text=True)
     if r.returncode != 0:

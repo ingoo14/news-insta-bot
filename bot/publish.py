@@ -169,7 +169,12 @@ def main():
         link, err = None, None
         for host in hosts:  # CDN이 안 되면 GitHub 원본 주소로 재시도
             try:
-                link = instagram.publish(image_urls(rec, sha, host), rec["caption"], rec.get("poll"))
+                if rec.get("type") == "reel":  # 릴스: 영상은 용량 때문에 GitHub 원본 주소로
+                    repo = config.GITHUB_REPOSITORY
+                    vurl = f"https://raw.githubusercontent.com/{repo}/{sha}/{rec['video']}"
+                    link = instagram.publish_reel(vurl, rec["caption"], rec.get("poll"))
+                else:
+                    link = instagram.publish(image_urls(rec, sha, host), rec["caption"], rec.get("poll"))
                 break
             except Exception as e:
                 err = e
@@ -194,7 +199,8 @@ def main():
         elif rec["attempts"] >= MAX_ATTEMPTS or want is not None:  # 링크 업로드는 재시도 회차가 없으니 바로 알림
             rec["status"] = "failed"
             shutil.rmtree(config.POSTS_DIR / rec["id"], ignore_errors=True)
-            notify(f"⚠️ [{ch['handle']}] 업로드 실패 — 링크를 다시 보내줘\n{title}\n{err}")
+            what = "영상을" if rec.get("type") == "reel" else "링크를"
+            notify(f"⚠️ [{ch['handle']}] 업로드 실패 — {what} 다시 보내줘\n{title}\n{err}")
         else:
             notify(f"⚠️ [{ch['handle']}] 업로드 실패 (다음 회차에 재시도)\n{title}\n{err}")
         rec["done"] = datetime.now(timezone.utc).isoformat()
