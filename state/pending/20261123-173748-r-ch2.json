@@ -1,7 +1,7 @@
 {
   "id": "20261123-173748-r-ch2",
   "created": "2026-11-23T17:37:48.717238+09:00",
-  "status": "pending",
+  "status": "publishing",
   "attempts": 0,
   "manual": true,
   "type": "reel",
@@ -23,5 +23,6 @@
   "photo": {},
   "channel": "ch2",
   "channel_handle": "greenlight_music",
-  "preview_msg": 435
+  "preview_msg": 435,
+  "claimed": "2026-11-23T09:02:55.273611+00:00"
 }
