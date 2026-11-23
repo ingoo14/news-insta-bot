@@ -414,3 +414,57 @@ JSON: {{"question": "...", "options": ["...", "..."]}}"""
     except Exception as e:
         print(f"[투표 만들기 실패] {e}")
         return {}
+
+
+REEL_STYLE = """[우리 채널 릴스 캡션 스타일 — 기사체 절대 금지]
+예시1)
+지치지 말라고 에바뛰 형들이 위로해줌
+💿 CNBLUE (씨엔블루) - 달리기
+
+#CNBLUE #씨엔블루 #달리기 #Running #씨엔블루달리기 #정용화 #강민혁 #이정신 #이슈 #issuse #idol #아이돌 #케이팝 #kpop #kpopidol #fyp
+
+예시2)
+주차장에서 라이브를 이렇게 잘한다고?!
+
+🎶 커버곡 : 꿈의음 - 우리에게 남은 시간은 가을이야 (cover by 이윤희 @lee_yoon_hee_)
+
+#우리에게_남은_시간은_가을이야 #꿈의음 #커버 #cover #주차장 #라이브 #신곡 #가을 #겨울 #노래추천 #reels
+
+규칙
+- 첫 줄: 짧은 한 줄 훅. 친구한테 말하듯 반말·감탄 (예: ~해줌, ~한다고?!, ~미쳤다). 20자 안팎. '공개했습니다' 같은 기사 말투 금지.
+- 둘째 줄: 💿 또는 🎶 + '아티스트 - 곡명' (커버면 '커버곡 : 원곡 아티스트 - 곡명 (cover by 이름 @아이디)'). 모르면 이 줄은 생략.
+- 빈 줄 후 해시태그 10~18개: 아티스트 한글·영문, 곡명, 곡명 띄어쓰기를 _로, 분위기·계절, #노래추천 #kpop #reels #fyp 같은 범용 태그.
+- 📌, 제목줄, 설명 문단 쓰지 말 것. 사실은 메모·화면에 있는 것만 (모르는 곡명·이름 지어내기 금지)."""
+
+
+def write_reel_caption(info: dict, items: list[dict]) -> str:
+    """릴스용 짧은 감성 캡션 (훅 한 줄 + 곡 정보 + 해시태그)."""
+    heads = "\n".join(f"- {n['title']}" for n in items[:8]) or "(없음)"
+    prompt = f"""{REEL_STYLE}
+
+[영상 화면에서 읽은 것 / 보낸 사람 메모]
+{json.dumps(info, ensure_ascii=False, indent=1)}
+
+[참고 뉴스 제목]
+{heads}
+
+JSON: {{"caption": "캡션 전체 (줄바꿈은 \\n)"}}"""
+    d = _gemini(prompt) or {}
+    return str(d.get("caption", "")).replace("\\n", "\n").strip()
+
+
+def revise_reel_caption(caption: str, request: str) -> str:
+    prompt = f"""{REEL_STYLE}
+
+아래 릴스 캡션을 요청대로 고쳐. 곡명·아티스트 같은 사실은 유지, 새 사실 지어내기 금지.
+- 요청: {request}
+[현재 캡션]
+{caption}
+
+JSON: {{"caption": "고친 캡션 전체"}}"""
+    try:
+        d = _gemini(prompt) or {}
+        return str(d.get("caption", "")).replace("\\n", "\n").strip()
+    except Exception as e:
+        print(f"[릴스 캡션 수정 실패] {e}")
+        return ""

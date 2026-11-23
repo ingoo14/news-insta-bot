@@ -448,13 +448,11 @@ def make_reel_post(text: str, video_id: str, ch: dict) -> tuple[bool, str]:
         info["platform"] = "우리 채널 릴스 영상 (직접 제작)"
         q = info.get("person") or info.get("search_query") or ""
         items = news.search_news(q) if q else []
-        s = summarize.write_capture_story(info, items)
-        if not s.get("ok"):
+        caption = summarize.write_reel_caption(info, items)  # 짧은 감성 캡션 (기사체 X)
+        if not caption:
             return False, "릴스 문구를 못 만들었어 (AI 응답 오류). 문구를 직접 써서 보내줘"
-        caption = collect.build_caption(s, {})
+        s = {"title": caption.splitlines()[0][:40], "custom_caption": True, "confirmed": True, "ai_caption": True}
     poll = _apply_poll(s, POLL)
-    if poll and s.get("poll_q") and not s.get("custom_caption"):
-        caption = collect.build_caption(s, {})
     record = {"id": post_id, "created": now.isoformat(), "status": "awaiting", "attempts": 0, "manual": True,
               "type": "reel", "video": str(vid.relative_to(config.ROOT)), "images": [str(frame.relative_to(config.ROOT))],
               "publish_at": PUBLISH_AT, "poll": poll, "caption": caption, "story": s, "photo": {},
@@ -498,7 +496,7 @@ def handle_edit(reply_to: str, text: str):
         return
     s = rec["story"]
     changed = []
-    if fields.get("request"):  # '요청: 더 짧게' 같은 자유 요청 → AI가 고쳐 씀
+    if fields.get("request") and rec.get("type") != "reel":  # '요청: 더 짧게' 같은 자유 요청 → AI가 고쳐 씀
         rev = summarize.revise_story(s, fields["request"])
         for k in ("headline_top", "headline_bottom", "title", "body", "hashtags"):
             if rev.get(k):
@@ -528,17 +526,19 @@ def handle_edit(reply_to: str, text: str):
             rec["poll"] = _apply_poll(s, req)
         changed.append("투표")
     if rec.get("type") == "reel":  # 릴스는 영상이라 그림 다시 그릴 것 없이 캡션만
-        if s.get("custom_caption") and not fields.get("request"):
-            if fields.get("body") is not None:  # 직접 쓴 문구를 통째로 교체
+        if fields.get("request"):  # '요청: …' → 릴스 캡션 스타일로 다시 씀
+            new_cap = summarize.revise_reel_caption(rec["caption"], fields["request"])
+            if new_cap:
+                rec["caption"] = new_cap
+                changed.append("요청 반영")
+        if True:
+            if fields.get("body") is not None:  # 문구를 통째로 교체
                 rec["caption"] = fields["body"]
             if fields.get("tags"):  # 해시태그 줄만 교체
                 lines = rec["caption"].rstrip().split("\n")
                 while lines and lines[-1].strip().startswith("#"):
                     lines.pop()
                 rec["caption"] = ("\n".join(lines).rstrip() + "\n\n" + " ".join(s["hashtags"])).strip()
-        else:
-            s.pop("custom_caption", None)
-            rec["caption"] = collect.build_caption(s, {})
         rec["story"] = s
         if rec.get("preview_msg"):
             telegram.edit_buttons(rec["preview_msg"], "✏️ 수정됨 (아래 새 미리보기)")
