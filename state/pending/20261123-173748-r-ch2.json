@@ -11,15 +11,17 @@
   ],
   "publish_at": "2026-11-23T09:00:00+00:00",
   "poll": null,
-  "caption": "밤 고속도로에 이 노래 틀면 미쳤음\n\n🎶 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음헌신 #노래추천 #신곡 #드라이브 #저녁드라이브 #밤드라이브 #드라이빙 #감성 #감성노래 #kpop #reels #fyp",
+  "caption": "저녁 드라이브 할 때 이 노래 들어봐",
   "story": {
     "title": "밤 고속도로에 이 노래 틀면 미쳤음",
     "custom_caption": true,
     "confirmed": true,
-    "ai_caption": true
+    "ai_caption": true,
+    "body": "저녁 드라이브 할 때 이 노래 들어봐",
+    "body_custom": true
   },
   "photo": {},
   "channel": "ch2",
   "channel_handle": "greenlight_music",
-  "preview_msg": 431
+  "preview_msg": 435
 }
