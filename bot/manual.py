@@ -372,11 +372,89 @@ def _send_preview(record: dict, header: str = "이대로 올릴까요?"):
            "• 표지 제목 → 그냥 두 줄 (첫줄 흰 글씨 / 둘째줄 컬러)\n"
            "• 출처: 사진 출처\n• 캡션제목: 캡션 📌 첫 줄\n• 내용: 캡션 본문\n• 태그: #해시태그\n"
            "• 투표: 멋지다 / 존경한다 (없음 = 빼기)\n• 요청: 더 짧게 / 더 밝게 같은 부탁")
+    if record.get("type") == "reel":
+        tip = ("\n\n✏️ 고치려면 이 메시지에 '답장'으로:\n• 내용: 새 문구 (통째로 교체)\n• 태그: #해시태그\n"
+               "• 투표: 멋지다 / 존경한다\n• 요청: 더 짧게 / 더 밝게 같은 부탁")
     msg = telegram.send_message(f"👀 [{record.get('channel_handle')}] {header}{warn}\n\n{record['caption'][:2800]}{tip}",
                                 buttons=[[{"text": "✅ 올리기", "callback_data": f"ok:{post_id}"},
                                           {"text": "❌ 취소", "callback_data": f"no:{post_id}"}]])
     record["preview_msg"] = (msg or {}).get("message_id")
     (config.PENDING_DIR / f"{post_id}.json").write_text(json.dumps(record, ensure_ascii=False, indent=2))
+
+
+CAPTION_RE = re.compile(r"(?:캡션|워딩|문구)\s*[:：]\s*", re.S)
+
+
+def make_reel_post(text: str, video_id: str, ch: dict) -> tuple[bool, str]:
+    """우리가 만든 릴스 영상 업로드. '캡션: …'으로 문구를 주면 그대로, 없으면 AI가 영상 장면+메모로 작성.
+    바로 안 올리고 미리보기 → ✅ 승인 후 업로드 (캡처와 같은 방식)."""
+    import shutil as _sh
+    import subprocess
+    if not _sh.which("ffmpeg"):  # 보통 GitHub 서버에 기본 설치돼 있음. 없으면 설치
+        subprocess.run("sudo apt-get install -y -qq ffmpeg", shell=True, timeout=180)
+    now = datetime.now(KST)
+    post_id = f"{now:%Y%m%d-%H%M%S}-r-{ch['key']}"
+    out_dir = config.POSTS_DIR / post_id
+    src, vid = out_dir / "_src.mp4", out_dir / "reel.mp4"
+    vid_fid, _, where = video_id.partition("|")  # 'file_id|채팅방id|메시지id'
+    try:
+        telegram.download_file(vid_fid, src)
+    except Exception as e:
+        chat_id, _, msg_id = where.partition("|")
+        if "20MB" in str(e) and msg_id:  # 큰 영상 → 텔레그램 본 서버로 받기
+            try:
+                telegram.download_big(chat_id or config.TELEGRAM_CHAT_ID, int(msg_id), src)
+            except Exception as e2:
+                return False, f"큰 영상을 못 받았어: {e2}"
+        else:
+            return False, f"영상을 못 받았어: {e}"
+    # 인스타 규격(H.264+AAC, 빠른 시작)으로 변환. 소리 없는 영상도 OK
+    r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-c:v", "libx264", "-preset", "veryfast",
+                        "-crf", "21", "-maxrate", "8M", "-bufsize", "16M", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart",
+                        str(vid)], capture_output=True, text=True)
+    if r.returncode != 0:
+        return False, f"영상 변환 실패: {r.stderr[-200:]}"
+    src.unlink(missing_ok=True)
+    dur = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(vid)],
+                         capture_output=True, text=True).stdout.strip()
+    dur = float(dur or 0)
+    frame = out_dir / "_cover.jpg"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(min(1.0, dur / 3)), "-i", str(vid),
+                    "-frames:v", "1", str(frame)], capture_output=True)
+    print(f"[릴스] {dur:.1f}초 / {vid.stat().st_size / 1e6:.1f}MB")
+
+    m = CAPTION_RE.search(text or "")
+    if m:  # 우리가 쓴 문구 그대로
+        caption = text[m.end():].strip()
+        s = {"title": caption.splitlines()[0][:40] if caption else "릴스", "custom_caption": True, "confirmed": True}
+    else:  # AI가 작성: 영상 장면 + 메모 + 관련 뉴스
+        hint = URL_RE.sub(" ", text or "")
+        for words in ALIASES.values():
+            for w in words:
+                hint = hint.replace(w, " ")
+        hint = hint.replace("캡처", " ").strip()
+        info = summarize.read_capture(str(frame)) if frame.exists() else {}
+        info = info or {}
+        if hint:
+            info["memo_from_sender"] = hint
+            if not info.get("person"):
+                info["person"] = hint.split()[0]
+        info["platform"] = "우리 채널 릴스 영상 (직접 제작)"
+        items = news.search_news(f"{info.get('person', '')} {hint}".strip()) if (info.get("person") or hint) else []
+        s = summarize.write_capture_story(info, items)
+        if not s.get("ok"):
+            return False, "릴스 문구를 못 만들었어 (AI 응답 오류). '캡션: …'으로 직접 써서 보내줘"
+        caption = collect.build_caption(s, {})
+    poll = _apply_poll(s, POLL)
+    if poll and s.get("poll_q") and not s.get("custom_caption"):
+        caption = collect.build_caption(s, {})
+    record = {"id": post_id, "created": now.isoformat(), "status": "awaiting", "attempts": 0, "manual": True,
+              "type": "reel", "video": str(vid.relative_to(config.ROOT)), "images": [str(frame.relative_to(config.ROOT))],
+              "publish_at": PUBLISH_AT, "poll": poll, "caption": caption, "story": s, "photo": {},
+              "channel": ch["key"], "channel_handle": ch.get("handle", "")}
+    config.PENDING_DIR.mkdir(parents=True, exist_ok=True)
+    _send_preview(record, "🎬 릴스 이대로 올릴까요?")
+    return True, "릴스 미리보기 보냄"
 
 
 def handle_edit(reply_to: str, text: str):
@@ -442,6 +520,18 @@ def handle_edit(reply_to: str, text: str):
             _, req = extract_poll("투표: " + val)
             rec["poll"] = _apply_poll(s, req)
         changed.append("투표")
+    if rec.get("type") == "reel":  # 릴스는 영상이라 그림 다시 그릴 것 없이 캡션만
+        if s.get("custom_caption") and not fields.get("request"):
+            if fields.get("body") is not None:  # 직접 쓴 문구를 통째로 교체
+                rec["caption"] = fields["body"]
+        else:
+            s.pop("custom_caption", None)
+            rec["caption"] = collect.build_caption(s, {})
+        rec["story"] = s
+        if rec.get("preview_msg"):
+            telegram.edit_buttons(rec["preview_msg"], "✏️ 수정됨 (아래 새 미리보기)")
+        _send_preview(rec, f"{', '.join(changed)} 바꿨어! 🎬 릴스 이대로 올릴까요?")
+        return
     out_dir = (config.ROOT / rec["images"][0]).parent
     src = out_dir / "_src.jpg"
     if not src.exists():
@@ -514,6 +604,9 @@ def handle_approval(args: list[str]):
             telegram.edit_buttons(msg_id, "✅ 승인됨 — 업로드 중")
         print(f"[승인] {post_id}")
     else:
+        if post_dir:
+            import shutil
+            shutil.rmtree(post_dir, ignore_errors=True)  # 사진·영상 전부 삭제
         for img in rec.get("images", []):
             (config.ROOT / img).unlink(missing_ok=True)
         rec_path.unlink()
@@ -602,6 +695,18 @@ def _main():
             m = CREDIT_RE.search(tg_text)
             up = {"file_id": tg_file, "credit": m.group(1).strip() if m else ""}
         urls += [(u, tg_text, up) for u in URL_RE.findall(tg_text)]
+    if tg_file.startswith("video:"):  # 릴스 영상
+        ch = pick_channel(tg_text)
+        telegram.send_message(f"🎬 릴스 접수! [{ch.get('handle')}] 영상 변환·문구 작성 중…"
+                              + (f" (⏰ {_at_label(PUBLISH_AT)} 예약)" if PUBLISH_AT else ""))
+        try:
+            ok, msg = make_reel_post(tg_text, tg_file[len("video:"):], ch)
+        except Exception as e:
+            ok, msg = False, f"처리 중 오류: {str(e)[:200]}"
+        print(("[준비 완료] " if ok else "[실패] ") + msg)
+        if not ok:
+            telegram.send_message(f"⚠️ {msg}")
+        return
     # 링크 없이 캡처만 보낸 경우 → 캡처로 소식 쓰기 (채널 이름을 같이 써야 함)
     if tg_file and not URL_RE.search(tg_text or ""):
         ch = pick_channel(tg_text)  # 채널 이름 없으면 기본 채널(입덕)

@@ -66,10 +66,47 @@ def edit_buttons(message_id, label):
 
 def download_file(file_id: str, dest: Path) -> Path:
     """텔레그램으로 받은 사진을 파일로 저장."""
-    info = _api("getFile", json={"file_id": file_id})
+    try:
+        info = _api("getFile", json={"file_id": file_id})
+    except Exception as e:
+        if "too big" in str(e).lower():
+            raise RuntimeError("파일이 20MB를 넘어서 봇이 못 받아 (텔레그램 봇 제한). '파일'이 아니라 일반 동영상으로 보내서 압축되게 하거나, 화질을 낮춰서 다시 보내줘")
+        raise
     url = f"https://api.telegram.org/file/bot{config.TELEGRAM_BOT_TOKEN}/{info['file_path']}"
-    r = requests.get(url, timeout=60)
+    r = requests.get(url, timeout=180)
     r.raise_for_status()
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(r.content)
+    return dest
+
+
+def download_big(chat_id: str, message_id: int, dest: Path) -> Path:
+    """20MB 넘는 영상: 봇 API 대신 텔레그램 본 서버(MTProto)로 받기 (봇도 2GB까지 가능).
+    필요: GitHub Secrets TG_API_ID, TG_API_HASH (my.telegram.org에서 무료 발급)."""
+    import asyncio
+    import os
+    api_id, api_hash = os.environ.get("TG_API_ID"), os.environ.get("TG_API_HASH")
+    if not (api_id and api_hash):
+        raise RuntimeError("20MB 넘는 영상은 TG_API_ID / TG_API_HASH 설정이 필요해 (안내 참고)")
+    from telethon import TelegramClient
+    from telethon.sessions import StringSession
+    from telethon.tl.types import PeerChannel, PeerChat
+
+    async def run():
+        async with TelegramClient(StringSession(), int(api_id), api_hash) as client:
+            await client.start(bot_token=config.TELEGRAM_BOT_TOKEN)
+            cid = int(chat_id)
+            if str(chat_id).startswith("-100"):
+                peer = PeerChannel(int(str(chat_id)[4:]))
+            elif cid < 0:
+                peer = PeerChat(-cid)
+            else:
+                peer = cid
+            msg = await client.get_messages(peer, ids=int(message_id))
+            if not msg or not msg.media:
+                raise RuntimeError("텔레그램에서 그 메시지의 영상을 못 찾았어")
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            await client.download_media(msg, file=str(dest))
+    asyncio.run(run())
+    print(f"[큰 파일 받기] {dest.stat().st_size / 1e6:.1f}MB")
     return dest
