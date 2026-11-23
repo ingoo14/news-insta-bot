@@ -1,0 +1,25 @@
+{
+  "id": "20261123-173520-r-ch3",
+  "created": "2026-11-23T17:35:20.514086+09:00",
+  "status": "awaiting",
+  "attempts": 0,
+  "manual": true,
+  "type": "reel",
+  "video": "docs/posts/20261123-173520-r-ch3/reel.mp4",
+  "images": [
+    "docs/posts/20261123-173520-r-ch3/_cover.jpg"
+  ],
+  "publish_at": "2026-11-23T12:00:00+00:00",
+  "poll": null,
+  "caption": "노을 아래 손잡고 걷는 두 분, 이 노래랑 딱이다\n💿 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음_헌신 #노래추천 #감성 #저녁산책 #가로수길 #노을 #신곡 #추천곡 #kpop #reels #fyp",
+  "story": {
+    "title": "노을 아래 손잡고 걷는 두 분, 이 노래랑 딱이다",
+    "custom_caption": true,
+    "confirmed": true,
+    "ai_caption": true
+  },
+  "photo": {},
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon",
+  "preview_msg": 427
+}
