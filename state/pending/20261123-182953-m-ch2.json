@@ -1,0 +1,69 @@
+{
+  "id": "20261123-182953-m-ch2",
+  "created": "2026-11-23T18:29:53.339544+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-23T11:00:00+00:00",
+  "poll": null,
+  "src_url": "https://naver.me/GHL0VATW",
+  "force": false,
+  "images": [
+    "docs/posts/20261123-182953-m-ch2/01.jpg",
+    "docs/posts/20261123-182953-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"친해지고 싶어요, 선배님\"... 김재욱의 7년 만의 고백\n\n배우 김재욱이 SBS 예능 '틈만나면,'에서 유재석과 7년째 같은 체육관을 다니고 있다고 밝혔습니다. 어떤 주제로 대화를 시작해야 할지 몰라 그동안 인사만 드렸다고 수줍게 전했습니다.\n\n뒤늦게 김재욱의 진심을 알게 된 유재석은 '밥 사주면 나간다'는 특유의 밥약 기준을 공개했습니다. 김재욱은 먼저 다가가 대화를 시작했고, 서로의 형제 관계부터 조카의 근황까지 나누며 가까워졌다고 전해졌습니다.\n\n용기를 얻은 김재욱은 카페 사장님에게도 먼저 스몰토크를 건네 유재석을 놀라게 했다고 전해집니다.\n\n지난 17일 방송분은 최고 시청률 5.5%, 가구 시청률 3.8%(닐슨코리아 기준)를 기록했고, 14주 연속 동시간대 예능·교양 전체 1위를 차지했습니다. 이번 회차는 24일 화요일 밤 9시에 방송되며, 유재석과 유연석이 '투유 MC'로, 비와 김재욱이 '틈친구'로 나섭니다.\n\n사진 출처: SBS. All rights reserved.\n\n#김재욱 #유재석 #유연석 #비 #틈만나면 #SBS예능 #예능 #틈친구 #KimJaeWook #YooJaeSuk",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "예능",
+    "headline_top": "김재욱 ‘친구 신청’",
+    "headline_bottom": "유재석과 친해지고 싶었다",
+    "subline": "7년째 같은 체육관, 틈만나면 24일 방송",
+    "card_summary": [
+      "김재욱이 7년간 인사만 했다고 고백했다.",
+      "두 사람은 형제 관계와 조카 근황까지 나눴다.",
+      "24일 화요일 밤 9시 SBS '틈만나면,'에서 공개된다."
+    ],
+    "title": "\"친해지고 싶어요, 선배님\"... 김재욱의 7년 만의 고백",
+    "body": "배우 김재욱이 SBS 예능 '틈만나면,'에서 유재석과 7년째 같은 체육관을 다니고 있다고 밝혔습니다. 어떤 주제로 대화를 시작해야 할지 몰라 그동안 인사만 드렸다고 수줍게 전했습니다.\n\n뒤늦게 김재욱의 진심을 알게 된 유재석은 '밥 사주면 나간다'는 특유의 밥약 기준을 공개했습니다. 김재욱은 먼저 다가가 대화를 시작했고, 서로의 형제 관계부터 조카의 근황까지 나누며 가까워졌다고 전해졌습니다.\n\n용기를 얻은 김재욱은 카페 사장님에게도 먼저 스몰토크를 건네 유재석을 놀라게 했다고 전해집니다.\n\n지난 17일 방송분은 최고 시청률 5.5%, 가구 시청률 3.8%(닐슨코리아 기준)를 기록했고, 14주 연속 동시간대 예능·교양 전체 1위를 차지했습니다. 이번 회차는 24일 화요일 밤 9시에 방송되며, 유재석과 유연석이 '투유 MC'로, 비와 김재욱이 '틈친구'로 나섭니다.",
+    "hashtags": [
+      "#김재욱",
+      "#유재석",
+      "#유연석",
+      "#비",
+      "#틈만나면",
+      "#SBS예능",
+      "#예능",
+      "#틈친구",
+      "#KimJaeWook",
+      "#YooJaeSuk"
+    ],
+    "photo_queries": [
+      "김재욱",
+      "Kim Jae-wook",
+      "유재석",
+      "Yoo Jae-suk"
+    ],
+    "person": "김재욱",
+    "scene_queries": [
+      "Shinchon Seoul street cafe",
+      "variety show studio set"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/ranking/article/416/0000328240",
+    "source_title": "'틈만나면' 김재욱 \"유재석과 7년째 같은 체육관, 친해지고 싶었다\"…내향인의 수줍은 고백",
+    "issue_no": 99
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261123-182953-m-ch2/_src.jpg",
+    "credit": "SBS. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/ranking/article/416/0000328240",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
