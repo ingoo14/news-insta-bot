@@ -1,0 +1,68 @@
+{
+  "id": "20261123-212533-m-ch2",
+  "created": "2026-11-23T21:25:33.149970+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/FUiHQij1",
+  "force": false,
+  "images": [
+    "docs/posts/20261123-212533-m-ch2/01.jpg",
+    "docs/posts/20261123-212533-m-ch2/02.jpg"
+  ],
+  "caption": "📌 임영웅, 극장 깜짝 방문해 영웅시대 만나\n\n임영웅이 지난 21일 서울 CGV 용산아이파크몰을 찾아 팬들과 시간을 보냈다. 블랙 터틀넥에 레드 숏 재킷을 입고 등장했다.\n\n현장에서 엄지손가락을 치켜세우는 '건행' 포즈를 취하고, 손을 들어 인사하며 팬들과 소통했다.\n\n이번 방문은 공연 실황 영화 '임영웅 | 아임 히어로 더 스타디움 2' 개봉과 맞물렸다. 영화는 두 번째 스타디움 공연의 순간을 대형 스크린과 풍성한 사운드로 전한다.\n\n임영웅은 이날 김포, 영등포 타임스퀘어, 용산 아이파크몰에서 영웅시대를 만났고, 앞으로 청주와 김해를 찾을 예정이다.\n\n영화진흥위원회 통합전산망에 따르면 18일 개봉한 영화는 20일까지 누적 매출액 10억 2,666만 5,000원, 관객 3만 7,943명을 기록했다.\n\n사진 출처: 마이데일리. All rights reserved.\n\n#임영웅 #LimYoungWoong #아임히어로더스타디움2 #영웅시대 #건행 #CGV용산아이파크몰 #용산아이파크몰 #데뷔10주년 #영화 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "임영웅 극장 깜짝 방문",
+    "headline_bottom": "영웅시대와 소통",
+    "subline": "영웅시대 만난 극장 나들이",
+    "card_summary": [
+      "임영웅이 21일 용산 CGV를 찾았다.",
+      "영화 ‘아임 히어로 2’가 개봉했다.",
+      "총 3곳에서 영웅시대를 만났다.",
+      "누적 매출 10억 2,666만 원이다."
+    ],
+    "title": "임영웅, 극장 깜짝 방문해 영웅시대 만나",
+    "body": "임영웅이 지난 21일 서울 CGV 용산아이파크몰을 찾아 팬들과 시간을 보냈다. 블랙 터틀넥에 레드 숏 재킷을 입고 등장했다.\n\n현장에서 엄지손가락을 치켜세우는 '건행' 포즈를 취하고, 손을 들어 인사하며 팬들과 소통했다.\n\n이번 방문은 공연 실황 영화 '임영웅 | 아임 히어로 더 스타디움 2' 개봉과 맞물렸다. 영화는 두 번째 스타디움 공연의 순간을 대형 스크린과 풍성한 사운드로 전한다.\n\n임영웅은 이날 김포, 영등포 타임스퀘어, 용산 아이파크몰에서 영웅시대를 만났고, 앞으로 청주와 김해를 찾을 예정이다.\n\n영화진흥위원회 통합전산망에 따르면 18일 개봉한 영화는 20일까지 누적 매출액 10억 2,666만 5,000원, 관객 3만 7,943명을 기록했다.",
+    "hashtags": [
+      "#임영웅",
+      "#LimYoungWoong",
+      "#아임히어로더스타디움2",
+      "#영웅시대",
+      "#건행",
+      "#CGV용산아이파크몰",
+      "#용산아이파크몰",
+      "#데뷔10주년",
+      "#영화",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "임영웅",
+      "Lim Young Woong"
+    ],
+    "person": "임영웅",
+    "scene_queries": [
+      "movie theater lobby Seoul",
+      "concert stadium crowd lights"
+    ],
+    "fact_checked": true,
+    "press": "마이데일리",
+    "url": "https://m.entertain.naver.com/ranking/article/117/0004127226",
+    "source_title": "'건행' 임영웅, 레드 재킷 입고 극장 나들이…영웅시대 향한 특급 팬서비스",
+    "issue_no": 108
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261123-212533-m-ch2/_src.jpg",
+    "credit": "마이데일리. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/ranking/article/117/0004127226",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
