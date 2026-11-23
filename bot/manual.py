@@ -385,6 +385,23 @@ def _send_preview(record: dict, header: str = "이대로 올릴까요?"):
 CAPTION_RE = re.compile(r"(?:캡션|워딩|문구)\s*[:：]\s*", re.S)
 
 
+def reel_caption_text(text: str) -> str:
+    """릴스 메시지에서 우리가 쓴 문구만 남김: 첫 줄의 채널 이름, '캡션:' 표시, 빈 자리 표시('캡처')는 빼고
+    줄바꿈·이모지·해시태그는 그대로. 남는 게 없으면 '' (→ AI가 작성)."""
+    t = CAPTION_RE.sub("", text or "", count=1)
+    lines = [l.rstrip() for l in t.replace("\r", "").split("\n")]
+    alias = {w.lower() for ws in ALIASES.values() for w in ws} | {"다시", "캡처"}
+    for i, l in enumerate(lines):  # 처음 나오는 글 줄에서만 채널 이름 같은 지시어 제거
+        if l.strip():
+            toks = l.split()
+            while toks and toks[0].lower() in alias:
+                toks.pop(0)
+            lines[i] = " ".join(toks)
+            break
+    out = "\n".join(lines).strip()
+    return re.sub(r"\n{3,}", "\n\n", out)
+
+
 def make_reel_post(text: str, video_id: str, ch: dict) -> tuple[bool, str]:
     """우리가 만든 릴스 영상 업로드. '캡션: …'으로 문구를 주면 그대로, 없으면 AI가 영상 장면+메모로 작성.
     바로 안 올리고 미리보기 → ✅ 승인 후 업로드 (캡처와 같은 방식)."""
@@ -423,27 +440,17 @@ def make_reel_post(text: str, video_id: str, ch: dict) -> tuple[bool, str]:
                     "-frames:v", "1", str(frame)], capture_output=True)
     print(f"[릴스] {dur:.1f}초 / {vid.stat().st_size / 1e6:.1f}MB")
 
-    m = CAPTION_RE.search(text or "")
-    if m:  # 우리가 쓴 문구 그대로
-        caption = text[m.end():].strip()
-        s = {"title": caption.splitlines()[0][:40] if caption else "릴스", "custom_caption": True, "confirmed": True}
-    else:  # AI가 작성: 영상 장면 + 메모 + 관련 뉴스
-        hint = URL_RE.sub(" ", text or "")
-        for words in ALIASES.values():
-            for w in words:
-                hint = hint.replace(w, " ")
-        hint = hint.replace("캡처", " ").strip()
-        info = summarize.read_capture(str(frame)) if frame.exists() else {}
-        info = info or {}
-        if hint:
-            info["memo_from_sender"] = hint
-            if not info.get("person"):
-                info["person"] = hint.split()[0]
+    caption = reel_caption_text(text)
+    if caption:  # 우리가 쓴 문구가 있으면 글자 그대로 ('캡션:' 안 써도 됨)
+        s = {"title": caption.splitlines()[0][:40], "custom_caption": True, "confirmed": True}
+    else:  # 채널·시간만 썼으면 AI가 작성 (영상 장면 + 관련 뉴스)
+        info = (summarize.read_capture(str(frame)) if frame.exists() else {}) or {}
         info["platform"] = "우리 채널 릴스 영상 (직접 제작)"
-        items = news.search_news(f"{info.get('person', '')} {hint}".strip()) if (info.get("person") or hint) else []
+        q = info.get("person") or info.get("search_query") or ""
+        items = news.search_news(q) if q else []
         s = summarize.write_capture_story(info, items)
         if not s.get("ok"):
-            return False, "릴스 문구를 못 만들었어 (AI 응답 오류). '캡션: …'으로 직접 써서 보내줘"
+            return False, "릴스 문구를 못 만들었어 (AI 응답 오류). 문구를 직접 써서 보내줘"
         caption = collect.build_caption(s, {})
     poll = _apply_poll(s, POLL)
     if poll and s.get("poll_q") and not s.get("custom_caption"):
@@ -524,6 +531,11 @@ def handle_edit(reply_to: str, text: str):
         if s.get("custom_caption") and not fields.get("request"):
             if fields.get("body") is not None:  # 직접 쓴 문구를 통째로 교체
                 rec["caption"] = fields["body"]
+            if fields.get("tags"):  # 해시태그 줄만 교체
+                lines = rec["caption"].rstrip().split("\n")
+                while lines and lines[-1].strip().startswith("#"):
+                    lines.pop()
+                rec["caption"] = ("\n".join(lines).rstrip() + "\n\n" + " ".join(s["hashtags"])).strip()
         else:
             s.pop("custom_caption", None)
             rec["caption"] = collect.build_caption(s, {})
