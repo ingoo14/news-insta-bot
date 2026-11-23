@@ -1,0 +1,65 @@
+{
+  "id": "20261123-160436-m-ch3",
+  "created": "2026-11-23T16:04:36.488854+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-23T11:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/home/article/408/0000328805",
+  "force": false,
+  "images": [
+    "docs/posts/20261123-160436-m-ch3/01.jpg",
+    "docs/posts/20261123-160436-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"보고 싶은 대로 보는 세상\"... 조권, SNS 글 게재\n\n가수 겸 뮤지컬 배우 조권이 지난 22일 SNS에 \"보고 싶은 대로 보는 세상\"이라는 글과 함께 사진 여러 장을 게재했습니다.\n\n조권은 2008년 데뷔해 현재 솔로 가수와 뮤지컬 배우로 활동하고 있습니다.\n\n다만 해당 글의 구체적인 의미에 대해서는 아직 별도로 밝히지 않았습니다.\n\n사진 출처: MBC연예. All rights reserved.\n\n#조권 #JoKwon #2AM #솔로가수 #뮤지컬배우 #SNS #연예뉴스 #소셜인",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "조권, '보고 싶은 대로'",
+    "headline_bottom": "SNS에 사진·글 게재",
+    "subline": "SNS 게시글의 의미는 아직 밝혀지지 않아",
+    "card_summary": [
+      "조권이 지난 22일 SNS에 사진 여러 장을 올렸다.",
+      "게시글에는 '보고 싶은 대로 보는 세상'이라는 문구가 담겼다.",
+      "조권은 아직 글의 구체적인 의미를 밝히지 않았다."
+    ],
+    "title": "\"보고 싶은 대로 보는 세상\"... 조권, SNS 글 게재",
+    "body": "가수 겸 뮤지컬 배우 조권이 지난 22일 SNS에 \"보고 싶은 대로 보는 세상\"이라는 글과 함께 사진 여러 장을 게재했습니다.\n\n조권은 2008년 데뷔해 현재 솔로 가수와 뮤지컬 배우로 활동하고 있습니다.\n\n다만 해당 글의 구체적인 의미에 대해서는 아직 별도로 밝히지 않았습니다.",
+    "hashtags": [
+      "#조권",
+      "#JoKwon",
+      "#2AM",
+      "#솔로가수",
+      "#뮤지컬배우",
+      "#SNS",
+      "#연예뉴스",
+      "#소셜인"
+    ],
+    "photo_queries": [
+      "조권",
+      "Jo Kwon"
+    ],
+    "person": "조권",
+    "scene_queries": [
+      "smartphone social media",
+      "musical stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/home/article/408/0000328805",
+    "source_title": "조권, 열애설에 일침? \"보고 싶은 대로 보는 세상\" [소셜in]",
+    "issue_no": 92
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261123-160436-m-ch3/_src.jpg",
+    "credit": "MBC연예. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/home/article/408/0000328805",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
