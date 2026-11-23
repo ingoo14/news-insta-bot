@@ -1,0 +1,70 @@
+{
+  "id": "20261123-212202-m-ch1",
+  "created": "2026-11-23T21:22:02.958126+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/GHL0YVph",
+  "force": false,
+  "images": [
+    "docs/posts/20261123-212202-m-ch1/01.jpg",
+    "docs/posts/20261123-212202-m-ch1/02.jpg"
+  ],
+  "caption": "📌 ‘굿데이2’ 론칭… 지드래곤이 총괄 프로듀서로 나선다\n\n지드래곤이 김태호 PD와 다시 손잡고 음악 프로젝트 ‘굿데이’ 시즌2를 선보입니다.\n‘굿데이’는 지드래곤이 다양한 분야의 인물들과 함께 올해의 노래를 완성하는 프로젝트입니다. 시즌2에서는 지드래곤이 총괄 프로듀서로 나서 후배 프로듀서들과 앨범을 만드는 과정을 보여줍니다.\n프로듀서 라인업에는 코드 쿤스트, 잔나비 최정훈, 아이들 소연, 스트레이 키즈 쓰리라차, 한로로, 박명수가 이름을 올렸습니다.\n‘굿데이2’는 2027년 상반기 공개될 예정이며, 플랫폼과 편성은 논의 중입니다.\n\n\n#지드래곤 #GDRAGON #굿데이2 #굿데이 #김태호PD #빅뱅 #BIGBANG #소연 #한로로 #박명수 #코드쿤스트 #잔나비최정훈",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "예능",
+    "headline_top": "지드래곤, ‘굿데이2’",
+    "headline_bottom": "2027년 상반기 공개",
+    "subline": "지드래곤이 총괄하는 음악 프로젝트 시즌2",
+    "card_summary": [
+      "지드래곤이 김태호 PD와 ‘굿데이’ 시즌2를 선보인다.",
+      "지드래곤이 총괄을 맡아 후배 프로듀서들과 앨범을 만든다.",
+      "잔나비 최정훈, 아이들 소연, 한로로, 박명수 등이 합류했다.",
+      "2027년 상반기 공개 예정, 플랫폼·편성은 논의 중이다."
+    ],
+    "title": "‘굿데이2’ 론칭… 지드래곤이 총괄 프로듀서로 나선다",
+    "body": "지드래곤이 김태호 PD와 다시 손잡고 음악 프로젝트 ‘굿데이’ 시즌2를 선보입니다.\n‘굿데이’는 지드래곤이 다양한 분야의 인물들과 함께 올해의 노래를 완성하는 프로젝트입니다. 시즌2에서는 지드래곤이 총괄 프로듀서로 나서 후배 프로듀서들과 앨범을 만드는 과정을 보여줍니다.\n프로듀서 라인업에는 코드 쿤스트, 잔나비 최정훈, 아이들 소연, 스트레이 키즈 쓰리라차, 한로로, 박명수가 이름을 올렸습니다.\n‘굿데이2’는 2027년 상반기 공개될 예정이며, 플랫폼과 편성은 논의 중입니다.",
+    "hashtags": [
+      "#지드래곤",
+      "#GDRAGON",
+      "#굿데이2",
+      "#굿데이",
+      "#김태호PD",
+      "#빅뱅",
+      "#BIGBANG",
+      "#소연",
+      "#한로로",
+      "#박명수",
+      "#코드쿤스트",
+      "#잔나비최정훈"
+    ],
+    "photo_queries": [
+      "지드래곤",
+      "G-Dragon"
+    ],
+    "person": "지드래곤",
+    "scene_queries": [
+      "Seoul recording studio",
+      "music production studio headphones"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/021/0002834887",
+    "source_title": "지드래곤 ‘굿데이2’ 론칭…소연·한로로·박명수 합류",
+    "issue_no": 107
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261123-212202-m-ch1/_src.jpg",
+    "credit": "",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "직접 전송"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
