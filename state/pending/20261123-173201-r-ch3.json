@@ -11,15 +11,17 @@
   ],
   "publish_at": "2026-11-23T12:00:00+00:00",
   "poll": null,
-  "caption": "이 가사 보고 울컥함... 노부부 조합 미쳤다\n💿 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음_헌신 #노래추천 #감성노래 #가사 #신곡 #겨울감성 #음악추천 #추천곡 #reels #fyp",
+  "caption": "새 문구",
   "story": {
     "title": "이 가사 보고 울컥함... 노부부 조합 미쳤다",
     "custom_caption": true,
     "confirmed": true,
-    "ai_caption": true
+    "ai_caption": true,
+    "body": "새 문구",
+    "body_custom": true
   },
   "photo": {},
   "channel": "ch3",
   "channel_handle": "gaem_seong_1spoon",
-  "preview_msg": 420
+  "preview_msg": 423
 }
