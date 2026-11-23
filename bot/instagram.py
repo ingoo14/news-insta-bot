@@ -113,3 +113,22 @@ def refresh_token() -> str:
     if "access_token" not in data:
         raise RuntimeError(f"토큰 갱신 실패: {data}")
     return data["access_token"]
+
+
+def publish_reel(video_url: str, caption: str, poll=None, cover_url: str = "") -> str:
+    """릴스 업로드 (우리가 만든 영상). 영상 처리에 몇 분 걸릴 수 있음."""
+    global POLL_NOTE
+    POLL_NOTE = ""
+    uid = config.IG_USER_ID
+    params = {"media_type": "REELS", "video_url": video_url, "caption": caption[:2200], "share_to_feed": "true"}
+    if cover_url:
+        params["cover_url"] = cover_url
+    if config.IG_AI_LABEL:
+        params["is_ai_generated"] = "true"
+    c = _create_with_poll(uid, params, poll)
+    _wait(c, tries=120)  # 최대 약 6분
+    media_id = _post(f"{uid}/media_publish", creation_id=c)["id"]
+    try:
+        return _get(media_id, fields="permalink").get("permalink", "")
+    except Exception:
+        return ""
