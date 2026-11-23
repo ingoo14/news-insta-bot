@@ -1,0 +1,70 @@
+{
+  "id": "20261123-182954-m-ch2",
+  "created": "2026-11-23T18:29:54.587324+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-23T11:00:00+00:00",
+  "poll": null,
+  "src_url": "https://naver.me/GB325PSk",
+  "force": false,
+  "images": [
+    "docs/posts/20261123-182954-m-ch2/01.jpg",
+    "docs/posts/20261123-182954-m-ch2/02.jpg"
+  ],
+  "caption": "📌 정우성, 아티스트컴퍼니 주식 15만5000주 매도\n\n배우 정우성이 이정재와 함께 세운 아티스트컴퍼니 주식 15만5000주를 17~19일 장내에서 매도했습니다. 매도 금액은 약 5억2169만원어치입니다.\n\n정우성의 지분율은 10.99%에서 9.9998%로 낮아졌습니다. 아티스트컴퍼니는 정우성이 \"발행회사의 주요주주에 해당하지 않게 됐다\"고 공시했습니다.\n\n정우성은 지난달 2일 사내이사직에서 물러났습니다. 임기는 6개월가량 남은 상태였습니다. 엿새 뒤에는 최대주주 이정재와 합쳐 공시하던 지분도 따로 분리됐습니다.\n\n정우성이 쥔 아티스트컴퍼니 주식은 155만9108주가 남아 있습니다. 회사가 세 든 청담동 빌딩은 두 사람이 공동으로 소유하고 있습니다.\n\n사진 출처: 스포츠경향. All rights reserved.\n\n#정우성 #이정재 #아티스트컴퍼니 #JungWooSung #LeeJungJae #연예뉴스 #주식매도 #청담동 #연예",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "정우성, 아컴 주식 매도",
+    "headline_bottom": "주요주주 지위 이탈",
+    "subline": "아티스트컴퍼니 주식 15만5000주 매도",
+    "card_summary": [
+      "정우성은 17~19일 주식 15만5000주를 팔았다.",
+      "매도 금액은 약 5억2169만원어치였다.",
+      "지분율 10.99%→9.9998%로 주요주주에서 빠졌다.",
+      "정우성은 지난달 사내이사직에서 물러났다."
+    ],
+    "title": "정우성, 아티스트컴퍼니 주식 15만5000주 매도",
+    "body": "배우 정우성이 이정재와 함께 세운 아티스트컴퍼니 주식 15만5000주를 17~19일 장내에서 매도했습니다. 매도 금액은 약 5억2169만원어치입니다.\n\n정우성의 지분율은 10.99%에서 9.9998%로 낮아졌습니다. 아티스트컴퍼니는 정우성이 \"발행회사의 주요주주에 해당하지 않게 됐다\"고 공시했습니다.\n\n정우성은 지난달 2일 사내이사직에서 물러났습니다. 임기는 6개월가량 남은 상태였습니다. 엿새 뒤에는 최대주주 이정재와 합쳐 공시하던 지분도 따로 분리됐습니다.\n\n정우성이 쥔 아티스트컴퍼니 주식은 155만9108주가 남아 있습니다. 회사가 세 든 청담동 빌딩은 두 사람이 공동으로 소유하고 있습니다.",
+    "hashtags": [
+      "#정우성",
+      "#이정재",
+      "#아티스트컴퍼니",
+      "#JungWooSung",
+      "#LeeJungJae",
+      "#연예뉴스",
+      "#스포츠경향",
+      "#주식매도",
+      "#청담동",
+      "#연예"
+    ],
+    "photo_queries": [
+      "정우성",
+      "Jung Woo-sung",
+      "이정재",
+      "Lee Jung-jae"
+    ],
+    "person": "정우성",
+    "scene_queries": [
+      "Seoul office building Cheongdam",
+      "stock market trading screen"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/ranking/article/144/0001151306",
+    "source_title": "[속보] 정우성, 이정재와 ‘결별’ 수순···아컴 주요주주서도 빠졌다",
+    "issue_no": 99
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261123-182954-m-ch2/_src.jpg",
+    "credit": "스포츠경향. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/ranking/article/144/0001151306",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
