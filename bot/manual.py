@@ -196,9 +196,17 @@ def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) 
     now = datetime.now(KST)
     post_id = f"{now:%Y%m%d-%H%M%S}-m-{ch['key']}"
     out_dir = config.POSTS_DIR / post_id
-    if user_photo:
+    extras = []
+    if user_photo:  # 보내준 사진 (여러 장이면 첫 장 = 표지, 나머지 = 요약 카드 뒤에 사진만)
         try:
-            telegram.download_file(user_photo["file_id"], out_dir / "_src.jpg")
+            ids = [f for f in user_photo["file_id"].split(",") if f][:8]
+            for i, fid in enumerate(ids):
+                dest = out_dir / ("_src.jpg" if i == 0 else f"_x{i}.jpg")
+                telegram.download_file(fid, dest)
+                Image.open(dest).convert("RGB").save(dest, "JPEG", quality=95)
+                render.crop_capture(str(dest))  # 휴대폰 캡처면 앱 화면만 잘라냄 (일반 사진은 그대로)
+                if i:
+                    extras.append(dest)
             ph = {"path": str(out_dir / "_src.jpg"), "credit": user_photo.get("credit", ""), "license": "",
                   "page": "", "source": "", "kind": "직접 전송"}
         except Exception as e:
@@ -231,6 +239,9 @@ def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) 
         return False, f"‘{s.get('person') or a['title']}’ 인물의 무료 사진을 못 찾아서 못 올렸어"
     s["issue_no"] = collect._next_issue()
     paths = render.render_story(s, ph, out_dir)
+    for i, x in enumerate(extras, len(paths) + 1):
+        paths.append(render.photo_slide(str(x), out_dir / f"{i:02d}.jpg"))
+        x.unlink(missing_ok=True)
     (out_dir / "_src.jpg").unlink(missing_ok=True)
     record = {"id": post_id, "created": now.isoformat(), "status": "pending", "attempts": 0, "manual": True,
               "publish_at": PUBLISH_AT, "poll": _apply_poll(s, POLL), "src_url": url, "force": FORCE,
