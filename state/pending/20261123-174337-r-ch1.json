@@ -11,15 +11,17 @@
   ],
   "publish_at": "2026-11-23T09:00:00+00:00",
   "poll": null,
-  "caption": "떠나도 끝까지 지켜준다고 하니까 울컥함\n\n💿 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음_헌신 #신곡 #11월25일 #발매 #고양이 #감성 #위로 #노래추천 #추천곡 #kpop #reels #fyp",
+  "caption": "널 끝까지 지켜줄게",
   "story": {
     "title": "떠나도 끝까지 지켜준다고 하니까 울컥함",
     "custom_caption": true,
     "confirmed": true,
-    "ai_caption": true
+    "ai_caption": true,
+    "body": "널 끝까지 지켜줄게",
+    "body_custom": true
   },
   "photo": {},
   "channel": "ch1",
   "channel_handle": "ibduck_music",
-  "preview_msg": 439
+  "preview_msg": 442
 }
