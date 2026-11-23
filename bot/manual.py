@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 from . import collect, config, news, photo, render, summarize, telegram
 
 KST = timezone(timedelta(hours=9))
+FORCE = False  # 메시지에 '다시'가 있으면 중복 검사 무시
 RUN_IDS = []  # 이번 실행에서 바로 올릴 게시물 (다른 실행이 만든 건 안 건드림)
 POLL = None  # 투표: ['선택지1','선택지2'] / 'auto'(AI가 만들기) / None
 PUBLISH_AT = ""  # 예약 업로드 시각 (워커가 '예약 20시' 같은 문구를 읽어서 AT=... 으로 넘겨줌)
@@ -173,6 +174,11 @@ CREDIT_RE = re.compile(r"(?:사진|photo)\s*[:：]\s*([^\n]+)", re.I)
 def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) -> tuple[bool, str]:
     """user_photo = {"file_id": ..., "credit": ...} 이면 자동 검색 대신 보내준 사진 사용."""
     ch = ch or pick_channel("")
+    from . import publish as pub
+    key = pub.url_key(ch["key"], url)
+    if key in pub.load_done() and not FORCE:
+        when = pub.load_done()[key][:16].replace("T", " ")
+        return False, f"이 기사는 [{ch.get('handle')}]에 이미 올렸어 ({when} UTC). 그래도 또 올리려면 메시지에 '다시'를 같이 써줘"
     try:
         a = article_from_url(url)
     except Exception as e:
@@ -227,7 +233,7 @@ def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) 
     paths = render.render_story(s, ph, out_dir)
     (out_dir / "_src.jpg").unlink(missing_ok=True)
     record = {"id": post_id, "created": now.isoformat(), "status": "pending", "attempts": 0, "manual": True,
-              "publish_at": PUBLISH_AT, "poll": _apply_poll(s, POLL),
+              "publish_at": PUBLISH_AT, "poll": _apply_poll(s, POLL), "src_url": url, "force": FORCE,
               "images": [str(p.relative_to(config.ROOT)) for p in paths],
               "caption": collect.build_caption(s, ph), "story": s, "photo": ph,
               "channel": ch["key"], "channel_handle": ch.get("handle", "")}
@@ -562,7 +568,8 @@ def _main():
     if tg_text.startswith("PUBLISH_DUE"):  # 예약 시간이 된 게시물 올리기 (업로드는 다음 단계에서)
         print("예약 시간 도착 → 업로드 단계로")
         return
-    global POLL
+    global POLL, FORCE
+    FORCE = bool(re.search(r"(^|\s)다시(\s|$)", tg_text))
     if not tg_text.startswith(("EDIT ", "APPROVE ")):
         tg_text, POLL = extract_poll(tg_text)
         if POLL:

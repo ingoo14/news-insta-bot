@@ -38,6 +38,36 @@ def git_save(msg: str) -> bool:
     return False
 
 
+DONE_FILE = config.ROOT / "state" / "published_urls.json"  # 채널별로 이미 올린 기사 주소 (중복 업로드 방지)
+
+
+def url_key(channel: str, url: str) -> str:
+    """같은 기사 판별용: 주소에서 ?utm_… 같은 꼬리 제거."""
+    u = (url or "").split("#")[0].split("?")[0].rstrip("/").lower()
+    u = u.replace("://m.", "://").replace("://www.", "://")
+    return f"{channel}|{u}" if u else ""
+
+
+def load_done() -> dict:
+    try:
+        done = json.loads(DONE_FILE.read_text())
+    except Exception:
+        done = {}
+    for p in config.PENDING_DIR.glob("*.json"):  # 최근 올린 기록도 같이 (파일 생기기 전에 올린 것 포함)
+        try:
+            r = json.loads(p.read_text())
+        except Exception:
+            continue
+        k = url_key(r.get("channel", ""), rec_url(r))
+        if r.get("status") == "published" and k:
+            done.setdefault(k, r.get("done", r.get("created", "")))
+    return done
+
+
+def rec_url(rec: dict) -> str:
+    return rec.get("src_url") or (rec.get("story") or {}).get("url") or ""
+
+
 def claim(p, rec_id: str):
     """중복 업로드 방지 잠금: 최신 상태를 받아서 아직 'pending'인지 확인 → 'publishing'으로 바꿔서 먼저 올린 쪽만 업로드.
     동시에 돈 다른 실행이 이미 가져갔으면 None."""
@@ -51,6 +81,22 @@ def claim(p, rec_id: str):
         rec = json.loads(p.read_text())
         if rec.get("status") != "pending":
             print(f"[이미 다른 실행이 처리 중/완료 → 건너뜀] {rec_id} ({rec.get('status')})")
+            return None
+        key = url_key(rec.get("channel", ""), rec_url(rec))
+        busy = False  # 같은 기사를 다른 실행이 지금 올리는 중인지
+        for q in config.PENDING_DIR.glob("*.json"):
+            if q != p and key:
+                try:
+                    o = json.loads(q.read_text())
+                except Exception:
+                    continue
+                if o.get("status") in ("publishing", "published") and url_key(o.get("channel", ""), rec_url(o)) == key:
+                    busy = True
+        if key and (key in load_done() or busy) and not rec.get("force"):  # 같은 채널에 같은 기사가 이미 올라감 → 절대 다시 안 올림
+            rec["status"], rec["done"] = "duplicate", datetime.now(timezone.utc).isoformat()
+            p.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
+            git_save(f"duplicate {rec_id}")
+            notify(f"🚫 [{rec.get('channel_handle', '')}] 이미 올린 기사라 건너뜀\n{(rec.get('story') or {}).get('title', '')}")
             return None
         rec["status"] = "publishing"
         rec["claimed"] = datetime.now(timezone.utc).isoformat()
@@ -130,6 +176,15 @@ def main():
                 print(f"[업로드 실패/{host}] {rec['id']}: {e}")
         if link is not None:
             rec["status"], rec["permalink"] = "published", link
+            key = url_key(rec.get("channel", ""), rec_url(rec))
+            if key:
+                done = load_done()
+                done[key] = datetime.now(timezone.utc).isoformat()
+                # 30일 지난 기록은 정리
+                cut = datetime.now(timezone.utc) - timedelta(days=30)
+                done = {k: v for k, v in done.items() if datetime.fromisoformat(v) > cut}
+                DONE_FILE.parent.mkdir(parents=True, exist_ok=True)
+                DONE_FILE.write_text(json.dumps(done, ensure_ascii=False, indent=1))
             shutil.rmtree(config.POSTS_DIR / rec["id"], ignore_errors=True)
             ph = rec.get("photo") or {}
             poll_txt = ""
