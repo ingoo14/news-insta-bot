@@ -1,0 +1,25 @@
+{
+  "id": "20261123-174337-r-ch1",
+  "created": "2026-11-23T17:43:37.426377+09:00",
+  "status": "awaiting",
+  "attempts": 0,
+  "manual": true,
+  "type": "reel",
+  "video": "docs/posts/20261123-174337-r-ch1/reel.mp4",
+  "images": [
+    "docs/posts/20261123-174337-r-ch1/_cover.jpg"
+  ],
+  "publish_at": "2026-11-23T09:00:00+00:00",
+  "poll": null,
+  "caption": "떠나도 끝까지 지켜준다고 하니까 울컥함\n\n💿 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음_헌신 #신곡 #11월25일 #발매 #고양이 #감성 #위로 #노래추천 #추천곡 #kpop #reels #fyp",
+  "story": {
+    "title": "떠나도 끝까지 지켜준다고 하니까 울컥함",
+    "custom_caption": true,
+    "confirmed": true,
+    "ai_caption": true
+  },
+  "photo": {},
+  "channel": "ch1",
+  "channel_handle": "ibduck_music",
+  "preview_msg": 439
+}
