@@ -21,6 +21,58 @@ def image_urls(rec, sha, host):
     return [f"https://cdn.jsdelivr.net/gh/{repo}@{sha}/{p}" for p in rec["images"]]
 
 
+def _git(*args) -> bool:
+    return subprocess.run(["git", *args], cwd=config.ROOT, capture_output=True, text=True).returncode == 0
+
+
+def git_save(msg: str) -> bool:
+    """지금 상태를 커밋하고 올림 (다른 실행과 겹치면 받아서 합친 뒤 재시도)."""
+    _git("add", "-A", "--", ".", ":!fonts")
+    if _git("diff", "--cached", "--quiet"):
+        return True
+    _git("commit", "-q", "-m", msg)
+    for _ in range(5):
+        if _git("push", "-q"):
+            return True
+        _git("pull", "--rebase", "-X", "theirs", "-q")
+    return False
+
+
+def claim(p, rec_id: str):
+    """중복 업로드 방지 잠금: 최신 상태를 받아서 아직 'pending'인지 확인 → 'publishing'으로 바꿔서 먼저 올린 쪽만 업로드.
+    동시에 돈 다른 실행이 이미 가져갔으면 None."""
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        return json.loads(p.read_text())
+    for _ in range(4):
+        _git("fetch", "-q", "origin")
+        _git("reset", "-q", "--hard", "origin/HEAD") or _git("reset", "-q", "--hard", "origin/main")
+        if not p.exists():
+            return None
+        rec = json.loads(p.read_text())
+        if rec.get("status") != "pending":
+            print(f"[이미 다른 실행이 처리 중/완료 → 건너뜀] {rec_id} ({rec.get('status')})")
+            return None
+        rec["status"] = "publishing"
+        rec["claimed"] = datetime.now(timezone.utc).isoformat()
+        p.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
+        _git("add", str(p))
+        _git("commit", "-q", "-m", f"claim {rec_id}")
+        if _git("push", "-q"):
+            rec["status"] = "pending"
+            return rec
+        print(f"[잠금 충돌 → 다시 확인] {rec_id}")
+    return None
+
+
+def targets():
+    """이번 실행이 올려야 할 게시물 id (manual.py가 남김). 파일이 없으면 None = 전부(예전 방식)."""
+    f = os.environ.get("PUBLISH_IDS_FILE", "/tmp/publish_ids.json")
+    try:
+        return json.load(open(f))
+    except Exception:
+        return None
+
+
 def notify(text):
     try:
         telegram.send_message(text)
@@ -36,9 +88,17 @@ def main():
     first = os.environ.get("IMAGE_HOST") or "jsdelivr"
     hosts = [first] + [h for h in ("jsdelivr", "raw") if h != first]
     kind = (os.environ.get("PUBLISH_KIND") or "all").lower()  # auto / manual / all
+    want = targets()  # ['id', ...] 또는 {'due': true}
+    if want is not None:
+        print(f"[이번 실행 업로드 대상] {want}")
     for p in sorted(config.PENDING_DIR.glob("*.json")):
         rec = json.loads(p.read_text())
         if rec.get("status") != "pending":
+            continue
+        # 동시에 여러 링크를 보내도 각 실행은 '자기가 만든 게시물'만 올림 (예약은 시간이 된 것만)
+        if isinstance(want, list) and rec["id"] not in want:
+            continue
+        if isinstance(want, dict) and want.get("due") and not rec.get("publish_at"):
             continue
         if kind == "auto" and rec.get("manual") or kind == "manual" and not rec.get("manual"):
             continue
@@ -53,6 +113,9 @@ def main():
         ch = chans.get(rec.get("channel", "ch1"))
         if not ch:
             print(f"[채널 설정 없음 → 건너뜀] {rec['id']} ({rec.get('channel')})")
+            continue
+        rec = claim(p, rec["id"])  # 잠금 (다른 실행이 이미 올렸으면 건너뜀)
+        if rec is None:
             continue
         config.IG_USER_ID, config.IG_ACCESS_TOKEN = ch["user_id"], ch["token"]  # 이 게시물의 계정으로 전환
         rec["attempts"] = rec.get("attempts", 0) + 1
@@ -73,20 +136,30 @@ def main():
             if rec.get("poll"):
                 poll_txt = f"\n⚠️ {instagram.POLL_NOTE}" if instagram.POLL_NOTE else "\n🗳 투표: " + " / ".join(rec["poll"])
             notify(f"✅ [{ch['handle']}] 업로드 완료\n{title}\n{link}\n사진: {ph.get('page', '')}{poll_txt}")
-        elif rec["attempts"] >= MAX_ATTEMPTS:
+        elif rec["attempts"] >= MAX_ATTEMPTS or want is not None:  # 링크 업로드는 재시도 회차가 없으니 바로 알림
             rec["status"] = "failed"
             shutil.rmtree(config.POSTS_DIR / rec["id"], ignore_errors=True)
-            notify(f"⚠️ [{ch['handle']}] 업로드 {MAX_ATTEMPTS}번 실패해서 포기함\n{title}\n{err}")
+            notify(f"⚠️ [{ch['handle']}] 업로드 실패 — 링크를 다시 보내줘\n{title}\n{err}")
         else:
             notify(f"⚠️ [{ch['handle']}] 업로드 실패 (다음 회차에 재시도)\n{title}\n{err}")
         rec["done"] = datetime.now(timezone.utc).isoformat()
         p.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            git_save(f"published {rec['id']}")
 
+    # 업로드 도중 멈춘 잠금은 30분 뒤 풀어줌 (다음 실행이 다시 시도)
+    for p in config.PENDING_DIR.glob("*.json"):
+        rec = json.loads(p.read_text())
+        if rec.get("status") == "publishing" and \
+                datetime.now(timezone.utc) - datetime.fromisoformat(rec.get("claimed", rec["created"])) > timedelta(minutes=30):
+            rec["status"] = "pending"
+            p.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
     # 처리 끝난 기록은 2일 뒤 정리
     now = datetime.now(timezone.utc)
     for p in config.PENDING_DIR.glob("*.json"):
         rec = json.loads(p.read_text())
-        if rec.get("status") != "pending" and (now - datetime.fromisoformat(rec.get("done", rec["created"]))).days >= 2:
+        if rec.get("status") not in ("pending", "publishing", "awaiting") and \
+                (now - datetime.fromisoformat(rec.get("done", rec["created"]))).days >= 2:
             p.unlink()
 
 

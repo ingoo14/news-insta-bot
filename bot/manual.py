@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 from . import collect, config, news, photo, render, summarize, telegram
 
 KST = timezone(timedelta(hours=9))
+RUN_IDS = []  # 이번 실행에서 바로 올릴 게시물 (다른 실행이 만든 건 안 건드림)
 POLL = None  # 투표: ['선택지1','선택지2'] / 'auto'(AI가 만들기) / None
 PUBLISH_AT = ""  # 예약 업로드 시각 (워커가 '예약 20시' 같은 문구를 읽어서 AT=... 으로 넘겨줌)
 
@@ -232,6 +233,7 @@ def make_post(url: str, ch: dict | None = None, user_photo: dict | None = None) 
               "channel": ch["key"], "channel_handle": ch.get("handle", "")}
     config.PENDING_DIR.mkdir(parents=True, exist_ok=True)
     (config.PENDING_DIR / f"{post_id}.json").write_text(json.dumps(record, ensure_ascii=False, indent=2))
+    RUN_IDS.append(post_id)
     # 같은 소식이 자동 수집으로 또 올라가지 않게 기록
     seen = collect._load(config.SEEN_FILE, []) + [a["url"], url]
     config.SEEN_FILE.write_text(json.dumps(seen[-3000:], ensure_ascii=False))
@@ -489,6 +491,7 @@ def handle_approval(args: list[str]):
         (post_dir / "_src.jpg").unlink(missing_ok=True)
     if act == "ok":
         rec["status"] = "pending"
+        RUN_IDS.append(post_id)
         rec_path.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
         if msg_id:
             telegram.edit_buttons(msg_id, "✅ 승인됨 — 업로드 중")
@@ -530,7 +533,25 @@ def telegram_links() -> list[tuple[str, str, dict | None]]:
     return urls
 
 
+def _write_targets(val):
+    try:
+        json.dump(val, open(os.environ.get("PUBLISH_IDS_FILE", "/tmp/publish_ids.json"), "w"))
+    except Exception as e:
+        print(f"[업로드 대상 기록 실패] {e}")
+
+
 def main():
+    _write_targets([])  # 기본: 아무것도 안 올림 (아래에서 만든 것만 추가)
+    try:
+        _main()
+    finally:
+        if os.environ.get("TG_TEXT", "").startswith("PUBLISH_DUE"):
+            _write_targets({"due": True})
+        else:
+            _write_targets(RUN_IDS)
+
+
+def _main():
     for k in ["GEMINI_API_KEY", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"]:
         config.env(k, required=True)
     manual_in = os.environ.get("MANUAL_URL", "")
