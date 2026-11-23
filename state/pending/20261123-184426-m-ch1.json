@@ -1,0 +1,68 @@
+{
+  "id": "20261123-184426-m-ch1",
+  "created": "2026-11-23T18:44:26.262902+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/5fdVIH83",
+  "force": false,
+  "images": [
+    "docs/posts/20261123-184426-m-ch1/01.jpg",
+    "docs/posts/20261123-184426-m-ch1/02.jpg"
+  ],
+  "caption": "📌 \"Waking Up The City\"... 엑소-카이세훈 첫 앨범 하이라이트 메들리 공개\n\n엑소-카이세훈이 12월 1일 첫 미니앨범 'Waking Up The City'를 발매합니다. 앨범에는 타이틀곡을 포함한 유닛곡 5곡과 카이, 세훈의 솔로곡 2곡을 합쳐 총 7곡이 담깁니다.\n\n카이의 솔로곡 'Dirty On Me'는 피아노 선율과 거친 드럼 사운드가 어우러진 어두운 분위기의 R&B입니다. 세훈의 솔로곡 'Everybody Move'는 강렬한 808 베이스와 신스 사운드가 특징인 댄스 팝곡입니다.\n\n그룹은 이날 오후 6시 공식 SNS를 통해 앨범 하이라이트 메들리를 공개했습니다. 12월 1일 앨범 발매 당일에는 쇼케이스도 열립니다.\n\n이후 2027년 1월 서울을 시작으로 전 세계 8개 지역에서 팬콘 투어 'SILENT CITY'를 진행할 예정입니다.\n\n사진 출처: 티브이데일리. All rights reserved.\n\n#엑소 #EXO #카이 #KAI #세훈 #SEHUN #엑소카이세훈 #EXOKASE #WakingUpTheCity #SILENTCITY",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "엑소-카이세훈 첫 미니앨범",
+    "headline_bottom": "12월 1일 앨범 발매",
+    "subline": "솔로곡 2곡 포함 7곡 수록",
+    "card_summary": [
+      "엑소-카이세훈이 12월 1일 첫 미니앨범을 발매한다.",
+      "앨범에는 유닛곡 5곡과 카이, 세훈의 솔로곡 2곡이 담긴다.",
+      "하이라이트 메들리는 공식 SNS를 통해 공개됐다.",
+      "2027년 1월 서울부터 팬콘 투어 'SILENT CITY'가 예정돼 있다."
+    ],
+    "title": "\"Waking Up The City\"... 엑소-카이세훈 첫 앨범 하이라이트 메들리 공개",
+    "body": "엑소-카이세훈이 12월 1일 첫 미니앨범 'Waking Up The City'를 발매합니다. 앨범에는 타이틀곡을 포함한 유닛곡 5곡과 카이, 세훈의 솔로곡 2곡을 합쳐 총 7곡이 담깁니다.\n\n카이의 솔로곡 'Dirty On Me'는 피아노 선율과 거친 드럼 사운드가 어우러진 어두운 분위기의 R&B입니다. 세훈의 솔로곡 'Everybody Move'는 강렬한 808 베이스와 신스 사운드가 특징인 댄스 팝곡입니다.\n\n그룹은 이날 오후 6시 공식 SNS를 통해 앨범 하이라이트 메들리를 공개했습니다. 12월 1일 앨범 발매 당일에는 쇼케이스도 열립니다.\n\n이후 2027년 1월 서울을 시작으로 전 세계 8개 지역에서 팬콘 투어 'SILENT CITY'를 진행할 예정입니다.",
+    "hashtags": [
+      "#엑소",
+      "#EXO",
+      "#카이",
+      "#KAI",
+      "#세훈",
+      "#SEHUN",
+      "#엑소카이세훈",
+      "#EXOKASE",
+      "#WakingUpTheCity",
+      "#SILENTCITY"
+    ],
+    "photo_queries": [
+      "엑소-카이세훈",
+      "EXO-KASE"
+    ],
+    "person": "엑소-카이세훈",
+    "scene_queries": [
+      "concert stage lights",
+      "Seoul city night skyline"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/440/0000053885",
+    "source_title": "엑소-카이세훈, 첫 앨범 하이라이트 메들리 '기대 이상'",
+    "issue_no": 101
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261123-184426-m-ch1/_src.jpg",
+    "credit": "티브이데일리. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/440/0000053885",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
