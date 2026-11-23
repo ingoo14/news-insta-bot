@@ -1,8 +1,8 @@
 {
   "id": "20261123-174337-r-ch1",
   "created": "2026-11-23T17:43:37.426377+09:00",
-  "status": "publishing",
-  "attempts": 0,
+  "status": "failed",
+  "attempts": 1,
   "manual": true,
   "type": "reel",
   "video": "docs/posts/20261123-174337-r-ch1/reel.mp4",
@@ -24,5 +24,6 @@
   "channel": "ch1",
   "channel_handle": "ibduck_music",
   "preview_msg": 442,
-  "claimed": "2026-11-23T09:03:04.531591+00:00"
+  "claimed": "2026-11-23T09:03:04.531591+00:00",
+  "done": "2026-11-23T09:03:12.667747+00:00"
 }
