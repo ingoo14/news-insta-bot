@@ -1,8 +1,8 @@
 {
   "id": "20261123-174855-r-ch2",
   "created": "2026-11-23T17:48:55.841189+09:00",
-  "status": "publishing",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "manual": true,
   "type": "reel",
   "video": "docs/posts/20261123-174855-r-ch2/reel.mp4",
@@ -24,5 +24,7 @@
   "channel": "ch2",
   "channel_handle": "greenlight_music",
   "preview_msg": 452,
-  "claimed": "2026-11-23T12:02:55.699039+00:00"
+  "claimed": "2026-11-23T12:02:55.699039+00:00",
+  "permalink": "https://www.instagram.com/reel/DgFVdW6DVYc/",
+  "done": "2026-11-23T12:03:34.481405+00:00"
 }
