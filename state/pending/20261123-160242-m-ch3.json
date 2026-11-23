@@ -1,0 +1,69 @@
+{
+  "id": "20261123-160242-m-ch3",
+  "created": "2026-11-23T16:02:42.235147+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-23T09:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/music/article/117/0004127134",
+  "force": false,
+  "images": [
+    "docs/posts/20261123-160242-m-ch3/01.jpg",
+    "docs/posts/20261123-160242-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"미션 성공\"... 아일릿, MAMA 3관왕\n\n아일릿이 건강 악화와 발목 부상 속에서도 값진 결과를 받았습니다. 지난 20일부터 21일까지 일본 교세라 돔 오사카에서 열린 '2026 MAMA AWARDS'에서 팬스 초이스 피메일 톱10, 베스트 댄스 퍼포먼스 피메일 그룹, 베스트 송 톱10 등 3개 부문을 수상했습니다.\n\n미니 4집 타이틀곡 'It's Me'로는 베스트 댄스 퍼포먼스 피메일 그룹과 베스트 송 톱10을 동시에 받았습니다. 아일릿은 수상 소감에서 팬들의 사랑에 감사를 전하고, 더 많은 글릿을 만나러 가겠다는 뜻을 밝혔습니다.\n\n소속사 빌리프랩은 지난 18일 위버스를 통해 멤버들의 회복을 위해 미니 5집 'BREAK EVEN'의 음악방송 등 일부 활동 일정을 줄인다고 알렸습니다. 윤아, 민주, 원희는 고열과 몸살 증상으로 병원을 찾았고, 원희와 이로하는 발목 부상 이후 지속적인 관리가 필요한 상태라고 전했습니다.\n\n20일 1일차 무대에서 원희는 보호대를 찬 채 안무를 소화했습니다. 비밀 요원 콘셉트로 꾸민 공연이었고, 원희는 마지막에 \"미션 성공\"을 외치며 무대를 마쳤습니다. 21일 시상식에는 원희와 이로하가 참석해 베스트 송 톱10 트로피를 받았습니다.\n\n사진 출처: 마이데일리. All rights reserved.\n\n#아일릿 #ILLIT #MAMA #2026MAMA #MAMAAWARDS #잇츠미 #ItsMe #원희 #WONHEE #베스트송 #빌리프랩",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "아일릿, ‘MAMA 3관왕’",
+    "headline_bottom": "발목 보호대 투혼",
+    "subline": "건강 이슈 속 MAMA 3개 부문 수상",
+    "card_summary": [
+      "아일릿이 2026 MAMA에서 3개 부문을 수상했다.",
+      "‘It's Me’로 두 개 부문을 동시에 받았다.",
+      "멤버들은 건강 문제로 일부 활동을 줄이기로 했다.",
+      "원희는 발목 보호대를 착용하고 무대에 올랐다."
+    ],
+    "title": "\"미션 성공\"... 아일릿, MAMA 3관왕",
+    "body": "아일릿이 건강 악화와 발목 부상 속에서도 값진 결과를 받았습니다. 지난 20일부터 21일까지 일본 교세라 돔 오사카에서 열린 '2026 MAMA AWARDS'에서 팬스 초이스 피메일 톱10, 베스트 댄스 퍼포먼스 피메일 그룹, 베스트 송 톱10 등 3개 부문을 수상했습니다.\n\n미니 4집 타이틀곡 'It's Me'로는 베스트 댄스 퍼포먼스 피메일 그룹과 베스트 송 톱10을 동시에 받았습니다. 아일릿은 수상 소감에서 팬들의 사랑에 감사를 전하고, 더 많은 글릿을 만나러 가겠다는 뜻을 밝혔습니다.\n\n소속사 빌리프랩은 지난 18일 위버스를 통해 멤버들의 회복을 위해 미니 5집 'BREAK EVEN'의 음악방송 등 일부 활동 일정을 줄인다고 알렸습니다. 윤아, 민주, 원희는 고열과 몸살 증상으로 병원을 찾았고, 원희와 이로하는 발목 부상 이후 지속적인 관리가 필요한 상태라고 전했습니다.\n\n20일 1일차 무대에서 원희는 보호대를 찬 채 안무를 소화했습니다. 비밀 요원 콘셉트로 꾸민 공연이었고, 원희는 마지막에 \"미션 성공\"을 외치며 무대를 마쳤습니다. 21일 시상식에는 원희와 이로하가 참석해 베스트 송 톱10 트로피를 받았습니다.",
+    "hashtags": [
+      "#아일릿",
+      "#ILLIT",
+      "#MAMA",
+      "#2026MAMA",
+      "#MAMAAWARDS",
+      "#잇츠미",
+      "#ItsMe",
+      "#원희",
+      "#WONHEE",
+      "#베스트송",
+      "#빌리프랩"
+    ],
+    "photo_queries": [
+      "아일릿",
+      "ILLIT"
+    ],
+    "person": "아일릿",
+    "scene_queries": [
+      "concert stage lights",
+      "awards ceremony stage Osaka"
+    ],
+    "fact_checked": true,
+    "press": "마이데일리",
+    "url": "https://m.entertain.naver.com/music/article/117/0004127134",
+    "source_title": "아일릿, 원희 발목 보호대 투혼 \"미션 성공\"…'MAMA' 3관왕 빛났다",
+    "issue_no": 91
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261123-160242-m-ch3/_src.jpg",
+    "credit": "마이데일리. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/music/article/117/0004127134",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
