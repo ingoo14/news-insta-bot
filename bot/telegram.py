@@ -94,8 +94,11 @@ def download_big(chat_id: str, message_id: int, dest: Path) -> Path:
 
     async def run():
         # 주의: 'async with' 로 열면 봇 토큰 없이 사람 로그인(전화번호 입력)을 시도해서 'EOF when reading a line' 에러 남
-        client = TelegramClient(StringSession(), int(api_id), api_hash)
+        client = TelegramClient(StringSession(), int(api_id), api_hash,
+                                request_retries=10, connection_retries=10, retry_delay=3,
+                                flood_sleep_threshold=180, timeout=60)
         await client.start(bot_token=config.TELEGRAM_BOT_TOKEN)
+        print("[큰 파일] 텔레그램 본 서버 로그인 OK")
         try:
             cid = int(chat_id)
             if str(chat_id).startswith("-100"):
@@ -107,10 +110,27 @@ def download_big(chat_id: str, message_id: int, dest: Path) -> Path:
             msg = await client.get_messages(peer, ids=int(message_id))
             if not msg or not msg.media:
                 raise RuntimeError("텔레그램에서 그 메시지의 영상을 못 찾았어")
+            print(f"[큰 파일] 메시지 찾음 → 내려받는 중")
             dest.parent.mkdir(parents=True, exist_ok=True)
-            await client.download_media(msg, file=str(dest))
+            # 큰 파일은 여러 조각을 동시에 받는 대신 안정적으로 1MB씩 순서대로
+            with open(dest, "wb") as fh:
+                async for chunk in client.iter_download(msg.media, request_size=512 * 1024):
+                    fh.write(chunk)
         finally:
             await client.disconnect()
-    asyncio.run(run())
+    import logging
+    logging.basicConfig(level=logging.WARNING)  # 실패하면 Actions 로그에 텔레그램 쪽 이유가 찍힘
+    import time as _t
+    for attempt in (1, 2):  # 텔레그램 서버가 일시적으로 바쁠 수 있어 한 번 더 시도
+        try:
+            asyncio.run(run())
+            break
+        except Exception as e:
+            cause = e.__cause__ or e.__context__
+            detail = f"{type(e).__name__}: {e}" + (f" ← {type(cause).__name__}: {cause}" if cause else "")
+            print(f"[큰 파일 실패 {attempt}/2] {detail}")
+            if attempt == 2:
+                raise RuntimeError(detail[:300]) from e
+            _t.sleep(15)
     print(f"[큰 파일 받기] {dest.stat().st_size / 1e6:.1f}MB")
     return dest
