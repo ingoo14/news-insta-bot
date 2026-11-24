@@ -1,8 +1,8 @@
 {
   "id": "20261124-151804-r-ch2",
   "created": "2026-11-24T15:18:04.964723+09:00",
-  "status": "publishing",
-  "attempts": 0,
+  "status": "failed",
+  "attempts": 1,
   "manual": true,
   "type": "reel",
   "video": "docs/posts/20261124-151804-r-ch2/reel.mp4",
@@ -26,5 +26,5 @@
   "preview_msg": 683,
   "claimed": "2026-11-24T06:28:35.766342+00:00",
   "permalink": "https://www.instagram.com/reel/DgHTq3Cinzo/",
-  "done": "2026-11-24T06:26:26.612422+00:00"
+  "done": "2026-11-24T06:28:51.879522+00:00"
 }
