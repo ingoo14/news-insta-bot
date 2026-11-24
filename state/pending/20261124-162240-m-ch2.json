@@ -1,7 +1,7 @@
 {
   "id": "20261124-162240-m-ch2",
   "created": "2026-11-24T16:22:40.885960+09:00",
-  "status": "pending",
+  "status": "publishing",
   "attempts": 0,
   "manual": true,
   "publish_at": "",
@@ -63,5 +63,6 @@
     "kind": "기사 사진"
   },
   "channel": "ch2",
-  "channel_handle": "greenlight_music"
+  "channel_handle": "greenlight_music",
+  "claimed": "2026-11-24T07:23:04.266499+00:00"
 }
