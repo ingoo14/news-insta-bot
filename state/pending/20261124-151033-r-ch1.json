@@ -1,0 +1,25 @@
+{
+  "id": "20261124-151033-r-ch1",
+  "created": "2026-11-24T15:10:33.079563+09:00",
+  "status": "awaiting",
+  "attempts": 0,
+  "manual": true,
+  "type": "reel",
+  "video": "docs/posts/20261124-151033-r-ch1/reel.mp4",
+  "images": [
+    "docs/posts/20261124-151033-r-ch1/_cover.jpg"
+  ],
+  "publish_at": "",
+  "poll": null,
+  "caption": "옆에서 끝까지 지켜준다는데 울컥함\n🎶 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음헌신 #노래추천 #감성 #가사 #신곡 #음악 #kpop #reels #fyp #추천곡 #플레이리스트 #노래스타그램",
+  "story": {
+    "title": "옆에서 끝까지 지켜준다는데 울컥함",
+    "custom_caption": true,
+    "confirmed": true,
+    "ai_caption": true
+  },
+  "photo": {},
+  "channel": "ch1",
+  "channel_handle": "ibduck_music",
+  "preview_msg": 672
+}
