@@ -11,15 +11,17 @@
   ],
   "publish_at": "",
   "poll": null,
-  "caption": "거센 바람 와도 네 옆은 내가 지켜줌\n🎶 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음헌신 #노래추천 #신곡 #겨울노래 #가을감성 #골든리트리버 #강아지 #힐링 #분위기 #kpop #reels #fyp",
+  "caption": "거센 바람이 와도 네 옆에 있을거야\n\n🎶꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음_헌신 #겨울 #사랑 #강아지 #노래추천 #감성 #신곡 #추천곡 #플레이리스트 #reels",
   "story": {
     "title": "거센 바람 와도 네 옆은 내가 지켜줌",
     "custom_caption": true,
     "confirmed": true,
-    "ai_caption": true
+    "ai_caption": true,
+    "body": "거센 바람이 와도 네 옆에 있을거야\n\n🎶꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음_헌신 #겨울 #사랑 #강아지 #노래추천 #감성 #신곡 #추천곡 #플레이리스트 #reels",
+    "body_custom": true
   },
   "photo": {},
   "channel": "ch2",
   "channel_handle": "greenlight_music",
-  "preview_msg": 680
+  "preview_msg": 683
 }
