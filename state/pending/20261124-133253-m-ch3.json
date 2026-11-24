@@ -1,0 +1,70 @@
+{
+  "id": "20261124-133253-m-ch3",
+  "created": "2026-11-24T13:32:53.551767+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-24T08:00:00+00:00",
+  "poll": null,
+  "src_url": "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611240019&t=NN",
+  "force": false,
+  "images": [
+    "docs/posts/20261124-133253-m-ch3/01.jpg",
+    "docs/posts/20261124-133253-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"열 번째 함께 맞이하는 겨울\"... 하정우·차정원 결혼 소식\n\n배우 하정우와 차정원이 오는 12월 13일 결혼식을 앞두고 최근 지인들에게 청첩장을 전달했습니다.\n\n공개된 청첩장에는 화보 사진 대신 결혼을 앞둔 마음을 담은 문구가 실렸습니다. 열 번째로 함께 맞이하는 겨울에 평생을 약속하겠다는 내용입니다.\n\n두 사람은 하객들에게 여러 홀에 나눠 좌석을 마련한 점에 대해 양해를 구했습니다. 또 결혼식 현장 사진과 영상을 SNS에 올리지 말아 달라고 당부했고, 축하 화환도 정중히 사양했습니다.\n\n두 사람은 지난 2월 열애 사실을 공식 인정했습니다. 2020년 무렵 인연을 맺어 약 6년간 교제해 온 것으로 알려졌으며, 지난 10월 결혼 소식을 전했습니다.\n\n하정우는 차기작 '내부자들: 악인들의 탄생' 촬영에 한창이며, 차정원은 패션 인플루언서로 활동하고 있습니다.\n\n사진 출처: wowtv.co.kr\n\n#하정우 #차정원 #하정우차정원 #HaJungWoo #ChaJungWon #청첩장 #결혼 #내부자들악인들의탄생 #패션인플루언서 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "하정우·차정원 '청첩장'",
+    "headline_bottom": "12월 13일 결혼식",
+    "subline": "열 번째 겨울, 평생을 약속한다",
+    "card_summary": [
+      "배우 하정우와 차정원이 결혼식 청첩장을 지인들에게 전달했다.",
+      "결혼식은 오는 12월 13일 열린다.",
+      "청첩장에는 화보 대신 진심을 담은 글귀가 실렸다.",
+      "두 사람은 지난 2월 열애를 공식 인정했다."
+    ],
+    "title": "\"열 번째 함께 맞이하는 겨울\"... 하정우·차정원 결혼 소식",
+    "body": "배우 하정우와 차정원이 오는 12월 13일 결혼식을 앞두고 최근 지인들에게 청첩장을 전달했습니다.\n\n공개된 청첩장에는 화보 사진 대신 결혼을 앞둔 마음을 담은 문구가 실렸습니다. 열 번째로 함께 맞이하는 겨울에 평생을 약속하겠다는 내용입니다.\n\n두 사람은 하객들에게 여러 홀에 나눠 좌석을 마련한 점에 대해 양해를 구했습니다. 또 결혼식 현장 사진과 영상을 SNS에 올리지 말아 달라고 당부했고, 축하 화환도 정중히 사양했습니다.\n\n두 사람은 지난 2월 열애 사실을 공식 인정했습니다. 2020년 무렵 인연을 맺어 약 6년간 교제해 온 것으로 알려졌으며, 지난 10월 결혼 소식을 전했습니다.\n\n하정우는 차기작 '내부자들: 악인들의 탄생' 촬영에 한창이며, 차정원은 패션 인플루언서로 활동하고 있습니다.",
+    "hashtags": [
+      "#하정우",
+      "#차정원",
+      "#하정우차정원",
+      "#HaJungWoo",
+      "#ChaJungWon",
+      "#청첩장",
+      "#결혼",
+      "#내부자들악인들의탄생",
+      "#패션인플루언서",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "하정우",
+      "Ha Jung-woo",
+      "차정원",
+      "Cha Jung-won"
+    ],
+    "person": "하정우",
+    "scene_queries": [
+      "wedding invitation card",
+      "wedding ceremony flowers"
+    ],
+    "fact_checked": true,
+    "press": "wowtv.co.kr",
+    "url": "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611240019&t=NN",
+    "source_title": "\"6년 열애 아니었어?\"…하정우·차정원, 청첩장에 담긴 '진실'",
+    "issue_no": 124
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261124-133253-m-ch3/_src.jpg",
+    "credit": "wowtv.co.kr",
+    "license": "",
+    "page": "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611240019&t=NN",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
