@@ -1,0 +1,69 @@
+{
+  "id": "20261124-134135-m-ch3",
+  "created": "2026-11-24T13:41:35.791015+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-24T13:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/home/article/001/0016457950",
+  "force": false,
+  "images": [
+    "docs/posts/20261124-134135-m-ch3/01.jpg",
+    "docs/posts/20261124-134135-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"'러브 어게인'\"... 한해·문세윤, 제나 피처링 신곡\n\n가수 한해와 방송인 문세윤이 23일 오후 6시 신곡 '러브 어게인'을 발표했습니다. 소속사 브랜뉴뮤직이 전했습니다.\n\n이 곡은 '한문철'이라는 애칭으로 불리는 두 사람의 다섯 번째 듀엣 프로젝트 싱글입니다. 서로의 기억 속에서 조금씩 희미해져 가던 두 사람에게 찾아온 뜻밖의 겨울날을 그린 노래입니다.\n\n대세 걸그룹 리센느의 제나가 데뷔 이후 처음으로 이 곡에 피처링으로 참여했습니다.\n\n사진 출처: 재판매 및 DB 금지]\n\n#한해 #문세윤 #제나 #리센느 #러브어게인 #한문철 #브랜뉴뮤직 #신곡 #듀엣 #가요소식",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "한해·문세윤, 신곡",
+    "headline_bottom": "제나 피처링 참여",
+    "subline": "리센느 제나 피처링한 듀엣곡",
+    "card_summary": [
+      "한해와 문세윤이 신곡을 발표했다.",
+      "리센느 제나가 피처링으로 참여했다.",
+      "23일 오후 6시 발표했다고 소속사가 밝혔다."
+    ],
+    "title": "\"'러브 어게인'\"... 한해·문세윤, 제나 피처링 신곡",
+    "body": "가수 한해와 방송인 문세윤이 23일 오후 6시 신곡 '러브 어게인'을 발표했습니다. 소속사 브랜뉴뮤직이 전했습니다.\n\n이 곡은 '한문철'이라는 애칭으로 불리는 두 사람의 다섯 번째 듀엣 프로젝트 싱글입니다. 서로의 기억 속에서 조금씩 희미해져 가던 두 사람에게 찾아온 뜻밖의 겨울날을 그린 노래입니다.\n\n대세 걸그룹 리센느의 제나가 데뷔 이후 처음으로 이 곡에 피처링으로 참여했습니다.",
+    "hashtags": [
+      "#한해",
+      "#문세윤",
+      "#제나",
+      "#리센느",
+      "#러브어게인",
+      "#한문철",
+      "#브랜뉴뮤직",
+      "#신곡",
+      "#듀엣",
+      "#가요소식"
+    ],
+    "photo_queries": [
+      "한해",
+      "문세윤",
+      "Han Hae",
+      "Moon Se-yoon"
+    ],
+    "person": "한해",
+    "scene_queries": [
+      "winter night Seoul street",
+      "recording studio microphone"
+    ],
+    "fact_checked": true,
+    "press": "연합뉴스",
+    "url": "https://m.entertain.naver.com/home/article/001/0016457950",
+    "source_title": "[가요소식] 한해·문세윤, 리센느 제나와 신곡 '러브 어게인'",
+    "issue_no": 127
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261124-134135-m-ch3/_src.jpg",
+    "credit": "재판매 및 DB 금지]",
+    "license": "",
+    "page": "https://m.entertain.naver.com/home/article/001/0016457950",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
