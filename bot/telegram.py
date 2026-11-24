@@ -93,8 +93,10 @@ def download_big(chat_id: str, message_id: int, dest: Path) -> Path:
     from telethon.tl.types import PeerChannel, PeerChat
 
     async def run():
-        async with TelegramClient(StringSession(), int(api_id), api_hash) as client:
-            await client.start(bot_token=config.TELEGRAM_BOT_TOKEN)
+        # 주의: 'async with' 로 열면 봇 토큰 없이 사람 로그인(전화번호 입력)을 시도해서 'EOF when reading a line' 에러 남
+        client = TelegramClient(StringSession(), int(api_id), api_hash)
+        await client.start(bot_token=config.TELEGRAM_BOT_TOKEN)
+        try:
             cid = int(chat_id)
             if str(chat_id).startswith("-100"):
                 peer = PeerChannel(int(str(chat_id)[4:]))
@@ -107,6 +109,8 @@ def download_big(chat_id: str, message_id: int, dest: Path) -> Path:
                 raise RuntimeError("텔레그램에서 그 메시지의 영상을 못 찾았어")
             dest.parent.mkdir(parents=True, exist_ok=True)
             await client.download_media(msg, file=str(dest))
+        finally:
+            await client.disconnect()
     asyncio.run(run())
     print(f"[큰 파일 받기] {dest.stat().st_size / 1e6:.1f}MB")
     return dest
