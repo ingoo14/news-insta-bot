@@ -1,8 +1,8 @@
 {
   "id": "20261124-144151-r-ch3",
   "created": "2026-11-24T14:41:51.130559+09:00",
-  "status": "publishing",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "manual": true,
   "type": "reel",
   "video": "docs/posts/20261124-144151-r-ch3/reel.mp4",
@@ -22,5 +22,7 @@
   "channel": "ch3",
   "channel_handle": "gaem_seong_1spoon",
   "preview_msg": 641,
-  "claimed": "2026-11-24T05:47:47.300125+00:00"
+  "claimed": "2026-11-24T05:47:47.300125+00:00",
+  "permalink": "https://www.instagram.com/reel/DgHPcM8TwVK/",
+  "done": "2026-11-24T05:50:01.545738+00:00"
 }
