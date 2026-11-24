@@ -1,0 +1,70 @@
+{
+  "id": "20261124-133318-m-ch3",
+  "created": "2026-11-24T13:33:18.435175+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-24T09:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/music/article/109/0005644297",
+  "force": false,
+  "images": [
+    "docs/posts/20261124-133318-m-ch3/01.jpg",
+    "docs/posts/20261124-133318-m-ch3/02.jpg"
+  ],
+  "caption": "📌 장원영, MAMA 무대 뒤 사진 13장 공개\n\n아이브 장원영이 23일 자신의 인스타그램에 2026 MAMA AWARDS 무대 뒤에서 찍은 사진 13장을 올렸습니다.\n\n첫 사진에는 아이보리색 무대 의상을 입고 거울 앞에서 휴대전화를 든 모습이 담겼습니다. 검은 커튼 앞에서 붉은색 헤드셋 마이크를 착용한 사진도 함께 공개했습니다.\n\n장원영은 21일 브라운 드레스 사진을 올렸습니다. 같은 색 드레스 차림으로 일본 교세라 돔 오사카에서 열린 시상식 레드카펫에도 등장했습니다. 안유진과 나란히 찍은 사진도 공개했습니다.\n\n아이브는 20일 '베스트 피메일 그룹' 수상자로 호명됐습니다. 21일에는 'BANG BANG'으로 '베스트 송 톱 10'에 이름을 올렸고, 본 무대에서는 'SNAKESKIN', 'BLACKHOLE', 'BANG BANG'을 선보였습니다.\n\n사진 출처: OSEN. All rights reserved.\n\n#아이브 #IVE #장원영 #JangWonYoung #안유진 #MAMA2026 #MAMAAWARDS #BANGBANG #뱅뱅 #베스트피메일그룹 #베스트송톱10",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "장원영, '무대 뒤' 사진",
+    "headline_bottom": "아이브 MAMA 2관왕",
+    "subline": "아이브 2관왕 시상식 뒤 사진 13장",
+    "card_summary": [
+      "장원영이 23일 인스타그램에 사진 13장을 올렸다.",
+      "2026 MAMA AWARDS 무대 뒤에서 찍은 사진이다.",
+      "아이브는 20~21일 시상식에서 트로피 두 개를 받았다."
+    ],
+    "title": "장원영, MAMA 무대 뒤 사진 13장 공개",
+    "body": "아이브 장원영이 23일 자신의 인스타그램에 2026 MAMA AWARDS 무대 뒤에서 찍은 사진 13장을 올렸습니다.\n\n첫 사진에는 아이보리색 무대 의상을 입고 거울 앞에서 휴대전화를 든 모습이 담겼습니다. 검은 커튼 앞에서 붉은색 헤드셋 마이크를 착용한 사진도 함께 공개했습니다.\n\n장원영은 21일 브라운 드레스 사진을 올렸습니다. 같은 색 드레스 차림으로 일본 교세라 돔 오사카에서 열린 시상식 레드카펫에도 등장했습니다. 안유진과 나란히 찍은 사진도 공개했습니다.\n\n아이브는 20일 '베스트 피메일 그룹' 수상자로 호명됐습니다. 21일에는 'BANG BANG'으로 '베스트 송 톱 10'에 이름을 올렸고, 본 무대에서는 'SNAKESKIN', 'BLACKHOLE', 'BANG BANG'을 선보였습니다.",
+    "hashtags": [
+      "#아이브",
+      "#IVE",
+      "#장원영",
+      "#JangWonYoung",
+      "#안유진",
+      "#MAMA2026",
+      "#MAMAAWARDS",
+      "#BANGBANG",
+      "#뱅뱅",
+      "#베스트피메일그룹",
+      "#베스트송톱10"
+    ],
+    "photo_queries": [
+      "장원영",
+      "Jang Won-young",
+      "아이브",
+      "IVE"
+    ],
+    "person": "장원영",
+    "scene_queries": [
+      "MAMA Awards stage lights",
+      "Kyocera Dome Osaka red carpet"
+    ],
+    "fact_checked": true,
+    "press": "OSEN",
+    "url": "https://m.entertain.naver.com/music/article/109/0005644297",
+    "source_title": "“저 역시 ‘뱅뱅’을 사랑했다”…장원영, 아이브 ‘MAMA’ 2관왕 무대서 고백 [핫피플]",
+    "issue_no": 124
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261124-133318-m-ch3/_src.jpg",
+    "credit": "OSEN. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/music/article/109/0005644297",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
