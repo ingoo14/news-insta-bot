@@ -1,0 +1,67 @@
+{
+  "id": "20261124-104919-m-ch1",
+  "created": "2026-11-24T10:49:19.827768+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-24T03:00:00+00:00",
+  "poll": null,
+  "src_url": "https://naver.me/xtN2YAPX",
+  "force": false,
+  "images": [
+    "docs/posts/20261124-104919-m-ch1/01.jpg",
+    "docs/posts/20261124-104919-m-ch1/02.jpg"
+  ],
+  "caption": "📌 \"언스페셜\"... 태연, 정규 4집 하이라이트 메들리 공개\n\n태연이 정규 4집 'Unspecial'의 하이라이트 메들리 영상을 공개하며 컴백 분위기를 끌어올렸습니다.\n\n영상은 24일 0시 태연의 공식 유튜브 채널을 통해 공개됐습니다. 손으로 만지고 그리며 고친 흔적이 남은 패치들이 하나씩 모여 한 장의 패치워크로 완성되는 과정을 담았습니다. 앨범 콘셉트와 수록곡 일부를 미리 들어볼 수 있는 영상입니다.\n\n정규 4집 'Unspecial'은 11월 30일 공개되며, 동명의 타이틀곡 'Unspecial'을 포함해 총 12곡이 수록됩니다.\n\n앨범은 현재 각종 온·오프라인 음반 매장에서 예약 구매할 수 있습니다.\n\n\n#태연 #Taeyeon #언스페셜 #Unspecial #정규4집 #소녀시대 #SNSD #컴백 #하이라이트메들리 #SMEntertainment",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "태연, '언스페셜'",
+    "headline_bottom": "하이라이트 메들리 공개",
+    "subline": "정규 4집 하이라이트 메들리 영상 공개",
+    "card_summary": [
+      "태연이 정규 4집 하이라이트 메들리를 공개했다.",
+      "영상은 24일 0시 공식 유튜브 채널을 통해 공개됐다.",
+      "정규 4집 'Unspecial'은 11월 30일 공개 예정이다."
+    ],
+    "title": "\"언스페셜\"... 태연, 정규 4집 하이라이트 메들리 공개",
+    "body": "태연이 정규 4집 'Unspecial'의 하이라이트 메들리 영상을 공개하며 컴백 분위기를 끌어올렸습니다.\n\n영상은 24일 0시 태연의 공식 유튜브 채널을 통해 공개됐습니다. 손으로 만지고 그리며 고친 흔적이 남은 패치들이 하나씩 모여 한 장의 패치워크로 완성되는 과정을 담았습니다. 앨범 콘셉트와 수록곡 일부를 미리 들어볼 수 있는 영상입니다.\n\n정규 4집 'Unspecial'은 11월 30일 공개되며, 동명의 타이틀곡 'Unspecial'을 포함해 총 12곡이 수록됩니다.\n\n앨범은 현재 각종 온·오프라인 음반 매장에서 예약 구매할 수 있습니다.",
+    "hashtags": [
+      "#태연",
+      "#Taeyeon",
+      "#언스페셜",
+      "#Unspecial",
+      "#정규4집",
+      "#소녀시대",
+      "#SNSD",
+      "#컴백",
+      "#하이라이트메들리",
+      "#SMEntertainment"
+    ],
+    "photo_queries": [
+      "태연",
+      "Taeyeon"
+    ],
+    "person": "태연",
+    "scene_queries": [
+      "Seoul concert stage lights",
+      "vinyl record album music store"
+    ],
+    "fact_checked": true,
+    "press": "마이데일리",
+    "url": "https://m.entertain.naver.com/now/article/117/0004127559",
+    "source_title": "태연, 특별하지 않은데 특별한…",
+    "issue_no": 112
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261124-104919-m-ch1/_src.jpg",
+    "credit": "",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "직접 전송"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
