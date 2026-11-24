@@ -1,0 +1,72 @@
+{
+  "id": "20261124-222311-m-ch2",
+  "created": "2026-11-24T22:23:11.476325+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/5GcuUQvg",
+  "force": false,
+  "images": [
+    "docs/posts/20261124-222311-m-ch2/01.jpg",
+    "docs/posts/20261124-222311-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"Afterglow\"... 정한x야마다 료스케 협업곡 공개\n\n세븐틴 정한과 일본 톱스타 야마다 료스케의 협업이 성사됐습니다. 소속사 플레디스 엔터테인먼트는 24일 두 사람이 부른 ‘Afterglow’가 내달 14일 공개된다고 밝혔습니다.\n\n야마다 료스케는 2006년 NTV 드라마 ‘탐정학원 Q’로 배우 데뷔했으며, 이후 연기와 음악 활동을 병행하고 있습니다.\n\n플레디스는 야마다 료스케가 오랜 시간 해외 아티스트와의 협업을 꿈꿔왔고, 정한의 음악 활동을 지켜보다 듀엣을 제안했다고 전했습니다.\n\n두 사람은 내달 9일 방송되는 후지TV ‘FNS 가요제’에도 함께 출연합니다.\n\n‘Afterglow’는 잔광을 뜻하며, 공개된 재킷 사진에는 아련한 분위기와 은은한 카리스마가 담겼습니다.\n\n사진 출처: OSEN. All rights reserved.\n\n#정한 #Jeonghan #세븐틴 #SEVENTEEN #야마다료스케 #YamadaRyosuke #Afterglow #FNS가요제 #플레디스 #협업 #K팝 #음악",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "정한, 日 아티스트와 듀엣",
+    "headline_bottom": "내달 14일 공개",
+    "subline": "야마다 료스케와 협업곡 공개 예정",
+    "card_summary": [
+      "정한과 야마다 료스케의 협업곡이 공개된다.",
+      "협업곡 ‘Afterglow’는 내달 14일 공개 예정이다.",
+      "두 사람은 내달 9일 후지TV ‘FNS 가요제’에 함께 출연한다.",
+      "야마다 료스케는 2006년 배우로 데뷔해 연기와 음악을 병행한다."
+    ],
+    "title": "\"Afterglow\"... 정한x야마다 료스케 협업곡 공개",
+    "body": "세븐틴 정한과 일본 톱스타 야마다 료스케의 협업이 성사됐습니다. 소속사 플레디스 엔터테인먼트는 24일 두 사람이 부른 ‘Afterglow’가 내달 14일 공개된다고 밝혔습니다.\n\n야마다 료스케는 2006년 NTV 드라마 ‘탐정학원 Q’로 배우 데뷔했으며, 이후 연기와 음악 활동을 병행하고 있습니다.\n\n플레디스는 야마다 료스케가 오랜 시간 해외 아티스트와의 협업을 꿈꿔왔고, 정한의 음악 활동을 지켜보다 듀엣을 제안했다고 전했습니다.\n\n두 사람은 내달 9일 방송되는 후지TV ‘FNS 가요제’에도 함께 출연합니다.\n\n‘Afterglow’는 잔광을 뜻하며, 공개된 재킷 사진에는 아련한 분위기와 은은한 카리스마가 담겼습니다.",
+    "hashtags": [
+      "#정한",
+      "#Jeonghan",
+      "#세븐틴",
+      "#SEVENTEEN",
+      "#야마다료스케",
+      "#YamadaRyosuke",
+      "#Afterglow",
+      "#FNS가요제",
+      "#플레디스",
+      "#협업",
+      "#K팝",
+      "#음악"
+    ],
+    "photo_queries": [
+      "정한",
+      "Jeonghan",
+      "야마다 료스케",
+      "Yamada Ryosuke"
+    ],
+    "person": "정한",
+    "scene_queries": [
+      "recording studio microphone",
+      "Tokyo night city lights"
+    ],
+    "fact_checked": true,
+    "press": "OSEN",
+    "url": "https://m.entertain.naver.com/now/article/109/0005644763",
+    "source_title": "세븐틴 정한, 日 톱스타 야마다 료스케와 손잡았다",
+    "issue_no": 148
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261124-222311-m-ch2/_src.jpg",
+    "credit": "OSEN. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/109/0005644763",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
