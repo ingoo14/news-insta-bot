@@ -1,0 +1,71 @@
+{
+  "id": "20261124-142855-m-ch1",
+  "created": "2026-11-24T14:28:55.266949+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-24T06:00:00+00:00",
+  "poll": null,
+  "src_url": "https://www.starnewskorea.com/star/2026/11/24/2026112410431384903?utm_source=share_url&utm_medium=share&utm_campaign=regular",
+  "force": false,
+  "images": [
+    "docs/posts/20261124-142855-m-ch1/01.jpg",
+    "docs/posts/20261124-142855-m-ch1/02.jpg"
+  ],
+  "caption": "📌 김명수·표예진, 웨이브 새 드라마 ‘연대보증 로맨스’\n\n인피니트 멤버 겸 배우 김명수와 배우 표예진이 웨이브 새 오리지널 드라마 ‘연대보증 로맨스’에 출연했습니다. 극본은 이도연, 연출은 강민구 감독이 맡았습니다.\n\n이 작품은 나무에 진심인 괴짜 목수 이정식(김명수 분)과 야망 있는 홈쇼핑 MD 나다운(표예진 분)이 신혼부부 대출을 위해 서로의 연대보증인이 되면서 얽히는 현실 밀착 생존 로맨스물입니다.\n\n이정식은 나무를 보는 안목을 인정받지만 스스로는 부족하다고 여겨 재능을 드러내지 않는 인물로 그려졌습니다. 나다운은 합리적인 소비를 추구하며 언젠가 자신만의 사업을 펼치겠다는 포부를 가진 인물입니다.\n\n제작진은 김명수와 표예진이 각기 다른 개성을 지닌 두 인물을 매력적으로 그려낼 배우라고 전했습니다.\n\n‘연대보증 로맨스’는 2027년 1월 웨이브에서 첫 공개될 예정입니다.\n\n사진 출처: 루크 미디어, 시크릿이엔티\n\n#김명수 #표예진 #연대보증로맨스 #웨이브 #Wavve #인피니트 #INFINITE #강민구 #이도연 #드라마 #신작드라마 #로맨스드라마",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "드라마",
+    "headline_top": "김명수·표예진 ‘연대보증’",
+    "headline_bottom": "웨이브 새 드라마 출연",
+    "subline": "웨이브 오리지널, 2027년 1월 공개",
+    "card_summary": [
+      "김명수와 표예진이 웨이브 새 오리지널 드라마에 출연했다.",
+      "강민구 감독이 연출을 맡은 ‘연대보증 로맨스’다.",
+      "2027년 1월 웨이브에서 첫 공개될 예정이다."
+    ],
+    "title": "김명수·표예진, 웨이브 새 드라마 ‘연대보증 로맨스’",
+    "body": "인피니트 멤버 겸 배우 김명수와 배우 표예진이 웨이브 새 오리지널 드라마 ‘연대보증 로맨스’에 출연했습니다. 극본은 이도연, 연출은 강민구 감독이 맡았습니다.\n\n이 작품은 나무에 진심인 괴짜 목수 이정식(김명수 분)과 야망 있는 홈쇼핑 MD 나다운(표예진 분)이 신혼부부 대출을 위해 서로의 연대보증인이 되면서 얽히는 현실 밀착 생존 로맨스물입니다.\n\n이정식은 나무를 보는 안목을 인정받지만 스스로는 부족하다고 여겨 재능을 드러내지 않는 인물로 그려졌습니다. 나다운은 합리적인 소비를 추구하며 언젠가 자신만의 사업을 펼치겠다는 포부를 가진 인물입니다.\n\n제작진은 김명수와 표예진이 각기 다른 개성을 지닌 두 인물을 매력적으로 그려낼 배우라고 전했습니다.\n\n‘연대보증 로맨스’는 2027년 1월 웨이브에서 첫 공개될 예정입니다.",
+    "hashtags": [
+      "#김명수",
+      "#표예진",
+      "#연대보증로맨스",
+      "#웨이브",
+      "#Wavve",
+      "#인피니트",
+      "#INFINITE",
+      "#강민구",
+      "#이도연",
+      "#드라마",
+      "#신작드라마",
+      "#로맨스드라마"
+    ],
+    "photo_queries": [
+      "김명수",
+      "Kim Myung-soo",
+      "표예진",
+      "Pyo Ye-jin"
+    ],
+    "person": "김명수",
+    "scene_queries": [
+      "Seoul streaming drama set",
+      "wooden furniture workshop"
+    ],
+    "fact_checked": true,
+    "press": "김나라",
+    "url": "https://www.starnewskorea.com/star/2026/11/24/2026112410431384903?utm_source=share_url&utm_medium=share&utm_campaign=regular",
+    "source_title": "[공식] 김명수♥표예진, '연대보증 로맨스' | 스타뉴스",
+    "issue_no": 133
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261124-142855-m-ch1/_src.jpg",
+    "credit": "루크 미디어, 시크릿이엔티",
+    "license": "",
+    "page": "https://www.starnewskorea.com/star/2026/11/24/2026112410431384903?utm_source=share_url&utm_medium=share&utm_campaign=regular",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
