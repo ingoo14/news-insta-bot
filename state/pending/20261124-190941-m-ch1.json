@@ -1,0 +1,67 @@
+{
+  "id": "20261124-190941-m-ch1",
+  "created": "2026-11-24T19:09:41.235057+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/IFELudVr",
+  "force": false,
+  "images": [
+    "docs/posts/20261124-190941-m-ch1/01.jpg",
+    "docs/posts/20261124-190941-m-ch1/02.jpg"
+  ],
+  "caption": "📌 폴킴, 크리스마스 캐럴풍 영어 싱글 ‘마이 온리 원’ 발매\n\n싱어송라이터 폴킴이 두 번째 영어 싱글 ‘마이 온리 원(My Only One)’을 27일 오후 2시 전 세계 동시 발매합니다. 소속사 와이예스엔터테인먼트가 전했습니다.\n\n이번 곡은 지난 10월 30일 발표한 첫 영어 싱글 ‘러브 미 하드(Love Me Hard)’ 이후 약 1개월 만에 선보이는 두 번째 영어곡입니다. 크리스마스 시즌을 겨냥한 캐럴풍 팝 넘버입니다.\n\n첫 곡이 온 마음을 다해 사랑하고 싶은 강렬한 갈망을 노래했다면, 이번 곡은 산타클로스에게 띄우는 단 하나의 소원으로 진심 어린 사랑을 고백합니다.\n\n폴킴이 작사에 직접 참여했으며, 포근하고 부드러운 사운드 위에 특유의 감미롭고 따뜻한 음색을 얹었습니다. 가사 속 화자는 값비싼 선물들을 떠올리지만, 마음속 ‘너’가 없다면 어떤 선물도 의미가 없다고 고백합니다. 결국 크리스마스 위시리스트에는 ‘너’ 하나만 남습니다.\n\n사진 출처: 와이예스엔터테인먼트\n\n#폴킴 #PaulKim #마이온리원 #MyOnlyOne #LoveMeHard #영어싱글 #크리스마스캐럴 #신곡 #와이예스엔터테인먼트 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "폴킴, '마이 온리 원'",
+    "headline_bottom": "두 번째 영어 싱글 발매",
+    "subline": "크리스마스 감성 담은 캐럴풍 팝",
+    "card_summary": [
+      "폴킴이 두 번째 영어 싱글 ‘마이 온리 원’을 발매한다.",
+      "첫 영어 싱글 발표 약 1개월 만의 신곡이다.",
+      "27일 오후 2시 전 세계 동시 발매 예정이다."
+    ],
+    "title": "폴킴, 크리스마스 캐럴풍 영어 싱글 ‘마이 온리 원’ 발매",
+    "body": "싱어송라이터 폴킴이 두 번째 영어 싱글 ‘마이 온리 원(My Only One)’을 27일 오후 2시 전 세계 동시 발매합니다. 소속사 와이예스엔터테인먼트가 전했습니다.\n\n이번 곡은 지난 10월 30일 발표한 첫 영어 싱글 ‘러브 미 하드(Love Me Hard)’ 이후 약 1개월 만에 선보이는 두 번째 영어곡입니다. 크리스마스 시즌을 겨냥한 캐럴풍 팝 넘버입니다.\n\n첫 곡이 온 마음을 다해 사랑하고 싶은 강렬한 갈망을 노래했다면, 이번 곡은 산타클로스에게 띄우는 단 하나의 소원으로 진심 어린 사랑을 고백합니다.\n\n폴킴이 작사에 직접 참여했으며, 포근하고 부드러운 사운드 위에 특유의 감미롭고 따뜻한 음색을 얹었습니다. 가사 속 화자는 값비싼 선물들을 떠올리지만, 마음속 ‘너’가 없다면 어떤 선물도 의미가 없다고 고백합니다. 결국 크리스마스 위시리스트에는 ‘너’ 하나만 남습니다.",
+    "hashtags": [
+      "#폴킴",
+      "#PaulKim",
+      "#마이온리원",
+      "#MyOnlyOne",
+      "#LoveMeHard",
+      "#영어싱글",
+      "#크리스마스캐럴",
+      "#신곡",
+      "#와이예스엔터테인먼트",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "폴킴",
+      "Paul Kim"
+    ],
+    "person": "폴킴",
+    "scene_queries": [
+      "Christmas lights night city",
+      "winter romantic snow street"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/468/0001283160",
+    "source_title": "폴킴, 두 번째 영어 싱글 ‘마이 온리 원’ 발매",
+    "issue_no": 147
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261124-190941-m-ch1/_src.jpg",
+    "credit": "와이예스엔터테인먼트",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/468/0001283160",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
