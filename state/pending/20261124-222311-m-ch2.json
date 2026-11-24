@@ -1,8 +1,8 @@
 {
   "id": "20261124-222311-m-ch2",
   "created": "2026-11-24T22:23:11.476325+09:00",
-  "status": "publishing",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "manual": true,
   "publish_at": "",
   "poll": null,
@@ -69,5 +69,7 @@
   },
   "channel": "ch2",
   "channel_handle": "greenlight_music",
-  "claimed": "2026-11-24T13:23:35.318579+00:00"
+  "claimed": "2026-11-24T13:23:35.318579+00:00",
+  "permalink": "https://www.instagram.com/p/DgIDgTDlxD8/",
+  "done": "2026-11-24T13:24:04.021966+00:00"
 }
