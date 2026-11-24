@@ -1,0 +1,70 @@
+{
+  "id": "20261124-132747-m-ch3",
+  "created": "2026-11-24T13:27:47.068346+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-24T06:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/home/article/112/0003814097",
+  "force": false,
+  "images": [
+    "docs/posts/20261124-132747-m-ch3/01.jpg",
+    "docs/posts/20261124-132747-m-ch3/02.jpg"
+  ],
+  "caption": "📌 한지민·이제훈, 제47회 청룡영화상 공동 MC 확정\n\n배우 한지민과 이제훈이 제47회 청룡영화상의 공동 MC를 맡았습니다. 두 사람은 지난해에 이어 올해도 시상식을 함께 진행합니다.\n\n시상식은 25일 서울 여의도 KBS홀에서 열리며, 올해 한국 영화를 빛낸 작품과 영화인들을 조명합니다. 시상식은 KBS2를 통해 생중계됩니다.\n\n최우수작품상 후보는 '군체', '세계의 주인', '암살자(들)', '왕과 사는 남자', '호프' 다섯 편입니다. 전체 후보 지명에서는 '호프'가 10개 부문으로 최다 기록을 세웠고, '가능한 사랑'이 8개, '왕과 사는 남자'가 7개 부문으로 뒤를 이었습니다.\n\n구교환과 조인성은 서로 다른 작품으로 주연상과 조연상 후보에 동시에 올랐습니다. '가능한 사랑'은 남녀 주연상과 조연상 4개 부문에 모두 후보를 냈습니다.\n\n\n#청룡영화상 #제47회청룡영화상 #BlueDragonFilmAwards #한지민 #HanJiMin #이제훈 #LeeJeHoon #호프 #가능한사랑 #왕과사는남자",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "영화",
+    "headline_top": "한지민·이제훈 공동 MC",
+    "headline_bottom": "청룡영화상 MC 확정",
+    "subline": "25일 여의도 KBS홀에서 개최",
+    "card_summary": [
+      "한지민·이제훈이 제47회 청룡영화상 공동 MC를 맡았다.",
+      "시상식은 25일 서울 여의도 KBS홀에서 열린다.",
+      "최우수작품상엔 '군체', '호프' 등 5편이 올랐다.",
+      "'호프'가 10개 부문 후보로 가장 많이 지명됐다."
+    ],
+    "title": "한지민·이제훈, 제47회 청룡영화상 공동 MC 확정",
+    "body": "배우 한지민과 이제훈이 제47회 청룡영화상의 공동 MC를 맡았습니다. 두 사람은 지난해에 이어 올해도 시상식을 함께 진행합니다.\n\n시상식은 25일 서울 여의도 KBS홀에서 열리며, 올해 한국 영화를 빛낸 작품과 영화인들을 조명합니다. 시상식은 KBS2를 통해 생중계됩니다.\n\n최우수작품상 후보는 '군체', '세계의 주인', '암살자(들)', '왕과 사는 남자', '호프' 다섯 편입니다. 전체 후보 지명에서는 '호프'가 10개 부문으로 최다 기록을 세웠고, '가능한 사랑'이 8개, '왕과 사는 남자'가 7개 부문으로 뒤를 이었습니다.\n\n구교환과 조인성은 서로 다른 작품으로 주연상과 조연상 후보에 동시에 올랐습니다. '가능한 사랑'은 남녀 주연상과 조연상 4개 부문에 모두 후보를 냈습니다.",
+    "hashtags": [
+      "#청룡영화상",
+      "#제47회청룡영화상",
+      "#BlueDragonFilmAwards",
+      "#한지민",
+      "#HanJiMin",
+      "#이제훈",
+      "#LeeJeHoon",
+      "#호프",
+      "#가능한사랑",
+      "#왕과사는남자"
+    ],
+    "photo_queries": [
+      "한지민",
+      "Han Ji-min",
+      "이제훈",
+      "Lee Je-hoon"
+    ],
+    "person": "한지민",
+    "scene_queries": [
+      "film awards ceremony stage",
+      "Yeouido KBS hall Seoul night"
+    ],
+    "fact_checked": true,
+    "press": "헤럴드뮤즈",
+    "url": "https://m.entertain.naver.com/home/article/112/0003814097",
+    "source_title": "한지민X이제훈, 제47회 청룡영화상 공동 MC 확정..영화인 축제 이끈다(공식)",
+    "issue_no": 122
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261124-132747-m-ch3/_src.jpg",
+    "credit": "",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "직접 전송"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
