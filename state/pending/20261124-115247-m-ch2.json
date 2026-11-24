@@ -1,0 +1,68 @@
+{
+  "id": "20261124-115247-m-ch2",
+  "created": "2026-11-24T11:52:47.389953+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/xXnmBoqo",
+  "force": false,
+  "images": [
+    "docs/posts/20261124-115247-m-ch2/01.jpg",
+    "docs/posts/20261124-115247-m-ch2/02.jpg"
+  ],
+  "caption": "📌 '우아한' 무대 의상…장원영, 백스테이지 컷 공개\n\n장원영이 지난 23일 자신의 개인 SNS 계정에 백스테이지 비하인드 컷 여러 장을 게재했습니다.\n\n공개된 사진 속 장원영은 크림 아이보리 톤의 무대 의상을 입고 시선을 사로잡았습니다. 자카드 패턴과 프릴 디테일이 돋보이는 튜브톱 위에 스트링과 버클 장식이 있는 레이스업 코르셋을 레이어드해 잘록한 허리 라인을 강조했습니다.\n\n코르셋과 톤을 맞춘 광택 새틴 미니스커트에 길게 늘어지는 시폰 드레이핑을 매치해 움직임에 따라 우아한 실루엣을 완성했습니다.\n\n팔 전체를 감싸는 암 워머와 초커도 레이스업 디테일, 시스루, 프릴 소재가 어우러져 화려한 분위기를 극대화했습니다.\n\n장원영이 속한 아이브는 지난 10월 발매한 미니 앨범 'Looks Can Kill(룩스 캔 킬)' 활동을 성공적으로 마무리했으며, 현재 연말 시상식 등 각종 대형 무대를 통해 퍼포먼스와 수상 행보를 이어가고 있습니다.\n\n사진 출처: 스포츠월드. All rights reserved.\n\n#장원영 #JangWonyoung #아이브 #IVE #LooksCanKill #룩스캔킬 #무대의상 #레이스업코르셋 #백스테이지 #스타샷",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "장원영, 코르셋 무대 의상",
+    "headline_bottom": "백스테이지 컷 공개",
+    "subline": "백스테이지 사진 여러 장 공개",
+    "card_summary": [
+      "장원영이 23일 SNS에 백스테이지 컷을 공개했다.",
+      "튜브톱 위에 레이스업 코르셋을 레이어드했다.",
+      "새틴 미니스커트와 시폰 드레이핑으로 실루엣을 완성했다.",
+      "아이브는 10월 발매한 미니 앨범 활동을 마무리했다."
+    ],
+    "title": "'우아한' 무대 의상…장원영, 백스테이지 컷 공개",
+    "body": "장원영이 지난 23일 자신의 개인 SNS 계정에 백스테이지 비하인드 컷 여러 장을 게재했습니다.\n\n공개된 사진 속 장원영은 크림 아이보리 톤의 무대 의상을 입고 시선을 사로잡았습니다. 자카드 패턴과 프릴 디테일이 돋보이는 튜브톱 위에 스트링과 버클 장식이 있는 레이스업 코르셋을 레이어드해 잘록한 허리 라인을 강조했습니다.\n\n코르셋과 톤을 맞춘 광택 새틴 미니스커트에 길게 늘어지는 시폰 드레이핑을 매치해 움직임에 따라 우아한 실루엣을 완성했습니다.\n\n팔 전체를 감싸는 암 워머와 초커도 레이스업 디테일, 시스루, 프릴 소재가 어우러져 화려한 분위기를 극대화했습니다.\n\n장원영이 속한 아이브는 지난 10월 발매한 미니 앨범 'Looks Can Kill(룩스 캔 킬)' 활동을 성공적으로 마무리했으며, 현재 연말 시상식 등 각종 대형 무대를 통해 퍼포먼스와 수상 행보를 이어가고 있습니다.",
+    "hashtags": [
+      "#장원영",
+      "#JangWonyoung",
+      "#아이브",
+      "#IVE",
+      "#LooksCanKill",
+      "#룩스캔킬",
+      "#무대의상",
+      "#레이스업코르셋",
+      "#백스테이지",
+      "#스타샷"
+    ],
+    "photo_queries": [
+      "장원영",
+      "Jang Wonyoung"
+    ],
+    "person": "장원영",
+    "scene_queries": [
+      "concert stage lights",
+      "fashion backstage dressing room"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/photo/article/396/0000761765",
+    "source_title": "아이브 장원영, 한 줌 허리 강조한 ‘레이스업 코르셋’ 무대 의상…우아함의 정석 [스타★샷]",
+    "issue_no": 115
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261124-115247-m-ch2/_src.jpg",
+    "credit": "스포츠월드. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/photo/article/396/0000761765",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
