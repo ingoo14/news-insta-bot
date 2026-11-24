@@ -1,7 +1,7 @@
 {
   "id": "20261124-151033-r-ch1",
   "created": "2026-11-24T15:10:33.079563+09:00",
-  "status": "pending",
+  "status": "publishing",
   "attempts": 0,
   "manual": true,
   "type": "reel",
@@ -23,5 +23,6 @@
   "photo": {},
   "channel": "ch1",
   "channel_handle": "ibduck_music",
-  "preview_msg": 675
+  "preview_msg": 675,
+  "claimed": "2026-11-24T06:16:04.616062+00:00"
 }
