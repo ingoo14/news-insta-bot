@@ -1,0 +1,71 @@
+{
+  "id": "20261125-184933-m-ch2",
+  "created": "2026-11-25T18:49:33.764696+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/FJOCqJlp",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-184933-m-ch2/01.jpg",
+    "docs/posts/20261125-184933-m-ch2/02.jpg"
+  ],
+  "caption": "📌 '본상 동시 후보'... 방탄소년단·아이브 등 4팀\n\n제41회 골든디스크어워즈 주요 부문 후보가 공개됐습니다. 주최·주관사 HLL에 따르면 방탄소년단, 아이브, 에스파, 코르티스 네 팀이 디지털 음원 본상과 음반 본상 두 부문에 모두 이름을 올렸습니다.\n\n후보는 지난해 11월 초부터 올해 10월 말까지 발매된 음원과 음반을 대상으로, 음원 이용량과 음반 판매량 등 정량 평가를 거쳐 선정됐습니다.\n\n시상식은 내년 1월 9~10일 베트남 하노이 VEC 야외 특설무대에서 열립니다. 성시경과 문가영이 MC를 맡고, 류승룡·김무열·지창욱·황인엽·고윤정이 시상자로 나섭니다.\n\n이번 시상식은 베트남 은행 MBBank가 타이틀 스폰서로 참여하며, 트립닷컴 그룹과 마이싯이 협력합니다.\n\n사진 출처: HLL 제공) 2026.11.25. photo@news\n\n#골든디스크어워즈 #골든디스크 #GoldenDiscAwards #방탄소년단 #BTS #아이브 #IVE #에스파 #aespa #코르티스 #CORTIS #성시경",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "방탄소년단·아이브 외 2팀",
+    "headline_bottom": "골든디스크 본상 후보",
+    "subline": "디지털 음원·음반 본상 동시 노미네이트",
+    "card_summary": [
+      "제41회 골든디스크어워즈 본상 후보가 공개됐다.",
+      "네 팀이 음원·음반 본상 양 부문에 모두 올랐다.",
+      "시상식은 내년 1월 9~10일 베트남 하노이에서 열린다."
+    ],
+    "title": "'본상 동시 후보'... 방탄소년단·아이브 등 4팀",
+    "body": "제41회 골든디스크어워즈 주요 부문 후보가 공개됐습니다. 주최·주관사 HLL에 따르면 방탄소년단, 아이브, 에스파, 코르티스 네 팀이 디지털 음원 본상과 음반 본상 두 부문에 모두 이름을 올렸습니다.\n\n후보는 지난해 11월 초부터 올해 10월 말까지 발매된 음원과 음반을 대상으로, 음원 이용량과 음반 판매량 등 정량 평가를 거쳐 선정됐습니다.\n\n시상식은 내년 1월 9~10일 베트남 하노이 VEC 야외 특설무대에서 열립니다. 성시경과 문가영이 MC를 맡고, 류승룡·김무열·지창욱·황인엽·고윤정이 시상자로 나섭니다.\n\n이번 시상식은 베트남 은행 MBBank가 타이틀 스폰서로 참여하며, 트립닷컴 그룹과 마이싯이 협력합니다.",
+    "hashtags": [
+      "#골든디스크어워즈",
+      "#골든디스크",
+      "#GoldenDiscAwards",
+      "#방탄소년단",
+      "#BTS",
+      "#아이브",
+      "#IVE",
+      "#에스파",
+      "#aespa",
+      "#코르티스",
+      "#CORTIS",
+      "#성시경"
+    ],
+    "photo_queries": [
+      "방탄소년단",
+      "BTS",
+      "아이브",
+      "IVE"
+    ],
+    "person": "방탄소년단",
+    "scene_queries": [
+      "Golden Disc Awards stage",
+      "Hanoi outdoor concert stage night"
+    ],
+    "fact_checked": true,
+    "press": "뉴시스",
+    "url": "https://m.entertain.naver.com/now/article/003/0014345414",
+    "source_title": "방탄소년단·아이브·에스파·코르티스, '제41회 골든디스크' 본상 동시 후보",
+    "issue_no": 187
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-184933-m-ch2/_src.jpg",
+    "credit": "HLL 제공) 2026.11.25. photo@news",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/003/0014345414",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
