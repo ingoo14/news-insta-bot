@@ -1,0 +1,69 @@
+{
+  "id": "20261125-113238-m-ch3",
+  "created": "2026-11-25T11:32:38.644363+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-25T04:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/home/article/008/0005445706",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-113238-m-ch3/01.jpg",
+    "docs/posts/20261125-113238-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"원만하게 합의\"... 양홍원·원현주 이혼 절차 거의 종료\n\n래퍼 양홍원과 모델 원현주가 결혼식을 올린 지 한 달여 만에 이혼 절차를 거의 마무리했습니다. 원현주는 24일 SNS에 두 사람이 원만하게 합의했다고 알렸습니다.\n\n원현주는 개인적인 일인 만큼 자세한 이야기는 전하기 어렵다며 이해를 구했습니다. 앞으로도 일상을 보내며 종종 소식을 전하겠다고 덧붙였습니다.\n\n두 사람은 2017년부터 교제를 시작했고 2023년 혼인신고를 마쳤습니다. 지난해 11월 딸을 얻었으며, 지난달 18일 뒤늦게 결혼식을 올렸습니다.\n\n원현주는 구체적인 이혼 사유는 밝히지 않았습니다.\n\n사진 출처: 온라인 SNS 화면 갈무리\n\n#양홍원 #원현주 #이혼 #이혼소식 #래퍼 #모델 #연예뉴스 #YangHongwon #WonHyeonju",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "양홍원·원현주, '이혼'",
+    "headline_bottom": "이혼 절차 거의 종료",
+    "subline": "결혼 한 달여 만에 이혼 절차 진행",
+    "card_summary": [
+      "래퍼 양홍원과 모델 원현주가 이혼 절차를 거의 마무리했다.",
+      "원현주는 24일 SNS에 원만하게 합의했다고 밝혔다.",
+      "두 사람은 2023년 혼인신고 후 지난달 18일 결혼식을 올렸다.",
+      "구체적인 이혼 사유는 밝히지 않았다."
+    ],
+    "title": "\"원만하게 합의\"... 양홍원·원현주 이혼 절차 거의 종료",
+    "body": "래퍼 양홍원과 모델 원현주가 결혼식을 올린 지 한 달여 만에 이혼 절차를 거의 마무리했습니다. 원현주는 24일 SNS에 두 사람이 원만하게 합의했다고 알렸습니다.\n\n원현주는 개인적인 일인 만큼 자세한 이야기는 전하기 어렵다며 이해를 구했습니다. 앞으로도 일상을 보내며 종종 소식을 전하겠다고 덧붙였습니다.\n\n두 사람은 2017년부터 교제를 시작했고 2023년 혼인신고를 마쳤습니다. 지난해 11월 딸을 얻었으며, 지난달 18일 뒤늦게 결혼식을 올렸습니다.\n\n원현주는 구체적인 이혼 사유는 밝히지 않았습니다.",
+    "hashtags": [
+      "#양홍원",
+      "#원현주",
+      "#이혼",
+      "#이혼소식",
+      "#래퍼",
+      "#모델",
+      "#연예뉴스",
+      "#YangHongwon",
+      "#WonHyeonju"
+    ],
+    "photo_queries": [
+      "양홍원",
+      "Yang Hongwon",
+      "원현주",
+      "Won Hyeonju"
+    ],
+    "person": "양홍원",
+    "scene_queries": [
+      "wedding rings close up",
+      "quiet city street Seoul night"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/home/article/008/0005445706",
+    "source_title": "결혼식 닷새만 불륜 의혹, 한달만 파경...양홍원·원현주, 결국 '이혼'",
+    "issue_no": 171
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-113238-m-ch3/_src.jpg",
+    "credit": "온라인 SNS 화면 갈무리",
+    "license": "",
+    "page": "https://m.entertain.naver.com/home/article/008/0005445706",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
