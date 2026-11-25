@@ -1,0 +1,71 @@
+{
+  "id": "20261125-113336-m-ch3",
+  "created": "2026-11-25T11:33:36.194496+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-25T05:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/music/article/144/0001151586",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-113336-m-ch3/01.jpg",
+    "docs/posts/20261125-113336-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"기립\"... 빅뱅 신곡, KBS 가요심의 부적격\n\n그룹 빅뱅의 데뷔 20주년 신곡 '기립'(GiiiRIP)이 KBS 가요심의에서 부적격 판정을 받았습니다.\n\n사유는 욕설, 비속어, 저속한 표현이 담긴 가사입니다. 부적격 곡은 KBS TV와 라디오 채널에서 틀 수 없으며, 문제가 된 가사를 고치거나 지운 뒤 다시 심의를 받아 적격 판정을 받아야 방송할 수 있습니다.\n\n'기립'은 빅뱅이 20일 예고 없이 낸 데뷔 20주년 신곡입니다. 빅뱅은 다음 날 일본 교세라 돔 오사카에서 열린 '2026 마마 어워즈'에서 이 곡의 무대를 처음 선보였습니다.\n\nKBS 심의 자료에 따르면 작곡에는 지드래곤, 테디 등이 이름을 올렸으며, 미국 프로듀서 퍼렐 윌리엄스와 채드 휴고도 작곡진에 포함됐습니다. 작사에는 지드래곤, 테디, 태양 등이 참여했습니다.\n\n빅뱅은 이날 오후 6시 '기립' 퍼포먼스 영상을 공개합니다.\n\n사진 출처: YG엔터테인먼트\n\n#빅뱅 #BIGBANG #기립 #GiiiRIP #지드래곤 #GDRAGON #테디 #태양 #KBS #가요심의 #데뷔20주년 #마마어워즈",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "빅뱅, '기립'",
+    "headline_bottom": "KBS 부적격 판정",
+    "subline": "욕설·비속어 가사로 방송 제한, 재심의 필요",
+    "card_summary": [
+      "빅뱅 신곡 '기립'이 KBS 가요심의에서 부적격 판정을 받았다.",
+      "사유는 욕설·비속어·저속한 표현이 쓰인 가사다.",
+      "가사를 고쳐 재심의에서 적격 판정을 받아야 방송할 수 있다."
+    ],
+    "title": "\"기립\"... 빅뱅 신곡, KBS 가요심의 부적격",
+    "body": "그룹 빅뱅의 데뷔 20주년 신곡 '기립'(GiiiRIP)이 KBS 가요심의에서 부적격 판정을 받았습니다.\n\n사유는 욕설, 비속어, 저속한 표현이 담긴 가사입니다. 부적격 곡은 KBS TV와 라디오 채널에서 틀 수 없으며, 문제가 된 가사를 고치거나 지운 뒤 다시 심의를 받아 적격 판정을 받아야 방송할 수 있습니다.\n\n'기립'은 빅뱅이 20일 예고 없이 낸 데뷔 20주년 신곡입니다. 빅뱅은 다음 날 일본 교세라 돔 오사카에서 열린 '2026 마마 어워즈'에서 이 곡의 무대를 처음 선보였습니다.\n\nKBS 심의 자료에 따르면 작곡에는 지드래곤, 테디 등이 이름을 올렸으며, 미국 프로듀서 퍼렐 윌리엄스와 채드 휴고도 작곡진에 포함됐습니다. 작사에는 지드래곤, 테디, 태양 등이 참여했습니다.\n\n빅뱅은 이날 오후 6시 '기립' 퍼포먼스 영상을 공개합니다.",
+    "hashtags": [
+      "#빅뱅",
+      "#BIGBANG",
+      "#기립",
+      "#GiiiRIP",
+      "#지드래곤",
+      "#GDRAGON",
+      "#테디",
+      "#태양",
+      "#KBS",
+      "#가요심의",
+      "#데뷔20주년",
+      "#마마어워즈"
+    ],
+    "photo_queries": [
+      "빅뱅",
+      "BIGBANG",
+      "지드래곤",
+      "G-Dragon"
+    ],
+    "person": "빅뱅",
+    "scene_queries": [
+      "music stage performance lights",
+      "Seoul broadcasting studio"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/music/article/144/0001151586",
+    "source_title": "[단독] 빅뱅 ‘기립’ KBS선 못 튼다···‘욕설·비속어’ 부적격 판정",
+    "issue_no": 171
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-113336-m-ch3/_src.jpg",
+    "credit": "YG엔터테인먼트",
+    "license": "",
+    "page": "https://m.entertain.naver.com/music/article/144/0001151586",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
