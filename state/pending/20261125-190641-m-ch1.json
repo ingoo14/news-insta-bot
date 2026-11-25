@@ -1,7 +1,7 @@
 {
   "id": "20261125-190641-m-ch1",
   "created": "2026-11-25T19:06:41.527969+09:00",
-  "status": "pending",
+  "status": "publishing",
   "attempts": 0,
   "manual": true,
   "publish_at": "",
@@ -67,5 +67,6 @@
     "kind": "직접 전송"
   },
   "channel": "ch1",
-  "channel_handle": "ibduck_music"
+  "channel_handle": "ibduck_music",
+  "claimed": "2026-11-25T10:07:06.054288+00:00"
 }
