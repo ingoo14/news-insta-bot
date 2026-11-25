@@ -1,0 +1,69 @@
+{
+  "id": "20261125-113155-m-ch3",
+  "created": "2026-11-25T11:31:55.453723+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/home/article/003/0014343800",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-113155-m-ch3/01.jpg",
+    "docs/posts/20261125-113155-m-ch3/02.jpg"
+  ],
+  "caption": "📌 ‘좋은 동료로 남기로’… 이도현·임지연 결별 확인\n\n배우 이도현과 임지연이 결별했다는 소식이 전해졌습니다. 두 사람은 지난 24일 결별 사실을 알렸습니다.\n\n이도현의 소속사 YH엔터테인먼트는 두 사람이 최근 결별한 것이 맞다고 밝혔고, 서로를 응원하며 좋은 동료로 남기로 했다고 전했습니다. 임지연의 소속사 아티스트컴퍼니도 서로의 앞날을 응원하는 좋은 동료로 남기로 했다고 전하며, 배우의 사생활인 만큼 구체적인 결별 사유나 시기는 확인해주기 어렵다고 밝혔습니다.\n\n결별 소식이 전해진 뒤 이도현이 약 7주 전 인스타그램에 올린 해외 일정 사진이 화제가 됐습니다.\n\n두 사람은 2022년 공개된 넷플릭스 드라마 ‘더 글로리’를 통해 인연을 맺었습니다. 임지연은 학교폭력 가해자 박연진 역을, 이도현은 주인공 문동은의 복수를 돕는 주여정 역을 맡았습니다.\n\n사진 출처: 인스타그램 캡처) 2026.11.25. photo@ne\n\n#이도현 #임지연 #Lee_Do_hyun #Im_Ji_yeon #더글로리 #THE_GLORY #넷플릭스 #결별 #연예뉴스 #배우",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "이도현·임지연, ‘결별’",
+    "headline_bottom": "소속사 측 확인",
+    "subline": "두 사람은 좋은 동료로 남기로 했다",
+    "card_summary": [
+      "이도현과 임지연이 결별 사실을 알렸다.",
+      "두 사람은 서로를 응원하는 좋은 동료로 남기로 했다.",
+      "이도현이 약 7주 전 SNS에 올린 게시물에도 관심이 이어지고 있다."
+    ],
+    "title": "‘좋은 동료로 남기로’… 이도현·임지연 결별 확인",
+    "body": "배우 이도현과 임지연이 결별했다는 소식이 전해졌습니다. 두 사람은 지난 24일 결별 사실을 알렸습니다.\n\n이도현의 소속사 YH엔터테인먼트는 두 사람이 최근 결별한 것이 맞다고 밝혔고, 서로를 응원하며 좋은 동료로 남기로 했다고 전했습니다. 임지연의 소속사 아티스트컴퍼니도 서로의 앞날을 응원하는 좋은 동료로 남기로 했다고 전하며, 배우의 사생활인 만큼 구체적인 결별 사유나 시기는 확인해주기 어렵다고 밝혔습니다.\n\n결별 소식이 전해진 뒤 이도현이 약 7주 전 인스타그램에 올린 해외 일정 사진이 화제가 됐습니다.\n\n두 사람은 2022년 공개된 넷플릭스 드라마 ‘더 글로리’를 통해 인연을 맺었습니다. 임지연은 학교폭력 가해자 박연진 역을, 이도현은 주인공 문동은의 복수를 돕는 주여정 역을 맡았습니다.",
+    "hashtags": [
+      "#이도현",
+      "#임지연",
+      "#Lee_Do_hyun",
+      "#Im_Ji_yeon",
+      "#더글로리",
+      "#THE_GLORY",
+      "#넷플릭스",
+      "#결별",
+      "#연예뉴스",
+      "#배우"
+    ],
+    "photo_queries": [
+      "이도현",
+      "Lee Do-hyun",
+      "임지연",
+      "Im Ji-yeon"
+    ],
+    "person": "이도현",
+    "scene_queries": [
+      "Seoul city street evening",
+      "film set camera lights"
+    ],
+    "fact_checked": true,
+    "press": "뉴시스",
+    "url": "https://m.entertain.naver.com/home/article/003/0014343800",
+    "source_title": "\"당신을 더 사랑했어요\"…'임지연과 결별' 이도현 SNS 재조명",
+    "issue_no": 170
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-113155-m-ch3/_src.jpg",
+    "credit": "인스타그램 캡처) 2026.11.25. photo@ne",
+    "license": "",
+    "page": "https://m.entertain.naver.com/home/article/003/0014343800",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
