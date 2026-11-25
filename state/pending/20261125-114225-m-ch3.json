@@ -1,0 +1,71 @@
+{
+  "id": "20261125-114225-m-ch3",
+  "created": "2026-11-25T11:42:25.475631+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-25T11:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/drama/article/416/0000328283",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-114225-m-ch3/01.jpg",
+    "docs/posts/20261125-114225-m-ch3/02.jpg"
+  ],
+  "caption": "📌 “우리 결혼할까요?”… ‘재혼 황후’ 최종회 오늘 공개\n\n디즈니+ 오리지널 시리즈 ‘재혼 황후’의 최종회가 오늘 25일 공개됩니다. 전 세계 시청자들의 사랑을 받아온 10부작 시리즈의 마지막 9~10회입니다.\n\n나비에(신민아 분)는 황제 소비에슈(주지훈 분)에게 이혼을 통보받자, 이를 받아들이는 대신 서왕국 왕자 하인리(이종석 분)와의 재혼 승인을 요구합니다. 여기에 도망 노예 라스타(이세영 분)의 황후 자리를 향한 욕망이 더해집니다.\n\n공개된 스틸에는 온화한 미소를 짓는 나비에와 그를 다정하게 끌어안은 하인리의 모습이 담겼습니다. 서왕국의 왕이 된 하인리는 나비에에게 “우리 결혼할까요?”라고 프러포즈합니다. 이혼 법정에 나란히 선 나비에와 하인리, 그리고 씁쓸한 표정으로 두 사람을 바라보는 소비에슈의 모습도 함께 공개됐습니다.\n\n사랑과 권력, 배신과 후회가 얽힌 황실의 마지막 이야기는 오늘 디즈니+에서 만나볼 수 있습니다.\n\n사진 출처: SBS. All rights reserved.\n\n#재혼황후 #신민아 #주지훈 #이종석 #이세영 #ShinMinA #JuJiHoon #LeeJongSuk #LeeSeYoung #디즈니플러스 #DisneyPlus #드라마",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "드라마",
+    "headline_top": "신민아 ‘재혼 황후’",
+    "headline_bottom": "최종회 공개",
+    "subline": "디즈니+ 9·10회 오늘 공개",
+    "card_summary": [
+      "‘재혼 황후’ 마지막 9~10회가 오늘 공개된다.",
+      "25일 디즈니+가 출연진 스틸을 선보였다.",
+      "10부작 시리즈는 오늘 디즈니+에서 공개된다."
+    ],
+    "title": "“우리 결혼할까요?”… ‘재혼 황후’ 최종회 오늘 공개",
+    "body": "디즈니+ 오리지널 시리즈 ‘재혼 황후’의 최종회가 오늘 25일 공개됩니다. 전 세계 시청자들의 사랑을 받아온 10부작 시리즈의 마지막 9~10회입니다.\n\n나비에(신민아 분)는 황제 소비에슈(주지훈 분)에게 이혼을 통보받자, 이를 받아들이는 대신 서왕국 왕자 하인리(이종석 분)와의 재혼 승인을 요구합니다. 여기에 도망 노예 라스타(이세영 분)의 황후 자리를 향한 욕망이 더해집니다.\n\n공개된 스틸에는 온화한 미소를 짓는 나비에와 그를 다정하게 끌어안은 하인리의 모습이 담겼습니다. 서왕국의 왕이 된 하인리는 나비에에게 “우리 결혼할까요?”라고 프러포즈합니다. 이혼 법정에 나란히 선 나비에와 하인리, 그리고 씁쓸한 표정으로 두 사람을 바라보는 소비에슈의 모습도 함께 공개됐습니다.\n\n사랑과 권력, 배신과 후회가 얽힌 황실의 마지막 이야기는 오늘 디즈니+에서 만나볼 수 있습니다.",
+    "hashtags": [
+      "#재혼황후",
+      "#신민아",
+      "#주지훈",
+      "#이종석",
+      "#이세영",
+      "#ShinMinA",
+      "#JuJiHoon",
+      "#LeeJongSuk",
+      "#LeeSeYoung",
+      "#디즈니플러스",
+      "#DisneyPlus",
+      "#드라마"
+    ],
+    "photo_queries": [
+      "신민아",
+      "Shin Min-a",
+      "주지훈",
+      "Ju Ji-hoon"
+    ],
+    "person": "신민아",
+    "scene_queries": [
+      "fantasy royal palace hall",
+      "Disney+ streaming drama"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/drama/article/416/0000328283",
+    "source_title": "떠나는 신민아 붙잡고 애원하는 주지훈…'재혼황후', 오늘(25일) 최종회 공개",
+    "issue_no": 175
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-114225-m-ch3/_src.jpg",
+    "credit": "SBS. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/drama/article/416/0000328283",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
