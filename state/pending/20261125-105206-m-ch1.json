@@ -1,0 +1,70 @@
+{
+  "id": "20261125-105206-m-ch1",
+  "created": "2026-11-25T10:52:06.882347+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-25T08:00:00+00:00",
+  "poll": null,
+  "src_url": "https://naver.me/GO6rGFGx",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-105206-m-ch1/01.jpg",
+    "docs/posts/20261125-105206-m-ch1/02.jpg"
+  ],
+  "caption": "📌 \"천천히 강렬하게\"... 송혜교·공유 넷플릭스 신작\n\n배우 송혜교와 공유가 출연하는 노희경 작가의 넷플릭스 신작 '천천히 강렬하게'가 3부작으로 공개됩니다.\n\n이 작품은 1960~80년대 한국 연예계를 배경으로, 가진 것은 없어도 빛나는 성공을 꿈꾸며 온몸을 던졌던 이들의 성장 스토리를 그립니다.\n\n총 22부작으로 구성되며, 12월 11일 파트1(1~8화)을 시작으로 12월 18일 파트2(9~15화), 12월 25일 파트3(16~22화)이 차례로 공개됩니다.\n\n파트1은 파란만장했던 주인공들의 유년기부터 다시 만나 새로운 꿈을 꾸게 되기까지, 그 강렬한 여정의 시작점을 담았습니다.\n\n한편 '천천히 강렬하게'는 청소년 관람불가 등급을 받았습니다.\n\n사진 출처: 문화일보. All rights reserved.\n\n#천천히강렬하게 #송혜교 #공유 #노희경 #넷플릭스 #Netflix #SongHyeKyo #GongYoo #드라마 #넷플릭스신작",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "드라마",
+    "headline_top": "송혜교·공유, 노희경 신작",
+    "headline_bottom": "3부작 넷플릭스 공개",
+    "subline": "1960~80년대 연예계 성장기",
+    "card_summary": [
+      "넷플릭스 신작 '천천히 강렬하게'가 3부작으로 공개된다.",
+      "1960~80년대 한국 연예계를 배경으로 한 성장 스토리다.",
+      "총 22부작이며 12월 11일 파트1이 먼저 공개된다.",
+      "청소년 관람불가 등급을 받았다."
+    ],
+    "title": "\"천천히 강렬하게\"... 송혜교·공유 넷플릭스 신작",
+    "body": "배우 송혜교와 공유가 출연하는 노희경 작가의 넷플릭스 신작 '천천히 강렬하게'가 3부작으로 공개됩니다.\n\n이 작품은 1960~80년대 한국 연예계를 배경으로, 가진 것은 없어도 빛나는 성공을 꿈꾸며 온몸을 던졌던 이들의 성장 스토리를 그립니다.\n\n총 22부작으로 구성되며, 12월 11일 파트1(1~8화)을 시작으로 12월 18일 파트2(9~15화), 12월 25일 파트3(16~22화)이 차례로 공개됩니다.\n\n파트1은 파란만장했던 주인공들의 유년기부터 다시 만나 새로운 꿈을 꾸게 되기까지, 그 강렬한 여정의 시작점을 담았습니다.\n\n한편 '천천히 강렬하게'는 청소년 관람불가 등급을 받았습니다.",
+    "hashtags": [
+      "#천천히강렬하게",
+      "#송혜교",
+      "#공유",
+      "#노희경",
+      "#넷플릭스",
+      "#Netflix",
+      "#SongHyeKyo",
+      "#GongYoo",
+      "#드라마",
+      "#넷플릭스신작"
+    ],
+    "photo_queries": [
+      "송혜교",
+      "Song Hye-kyo",
+      "공유",
+      "Gong Yoo"
+    ],
+    "person": "송혜교",
+    "scene_queries": [
+      "Netflix logo dark background",
+      "Seoul 1980s street night"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/021/0002835366",
+    "source_title": "‘청불’ 판정…송혜교·공유 주연 ‘천천한 강렬하게’ 3부작으로 공개",
+    "issue_no": 167
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-105206-m-ch1/_src.jpg",
+    "credit": "문화일보. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/021/0002835366",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
