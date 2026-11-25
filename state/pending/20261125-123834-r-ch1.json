@@ -11,15 +11,17 @@
   ],
   "publish_at": "",
   "poll": null,
-  "caption": "친구야 넌 내가 지킨다더니 ㅋㅋ\n\n🎶 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음_헌신 #신곡 #노래추천 #우정 #친구 #가을 #겨울 #케이팝 #kpop #reels #fyp",
+  "caption": "친구야 넌 내가 지킨다\n\n🎶 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음_헌신 #신곡 #우정 #친구 #사랑 #겨울 #노래추천 #플레이리스트 #reels #fyp",
   "story": {
     "title": "친구야 넌 내가 지킨다더니 ㅋㅋ",
     "custom_caption": true,
     "confirmed": true,
-    "ai_caption": true
+    "ai_caption": true,
+    "body": "친구야 넌 내가 지킨다\n\n🎶 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음_헌신 #신곡 #우정 #친구 #사랑 #겨울 #노래추천 #플레이리스트 #reels #fyp",
+    "body_custom": true
   },
   "photo": {},
   "channel": "ch1",
   "channel_handle": "ibduck_music",
-  "preview_msg": 909
+  "preview_msg": 912
 }
