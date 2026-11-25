@@ -1,8 +1,8 @@
 {
   "id": "20261125-123834-r-ch1",
   "created": "2026-11-25T12:38:34.718976+09:00",
-  "status": "publishing",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "manual": true,
   "type": "reel",
   "video": "docs/posts/20261125-123834-r-ch1/reel.mp4",
@@ -24,5 +24,7 @@
   "channel": "ch1",
   "channel_handle": "ibduck_music",
   "preview_msg": 912,
-  "claimed": "2026-11-25T03:42:13.067716+00:00"
+  "claimed": "2026-11-25T03:42:13.067716+00:00",
+  "permalink": "https://www.instagram.com/reel/DgJlwE3h4vU/",
+  "done": "2026-11-25T03:43:12.626037+00:00"
 }
