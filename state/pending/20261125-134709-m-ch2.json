@@ -1,0 +1,68 @@
+{
+  "id": "20261125-134709-m-ch2",
+  "created": "2026-11-25T13:47:09.787922+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/5UVlNWaW",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-134709-m-ch2/01.jpg",
+    "docs/posts/20261125-134709-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"다방면에서 역량 펼칠 것\"... 허영지, DSP미디어와 전속계약\n\nDSP미디어가 가수 겸 배우 허영지와 최근 전속계약을 체결했다고 밝혔습니다. 허영지는 2014년 DSP미디어 소속 그룹 카라 멤버로 데뷔했으며, 이번에 10년 만에 다시 소속사와 함께하게 됐습니다.\n\n소속사는 오랜 시간 쌓아온 신뢰를 바탕으로 허영지가 여러 분야에서 역량을 펼칠 수 있도록 전폭적인 지원을 아끼지 않겠다고 전했습니다.\n\n허영지는 약 10년간 음악 활동은 물론 연기와 예능 등 여러 분야에서 활동해 왔습니다.\n\n전속계약 소식과 함께 새로운 프로필 사진도 공개됐습니다. 화이트 셔츠와 데님 팬츠 차림은 청량한 이미지를, 블랙 오프숄더 의상은 한층 성숙한 분위기를 보여줬습니다.\n\n현재 DSP미디어에는 허영지를 비롯해 오마이걸, 안예은, 카드, 영파씨, 가비엔제이 등이 소속되어 있습니다.\n\n사진 출처: 알비더블유(RBW)\n\n#허영지 #HeoYoungJi #DSP미디어 #카라 #KARA #오마이걸 #안예은 #카드 #영파씨 #가비엔제이 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "허영지, '소속사 복귀'",
+    "headline_bottom": "DSP미디어 전속계약",
+    "subline": "카라 이후 10년 만에 DSP미디어로",
+    "card_summary": [
+      "DSP미디어가 허영지와 최근 전속계약을 체결했다.",
+      "2014년 카라 멤버로 데뷔한 허영지가 소속사로 복귀한다.",
+      "새 프로필 사진도 함께 공개됐다."
+    ],
+    "title": "\"다방면에서 역량 펼칠 것\"... 허영지, DSP미디어와 전속계약",
+    "body": "DSP미디어가 가수 겸 배우 허영지와 최근 전속계약을 체결했다고 밝혔습니다. 허영지는 2014년 DSP미디어 소속 그룹 카라 멤버로 데뷔했으며, 이번에 10년 만에 다시 소속사와 함께하게 됐습니다.\n\n소속사는 오랜 시간 쌓아온 신뢰를 바탕으로 허영지가 여러 분야에서 역량을 펼칠 수 있도록 전폭적인 지원을 아끼지 않겠다고 전했습니다.\n\n허영지는 약 10년간 음악 활동은 물론 연기와 예능 등 여러 분야에서 활동해 왔습니다.\n\n전속계약 소식과 함께 새로운 프로필 사진도 공개됐습니다. 화이트 셔츠와 데님 팬츠 차림은 청량한 이미지를, 블랙 오프숄더 의상은 한층 성숙한 분위기를 보여줬습니다.\n\n현재 DSP미디어에는 허영지를 비롯해 오마이걸, 안예은, 카드, 영파씨, 가비엔제이 등이 소속되어 있습니다.",
+    "hashtags": [
+      "#허영지",
+      "#HeoYoungJi",
+      "#DSP미디어",
+      "#카라",
+      "#KARA",
+      "#오마이걸",
+      "#안예은",
+      "#카드",
+      "#영파씨",
+      "#가비엔제이",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "허영지",
+      "Heo Young-ji"
+    ],
+    "person": "허영지",
+    "scene_queries": [
+      "Seoul office building exterior",
+      "photo studio portrait lighting"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/445/0000493097",
+    "source_title": "허영지, DSP미디어 전속계약 체결… \"다방면에서 역량 펼칠 것\"",
+    "issue_no": 178
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-134709-m-ch2/_src.jpg",
+    "credit": "알비더블유(RBW)",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/445/0000493097",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
