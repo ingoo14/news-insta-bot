@@ -1,0 +1,25 @@
+{
+  "id": "20261125-123834-r-ch1",
+  "created": "2026-11-25T12:38:34.718976+09:00",
+  "status": "awaiting",
+  "attempts": 0,
+  "manual": true,
+  "type": "reel",
+  "video": "docs/posts/20261125-123834-r-ch1/reel.mp4",
+  "images": [
+    "docs/posts/20261125-123834-r-ch1/_cover.jpg"
+  ],
+  "publish_at": "",
+  "poll": null,
+  "caption": "친구야 넌 내가 지킨다더니 ㅋㅋ\n\n🎶 꿈의음 - 헌신\n\n#꿈의음 #헌신 #꿈의음_헌신 #신곡 #노래추천 #우정 #친구 #가을 #겨울 #케이팝 #kpop #reels #fyp",
+  "story": {
+    "title": "친구야 넌 내가 지킨다더니 ㅋㅋ",
+    "custom_caption": true,
+    "confirmed": true,
+    "ai_caption": true
+  },
+  "photo": {},
+  "channel": "ch1",
+  "channel_handle": "ibduck_music",
+  "preview_msg": 909
+}
