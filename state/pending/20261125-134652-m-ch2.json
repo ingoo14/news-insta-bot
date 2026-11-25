@@ -1,0 +1,69 @@
+{
+  "id": "20261125-134652-m-ch2",
+  "created": "2026-11-25T13:46:52.407049+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/now/article/108/0003490014",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-134652-m-ch2/01.jpg",
+    "docs/posts/20261125-134652-m-ch2/02.jpg"
+  ],
+  "caption": "📌 신동엽·성시경·나연, 2026 KBS 연예대상 MC 합류\n\n신동엽, 성시경, 트와이스 나연이 올해 40주년을 맞는 '2026 KBS 연예대상'의 MC로 호흡을 맞춥니다.\n\n시상식은 12월 26일 서울 여의도 KBS홀에서 열립니다. 1987년 시작된 'KBS 코미디연기대상'의 역사를 잇는 연말 시상식으로, 한 해 동안 KBS 예능 프로그램과 예능인들의 활약을 조명합니다.\n\n신동엽은 2023년 이후 3년 만에 KBS 연예대상 MC석으로 돌아옵니다. 2002년 처음 대상을 받은 그는 2012년과 2022년에도 대상을 받아 통산 세 차례 대상을 수상했습니다.\n\n성시경은 KBS 음악 토크쇼 '더 시즌즈-성시경의 고막남친'을 통해 진행 능력을 선보이고 있습니다. 나연은 SBS '인기가요', MBC '쇼! 음악중심' 등 음악방송에서 스페셜 MC로 활약한 바 있습니다.\n\n사진 출처: 씨피엔터테인먼트, 에스케이재원(주), JYP엔터테인먼트\n\n#신동엽 #성시경 #나연 #트와이스 #TWICE #KBS연예대상 #2026KBS연예대상 #연예대상 #KBS #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "예능",
+    "headline_top": "신동엽·성시경·나연",
+    "headline_bottom": "연예대상 MC 합류",
+    "subline": "40주년 KBS 연예대상 진행 맡아",
+    "card_summary": [
+      "신동엽·성시경·나연이 KBS 연예대상 MC를 맡는다.",
+      "시상식은 12월 26일 서울 여의도 KBS홀에서 열린다.",
+      "올해로 40주년을 맞은 KBS 연말 시상식이다."
+    ],
+    "title": "신동엽·성시경·나연, 2026 KBS 연예대상 MC 합류",
+    "body": "신동엽, 성시경, 트와이스 나연이 올해 40주년을 맞는 '2026 KBS 연예대상'의 MC로 호흡을 맞춥니다.\n\n시상식은 12월 26일 서울 여의도 KBS홀에서 열립니다. 1987년 시작된 'KBS 코미디연기대상'의 역사를 잇는 연말 시상식으로, 한 해 동안 KBS 예능 프로그램과 예능인들의 활약을 조명합니다.\n\n신동엽은 2023년 이후 3년 만에 KBS 연예대상 MC석으로 돌아옵니다. 2002년 처음 대상을 받은 그는 2012년과 2022년에도 대상을 받아 통산 세 차례 대상을 수상했습니다.\n\n성시경은 KBS 음악 토크쇼 '더 시즌즈-성시경의 고막남친'을 통해 진행 능력을 선보이고 있습니다. 나연은 SBS '인기가요', MBC '쇼! 음악중심' 등 음악방송에서 스페셜 MC로 활약한 바 있습니다.",
+    "hashtags": [
+      "#신동엽",
+      "#성시경",
+      "#나연",
+      "#트와이스",
+      "#TWICE",
+      "#KBS연예대상",
+      "#2026KBS연예대상",
+      "#연예대상",
+      "#KBS",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "나연",
+      "Nayeon",
+      "신동엽",
+      "Shin Dong-yup"
+    ],
+    "person": "신동엽",
+    "scene_queries": [
+      "KBS hall stage awards show",
+      "Yeouido Seoul night city"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/108/0003490014",
+    "source_title": "[공식]신동엽·성시경·나연, '40주년' KBS 연예대상 MC 합류",
+    "issue_no": 178
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-134652-m-ch2/_src.jpg",
+    "credit": "씨피엔터테인먼트, 에스케이재원(주), JYP엔터테인먼트",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/108/0003490014",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
