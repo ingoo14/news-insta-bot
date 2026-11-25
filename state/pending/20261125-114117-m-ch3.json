@@ -1,0 +1,69 @@
+{
+  "id": "20261125-114117-m-ch3",
+  "created": "2026-11-25T11:41:17.663357+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-25T09:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/music/article/440/0000054036",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-114117-m-ch3/01.jpg",
+    "docs/posts/20261125-114117-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"본능은 곧 치유\"... 씨엘, 신곡 무대 준비 공개\n\n씨엘이 지난 24일 유튜브 채널 ‘CL’에 ‘CL TV EP.1 ICONIC’ 제목의 영상을 올렸습니다. 영상에는 신곡 무대를 준비하는 과정이 담겼습니다.\n\n씨엘은 신곡을 설명하며 ‘본능은 곧 치유’라는 말을 언급했습니다. 본능적으로 행동하고 자유로운 것이 치유이며, 그것이 아이코닉하다는 의미라고 밝혔습니다.\n\n씨엘은 투애니원 멤버들에 대한 애정도 드러냈습니다. 멤버들과 아직 단체 대화방이 남아 있다고 전했습니다.\n\n그는 박봄에게 직접 전화해 신곡이 나온다는 소식을 전했습니다. 댓글 작성과 리포스트를 부탁하는 모습도 담겼습니다.\n\n씨엘이 함께 빅뱅 콘서트에 가자고 했던 일을 언급하자, 박봄은 당일에 전화하면 어떻게 가느냐며 전날 연락해 달라고 말했습니다.\n\n박봄은 올해 3월 SNS에 산다라박과 관련된 주장을 올려 논란을 일으켰습니다. 산다라박은 이를 전면 부인하고 박봄의 SNS를 언팔로우했으며, 이후 멤버 간 불화설이 불거졌습니다.\n\n사진 출처: 티브이데일리. All rights reserved.\n\n#씨엘 #CL #투애니원 #2NE1 #박봄 #PARKBOM #ICONIC #CLTV #신곡 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "씨엘, ‘아이코닉’ 신곡",
+    "headline_bottom": "박봄과 직접 통화",
+    "subline": "씨엘 유튜브 ‘CL TV’ 첫 에피소드 공개",
+    "card_summary": [
+      "씨엘이 24일 유튜브 ‘CL’에 영상을 공개했다.",
+      "영상에는 신곡 무대 준비 과정이 담겼다.",
+      "씨엘은 박봄에게 직접 전화해 신곡 소식을 전했다."
+    ],
+    "title": "\"본능은 곧 치유\"... 씨엘, 신곡 무대 준비 공개",
+    "body": "씨엘이 지난 24일 유튜브 채널 ‘CL’에 ‘CL TV EP.1 ICONIC’ 제목의 영상을 올렸습니다. 영상에는 신곡 무대를 준비하는 과정이 담겼습니다.\n\n씨엘은 신곡을 설명하며 ‘본능은 곧 치유’라는 말을 언급했습니다. 본능적으로 행동하고 자유로운 것이 치유이며, 그것이 아이코닉하다는 의미라고 밝혔습니다.\n\n씨엘은 투애니원 멤버들에 대한 애정도 드러냈습니다. 멤버들과 아직 단체 대화방이 남아 있다고 전했습니다.\n\n그는 박봄에게 직접 전화해 신곡이 나온다는 소식을 전했습니다. 댓글 작성과 리포스트를 부탁하는 모습도 담겼습니다.\n\n씨엘이 함께 빅뱅 콘서트에 가자고 했던 일을 언급하자, 박봄은 당일에 전화하면 어떻게 가느냐며 전날 연락해 달라고 말했습니다.\n\n박봄은 올해 3월 SNS에 산다라박과 관련된 주장을 올려 논란을 일으켰습니다. 산다라박은 이를 전면 부인하고 박봄의 SNS를 언팔로우했으며, 이후 멤버 간 불화설이 불거졌습니다.",
+    "hashtags": [
+      "#씨엘",
+      "#CL",
+      "#투애니원",
+      "#2NE1",
+      "#박봄",
+      "#PARKBOM",
+      "#ICONIC",
+      "#CLTV",
+      "#신곡",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "씨엘",
+      "CL",
+      "투애니원",
+      "2NE1"
+    ],
+    "person": "씨엘",
+    "scene_queries": [
+      "stage performance spotlight Seoul",
+      "concert stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/music/article/440/0000054036",
+    "source_title": "씨엘 \"박봄, 내가 컴백하는 거 아냐\" 직접 통화…2NE1 불화설 종식",
+    "issue_no": 174
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-114117-m-ch3/_src.jpg",
+    "credit": "티브이데일리. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/music/article/440/0000054036",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
