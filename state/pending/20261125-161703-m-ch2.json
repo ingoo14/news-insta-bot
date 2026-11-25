@@ -1,0 +1,71 @@
+{
+  "id": "20261125-161703-m-ch2",
+  "created": "2026-11-25T16:17:03.042992+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/xoGTuQQu",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-161703-m-ch2/01.jpg",
+    "docs/posts/20261125-161703-m-ch2/02.jpg"
+  ],
+  "caption": "📌 ‘키키 타운’... 기현, 몬베베와 크리스마스 이브 팬파티 연다\n\n기현이 몬베베(몬스타엑스 공식 팬덤명)와 함께하는 단독 팬 파티를 개최합니다. 기현은 11월 25일 몬스타엑스 공식 계정을 통해 팬 파티 ‘KIKI TOWN : CHRISTMAS TO YOO(키키 타운 : 크리스마스 투 유)’의 개최 소식을 알렸습니다.\n\n팬 파티는 12월 24일 오후 서울 서대문구 연세대학교 대강당에서 진행됩니다. 기현의 별명 중 하나인 ‘키키’에서 착안한 행사입니다.\n\n공연 예매는 12월 11일 오후 7시 팬클럽 선예매, 14일 오후 7시 일반 예매 순으로 티켓링크에서 진행됩니다.\n\n기현은 2015년 몬스타엑스의 일원으로 데뷔한 이래 ‘무단침입(Trespass)’, ‘Follow’, ‘Alligator’, ‘Shoot Out’, ‘DRAMARAMA’, ‘Love Killa’, ‘GAMBLER’, ‘Rush Hour’ 등을 연달아 히트시켰습니다. 솔로로는 2022년 3월 첫 싱글 ‘VOYAGER’, 같은 해 10월 미니 1집 ‘YOUTH’, 올해 7월 미니 2집 ‘BORDERLINE’을 발매했습니다. tvN 드라마 ‘뜨거운 안녕’ OST ‘지금’에도 가창자로 참여했습니다.\n\n사진 출처: 스타쉽엔터테인먼트\n\n#기현 #KIHYUN #몬스타엑스 #MONSTAX #몬베베 #MONBEBE #키키타운 #KIKITOWN #팬파티 #크리스마스이브 #연세대학교",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "기현, ‘키키 타운’",
+    "headline_bottom": "크리스마스 이브 팬파티",
+    "subline": "몬베베와 12월 24일 단독 팬 파티",
+    "card_summary": [
+      "기현이 단독 팬 파티 개최를 알렸다.",
+      "12월 24일 오후 연세대 대강당에서 진행 예정이다.",
+      "팬클럽 선예매 12월 11일, 일반 예매 14일 진행."
+    ],
+    "title": "‘키키 타운’... 기현, 몬베베와 크리스마스 이브 팬파티 연다",
+    "body": "기현이 몬베베(몬스타엑스 공식 팬덤명)와 함께하는 단독 팬 파티를 개최합니다. 기현은 11월 25일 몬스타엑스 공식 계정을 통해 팬 파티 ‘KIKI TOWN : CHRISTMAS TO YOO(키키 타운 : 크리스마스 투 유)’의 개최 소식을 알렸습니다.\n\n팬 파티는 12월 24일 오후 서울 서대문구 연세대학교 대강당에서 진행됩니다. 기현의 별명 중 하나인 ‘키키’에서 착안한 행사입니다.\n\n공연 예매는 12월 11일 오후 7시 팬클럽 선예매, 14일 오후 7시 일반 예매 순으로 티켓링크에서 진행됩니다.\n\n기현은 2015년 몬스타엑스의 일원으로 데뷔한 이래 ‘무단침입(Trespass)’, ‘Follow’, ‘Alligator’, ‘Shoot Out’, ‘DRAMARAMA’, ‘Love Killa’, ‘GAMBLER’, ‘Rush Hour’ 등을 연달아 히트시켰습니다. 솔로로는 2022년 3월 첫 싱글 ‘VOYAGER’, 같은 해 10월 미니 1집 ‘YOUTH’, 올해 7월 미니 2집 ‘BORDERLINE’을 발매했습니다. tvN 드라마 ‘뜨거운 안녕’ OST ‘지금’에도 가창자로 참여했습니다.",
+    "hashtags": [
+      "#기현",
+      "#KIHYUN",
+      "#몬스타엑스",
+      "#MONSTAX",
+      "#몬베베",
+      "#MONBEBE",
+      "#키키타운",
+      "#KIKITOWN",
+      "#팬파티",
+      "#크리스마스이브",
+      "#연세대학교",
+      "#뉴스엔"
+    ],
+    "photo_queries": [
+      "기현",
+      "Kihyun",
+      "몬스타엑스",
+      "MONSTA X"
+    ],
+    "person": "기현",
+    "scene_queries": [
+      "Yonsei University Seoul",
+      "concert stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/609/0001191097",
+    "source_title": "몬스타엑스 기현, ♥몬베베와 크리스마스 이브 보낸다…팬파티 개최",
+    "issue_no": 180
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-161703-m-ch2/_src.jpg",
+    "credit": "스타쉽엔터테인먼트",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/609/0001191097",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
