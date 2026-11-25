@@ -1,0 +1,70 @@
+{
+  "id": "20261125-114517-m-ch3",
+  "created": "2026-11-25T11:45:17.690333+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-25T14:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/home/article/312/0000785999",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-114517-m-ch3/01.jpg",
+    "docs/posts/20261125-114517-m-ch3/02.jpg"
+  ],
+  "caption": "📌 김민주, 뉴욕 가을 근황 공개…넷플릭스 '늑대, 소녀' 앞둬\n\n배우 김민주가 최근 자신의 인스타그램에 뉴욕의 가을 풍경을 담은 사진들을 올렸습니다.\n\n노랗게 물든 나뭇잎이 드리운 공원 산책로, 낙엽이 떨어진 풀밭, 크리스마스트리 앞에서 찍은 사진들이 공개됐습니다.\n\n김민주는 자신의 인스타그램을 통해 넷플릭스 10주년 행사 참석 뒤 새 시리즈 '늑대, 소녀'에 대한 관심을 당부했습니다. '늑대, 소녀'에서 김민주는 하민수 역으로 출연하며, 작품은 공개를 앞두고 있습니다.\n\n한편 김민주는 JTBC 드라마 '샤이닝'에 이어 넷플릭스 시리즈 '늑대, 소녀'로 시청자들과 만날 예정입니다.\n\n사진 출처: 김민주 인스타그램\n\n#김민주 #KimMinJu #늑대소녀 #넷플릭스 #Netflix #샤이닝 #JTBC #아이즈원 #IZONE #배우 #뉴욕 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "김민주, 뉴욕 근황 공개",
+    "headline_bottom": "'늑대, 소녀' 앞둬",
+    "subline": "뉴욕 가을 산책 사진 공개",
+    "card_summary": [
+      "김민주가 인스타그램에 뉴욕 가을 근황 사진을 올렸다.",
+      "넷플릭스 10주년 행사 참석 뒤 새 시리즈 관심을 당부했다.",
+      "김민주는 '늑대, 소녀'에서 하민수 역으로 출연한다.",
+      "JTBC '샤이닝'에 이어 넷플릭스 시리즈로 만날 예정."
+    ],
+    "title": "김민주, 뉴욕 가을 근황 공개…넷플릭스 '늑대, 소녀' 앞둬",
+    "body": "배우 김민주가 최근 자신의 인스타그램에 뉴욕의 가을 풍경을 담은 사진들을 올렸습니다.\n\n노랗게 물든 나뭇잎이 드리운 공원 산책로, 낙엽이 떨어진 풀밭, 크리스마스트리 앞에서 찍은 사진들이 공개됐습니다.\n\n김민주는 자신의 인스타그램을 통해 넷플릭스 10주년 행사 참석 뒤 새 시리즈 '늑대, 소녀'에 대한 관심을 당부했습니다. '늑대, 소녀'에서 김민주는 하민수 역으로 출연하며, 작품은 공개를 앞두고 있습니다.\n\n한편 김민주는 JTBC 드라마 '샤이닝'에 이어 넷플릭스 시리즈 '늑대, 소녀'로 시청자들과 만날 예정입니다.",
+    "hashtags": [
+      "#김민주",
+      "#KimMinJu",
+      "#늑대소녀",
+      "#넷플릭스",
+      "#Netflix",
+      "#샤이닝",
+      "#JTBC",
+      "#아이즈원",
+      "#IZONE",
+      "#배우",
+      "#뉴욕",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "김민주",
+      "Kim Min-ju"
+    ],
+    "person": "김민주",
+    "scene_queries": [
+      "New York autumn park path",
+      "autumn leaves park New York"
+    ],
+    "fact_checked": true,
+    "press": "텐아시아",
+    "url": "https://m.entertain.naver.com/home/article/312/0000785999",
+    "source_title": "김민주, 뉴욕 홀린 역대급 청순 미모…안 예쁜 적이 없네",
+    "issue_no": 177
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-114517-m-ch3/_src.jpg",
+    "credit": "김민주 인스타그램",
+    "license": "",
+    "page": "https://m.entertain.naver.com/home/article/312/0000785999",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
