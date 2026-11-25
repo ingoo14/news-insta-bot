@@ -1,0 +1,69 @@
+{
+  "id": "20261125-104028-m-ch2",
+  "created": "2026-11-25T10:40:28.736508+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/GxrhcFF0",
+  "force": false,
+  "images": [
+    "docs/posts/20261125-104028-m-ch2/01.jpg",
+    "docs/posts/20261125-104028-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"Magic\"... 리센느, 영화 '헥스: 마녀왕국' OST 발매\n\n걸그룹 리센느가 부른 영화 '헥스: 마녀왕국'의 공식 OST 'Magic'이 25일 밤 0시 정식 발매됐습니다. 소속사 더뮤즈엔터테인먼트에 따르면 이날 발매됐습니다.\n\n'Magic'은 1978년 데뷔한 미국 록 밴드 The Cars의 히트곡을 리센느만의 매력으로 재해석한 곡입니다. 통통 튀는 보이스로 영화 특유의 경쾌한 분위기를 담았습니다.\n\nOST에는 리센느의 네 번째 미니앨범 'PULSE'의 타이틀곡 'With'도 함께 수록됐습니다. 엔딩 크레딧 첫 곡으로 'Magic'이 흐르고, 쿠키 영상이 끝난 뒤 'With'가 이어집니다.\n\n국내 걸그룹의 활동곡이 디즈니 영화 엔딩 크레딧 곡으로 삽입된 것은 리센느가 처음입니다.\n\n한편 'With'는 국내 주요 음원 차트 1위에 올랐고 음악방송 5관왕을 달성했습니다. 미국 빌보드 글로벌(미국 제외) 차트 22위, 글로벌 200 차트 58위도 기록했습니다.\n\n사진 출처: 더팩트. All rights reserved.\n\n#리센느 #RESCENE #헥스마녀왕국 #Magic #With #PULSE #디즈니 #OST #더뮤즈엔터테인먼트 #걸그룹OST #빌보드 #음악뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "리센느, 헥스 OST 발매",
+    "headline_bottom": "Magic 정식 발매",
+    "subline": "엔딩크레딧에 'With'도 함께 흐른다",
+    "card_summary": [
+      "리센느, 영화 OST 'Magic'을 25일 발매했다.",
+      "'With'도 OST에 수록돼 쿠키 영상 뒤 이어 흐른다.",
+      "'With'는 국내 음원 차트 1위, 음악방송 5관왕."
+    ],
+    "title": "\"Magic\"... 리센느, 영화 '헥스: 마녀왕국' OST 발매",
+    "body": "걸그룹 리센느가 부른 영화 '헥스: 마녀왕국'의 공식 OST 'Magic'이 25일 밤 0시 정식 발매됐습니다. 소속사 더뮤즈엔터테인먼트에 따르면 이날 발매됐습니다.\n\n'Magic'은 1978년 데뷔한 미국 록 밴드 The Cars의 히트곡을 리센느만의 매력으로 재해석한 곡입니다. 통통 튀는 보이스로 영화 특유의 경쾌한 분위기를 담았습니다.\n\nOST에는 리센느의 네 번째 미니앨범 'PULSE'의 타이틀곡 'With'도 함께 수록됐습니다. 엔딩 크레딧 첫 곡으로 'Magic'이 흐르고, 쿠키 영상이 끝난 뒤 'With'가 이어집니다.\n\n국내 걸그룹의 활동곡이 디즈니 영화 엔딩 크레딧 곡으로 삽입된 것은 리센느가 처음입니다.\n\n한편 'With'는 국내 주요 음원 차트 1위에 올랐고 음악방송 5관왕을 달성했습니다. 미국 빌보드 글로벌(미국 제외) 차트 22위, 글로벌 200 차트 58위도 기록했습니다.",
+    "hashtags": [
+      "#리센느",
+      "#RESCENE",
+      "#헥스마녀왕국",
+      "#Magic",
+      "#With",
+      "#PULSE",
+      "#디즈니",
+      "#OST",
+      "#더뮤즈엔터테인먼트",
+      "#걸그룹OST",
+      "#빌보드",
+      "#음악뉴스"
+    ],
+    "photo_queries": [
+      "리센느",
+      "RESCENE"
+    ],
+    "person": "리센느",
+    "scene_queries": [
+      "Disney movie theater screen",
+      "girl group concert stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/629/0000555257",
+    "source_title": "리센느, '헥스: 마녀왕국' OST 'Magic' 정식 발매",
+    "issue_no": 160
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261125-104028-m-ch2/_src.jpg",
+    "credit": "더팩트. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/629/0000555257",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
