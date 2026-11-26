@@ -1,0 +1,69 @@
+{
+  "id": "20261126-131143-m-ch1",
+  "created": "2026-11-26T13:11:43.342314+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-26T07:00:00+00:00",
+  "poll": null,
+  "src_url": "https://naver.me/FG3X4xBF",
+  "force": false,
+  "images": [
+    "docs/posts/20261126-131143-m-ch1/01.jpg",
+    "docs/posts/20261126-131143-m-ch1/02.jpg"
+  ],
+  "caption": "📌 “말간 일상”... 오브더블루, 멤버 4인 비주얼 공개\n\nJYP엔터테인먼트 아티스트 본부 SQU4D의 첫 보이그룹 오브더블루가 멤버 4인의 비주얼을 최초 공개했습니다. 오브더블루는 2027년 1월 11일 정식 데뷔하며, 데뷔 앨범은 'out of the blue'입니다.\n\n이번 콘셉트 포토는 멤버들의 일상을 스냅샷 느낌으로 담았습니다. 도시와 떨어진 공간에서 물놀이를 하거나 자연을 관찰하고, 햇살보다 환하게 웃는 모습이 담겼습니다.\n\n시골집을 배경으로 미니 건반을 든 제이든, 바다 한가운데서 노트북 작업을 하는 쉐인, 헤드셋을 착용한 차민준, 모래사장에 디지털 장비를 옮겨둔 강이안의 사진이 공개됐습니다. 서로 대비되는 요소들을 한데 결합한 컷입니다.\n\n나무를 제이든의 머리카락처럼 이어붙이거나 주차금지 라바콘을 막내 강이안의 머리 위로 합성하는 등 엉뚱한 호기심과 장난기를 표현한 이미지도 담겼습니다.\n\n그룹명 오브더블루의 출발점이자 데뷔 앨범명인 'out of the blue'는 '예상하지 못한 순간', '뜻밖의 발견'이라는 뜻의 관용 표현입니다.\n\n사진 출처: KBS 연예. All rights reserved.\n\n#오브더블루 #oftheblue #outoftheblue #JYP #JYP엔터테인먼트 #SQU4D #스쿼드 #제이든 #쉐인 #차민준 #강이안 #신인보이그룹",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "오브더블루 멤버 4인 공개",
+    "headline_bottom": "1월 11일 정식 데뷔",
+    "subline": "JYP 첫 보이그룹, 멤버 4인 비주얼 공개",
+    "card_summary": [
+      "오브더블루가 멤버 4인의 비주얼을 처음 공개했다.",
+      "콘셉트 포토는 멤버들의 일상을 스냅샷처럼 담았다.",
+      "오브더블루는 2027년 1월 11일 정식 데뷔할 예정이다."
+    ],
+    "title": "“말간 일상”... 오브더블루, 멤버 4인 비주얼 공개",
+    "body": "JYP엔터테인먼트 아티스트 본부 SQU4D의 첫 보이그룹 오브더블루가 멤버 4인의 비주얼을 최초 공개했습니다. 오브더블루는 2027년 1월 11일 정식 데뷔하며, 데뷔 앨범은 'out of the blue'입니다.\n\n이번 콘셉트 포토는 멤버들의 일상을 스냅샷 느낌으로 담았습니다. 도시와 떨어진 공간에서 물놀이를 하거나 자연을 관찰하고, 햇살보다 환하게 웃는 모습이 담겼습니다.\n\n시골집을 배경으로 미니 건반을 든 제이든, 바다 한가운데서 노트북 작업을 하는 쉐인, 헤드셋을 착용한 차민준, 모래사장에 디지털 장비를 옮겨둔 강이안의 사진이 공개됐습니다. 서로 대비되는 요소들을 한데 결합한 컷입니다.\n\n나무를 제이든의 머리카락처럼 이어붙이거나 주차금지 라바콘을 막내 강이안의 머리 위로 합성하는 등 엉뚱한 호기심과 장난기를 표현한 이미지도 담겼습니다.\n\n그룹명 오브더블루의 출발점이자 데뷔 앨범명인 'out of the blue'는 '예상하지 못한 순간', '뜻밖의 발견'이라는 뜻의 관용 표현입니다.",
+    "hashtags": [
+      "#오브더블루",
+      "#oftheblue",
+      "#outoftheblue",
+      "#JYP",
+      "#JYP엔터테인먼트",
+      "#SQU4D",
+      "#스쿼드",
+      "#제이든",
+      "#쉐인",
+      "#차민준",
+      "#강이안",
+      "#신인보이그룹"
+    ],
+    "photo_queries": [
+      "오브더블루",
+      "oftheblue"
+    ],
+    "person": "오브더블루",
+    "scene_queries": [
+      "beach sunlight seaside Korea",
+      "countryside house with vintage keyboard"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/438/0000082436",
+    "source_title": "\"2027년에 만나요\" JYP 신인 '오브더블루'",
+    "issue_no": 208
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261126-131143-m-ch1/_src.jpg",
+    "credit": "KBS 연예. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/438/0000082436",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
