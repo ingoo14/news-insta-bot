@@ -1,0 +1,70 @@
+{
+  "id": "20261126-124851-m-ch2",
+  "created": "2026-11-26T12:48:51.379400+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/GlR6lVRS",
+  "force": false,
+  "images": [
+    "docs/posts/20261126-124851-m-ch2/01.jpg",
+    "docs/posts/20261126-124851-m-ch2/02.jpg"
+  ],
+  "caption": "📌 전현무·장도연·미나미, '2026 MBC 방송연예대상' MC 낙점\n\n방송인 전현무, 장도연과 리센느 미나미가 올해 '2026 MBC 방송연예대상' MC로 낙점됐습니다. 시상식은 12월 29일 생방송으로 진행됩니다.\n\n전현무는 2016년 처음 MC를 맡은 뒤 2018년부터 지난해까지 8년 연속 시상식을 진행했습니다. 올해로 9년 연속, 통산 10번째 진행을 맡게 됐습니다. 2017년, 2022년, 2024년에는 대상을 받았습니다.\n\n장도연은 2020년 'MBC 방송연예대상'에서 전현무와 함께 진행을 맡았고, 지난해에도 MC로 나섰습니다. 두 사람은 지난 8월 '2026 케이 월드 드림 어워즈'에서도 공동 MC를 맡았습니다.\n\n미나미는 일본 출신으로 2024년 3월 리센느 멤버로 데뷔했습니다. 팀 내 유일한 일본인 멤버이며, 유튜브에서 선보인 갸루 콘셉트 콘텐츠와 '거제 야호' 유행어로 화제를 모았습니다.\n\n사진 출처: 스타뉴스, 뉴스1\n\n#전현무 #장도연 #미나미 #리센느 #MBC방송연예대상 #방송연예대상 #전현무장도연 #MBC #연예뉴스 #2026MBC방송연예대상",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "전현무·장도연·미나미",
+    "headline_bottom": "방송연예대상 MC 발탁",
+    "subline": "12월 29일 생방송 MC 낙점",
+    "card_summary": [
+      "전현무·장도연·미나미가 MBC 방송연예대상 MC 낙점됐다.",
+      "시상식은 12월 29일 생방송으로 진행된다.",
+      "전현무는 올해로 9년 연속, 통산 10번째 진행을 맡는다.",
+      "미나미는 2024년 리센느 멤버로 데뷔한 일본 출신이다."
+    ],
+    "title": "전현무·장도연·미나미, '2026 MBC 방송연예대상' MC 낙점",
+    "body": "방송인 전현무, 장도연과 리센느 미나미가 올해 '2026 MBC 방송연예대상' MC로 낙점됐습니다. 시상식은 12월 29일 생방송으로 진행됩니다.\n\n전현무는 2016년 처음 MC를 맡은 뒤 2018년부터 지난해까지 8년 연속 시상식을 진행했습니다. 올해로 9년 연속, 통산 10번째 진행을 맡게 됐습니다. 2017년, 2022년, 2024년에는 대상을 받았습니다.\n\n장도연은 2020년 'MBC 방송연예대상'에서 전현무와 함께 진행을 맡았고, 지난해에도 MC로 나섰습니다. 두 사람은 지난 8월 '2026 케이 월드 드림 어워즈'에서도 공동 MC를 맡았습니다.\n\n미나미는 일본 출신으로 2024년 3월 리센느 멤버로 데뷔했습니다. 팀 내 유일한 일본인 멤버이며, 유튜브에서 선보인 갸루 콘셉트 콘텐츠와 '거제 야호' 유행어로 화제를 모았습니다.",
+    "hashtags": [
+      "#전현무",
+      "#장도연",
+      "#미나미",
+      "#리센느",
+      "#MBC방송연예대상",
+      "#방송연예대상",
+      "#전현무장도연",
+      "#MBC",
+      "#연예뉴스",
+      "#2026MBC방송연예대상"
+    ],
+    "photo_queries": [
+      "전현무",
+      "Jun Hyun-moo",
+      "장도연",
+      "Jang Do-yeon"
+    ],
+    "person": "전현무",
+    "scene_queries": [
+      "MBC broadcasting awards show stage",
+      "Korean TV awards ceremony stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/108/0003490385",
+    "source_title": "[단독]야호! 전현무·장도연·미나미 뭉쳤다..'2026 MBC 방송연예대상' MC 발탁",
+    "issue_no": 207
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261126-124851-m-ch2/_src.jpg",
+    "credit": "스타뉴스, 뉴스1",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/108/0003490385",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
