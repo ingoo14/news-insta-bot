@@ -1,0 +1,70 @@
+{
+  "id": "20261126-173031-m-ch1",
+  "created": "2026-11-26T17:30:31.666914+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-26T09:00:00+00:00",
+  "poll": null,
+  "src_url": "https://naver.me/5xgxFoU7",
+  "force": false,
+  "images": [
+    "docs/posts/20261126-173031-m-ch1/01.jpg",
+    "docs/posts/20261126-173031-m-ch1/02.jpg"
+  ],
+  "caption": "📌 루시, 27일 홍대서 팬들과 만난다\n\n밴드 루시가 삼성닷컴이 개최하는 음악과 토크 결합 팝업 콘서트에 참석합니다. 27일 서울 마포구 홍대스퀘어에서 '삼닷 Live X LUCY 팝업 콘서트'가 진행됩니다.\n\n이벤트는 갤럭시 Z 폴드8 울트라, 폴드8, 플립8을 중심으로 운영됩니다. 25~27일 삼성닷컴 팝업 이벤트와 27일 삼닷 Live 방송으로 실시간 송출되는 토크 콘서트로 구성됐습니다.\n\n현장에서는 체험존, 럭키드로우 경품, 포토부스, 루시의 공식 캐릭터 'CYLU(시루)' 쿠키 등의 혜택이 예고됐습니다. 루시는 밴드 사운드와 진솔한 토크로 관객과 소통할 예정입니다.\n\n루시는 2020년 데뷔한 4인조 밴드로, 바이올린을 활용한 사운드로 주목받아 왔습니다. 최근 여덟 번째 디지털 싱글 '다시!'를 발매했고, 서울, 홍콩, 싱가포르에서 앙코르 콘서트 '2026 LUCY 9TH CONCERT ISLAND'를 성황리에 마쳤습니다.\n\n사진 출처: 엑스포츠뉴스. All rights reserved.\n\n#루시 #LUCY #삼성닷컴 #삼닷Live #홍대팝업콘서트 #홍대스퀘어 #갤럭시Z폴드8 #팝업콘서트 #밴드루시 #연예뉴스 #음악 #K팝",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "루시, 홍대서 팬들과 만남",
+    "headline_bottom": "27일 팝업 콘서트",
+    "subline": "삼성닷컴 팝업 콘서트, 27일 홍대서 열려",
+    "card_summary": [
+      "밴드 루시가 27일 홍대스퀘어 팝업 콘서트에 나선다.",
+      "25~27일 팝업 이벤트와 27일 토크 콘서트로 구성됐다.",
+      "토크 콘서트는 '삼닷 Live'로 온라인 생중계될 예정이다.",
+      "루시는 최근 여덟 번째 디지털 싱글 '다시!'를 발매했다."
+    ],
+    "title": "루시, 27일 홍대서 팬들과 만난다",
+    "body": "밴드 루시가 삼성닷컴이 개최하는 음악과 토크 결합 팝업 콘서트에 참석합니다. 27일 서울 마포구 홍대스퀘어에서 '삼닷 Live X LUCY 팝업 콘서트'가 진행됩니다.\n\n이벤트는 갤럭시 Z 폴드8 울트라, 폴드8, 플립8을 중심으로 운영됩니다. 25~27일 삼성닷컴 팝업 이벤트와 27일 삼닷 Live 방송으로 실시간 송출되는 토크 콘서트로 구성됐습니다.\n\n현장에서는 체험존, 럭키드로우 경품, 포토부스, 루시의 공식 캐릭터 'CYLU(시루)' 쿠키 등의 혜택이 예고됐습니다. 루시는 밴드 사운드와 진솔한 토크로 관객과 소통할 예정입니다.\n\n루시는 2020년 데뷔한 4인조 밴드로, 바이올린을 활용한 사운드로 주목받아 왔습니다. 최근 여덟 번째 디지털 싱글 '다시!'를 발매했고, 서울, 홍콩, 싱가포르에서 앙코르 콘서트 '2026 LUCY 9TH CONCERT ISLAND'를 성황리에 마쳤습니다.",
+    "hashtags": [
+      "#루시",
+      "#LUCY",
+      "#삼성닷컴",
+      "#삼닷Live",
+      "#홍대팝업콘서트",
+      "#홍대스퀘어",
+      "#갤럭시Z폴드8",
+      "#팝업콘서트",
+      "#밴드루시",
+      "#연예뉴스",
+      "#음악",
+      "#K팝"
+    ],
+    "photo_queries": [
+      "루시",
+      "LUCY"
+    ],
+    "person": "루시",
+    "scene_queries": [
+      "Hongdae street Seoul night",
+      "live band concert stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/311/0002084440",
+    "source_title": "루시, 홍대서 팬들과 특별한 만남…27일 팝업 콘서트 출격",
+    "issue_no": 215
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261126-173031-m-ch1/_src.jpg",
+    "credit": "엑스포츠뉴스. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/311/0002084440",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
