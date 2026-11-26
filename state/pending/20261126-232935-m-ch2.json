@@ -1,0 +1,67 @@
+{
+  "id": "20261126-232935-m-ch2",
+  "created": "2026-11-26T23:29:35.020145+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/xRgFFef5",
+  "force": false,
+  "images": [
+    "docs/posts/20261126-232935-m-ch2/01.jpg",
+    "docs/posts/20261126-232935-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"전장 속으로\"... 아이브, 신곡 ‘Renegade’ 티저 공개\n\n아이브가 지난 25일 PUBG 공식 유튜브 채널을 통해 신곡 ‘Renegade(레니게이드)’의 뮤직비디오 티저 영상을 공개했습니다.\n\n이번 곡은 PUBG: 배틀그라운드와 배틀그라운드 모바일이 공동으로 전개하는 시즌형 음악 프로젝트 ‘더 스쿼드(THE SQUAD)’의 일환입니다. 아이브는 이 프로젝트의 첫 번째 아티스트로 참여했습니다.\n\n티저 영상에서 아이브는 PUBG 게임 속 전장을 배경으로 등장했습니다. 게임의 세계관과 주요 요소를 떠올리게 하는 오브제와 연출이 함께 담겼습니다.\n\n아이브는 12월 2일 6시 스타쉽 공식 유튜브 채널을 통해 ‘Renegade’ 뮤직비디오 전편을 공개하며, 음원도 같은 날 발매합니다.\n\n사진 출처: PUBG 공식 유튜브 채널 캡처]\n\n#아이브 #IVE #레니게이드 #Renegade #PUBG #배틀그라운드 #배틀그라운드모바일 #더스쿼드 #THESQUAD #신곡",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "아이브, ‘레니게이드’",
+    "headline_bottom": "12월 2일 전편 공개",
+    "subline": "PUBG 신곡 뮤직비디오 티저 공개",
+    "card_summary": [
+      "아이브가 신곡 ‘Renegade’ 뮤직비디오 티저를 공개했다.",
+      "‘더 스쿼드’ 프로젝트의 첫 아티스트로 참여했다.",
+      "12월 2일 6시 뮤직비디오 전편과 음원이 공개 예정이다."
+    ],
+    "title": "\"전장 속으로\"... 아이브, 신곡 ‘Renegade’ 티저 공개",
+    "body": "아이브가 지난 25일 PUBG 공식 유튜브 채널을 통해 신곡 ‘Renegade(레니게이드)’의 뮤직비디오 티저 영상을 공개했습니다.\n\n이번 곡은 PUBG: 배틀그라운드와 배틀그라운드 모바일이 공동으로 전개하는 시즌형 음악 프로젝트 ‘더 스쿼드(THE SQUAD)’의 일환입니다. 아이브는 이 프로젝트의 첫 번째 아티스트로 참여했습니다.\n\n티저 영상에서 아이브는 PUBG 게임 속 전장을 배경으로 등장했습니다. 게임의 세계관과 주요 요소를 떠올리게 하는 오브제와 연출이 함께 담겼습니다.\n\n아이브는 12월 2일 6시 스타쉽 공식 유튜브 채널을 통해 ‘Renegade’ 뮤직비디오 전편을 공개하며, 음원도 같은 날 발매합니다.",
+    "hashtags": [
+      "#아이브",
+      "#IVE",
+      "#레니게이드",
+      "#Renegade",
+      "#PUBG",
+      "#배틀그라운드",
+      "#배틀그라운드모바일",
+      "#더스쿼드",
+      "#THESQUAD",
+      "#신곡"
+    ],
+    "photo_queries": [
+      "아이브",
+      "IVE"
+    ],
+    "person": "아이브",
+    "scene_queries": [
+      "PUBG battlegrounds game screenshot",
+      "video game battlefield smoke"
+    ],
+    "fact_checked": true,
+    "press": "헤럴드뮤즈",
+    "url": "https://m.entertain.naver.com/now/article/112/0003814508",
+    "source_title": "아이브, 전장 속으로..12월 2일 ‘레니게이드’ 발매[공식]",
+    "issue_no": 222
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261126-232935-m-ch2/_src.jpg",
+    "credit": "PUBG 공식 유튜브 채널 캡처]",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/112/0003814508",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
