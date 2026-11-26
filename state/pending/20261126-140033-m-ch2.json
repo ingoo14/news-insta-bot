@@ -1,0 +1,70 @@
+{
+  "id": "20261126-140033-m-ch2",
+  "created": "2026-11-26T14:00:33.575490+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/5qLJrid5",
+  "force": false,
+  "images": [
+    "docs/posts/20261126-140033-m-ch2/01.jpg",
+    "docs/posts/20261126-140033-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"Prankstar\"... 코드 쿤스트, 정규 6집 발매\n\n코드 쿤스트가 12월 3일 정규 6집 ‘Prankstar(프랭크스타)’를 발매합니다. 3년 만에 내놓는 정규앨범으로, 소속사 두오버엔터테인먼트가 이같이 밝혔습니다.\n\n앨범에는 총 14곡이 담기며, 더블 타이틀곡으로 DPR IAN이 참여한 ‘Prankstar’와 방탄소년단 정국이 피처링한 ‘Love is Blind’가 선정됐습니다.\n\n수록곡에는 크러쉬, 브라이언 체이스, 세로, 맥 킨, 조이스 라이스, 드비타, 콜드, 우즈, 영케이 등이 참여했습니다. 배우 김민하도 이름을 올렸습니다.\n\n코드 쿤스트는 대중매체 속 TV 스타의 모습과 그 이면의 개인적인 삶을 음악으로 풀어내고자 했다고 설명했습니다.\n\n그는 MBC ‘나 혼자 산다’로 예능에서도 활약 중이며, 웨이브 ‘연애남매2’, ‘굿데이2’ 출연도 앞두고 있습니다.\n\n사진 출처: 매일경제. All rights reserved.\n\n#코드쿤스트 #Codekunst #Prankstar #프랭크스타 #정국 #JUNGKOOK #BTS #DPRIAN #김민하 #나혼자산다 #연애남매2 #굿데이2",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "코드 쿤스트, 정규 6집",
+    "headline_bottom": "12월 3일 발매",
+    "subline": "3년 만의 정규앨범 'Prankstar'",
+    "card_summary": [
+      "코드 쿤스트, 12월 3일 정규 6집 발매",
+      "3년 만에 내놓는 정규앨범으로 총 14곡이 담긴다",
+      "더블 타이틀곡은 DPR IAN, 정국 참여곡이다",
+      "크러쉬·김민하 등 다수가 수록곡에 참여했다"
+    ],
+    "title": "\"Prankstar\"... 코드 쿤스트, 정규 6집 발매",
+    "body": "코드 쿤스트가 12월 3일 정규 6집 ‘Prankstar(프랭크스타)’를 발매합니다. 3년 만에 내놓는 정규앨범으로, 소속사 두오버엔터테인먼트가 이같이 밝혔습니다.\n\n앨범에는 총 14곡이 담기며, 더블 타이틀곡으로 DPR IAN이 참여한 ‘Prankstar’와 방탄소년단 정국이 피처링한 ‘Love is Blind’가 선정됐습니다.\n\n수록곡에는 크러쉬, 브라이언 체이스, 세로, 맥 킨, 조이스 라이스, 드비타, 콜드, 우즈, 영케이 등이 참여했습니다. 배우 김민하도 이름을 올렸습니다.\n\n코드 쿤스트는 대중매체 속 TV 스타의 모습과 그 이면의 개인적인 삶을 음악으로 풀어내고자 했다고 설명했습니다.\n\n그는 MBC ‘나 혼자 산다’로 예능에서도 활약 중이며, 웨이브 ‘연애남매2’, ‘굿데이2’ 출연도 앞두고 있습니다.",
+    "hashtags": [
+      "#코드쿤스트",
+      "#Codekunst",
+      "#Prankstar",
+      "#프랭크스타",
+      "#정국",
+      "#JUNGKOOK",
+      "#BTS",
+      "#DPRIAN",
+      "#김민하",
+      "#나혼자산다",
+      "#연애남매2",
+      "#굿데이2"
+    ],
+    "photo_queries": [
+      "코드 쿤스트",
+      "Code Kunst"
+    ],
+    "person": "코드 쿤스트",
+    "scene_queries": [
+      "recording studio microphone",
+      "Seoul night city lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/009/0005769391",
+    "source_title": "코드 쿤스트, BTS 정국과 손잡았다…12월 3일 정규앨범 발매",
+    "issue_no": 212
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261126-140033-m-ch2/_src.jpg",
+    "credit": "매일경제. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/009/0005769391",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
