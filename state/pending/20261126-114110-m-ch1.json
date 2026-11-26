@@ -1,0 +1,68 @@
+{
+  "id": "20261126-114110-m-ch1",
+  "created": "2026-11-26T11:41:10.109300+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-26T05:00:00+00:00",
+  "poll": null,
+  "src_url": "https://naver.me/51uK8U6W",
+  "force": false,
+  "images": [
+    "docs/posts/20261126-114110-m-ch1/01.jpg",
+    "docs/posts/20261126-114110-m-ch1/02.jpg"
+  ],
+  "caption": "📌 \"EVERY SUNSET HAS ITS STORY.\"... 휘영 솔로 컴백\n\nSF9 멤버 휘영이 솔로 아티스트로 컴백을 공식화했습니다. 지난 25일 SF9 공식 SNS를 통해 신곡 ‘Sunset(선셋)’의 타이틀 포스터가 갑작스럽게 공개됐습니다.\n\n포스터에는 붉게 노을 진 하늘의 주황빛 색감이 가득 담겼습니다. 'EVERY SUNSET HAS ITS STORY.'라는 문구가 함께 적혔습니다.\n\n휘영은 SF9 활동과 함께 꾸준히 곡 작업에 참여해 왔습니다. 2024년 발매한 첫 솔로 앨범 ‘Traveling Fish(트래블링 피시)’에서는 전곡 크레딧에 이름을 올렸습니다.\n\n신곡 발매 일정 등 자세한 프로모션 내용은 추후 SF9 공식 SNS를 통해 순차적으로 공개될 예정입니다.\n\n사진 출처: OSEN. All rights reserved.\n\n#휘영 #SF9 #에스에프나인 #Hwiyoung #Sunset #선셋 #솔로컴백 #TravelingFish #트래블링피시 #FNC엔터테인먼트",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "휘영, ‘솔로 컴백’ 시동",
+    "headline_bottom": "타이틀 포스터 공개",
+    "subline": "노을빛 신곡 ‘Sunset’ 예고",
+    "card_summary": [
+      "휘영이 솔로 아티스트로 컴백을 공식화했다.",
+      "지난 25일 SF9 공식 SNS에 타이틀 포스터를 공개했다.",
+      "포스터는 노을 진 주황빛 하늘을 담았다.",
+      "발매 일정 등 프로모션은 추후 순차 공개 예정이다."
+    ],
+    "title": "\"EVERY SUNSET HAS ITS STORY.\"... 휘영 솔로 컴백",
+    "body": "SF9 멤버 휘영이 솔로 아티스트로 컴백을 공식화했습니다. 지난 25일 SF9 공식 SNS를 통해 신곡 ‘Sunset(선셋)’의 타이틀 포스터가 갑작스럽게 공개됐습니다.\n\n포스터에는 붉게 노을 진 하늘의 주황빛 색감이 가득 담겼습니다. 'EVERY SUNSET HAS ITS STORY.'라는 문구가 함께 적혔습니다.\n\n휘영은 SF9 활동과 함께 꾸준히 곡 작업에 참여해 왔습니다. 2024년 발매한 첫 솔로 앨범 ‘Traveling Fish(트래블링 피시)’에서는 전곡 크레딧에 이름을 올렸습니다.\n\n신곡 발매 일정 등 자세한 프로모션 내용은 추후 SF9 공식 SNS를 통해 순차적으로 공개될 예정입니다.",
+    "hashtags": [
+      "#휘영",
+      "#SF9",
+      "#에스에프나인",
+      "#Hwiyoung",
+      "#Sunset",
+      "#선셋",
+      "#솔로컴백",
+      "#TravelingFish",
+      "#트래블링피시",
+      "#FNC엔터테인먼트"
+    ],
+    "photo_queries": [
+      "휘영",
+      "Hwiyoung"
+    ],
+    "person": "휘영",
+    "scene_queries": [
+      "sunset sky orange clouds",
+      "Seoul city skyline at dusk"
+    ],
+    "fact_checked": true,
+    "press": "OSEN",
+    "url": "https://m.entertain.naver.com/now/article/109/0005645535",
+    "source_title": "SF9 휘영, 솔로 컴백 시동..노을빛 ‘Sunset’ 타이틀 포스터 기습 공개",
+    "issue_no": 205
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261126-114110-m-ch1/_src.jpg",
+    "credit": "OSEN. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/109/0005645535",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
