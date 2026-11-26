@@ -1,0 +1,67 @@
+{
+  "id": "20261126-140015-m-ch2",
+  "created": "2026-11-26T14:00:15.318534+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/FlBXVaDz",
+  "force": false,
+  "images": [
+    "docs/posts/20261126-140015-m-ch2/01.jpg",
+    "docs/posts/20261126-140015-m-ch2/02.jpg"
+  ],
+  "caption": "📌 루시, 27일 팝업 콘서트로 팬들과 만난다\n\n밴드 루시가 음악과 토크를 결합한 특별한 팝업 콘서트로 팬들을 만납니다.\n\n루시는 오는 27일 서울 마포구 홍대스퀘어에서 열리는 '삼닷 라이브 엑스 루시 팝업 콘서트'에 참석합니다. 이 공연은 25일부터 27일까지 운영되는 삼성닷컴 팝업 이벤트의 일환으로 마련됐습니다.\n\n현장 관람은 물론 실시간 온라인 생중계로도 공연을 볼 수 있습니다. 무대에서는 밴드 특유의 청량하고 에너지 넘치는 사운드를 들려주고, 관객들이 남긴 사연을 직접 소개하며 이야기를 나눌 예정입니다.\n\n루시는 최근 여덟 번째 디지털 싱글 '다시!'를 발매했고, 서울·홍콩·싱가포르에서 아홉 번째 단독 콘서트 '아일랜드'의 앙코르 투어를 마무리했습니다.\n\n사진 출처: 일간스포츠. All rights reserved.\n\n#루시 #Lucy #밴드루시 #삼성닷컴 #삼닷라이브 #팝업콘서트 #홍대스퀘어 #싱글다시 #아일랜드 #앙코르투어",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "루시, 팝업 콘서트 출격",
+    "headline_bottom": "27일 홍대스퀘어 공연",
+    "subline": "음악과 토크가 결합된 팝업 공연",
+    "card_summary": [
+      "루시, 27일 홍대스퀘어 팝업 콘서트 참석 예정",
+      "삼성닷컴 팝업 이벤트(25~27일) 일환으로 마련됐다",
+      "현장 관람과 실시간 온라인 생중계로 진행된다"
+    ],
+    "title": "루시, 27일 팝업 콘서트로 팬들과 만난다",
+    "body": "밴드 루시가 음악과 토크를 결합한 특별한 팝업 콘서트로 팬들을 만납니다.\n\n루시는 오는 27일 서울 마포구 홍대스퀘어에서 열리는 '삼닷 라이브 엑스 루시 팝업 콘서트'에 참석합니다. 이 공연은 25일부터 27일까지 운영되는 삼성닷컴 팝업 이벤트의 일환으로 마련됐습니다.\n\n현장 관람은 물론 실시간 온라인 생중계로도 공연을 볼 수 있습니다. 무대에서는 밴드 특유의 청량하고 에너지 넘치는 사운드를 들려주고, 관객들이 남긴 사연을 직접 소개하며 이야기를 나눌 예정입니다.\n\n루시는 최근 여덟 번째 디지털 싱글 '다시!'를 발매했고, 서울·홍콩·싱가포르에서 아홉 번째 단독 콘서트 '아일랜드'의 앙코르 투어를 마무리했습니다.",
+    "hashtags": [
+      "#루시",
+      "#Lucy",
+      "#밴드루시",
+      "#삼성닷컴",
+      "#삼닷라이브",
+      "#팝업콘서트",
+      "#홍대스퀘어",
+      "#싱글다시",
+      "#아일랜드",
+      "#앙코르투어"
+    ],
+    "photo_queries": [
+      "루시",
+      "Lucy"
+    ],
+    "person": "루시",
+    "scene_queries": [
+      "Hongdae street Seoul night",
+      "live band concert stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/241/0003543713",
+    "source_title": "루시, 27일 ‘삼닷 라이브 X 루시 팝업 콘서트’ 출격…온·오프라인 동시 소통",
+    "issue_no": 212
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261126-140015-m-ch2/_src.jpg",
+    "credit": "일간스포츠. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/241/0003543713",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
