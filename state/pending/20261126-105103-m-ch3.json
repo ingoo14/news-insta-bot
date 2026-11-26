@@ -1,0 +1,69 @@
+{
+  "id": "20261126-105103-m-ch3",
+  "created": "2026-11-26T10:51:03.759074+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-26T10:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/ranking/article/117/0004128182",
+  "force": false,
+  "images": [
+    "docs/posts/20261126-105103-m-ch3/01.jpg",
+    "docs/posts/20261126-105103-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"이제 보내줄게!\"... 강민경, 뉴욕 여행 사진 공개\n\n다비치 강민경이 뉴욕 여행의 추억을 SNS에 되새겼습니다. 25일 강민경은 \"뉴요옥.. 이제 보내줄게!\"라는 글과 함께 여러 장의 사진을 게시했습니다.\n\n사진에는 뉴욕 곳곳을 누비며 여유로운 시간을 보내는 모습이 담겼습니다. 스테이크와 다양한 디저트 등 여행 기록도 함께 공유했습니다.\n\n고급스러운 분위기의 레스토랑을 찾은 모습도 공개됐습니다. 강민경은 가녀린 어깨라인과 쇄골이 드러나는 블랙 슬립 드레스를 입고, 자연스럽게 늘어뜨린 긴 웨이브 헤어 차림을 선보였습니다.\n\n이를 본 누리꾼들은 \"공주님\", \"너무 예쁘다\" 등의 반응을 남겼습니다. 강민경은 다비치 멤버로 꾸준히 음악 활동을 이어가고 있습니다. 개인 유튜브 채널 '걍밍경'을 통해 팬들과 소통하고 있으며, 패션 브랜드를 운영하는 사업가로도 활약 중입니다.\n\n사진 출처: 마이데일리. All rights reserved.\n\n#강민경 #다비치 #Kangminkyung #Davichi #걍밍경 #뉴욕여행 #뉴욕 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "강민경, '뉴욕 기록'",
+    "headline_bottom": "뉴욕 여행 사진 공개",
+    "subline": "다비치 강민경의 뉴욕 여행 근황",
+    "card_summary": [
+      "강민경이 자신의 SNS에 뉴욕 여행 사진을 올렸다.",
+      "스테이크와 디저트 등 여행 기록을 함께 공유했다.",
+      "레스토랑에서 블랙 슬립 드레스 차림을 공개했다.",
+      "강민경은 다비치 멤버로 음악 활동을 이어가고 있다."
+    ],
+    "title": "\"이제 보내줄게!\"... 강민경, 뉴욕 여행 사진 공개",
+    "body": "다비치 강민경이 뉴욕 여행의 추억을 SNS에 되새겼습니다. 25일 강민경은 \"뉴요옥.. 이제 보내줄게!\"라는 글과 함께 여러 장의 사진을 게시했습니다.\n\n사진에는 뉴욕 곳곳을 누비며 여유로운 시간을 보내는 모습이 담겼습니다. 스테이크와 다양한 디저트 등 여행 기록도 함께 공유했습니다.\n\n고급스러운 분위기의 레스토랑을 찾은 모습도 공개됐습니다. 강민경은 가녀린 어깨라인과 쇄골이 드러나는 블랙 슬립 드레스를 입고, 자연스럽게 늘어뜨린 긴 웨이브 헤어 차림을 선보였습니다.\n\n이를 본 누리꾼들은 \"공주님\", \"너무 예쁘다\" 등의 반응을 남겼습니다. 강민경은 다비치 멤버로 꾸준히 음악 활동을 이어가고 있습니다. 개인 유튜브 채널 '걍밍경'을 통해 팬들과 소통하고 있으며, 패션 브랜드를 운영하는 사업가로도 활약 중입니다.",
+    "hashtags": [
+      "#강민경",
+      "#다비치",
+      "#Kangminkyung",
+      "#Davichi",
+      "#걍밍경",
+      "#뉴욕여행",
+      "#뉴욕",
+      "#연예뉴스",
+      "#마이데일리"
+    ],
+    "photo_queries": [
+      "강민경",
+      "Kang Min-kyung",
+      "다비치",
+      "Davichi"
+    ],
+    "person": "강민경",
+    "scene_queries": [
+      "New York City street",
+      "upscale restaurant New York"
+    ],
+    "fact_checked": true,
+    "press": "마이데일리",
+    "url": "https://m.entertain.naver.com/ranking/article/117/0004128182",
+    "source_title": "강민경, 이렇게 글래머였나…뉴욕서 과감한 드레스 입고 반전 매력",
+    "issue_no": 198
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261126-105103-m-ch3/_src.jpg",
+    "credit": "마이데일리. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/ranking/article/117/0004128182",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
