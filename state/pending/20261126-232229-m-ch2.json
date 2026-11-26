@@ -1,0 +1,67 @@
+{
+  "id": "20261126-232229-m-ch2",
+  "created": "2026-11-26T23:22:29.266437+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/x0OWWvQD",
+  "force": false,
+  "images": [
+    "docs/posts/20261126-232229-m-ch2/01.jpg",
+    "docs/posts/20261126-232229-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"친한 친구 사이\"... 정혜린·하민 열애설 부인\n\n트리플에스 측은 26일 뉴스1에 정혜린과 하민이 연인 관계가 아니라고 밝혔습니다. 두 사람은 데뷔 전부터 알고 지낸 친한 친구 사이라고 설명했습니다.\n\n앞서 여러 SNS를 통해 함께 찍은 사진과 목격담이 퍼지면서 열애설이 제기됐습니다. 하민 측은 별도의 입장을 밝히지 않았습니다.\n\n정혜린은 2018년 웹드라마에 출연하며 배우로 활동을 시작했고, 2022년 가수로 데뷔했습니다. 2023년부터는 트리플에스 멤버로 활약 중입니다.\n\n하민은 SM엔터테인먼트의 공개 연습생 SMTR25 중 한 명으로, 올해 초 엠넷 '응답하라 하이스쿨'을 통해 얼굴을 알렸습니다. 내년 1월 가요계 정식 데뷔를 앞두고 있습니다.\n\n사진 출처: 뉴스1. All rights reserved.\n\n#정혜린 #하민 #트리플에스 #SMTR25 #SM엔터테인먼트 #응답하라하이스쿨 #엠넷 #Triples #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "정혜린·하민 '친한 친구'",
+    "headline_bottom": "열애설 부인",
+    "subline": "소속사 측 \"연인 관계 아냐\"",
+    "card_summary": [
+      "트리플에스 측이 26일 뉴스1에 입장을 밝혔다.",
+      "정혜린과 하민은 데뷔 전부터 알던 친한 친구라고 밝혔다.",
+      "SNS 사진과 목격담으로 제기된 열애설을 부인했다."
+    ],
+    "title": "\"친한 친구 사이\"... 정혜린·하민 열애설 부인",
+    "body": "트리플에스 측은 26일 뉴스1에 정혜린과 하민이 연인 관계가 아니라고 밝혔습니다. 두 사람은 데뷔 전부터 알고 지낸 친한 친구 사이라고 설명했습니다.\n\n앞서 여러 SNS를 통해 함께 찍은 사진과 목격담이 퍼지면서 열애설이 제기됐습니다. 하민 측은 별도의 입장을 밝히지 않았습니다.\n\n정혜린은 2018년 웹드라마에 출연하며 배우로 활동을 시작했고, 2022년 가수로 데뷔했습니다. 2023년부터는 트리플에스 멤버로 활약 중입니다.\n\n하민은 SM엔터테인먼트의 공개 연습생 SMTR25 중 한 명으로, 올해 초 엠넷 '응답하라 하이스쿨'을 통해 얼굴을 알렸습니다. 내년 1월 가요계 정식 데뷔를 앞두고 있습니다.",
+    "hashtags": [
+      "#정혜린",
+      "#하민",
+      "#트리플에스",
+      "#SMTR25",
+      "#SM엔터테인먼트",
+      "#응답하라하이스쿨",
+      "#엠넷",
+      "#Triples",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "정혜린",
+      "트리플에스",
+      "Triples"
+    ],
+    "person": "정혜린",
+    "scene_queries": [
+      "Seoul entertainment news studio",
+      "K-pop recording studio"
+    ],
+    "fact_checked": true,
+    "press": "뉴스1",
+    "url": "https://m.entertain.naver.com/now/article/421/0009313165",
+    "source_title": "SM 연습생 하민·트리플에스 정혜린, 열애설 초고속 부인 \"친한 친구\"",
+    "issue_no": 219
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261126-232229-m-ch2/_src.jpg",
+    "credit": "뉴스1. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/421/0009313165",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
