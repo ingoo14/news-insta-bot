@@ -1,0 +1,64 @@
+{
+  "id": "20261127-115959-m-ch3",
+  "created": "2026-11-27T11:59:59.481743+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-27T09:00:00+00:00",
+  "poll": null,
+  "src_url": "https://n.news.naver.com/mnews/article/016/0002729406?sid=102",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-115959-m-ch3/01.jpg",
+    "docs/posts/20261127-115959-m-ch3/02.jpg"
+  ],
+  "caption": "📌 김준표 유튜브 영상 4000여 개 삭제…무단 사용 주장 제기\n\n마술사 김준표의 유튜브 채널에서 영상이 대거 삭제돼 눈길을 끌고 있습니다. 채널의 구독자는 153만 명입니다.\n\n온라인 커뮤니티에는 한 누리꾼이 김준표가 자신의 게시글을 무단으로 사용했다는 취지의 글을 올렸습니다.\n\n채널의 영상 4000여 개가 사라졌습니다.\n\n사진 출처: 헤럴드경제. All rights reserved.\n\n#김준표 #마술사김준표 #김준표유튜브 #유튜버 #유튜브 #영상삭제 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "김준표, '영상 대거 삭제'",
+    "headline_bottom": "영상 4000여 개 삭제",
+    "subline": "무단 사용 주장이 제기된 상황",
+    "card_summary": [
+      "김준표 유튜브 채널에서 영상 4000여 개가 삭제됐다.",
+      "누리꾼이 김준표의 게시글 무단 사용을 주장하는 글을 올렸다.",
+      "'콘텐츠 날먹' 논란이 일었다."
+    ],
+    "title": "김준표 유튜브 영상 4000여 개 삭제…무단 사용 주장 제기",
+    "body": "마술사 김준표의 유튜브 채널에서 영상이 대거 삭제돼 눈길을 끌고 있습니다. 채널의 구독자는 153만 명입니다.\n\n온라인 커뮤니티에는 한 누리꾼이 김준표가 자신의 게시글을 무단으로 사용했다는 취지의 글을 올렸습니다.\n\n채널의 영상 4000여 개가 사라졌습니다.",
+    "hashtags": [
+      "#김준표",
+      "#마술사김준표",
+      "#김준표유튜브",
+      "#유튜버",
+      "#유튜브",
+      "#영상삭제",
+      "#연예뉴스",
+      "#헤럴드경제"
+    ],
+    "photo_queries": [
+      "김준표"
+    ],
+    "person": "김준표",
+    "scene_queries": [
+      "YouTube channel analytics screen",
+      "magic show stage lights"
+    ],
+    "fact_checked": true,
+    "press": "헤럴드경제",
+    "url": "https://n.news.naver.com/mnews/article/016/0002729406?sid=102",
+    "source_title": "‘조회수 52억’ 유튜버 김준표 ‘콘텐츠 날먹’ 논란 일더니…영상 4000여개 대거 사라져",
+    "issue_no": 227
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-115959-m-ch3/_src.jpg",
+    "credit": "헤럴드경제. All rights reserved.",
+    "license": "",
+    "page": "https://n.news.naver.com/mnews/article/016/0002729406?sid=102",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
