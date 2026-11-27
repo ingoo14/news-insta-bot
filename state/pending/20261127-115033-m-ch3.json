@@ -1,0 +1,71 @@
+{
+  "id": "20261127-115033-m-ch3",
+  "created": "2026-11-27T11:50:33.451415+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/home/article/311/0002083840",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-115033-m-ch3/01.jpg",
+    "docs/posts/20261127-115033-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"라우럴\"…지수, 비서진서 반전 매력\n\n블랙핑크 지수가 27일 방송되는 SBS '무엇이든 해줄지-비서진'에 출연합니다. 이서진, 김광규와 호흡을 맞춥니다.\n\n지난 24일 유튜브 채널 'SBS Entertainment'에 예고 영상이 공개됐습니다. 영상에는 메이크업을 받는 지수의 모습이 담겼습니다.\n\n지수는 무대 도중 표정 변화 없이 \"라우럴\"을 우렁차게 외쳐 반전 매력을 보여줬습니다. 이를 들은 김광규는 당황한 모습을 보였고, 이서진은 \"되게 성격이 걸걸하네\"라고 반응했습니다.\n\n지수는 지난 10월 30일 솔로곡 'ADDICTED'를 발매했습니다. 방송은 27일 오후 11시 10분 SBS에서 확인할 수 있습니다.\n\n사진 출처: 엑스포츠뉴스. All rights reserved.\n\n#지수 #JISOO #블랙핑크 #BLACKPINK #비서진 #무엇이든해줄지비서진 #이서진 #김광규 #SBS #예능 #ADDICTED",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "예능",
+    "headline_top": "지수, '반전 매력'",
+    "headline_bottom": "비서진 출연 예고",
+    "subline": "'라우럴' 외침에 이서진 \"성격 걸걸하네\"",
+    "card_summary": [
+      "블랙핑크 지수가 SBS '무엇이든 해줄지-비서진'에 출연한다.",
+      "지난 24일 공개된 예고 영상에서 털털한 반전 매력을 보였다.",
+      "영상에는 메이크업을 받는 지수의 모습이 담겼다.",
+      "방송은 27일 오후 11시 10분 SBS에서 예정돼 있다."
+    ],
+    "title": "\"라우럴\"…지수, 비서진서 반전 매력",
+    "body": "블랙핑크 지수가 27일 방송되는 SBS '무엇이든 해줄지-비서진'에 출연합니다. 이서진, 김광규와 호흡을 맞춥니다.\n\n지난 24일 유튜브 채널 'SBS Entertainment'에 예고 영상이 공개됐습니다. 영상에는 메이크업을 받는 지수의 모습이 담겼습니다.\n\n지수는 무대 도중 표정 변화 없이 \"라우럴\"을 우렁차게 외쳐 반전 매력을 보여줬습니다. 이를 들은 김광규는 당황한 모습을 보였고, 이서진은 \"되게 성격이 걸걸하네\"라고 반응했습니다.\n\n지수는 지난 10월 30일 솔로곡 'ADDICTED'를 발매했습니다. 방송은 27일 오후 11시 10분 SBS에서 확인할 수 있습니다.",
+    "hashtags": [
+      "#지수",
+      "#JISOO",
+      "#블랙핑크",
+      "#BLACKPINK",
+      "#비서진",
+      "#무엇이든해줄지비서진",
+      "#이서진",
+      "#김광규",
+      "#SBS",
+      "#예능",
+      "#ADDICTED"
+    ],
+    "photo_queries": [
+      "지수",
+      "Jisoo",
+      "블랙핑크",
+      "BLACKPINK"
+    ],
+    "person": "지수",
+    "scene_queries": [
+      "Seoul TV studio stage lights",
+      "variety show set interior"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/home/article/311/0002083840",
+    "source_title": "지수, 청순한 미모에 우렁찬 \"라우럴\"…이서진 \"성격이 걸걸하네\" (비서진)",
+    "issue_no": 223
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-115033-m-ch3/_src.jpg",
+    "credit": "엑스포츠뉴스. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/home/article/311/0002083840",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
