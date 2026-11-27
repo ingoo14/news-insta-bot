@@ -1,0 +1,71 @@
+{
+  "id": "20261127-180611-m-ch1",
+  "created": "2026-11-27T18:06:11.140219+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/xB7f31He",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-180611-m-ch1/01.jpg",
+    "docs/posts/20261127-180611-m-ch1/02.jpg"
+  ],
+  "caption": "📌 채령, A형 독감 확진…팬사인회 일정 연기\n\n있지 채령이 A형 독감 확진을 받아 예정된 스케줄을 연기하게 됐습니다.\n\n27일 소속사 JYP엔터테인먼트는 채령이 이날 오전 A형 독감 진단을 받았다고 밝혔습니다.\n\n확진으로 인해 이날부터 29일까지 사흘간 열릴 예정이던 팬사인회도 각각 다음 달 18일, 26일, 27일로 미뤄졌습니다.\n\n소속사는 팬들에게 심려를 끼쳐 진심으로 죄송하다고 전하며, 아티스트의 건강을 최우선으로 고려해 회복에 최선을 다하겠다는 입장을 밝혔습니다.\n\n한편 채령은 지난 9일 첫 솔로 미니앨범 'Lovesick(러브식)'을 발매했습니다.\n\n\n#채령 #Chaeryeong #있지 #ITZY #JYP엔터테인먼트 #팬사인회 #A형독감 #Lovesick #러브식 #케이팝 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "있지 채령, ‘독감 확진’",
+    "headline_bottom": "팬사인회 연기",
+    "subline": "스케줄과 팬사인회 일정이 미뤄졌어요",
+    "card_summary": [
+      "있지 채령이 A형 독감 확진을 받았다.",
+      "27일 소속사 JYP엔터테인먼트가 이 소식을 알렸다.",
+      "이에 따라 예정된 스케줄과 팬사인회 일정이 연기됐다.",
+      "팬사인회는 다음 달 18일, 26일, 27일로 미뤄졌다."
+    ],
+    "title": "채령, A형 독감 확진…팬사인회 일정 연기",
+    "body": "있지 채령이 A형 독감 확진을 받아 예정된 스케줄을 연기하게 됐습니다.\n\n27일 소속사 JYP엔터테인먼트는 채령이 이날 오전 A형 독감 진단을 받았다고 밝혔습니다.\n\n확진으로 인해 이날부터 29일까지 사흘간 열릴 예정이던 팬사인회도 각각 다음 달 18일, 26일, 27일로 미뤄졌습니다.\n\n소속사는 팬들에게 심려를 끼쳐 진심으로 죄송하다고 전하며, 아티스트의 건강을 최우선으로 고려해 회복에 최선을 다하겠다는 입장을 밝혔습니다.\n\n한편 채령은 지난 9일 첫 솔로 미니앨범 'Lovesick(러브식)'을 발매했습니다.",
+    "hashtags": [
+      "#채령",
+      "#Chaeryeong",
+      "#있지",
+      "#ITZY",
+      "#JYP엔터테인먼트",
+      "#팬사인회",
+      "#A형독감",
+      "#Lovesick",
+      "#러브식",
+      "#케이팝",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "채령",
+      "Chaeryeong",
+      "있지",
+      "ITZY"
+    ],
+    "person": "채령",
+    "scene_queries": [
+      "K-pop fan signing event",
+      "music studio microphone"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/408/0000329376",
+    "source_title": "있지 채령, A형 독감 확진…\"팬사인회 연기\"",
+    "issue_no": 252
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-180611-m-ch1/_src.jpg",
+    "credit": "",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "직접 전송"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
