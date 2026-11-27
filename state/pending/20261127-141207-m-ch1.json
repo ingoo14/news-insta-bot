@@ -1,0 +1,70 @@
+{
+  "id": "20261127-141207-m-ch1",
+  "created": "2026-11-27T14:12:07.212554+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/xYNSJGn4",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-141207-m-ch1/01.jpg",
+    "docs/posts/20261127-141207-m-ch1/02.jpg"
+  ],
+  "caption": "📌 ‘내일에서 기다릴게’ 스트리밍 1억 돌파, 투모로우바이투게더\n\n투모로우바이투게더의 ‘내일에서 기다릴게 (I'll See You There Tomorrow)’가 글로벌 음원 플랫폼 스포티파이에서 누적 재생 수 1억 회를 넘어섰습니다. 25일 기준 기록입니다.\n\n이 곡은 미니 6집 ‘minisode 3: TOMORROW’의 수록곡으로, 연준, 태현, 휴닝카이가 직접 작사에 참여했습니다. UK 스타일의 하우스 장르로, 밝고 신나는 트랙에 그루비하고 감미로운 멜로디가 특징입니다.\n\n곡은 발매 당시 멜론 일간 차트 88위에 올랐고, 올해 초 온라인에서 ‘낼기 붐’이 일어나며 다시 주목받았습니다. 미니 6집도 빌보드 200 3위에 진입해 4주 연속 차트인했습니다.\n\n팀은 미니 9집 ‘PERFECT STORM’으로 활동을 이어가고 있으며, 발매 첫 주 한터차트 기준 172만 장 이상을 판매해 8연속 초동 밀리언셀러를 기록했습니다. 27일 KBS2 ‘뮤직뱅크’, 28일 MBC ‘쇼! 음악중심’, 29일 SBS ‘인기가요’에서 타이틀곡 ‘Angel Bite’ 무대를 선보입니다.\n\n사진 출처: 빅히트 뮤직\n\n#투모로우바이투게더 #TOMORROW_X_TOGETHER #투바투 #TXT #내일에서기다릴게 #minisode3TOMORROW #PERFECTSTORM #AngelBite #스포티파이 #뮤직뱅크 #쇼음악중심 #인기가요",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "투모로우바이투게더",
+    "headline_bottom": "‘낼기’ 1억 스트리밍",
+    "subline": "스포티파이 억대 스트리밍 22번째 곡",
+    "card_summary": [
+      "‘내일에서 기다릴게’가 스포티파이 1억 회를 넘었다.",
+      "피처링 곡을 제외한 정식 발매곡 중 22번째 억대 기록이다.",
+      "미니 9집 첫 주 172만 장 이상, 8연속 초동 밀리언셀러다.",
+      "27~29일 음악방송 3곳에서 ‘Angel Bite’ 무대를 선보인다."
+    ],
+    "title": "‘내일에서 기다릴게’ 스트리밍 1억 돌파, 투모로우바이투게더",
+    "body": "투모로우바이투게더의 ‘내일에서 기다릴게 (I'll See You There Tomorrow)’가 글로벌 음원 플랫폼 스포티파이에서 누적 재생 수 1억 회를 넘어섰습니다. 25일 기준 기록입니다.\n\n이 곡은 미니 6집 ‘minisode 3: TOMORROW’의 수록곡으로, 연준, 태현, 휴닝카이가 직접 작사에 참여했습니다. UK 스타일의 하우스 장르로, 밝고 신나는 트랙에 그루비하고 감미로운 멜로디가 특징입니다.\n\n곡은 발매 당시 멜론 일간 차트 88위에 올랐고, 올해 초 온라인에서 ‘낼기 붐’이 일어나며 다시 주목받았습니다. 미니 6집도 빌보드 200 3위에 진입해 4주 연속 차트인했습니다.\n\n팀은 미니 9집 ‘PERFECT STORM’으로 활동을 이어가고 있으며, 발매 첫 주 한터차트 기준 172만 장 이상을 판매해 8연속 초동 밀리언셀러를 기록했습니다. 27일 KBS2 ‘뮤직뱅크’, 28일 MBC ‘쇼! 음악중심’, 29일 SBS ‘인기가요’에서 타이틀곡 ‘Angel Bite’ 무대를 선보입니다.",
+    "hashtags": [
+      "#투모로우바이투게더",
+      "#TOMORROW_X_TOGETHER",
+      "#투바투",
+      "#TXT",
+      "#내일에서기다릴게",
+      "#minisode3TOMORROW",
+      "#PERFECTSTORM",
+      "#AngelBite",
+      "#스포티파이",
+      "#뮤직뱅크",
+      "#쇼음악중심",
+      "#인기가요"
+    ],
+    "photo_queries": [
+      "투모로우바이투게더",
+      "TOMORROW X TOGETHER"
+    ],
+    "person": "투모로우바이투게더",
+    "scene_queries": [
+      "Seoul concert stage lights",
+      "music streaming headphones night"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/445/0000493969",
+    "source_title": "투모로우바이투게더, '낼기' 1억 스트리밍… \"한 번만 들은 사람은 없는 노래\"",
+    "issue_no": 241
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-141207-m-ch1/_src.jpg",
+    "credit": "빅히트 뮤직",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/445/0000493969",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
