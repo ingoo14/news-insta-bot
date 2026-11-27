@@ -1,0 +1,68 @@
+{
+  "id": "20261127-124957-m-ch2",
+  "created": "2026-11-27T12:49:57.611233+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/5renKjmF",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-124957-m-ch2/01.jpg",
+    "docs/posts/20261127-124957-m-ch2/02.jpg"
+  ],
+  "caption": "📌 ‘30주년’... 아시안 쿵푸 제너레이션, 한국 팬 만난다\n\n일본 록 밴드 아시안 쿵푸 제너레이션이 결성 30주년을 맞아 한국 팬들과 만납니다. 라이브 엔터테인먼트 브랜드 리벳에 따르면 내년 5월 22일 경기 고양시 킨텍스 10홀에서 ‘ASIAN KUNG-FU GENERATION 30th Anniversary Extra Show in Korea’를 개최합니다.\n\n이번 공연은 지난해 ‘인천 펜타포트 락 페스티벌’ 헤드라이너 출연 이후 선보이는 단독 내한 공연입니다.\n\n밴드는 고토 마사후미, 키타 켄스케, 야마다 타카히로, 이지치 키요시로로 구성된 4인조입니다. 2003년 메이저 데뷔 이후 ‘하루카 카나타’, ‘리라이트’ 등 애니메이션 주제가로 국내에서도 많은 사랑을 받았습니다.\n\n록 페스티벌 ‘나노무겐 페스’를 직접 기획해 왔으며, 지난해에는 11년 만에 행사를 부활시켰습니다. 오아시스 일본 공연 오프닝 무대에도 올랐습니다.\n\n올해는 자카르타와 남미 투어를 진행했습니다. 내년 1월 27일에는 11번째 정규앨범 ‘ASIAN KUNG-FU GENERATION’을 발매하며, 이 앨범은 영국 애비로드 스튜디오에서 녹음했습니다.\n\n사진 출처: 리벳(LIVET)\n\n#아시안쿵푸제너레이션 #AsianKungFuGeneration #AKG #일본밴드 #킨텍스 #내한공연 #펜타포트 #나노무겐페스 #하루카카나타 #LIVET",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "아시안 쿵푸 ‘30주년’",
+    "headline_bottom": "5월 22일 내한 공연",
+    "subline": "결성 30주년 기념, 킨텍스 단독 공연",
+    "card_summary": [
+      "아시안 쿵푸 제너레이션, 결성 30주년 기념 내한 공연 예정",
+      "내년 5월 22일 킨텍스 10홀에서 개최 예정",
+      "지난해 펜타포트 헤드라이너 이후 선보이는 단독 공연이다",
+      "내년 1월 27일 11번째 정규앨범 발매도 예정돼 있다"
+    ],
+    "title": "‘30주년’... 아시안 쿵푸 제너레이션, 한국 팬 만난다",
+    "body": "일본 록 밴드 아시안 쿵푸 제너레이션이 결성 30주년을 맞아 한국 팬들과 만납니다. 라이브 엔터테인먼트 브랜드 리벳에 따르면 내년 5월 22일 경기 고양시 킨텍스 10홀에서 ‘ASIAN KUNG-FU GENERATION 30th Anniversary Extra Show in Korea’를 개최합니다.\n\n이번 공연은 지난해 ‘인천 펜타포트 락 페스티벌’ 헤드라이너 출연 이후 선보이는 단독 내한 공연입니다.\n\n밴드는 고토 마사후미, 키타 켄스케, 야마다 타카히로, 이지치 키요시로로 구성된 4인조입니다. 2003년 메이저 데뷔 이후 ‘하루카 카나타’, ‘리라이트’ 등 애니메이션 주제가로 국내에서도 많은 사랑을 받았습니다.\n\n록 페스티벌 ‘나노무겐 페스’를 직접 기획해 왔으며, 지난해에는 11년 만에 행사를 부활시켰습니다. 오아시스 일본 공연 오프닝 무대에도 올랐습니다.\n\n올해는 자카르타와 남미 투어를 진행했습니다. 내년 1월 27일에는 11번째 정규앨범 ‘ASIAN KUNG-FU GENERATION’을 발매하며, 이 앨범은 영국 애비로드 스튜디오에서 녹음했습니다.",
+    "hashtags": [
+      "#아시안쿵푸제너레이션",
+      "#AsianKungFuGeneration",
+      "#AKG",
+      "#일본밴드",
+      "#킨텍스",
+      "#내한공연",
+      "#펜타포트",
+      "#나노무겐페스",
+      "#하루카카나타",
+      "#LIVET"
+    ],
+    "photo_queries": [
+      "아시안 쿵푸 제너레이션",
+      "Asian Kung-Fu Generation"
+    ],
+    "person": "아시안 쿵푸 제너레이션",
+    "scene_queries": [
+      "KINTEX Goyang concert hall",
+      "rock band concert stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/030/0003490692",
+    "source_title": "'30주년' 아시안 쿵푸 제너레이션, 韓 팬 만난다!",
+    "issue_no": 236
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-124957-m-ch2/_src.jpg",
+    "credit": "리벳(LIVET)",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/030/0003490692",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
