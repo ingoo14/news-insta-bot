@@ -1,0 +1,68 @@
+{
+  "id": "20261127-141547-m-ch1",
+  "created": "2026-11-27T14:15:47.420171+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/59lsrIKN",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-141547-m-ch1/01.jpg",
+    "docs/posts/20261127-141547-m-ch1/02.jpg"
+  ],
+  "caption": "📌 \"경쾌한 리듬\"... 김재환, '굿파트너2' OST '무빙 온' 발매\n\n김재환이 SBS 금토드라마 '굿파트너2'의 OST Part.2 '무빙 온'을 불렀습니다. 이 곡은 27일 오후 6시 각종 온라인 음원 사이트를 통해 공개됩니다.\n\n'무빙 온'은 감각적인 기타 리프와 경쾌한 리듬이 인상적인 미디엄 팝 장르의 곡입니다. 불확실한 현실과 두려움 속에서도 자신의 선택을 믿고 당당하게 나아가겠다는 의지를 노랫말에 담았습니다.\n\n세련된 사운드 위에 펼쳐지는 김재환의 역동적인 보컬이 곡의 밝고 힘찬 분위기를 더합니다.\n\n'굿파트너2'는 지난 20일 첫 방송에서 전국 시청률 8.4%를 기록했습니다. 이튿날 방송된 2회는 전국 시청률 7.7%, 순간 최고 시청률 10%를 돌파했습니다.\n\n김재환은 지난 10월 싱글 'Love, From Here(러브, 프롬 히어)'를 발표하고 단독 콘서트 '여백:餘白'을 마무리했습니다.\n\n사진 출처: 뮤직앤뉴\n\n#김재환 #KimJaehwan #굿파트너2 #GoodPartner2 #무빙온 #MovingOn #OST #SBS금토드라마 #김재환무빙온 #드라마OST",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "김재환, '무빙 온'",
+    "headline_bottom": "27일 OST 발매",
+    "subline": "드라마 '굿파트너2' OST 참여",
+    "card_summary": [
+      "김재환, '굿파트너2' OST '무빙 온' 발매",
+      "27일 오후 6시 온라인 음원 사이트에 공개",
+      "기타 리프와 경쾌한 리듬이 인상적인 미디엄 팝 곡",
+      "드라마는 첫 방송 전국 시청률 8.4%를 기록했다"
+    ],
+    "title": "\"경쾌한 리듬\"... 김재환, '굿파트너2' OST '무빙 온' 발매",
+    "body": "김재환이 SBS 금토드라마 '굿파트너2'의 OST Part.2 '무빙 온'을 불렀습니다. 이 곡은 27일 오후 6시 각종 온라인 음원 사이트를 통해 공개됩니다.\n\n'무빙 온'은 감각적인 기타 리프와 경쾌한 리듬이 인상적인 미디엄 팝 장르의 곡입니다. 불확실한 현실과 두려움 속에서도 자신의 선택을 믿고 당당하게 나아가겠다는 의지를 노랫말에 담았습니다.\n\n세련된 사운드 위에 펼쳐지는 김재환의 역동적인 보컬이 곡의 밝고 힘찬 분위기를 더합니다.\n\n'굿파트너2'는 지난 20일 첫 방송에서 전국 시청률 8.4%를 기록했습니다. 이튿날 방송된 2회는 전국 시청률 7.7%, 순간 최고 시청률 10%를 돌파했습니다.\n\n김재환은 지난 10월 싱글 'Love, From Here(러브, 프롬 히어)'를 발표하고 단독 콘서트 '여백:餘白'을 마무리했습니다.",
+    "hashtags": [
+      "#김재환",
+      "#KimJaehwan",
+      "#굿파트너2",
+      "#GoodPartner2",
+      "#무빙온",
+      "#MovingOn",
+      "#OST",
+      "#SBS금토드라마",
+      "#김재환무빙온",
+      "#드라마OST"
+    ],
+    "photo_queries": [
+      "김재환",
+      "Kim Jae-hwan"
+    ],
+    "person": "김재환",
+    "scene_queries": [
+      "concert stage lights",
+      "Seoul night city street"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/445/0000493957",
+    "source_title": "김재환, 흥행 시동 건 '굿파트너2' 지원사격…오늘(27일) OST 발매",
+    "issue_no": 243
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-141547-m-ch1/_src.jpg",
+    "credit": "뮤직앤뉴",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/445/0000493957",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
