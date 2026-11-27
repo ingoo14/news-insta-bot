@@ -1,0 +1,69 @@
+{
+  "id": "20261127-180417-m-ch1",
+  "created": "2026-11-27T18:04:17.245926+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/GSQf8yiB",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-180417-m-ch1/01.jpg",
+    "docs/posts/20261127-180417-m-ch1/02.jpg"
+  ],
+  "caption": "📌 \"첫 외국인 진행자\"... 미나미, MBC 연예대상 MC 발탁\n\n리센느 미나미가 'MBC 방송연예대상' 사상 첫 외국인 진행자로 발탁됐습니다. 26일 MBC와 방송계에 따르면 미나미는 전현무, 장도연과 함께 오는 12월 29일 생방송으로 진행되는 '2026 MBC 방송연예대상' MC를 맡습니다.\n\n지난해에 이어 진행을 맡는 전현무, 장도연에 미나미가 새롭게 합류해 3인 체제가 됐습니다. 한국에서 활동하는 외국인 아이돌이 시상식 전체를 이끄는 MC를 맡은 것은 이번이 첫 사례입니다.\n\n미나미는 일본 출신으로, 2024년 3월 걸그룹 리센느의 멤버로 데뷔했습니다. 팀 내 유일한 일본인 멤버이며, 최근에는 유튜브 콘텐츠에서 선보인 갸루 콘셉트와 '거제 야호' 유행어로 온라인에서 화제를 모았습니다.\n\n전현무는 2016년 처음 진행을 맡은 뒤 2018년부터 지난해까지 8년 연속 시상식 사회를 담당했습니다. 올해까지 9년 연속이자 통산 10번째 진행입니다.\n\n한편 리센느는 지난 3일 네 번째 미니앨범 'PULSE'를 발표하고 타이틀곡 'With'로 활동했습니다. 해당 곡은 발매 2시간 만에 멜론 TOP100 1위에 올랐습니다.\n\n사진 출처: 세계일보. All rights reserved.\n\n#리센느 #미나미 #Minami #RESCENE #MBC방송연예대상 #MBC연예대상 #전현무 #장도연 #연예대상 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "예능",
+    "headline_top": "미나미, '연예대상' 진행",
+    "headline_bottom": "첫 외국인 진행자",
+    "subline": "MBC 방송연예대상 3인 MC 합류",
+    "card_summary": [
+      "리센느 미나미가 MBC 방송연예대상 MC로 발탁됐다.",
+      "전현무, 장도연과 3인 체제로 진행한다.",
+      "12월 29일 생방송으로 열리는 시상식이다."
+    ],
+    "title": "\"첫 외국인 진행자\"... 미나미, MBC 연예대상 MC 발탁",
+    "body": "리센느 미나미가 'MBC 방송연예대상' 사상 첫 외국인 진행자로 발탁됐습니다. 26일 MBC와 방송계에 따르면 미나미는 전현무, 장도연과 함께 오는 12월 29일 생방송으로 진행되는 '2026 MBC 방송연예대상' MC를 맡습니다.\n\n지난해에 이어 진행을 맡는 전현무, 장도연에 미나미가 새롭게 합류해 3인 체제가 됐습니다. 한국에서 활동하는 외국인 아이돌이 시상식 전체를 이끄는 MC를 맡은 것은 이번이 첫 사례입니다.\n\n미나미는 일본 출신으로, 2024년 3월 걸그룹 리센느의 멤버로 데뷔했습니다. 팀 내 유일한 일본인 멤버이며, 최근에는 유튜브 콘텐츠에서 선보인 갸루 콘셉트와 '거제 야호' 유행어로 온라인에서 화제를 모았습니다.\n\n전현무는 2016년 처음 진행을 맡은 뒤 2018년부터 지난해까지 8년 연속 시상식 사회를 담당했습니다. 올해까지 9년 연속이자 통산 10번째 진행입니다.\n\n한편 리센느는 지난 3일 네 번째 미니앨범 'PULSE'를 발표하고 타이틀곡 'With'로 활동했습니다. 해당 곡은 발매 2시간 만에 멜론 TOP100 1위에 올랐습니다.",
+    "hashtags": [
+      "#리센느",
+      "#미나미",
+      "#Minami",
+      "#RESCENE",
+      "#MBC방송연예대상",
+      "#MBC연예대상",
+      "#전현무",
+      "#장도연",
+      "#연예대상",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "미나미",
+      "Minami",
+      "리센느",
+      "RESCENE"
+    ],
+    "person": "미나미",
+    "scene_queries": [
+      "MBC broadcasting center Seoul",
+      "award show stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/022/0004178675",
+    "source_title": "리센느 미나미, MBC 연예대상 MC 발탁…첫 외국인 진행자 됐다",
+    "issue_no": 251
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-180417-m-ch1/_src.jpg",
+    "credit": "세계일보. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/022/0004178675",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
