@@ -1,0 +1,67 @@
+{
+  "id": "20261127-124853-m-ch2",
+  "created": "2026-11-27T12:48:53.469930+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/56Xx0zyG",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-124853-m-ch2/01.jpg",
+    "docs/posts/20261127-124853-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"KISS N TELL\"... 에스파, 영어 버전으로 글로벌 팬 찾는다\n\n에스파가 27일 오후 2시 싱글 'KISS N TELL (English Ver.)'을 공개합니다.\n\n이번 곡은 지난 7월 발매된 일본 첫 미니앨범 타이틀곡 'KISS N TELL'을 영어로 재해석한 버전입니다. 경쾌한 피아노 사운드와 댄서블한 비트를 앞세운 하우스 기반 댄스 팝 곡입니다.\n\n원곡은 부드러운 코러스와 밝은 팝 감성으로 좋은 반응을 얻었습니다. 일본 미니앨범 발매 당시 오리콘 데일리 앨범 차트 1위에 올랐고, 현재 스포티파이 누적 스트리밍 수는 4600만 회를 넘었습니다.\n\n앞서 에스파는 홀리데이 시즌을 맞아 'KISS N TELL'의 m-flo ☆Taku Takahashi 리믹스 버전을 선보인 바 있습니다.\n\n사진 출처: SM엔터테인먼트\n\n#에스파 #aespa #KISSNTELL #KISSNTELL_EnglishVer #SMentertainment #하우스댄스팝 #댄스팝 #신곡 #일본미니앨범 #오리콘차트",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "에스파, '영어 버전'",
+    "headline_bottom": "27일 글로벌 발매",
+    "subline": "일본 히트곡을 영어로 새롭게 재해석",
+    "card_summary": [
+      "에스파가 'KISS N TELL' 영어 버전을 공개한다.",
+      "27일 오후 2시 싱글로 글로벌 발매될 예정이다.",
+      "일본 첫 미니앨범 타이틀곡을 영어로 재해석한 곡이다."
+    ],
+    "title": "\"KISS N TELL\"... 에스파, 영어 버전으로 글로벌 팬 찾는다",
+    "body": "에스파가 27일 오후 2시 싱글 'KISS N TELL (English Ver.)'을 공개합니다.\n\n이번 곡은 지난 7월 발매된 일본 첫 미니앨범 타이틀곡 'KISS N TELL'을 영어로 재해석한 버전입니다. 경쾌한 피아노 사운드와 댄서블한 비트를 앞세운 하우스 기반 댄스 팝 곡입니다.\n\n원곡은 부드러운 코러스와 밝은 팝 감성으로 좋은 반응을 얻었습니다. 일본 미니앨범 발매 당시 오리콘 데일리 앨범 차트 1위에 올랐고, 현재 스포티파이 누적 스트리밍 수는 4600만 회를 넘었습니다.\n\n앞서 에스파는 홀리데이 시즌을 맞아 'KISS N TELL'의 m-flo ☆Taku Takahashi 리믹스 버전을 선보인 바 있습니다.",
+    "hashtags": [
+      "#에스파",
+      "#aespa",
+      "#KISSNTELL",
+      "#KISSNTELL_EnglishVer",
+      "#SMentertainment",
+      "#하우스댄스팝",
+      "#댄스팝",
+      "#신곡",
+      "#일본미니앨범",
+      "#오리콘차트"
+    ],
+    "photo_queries": [
+      "에스파",
+      "aespa"
+    ],
+    "person": "에스파",
+    "scene_queries": [
+      "concert stage lights",
+      "city night lights Seoul"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/030/0003490699",
+    "source_title": "홀리데이 시즌 정조준…에스파, 'KISS N TELL' 英 버전 공개",
+    "issue_no": 235
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-124853-m-ch2/_src.jpg",
+    "credit": "SM엔터테인먼트",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/030/0003490699",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
