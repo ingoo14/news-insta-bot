@@ -1,0 +1,70 @@
+{
+  "id": "20261127-160751-m-ch1",
+  "created": "2026-11-27T16:07:51.319914+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/FHOQyqgy",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-160751-m-ch1/01.jpg",
+    "docs/posts/20261127-160751-m-ch1/02.jpg"
+  ],
+  "caption": "📌 '4WARD'... 마마무 서울 앙코르 콘서트\n\n마마무가 2027년 1월 2일과 3일 서울 송파구 올림픽공원 티켓링크 라이브 아레나에서 월드투어 '4WARD' 앙코르 콘서트를 엽니다.\n\n마마무는 지난 6월 서울 공연으로 투어를 시작했습니다. 이후 가오슝, 마카오, 홍콩, 도쿄, 타이베이 등 주요 도시에서 팬들과 만났으며, 여러 도시에서 매진을 기록했습니다.\n\n각자 솔로 활동을 해온 네 멤버가 한 무대에 모입니다. 투어명 '4WARD'는 네 멤버를 뜻하는 숫자 '4'와 앞으로 나아간다는 'FORWARD'를 결합한 이름입니다.\n\n이번 서울 공연은 월드투어의 마지막 무대입니다. 앙코르 공연에 앞서 28일과 29일에는 타이베이에서 투어를 이어갑니다.\n\n서울 공연 티켓은 멜론티켓과 티켓링크에서 예매할 수 있습니다. 팬클럽 선예매는 30일 오후 8시, 일반 예매는 12월 4일 오후 8시에 진행됩니다.\n\n사진 출처: 매일경제. All rights reserved.\n\n#마마무 #MAMAMOO #4WARD #마마무앙코르 #앙코르콘서트 #올림픽공원 #티켓링크 #멜론티켓 #솔라 #문별 #휘인 #화사",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "마마무, '4WARD'",
+    "headline_bottom": "2027년 1월 앙코르",
+    "subline": "월드투어 '4WARD' 서울 앙코르 공연",
+    "card_summary": [
+      "마마무가 2027년 1월 2~3일 앙코르 콘서트를 연다.",
+      "장소는 서울 올림픽공원 티켓링크 라이브 아레나다.",
+      "월드투어 '4WARD'의 대미를 장식하는 무대다.",
+      "팬클럽 선예매는 30일, 일반 예매는 12월 4일 진행된다."
+    ],
+    "title": "'4WARD'... 마마무 서울 앙코르 콘서트",
+    "body": "마마무가 2027년 1월 2일과 3일 서울 송파구 올림픽공원 티켓링크 라이브 아레나에서 월드투어 '4WARD' 앙코르 콘서트를 엽니다.\n\n마마무는 지난 6월 서울 공연으로 투어를 시작했습니다. 이후 가오슝, 마카오, 홍콩, 도쿄, 타이베이 등 주요 도시에서 팬들과 만났으며, 여러 도시에서 매진을 기록했습니다.\n\n각자 솔로 활동을 해온 네 멤버가 한 무대에 모입니다. 투어명 '4WARD'는 네 멤버를 뜻하는 숫자 '4'와 앞으로 나아간다는 'FORWARD'를 결합한 이름입니다.\n\n이번 서울 공연은 월드투어의 마지막 무대입니다. 앙코르 공연에 앞서 28일과 29일에는 타이베이에서 투어를 이어갑니다.\n\n서울 공연 티켓은 멜론티켓과 티켓링크에서 예매할 수 있습니다. 팬클럽 선예매는 30일 오후 8시, 일반 예매는 12월 4일 오후 8시에 진행됩니다.",
+    "hashtags": [
+      "#마마무",
+      "#MAMAMOO",
+      "#4WARD",
+      "#마마무앙코르",
+      "#앙코르콘서트",
+      "#올림픽공원",
+      "#티켓링크",
+      "#멜론티켓",
+      "#솔라",
+      "#문별",
+      "#휘인",
+      "#화사"
+    ],
+    "photo_queries": [
+      "마마무",
+      "MAMAMOO"
+    ],
+    "person": "마마무",
+    "scene_queries": [
+      "Olympic Park Seoul concert arena",
+      "concert stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/009/0005770016",
+    "source_title": "마마무, 18개 도시 홀리고 서울 컴백…2027년 1월 앙코르 콘서트",
+    "issue_no": 246
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-160751-m-ch1/_src.jpg",
+    "credit": "매일경제. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/009/0005770016",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
