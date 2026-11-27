@@ -1,0 +1,72 @@
+{
+  "id": "20261127-205545-m-ch1",
+  "created": "2026-11-27T20:55:45.701938+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/GWWbRkvA",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-205545-m-ch1/01.jpg",
+    "docs/posts/20261127-205545-m-ch1/02.jpg"
+  ],
+  "caption": "📌 임찬규, 프로골퍼 손새은과 12월 19일 결혼\n\nLG 트윈스는 27일 투수 임찬규가 프로골퍼 손새은과 12월 19일 결혼한다고 밝혔습니다.\n\n두 사람은 2022년 소개팅으로 만나 공개 열애를 이어왔습니다.\n\n손새은은 2017년 KLPGA에 입회한 프로골퍼이며, 그룹 에이핑크 출신 배우 손나은의 친동생으로도 알려져 있습니다.\n\n임찬규는 2026 시즌 31경기에서 15승 7패, 평균자책점 4.46을 기록하며 프로 데뷔 16년 만에 처음으로 개인 타이틀을 획득했습니다.\n\n\n#임찬규 #손새은 #손나은 #에이핑크 #LG트윈스 #KLPGA #프로골퍼 #결혼 #연예뉴스 #Apink #ImChanKyu #SonSaeEun",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "임찬규·손새은, 결혼 소식",
+    "headline_bottom": "12월 19일 결혼",
+    "subline": "LG 임찬규, 프로골퍼 손새은과 가정을 꾸린다",
+    "card_summary": [
+      "LG 트윈스 투수 임찬규가 프로골퍼 손새은과 결혼한다.",
+      "27일 구단에 따르면 두 사람은 12월 19일 결혼한다.",
+      "두 사람은 2022년 소개팅으로 만나 공개 열애를 이어왔다.",
+      "손새은은 2017년 KLPGA에 입회한 프로골퍼다."
+    ],
+    "title": "임찬규, 프로골퍼 손새은과 12월 19일 결혼",
+    "body": "LG 트윈스는 27일 투수 임찬규가 프로골퍼 손새은과 12월 19일 결혼한다고 밝혔습니다.\n\n두 사람은 2022년 소개팅으로 만나 공개 열애를 이어왔습니다.\n\n손새은은 2017년 KLPGA에 입회한 프로골퍼이며, 그룹 에이핑크 출신 배우 손나은의 친동생으로도 알려져 있습니다.\n\n임찬규는 2026 시즌 31경기에서 15승 7패, 평균자책점 4.46을 기록하며 프로 데뷔 16년 만에 처음으로 개인 타이틀을 획득했습니다.",
+    "hashtags": [
+      "#임찬규",
+      "#손새은",
+      "#손나은",
+      "#에이핑크",
+      "#LG트윈스",
+      "#KLPGA",
+      "#프로골퍼",
+      "#결혼",
+      "#연예뉴스",
+      "#Apink",
+      "#ImChanKyu",
+      "#SonSaeEun"
+    ],
+    "photo_queries": [
+      "임찬규",
+      "Im Chan-kyu",
+      "손새은",
+      "Son Sae-eun"
+    ],
+    "person": "임찬규",
+    "scene_queries": [
+      "golf course Korea",
+      "baseball stadium night"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/home/article/440/0000054478",
+    "source_title": "'손나은 동생' 프로골퍼 손새은, LG 임찬규와 12월19일 결혼",
+    "issue_no": 257
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-205545-m-ch1/_src.jpg",
+    "credit": "",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "직접 전송"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
