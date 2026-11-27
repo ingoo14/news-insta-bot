@@ -1,0 +1,69 @@
+{
+  "id": "20261127-120417-m-ch3",
+  "created": "2026-11-27T12:04:17.939515+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-27T13:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/home/article/312/0000786365",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-120417-m-ch3/01.jpg",
+    "docs/posts/20261127-120417-m-ch3/02.jpg"
+  ],
+  "caption": "📌 '나인 투 식스', 첫 회 시청률 3.6%로 수목극 1위\n\nSBS 새 수목드라마 '나인 투 식스'가 지난 25일 첫 방송되며 수목극 1위로 출발했습니다. 1회 전국 가구 기준 시청률은 3.6%를 기록했습니다.\n\n같은 시간대 KBS2에서 생중계된 청룡영화상 1부(2.8%)와 2부(3.4%)보다 높은 수치입니다. MBC '책책책 책을 읽읍시다 리턴즈'는 1.4%였습니다.\n\n박민영은 법무팀 차장 강이지 역을, 육성재는 인턴 한선우 역을 맡았습니다. 두 사람은 악연으로 시작해 상사와 인턴으로 재회하는 설정입니다.\n\n고수(본부장 박현태 역)는 1회에 등장하지 않았습니다. 2회에서는 강이지가 악의적인 갑질 논란에 휘말려 법무팀을 떠나 경영지원팀으로 좌천되는 전개가 예고됐습니다.\n\n사진 출처: SBS\n\n#나인투식스 #박민영 #육성재 #고수 #SBS #수목드라마 #수목극1위 #시청률 #로코퀸 #드라마",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "드라마",
+    "headline_top": "박민영, '나인 투 식스'",
+    "headline_bottom": "수목극 1위 출발",
+    "subline": "1회 전국 시청률 3.6%로 수목극 1위",
+    "card_summary": [
+      "SBS 새 수목드라마 '나인 투 식스'가 지난 25일 첫 방송됐다.",
+      "전국 가구 기준 시청률 3.6%로 수목극 1위에 올랐다.",
+      "같은 시간대 KBS2 청룡영화상 1·2부 시청률을 앞섰다."
+    ],
+    "title": "'나인 투 식스', 첫 회 시청률 3.6%로 수목극 1위",
+    "body": "SBS 새 수목드라마 '나인 투 식스'가 지난 25일 첫 방송되며 수목극 1위로 출발했습니다. 1회 전국 가구 기준 시청률은 3.6%를 기록했습니다.\n\n같은 시간대 KBS2에서 생중계된 청룡영화상 1부(2.8%)와 2부(3.4%)보다 높은 수치입니다. MBC '책책책 책을 읽읍시다 리턴즈'는 1.4%였습니다.\n\n박민영은 법무팀 차장 강이지 역을, 육성재는 인턴 한선우 역을 맡았습니다. 두 사람은 악연으로 시작해 상사와 인턴으로 재회하는 설정입니다.\n\n고수(본부장 박현태 역)는 1회에 등장하지 않았습니다. 2회에서는 강이지가 악의적인 갑질 논란에 휘말려 법무팀을 떠나 경영지원팀으로 좌천되는 전개가 예고됐습니다.",
+    "hashtags": [
+      "#나인투식스",
+      "#박민영",
+      "#육성재",
+      "#고수",
+      "#SBS",
+      "#수목드라마",
+      "#수목극1위",
+      "#시청률",
+      "#로코퀸",
+      "#드라마"
+    ],
+    "photo_queries": [
+      "박민영",
+      "Park Min-young",
+      "육성재",
+      "Yook Sung-jae"
+    ],
+    "person": "박민영",
+    "scene_queries": [
+      "Seoul office building night",
+      "television drama set office"
+    ],
+    "fact_checked": true,
+    "press": "텐아시아",
+    "url": "https://m.entertain.naver.com/home/article/312/0000786365",
+    "source_title": "청룡 꺾고 수목극 1위 찍었다…박민영 기시감·난해한 전개는 넘어야 할 산 [TEN스타필드]",
+    "issue_no": 230
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-120417-m-ch3/_src.jpg",
+    "credit": "SBS",
+    "license": "",
+    "page": "https://m.entertain.naver.com/home/article/312/0000786365",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
