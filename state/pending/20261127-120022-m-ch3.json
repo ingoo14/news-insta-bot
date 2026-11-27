@@ -1,0 +1,69 @@
+{
+  "id": "20261127-120022-m-ch3",
+  "created": "2026-11-27T12:00:22.526272+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-27T10:00:00+00:00",
+  "poll": null,
+  "src_url": "https://www.topstarnews.net/news/articleView.html?idxno=16287560",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-120022-m-ch3/01.jpg",
+    "docs/posts/20261127-120022-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"천천히 강렬하게\"… 송혜교·공유·김설현 메인 포스터·예고편 공개\n\n작품 '천천히 강렬하게'의 메인 포스터와 예고편이 공개됐습니다.\n\n송혜교, 공유, 김설현이 이름을 올린 작품으로, 에피소드 타이틀이 처음 공개됐습니다.\n\n사진 출처: 넷플릭스)\n\n#천천히강렬하게 #송혜교 #공유 #김설현 #Songhyekyo #GongYoo #KimSeolhyun #메인포스터 #예고편 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "'천천히 강렬하게'",
+    "headline_bottom": "포스터·예고편 공개",
+    "subline": "메인 포스터와 예고편, 에피소드 타이틀 공개",
+    "card_summary": [
+      "'천천히 강렬하게'의 메인 포스터와 예고편이 공개됐다.",
+      "송혜교, 공유, 김설현이 이름을 올린 작품이다.",
+      "에피소드 타이틀이 처음 공개됐다."
+    ],
+    "title": "\"천천히 강렬하게\"… 송혜교·공유·김설현 메인 포스터·예고편 공개",
+    "body": "작품 '천천히 강렬하게'의 메인 포스터와 예고편이 공개됐습니다.\n\n송혜교, 공유, 김설현이 이름을 올린 작품으로, 에피소드 타이틀이 처음 공개됐습니다.",
+    "hashtags": [
+      "#천천히강렬하게",
+      "#송혜교",
+      "#공유",
+      "#김설현",
+      "#Songhyekyo",
+      "#GongYoo",
+      "#KimSeolhyun",
+      "#메인포스터",
+      "#예고편",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "송혜교",
+      "Song Hye-kyo",
+      "공유",
+      "Gong Yoo"
+    ],
+    "person": "송혜교",
+    "scene_queries": [
+      "drama poster photo shoot studio",
+      "Seoul city night street"
+    ],
+    "fact_checked": true,
+    "press": "https://www.topstarnews.net/news/author_isumi.html",
+    "url": "https://www.topstarnews.net/news/articleView.html?idxno=16287560",
+    "source_title": "송혜교·공유·김설현 ‘천천히 강렬하게’, 메인 포스터·예고편 공개…에피소드 타이틀 첫 공개",
+    "issue_no": 228
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-120022-m-ch3/_src.jpg",
+    "credit": "넷플릭스)",
+    "license": "",
+    "page": "https://www.topstarnews.net/news/articleView.html?idxno=16287560",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
