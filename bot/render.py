@@ -464,6 +464,10 @@ def crop_capture(path: str) -> bool:
     if bg is None:
         print("[캡처 자르기] 앱 화면이 아닌 일반 사진 → 그대로 사용")
         return False
+    # 검정 배경은 어두운 사진(밤 레드카펫·무대)과 헷갈리기 쉬워서, 세로로 긴 휴대폰 캡처일 때만 자름
+    if (bg < 40).all() and h / w < 1.6:
+        print("[캡처 자르기] 어두운 일반 사진일 수 있음 → 그대로 사용")
+        return False
     near = (np.abs(a - bg).sum(axis=2) < 40).mean(axis=1)  # 줄마다 배경색 비율
     photo_row = near < 0.6
     best, start, run = (0, 0), None, 0
@@ -476,6 +480,12 @@ def crop_capture(path: str) -> bool:
             start = None
     top, bot = best
     if bot - top < h * 0.25:
+        return False
+    # 잘라낼 부분이 진짜 '앱 화면'인지 확인: 앱 화면은 글자 사이사이 거의 빈(배경색) 줄이 많음.
+    # 흰 벽·하늘처럼 사진 속 밝은 부분이면 빈 줄이 거의 없음 → 자르지 않음
+    cut = np.concatenate([near[:top], near[bot:]])
+    if len(cut) and (cut > 0.85).mean() < 0.4:
+        print("[캡처 자르기] 잘라낼 곳이 앱 화면이 아니라 사진 일부 → 그대로 사용")
         return False
     band = a[top:bot]
     col_near = (np.abs(band - bg).sum(axis=2) < 40).mean(axis=0)
@@ -490,7 +500,9 @@ def crop_capture(path: str) -> bool:
                 bestc = (st, x)
             st = None
     if bestc[1] - bestc[0] > w * 0.3:
-        left, right = bestc
+        cutc = np.concatenate([col_near[:bestc[0]], col_near[bestc[1]:]])
+        if not len(cutc) or (cutc > 0.85).mean() >= 0.4:  # 가로도 앱 화면(댓글창 등)일 때만 자름
+            left, right = bestc
     im.crop((left, top, right, bot)).save(path, "JPEG", quality=95)
     print(f"[캡처 자르기] {w}x{h} → {right - left}x{bot - top}")
     return True
