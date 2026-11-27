@@ -1,0 +1,67 @@
+{
+  "id": "20261127-120745-m-ch3",
+  "created": "2026-11-27T12:07:45.919631+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/relationship/article/112/0003814534",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-120745-m-ch3/01.jpg",
+    "docs/posts/20261127-120745-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"셀카 와장창 찍었어요\"... 아옳이, 파리 투샷 공개\n\n유튜버 아옳이가 남자친구이자 한의사인 김형배와 파리에서 찍은 사진을 공개했습니다.\n\n아옳이는 지난 25일 자신의 채널에 \"한 달 전에 예약한 파리 핫플 레스토랑, 너무 예뻐서 셀카 와장창 찍었어요\"라는 글과 함께 사진 여러 장을 올렸습니다.\n\n사진 속 아옳이는 파리의 건물을 배경으로 김형배의 품에 안겨 브이 포즈를 취했습니다. 아옳이는 짙은 베이지 컬러 니트를, 김형배는 브라운 컬러 니트를 입었습니다.\n\n네티즌들은 \"디즈니 왕자 공주\" 등의 반응을 보였습니다.\n\n아옳이는 지난 7월 연인의 얼굴을 가린 사진으로 열애 사실을 알렸으며, 이후 김형배와 함께 찍은 사진을 게재하며 공개 연애를 이어가고 있습니다.\n\n사진 출처: 헤럴드뮤즈 All Rights Reserved\n\n#아옳이 #김형배 #아옳이김형배 #유튜버아옳이 #파리 #파리여행 #커플스타그램 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "아옳이·김형배 파리 셀카",
+    "headline_bottom": "파리 투샷 공개",
+    "subline": "김형배와 파리에서 찍은 사진 공개",
+    "card_summary": [
+      "아옳이가 남자친구 김형배와 파리 사진을 공개했다.",
+      "지난 25일 채널에 여러 장의 사진을 올렸다.",
+      "파리 레스토랑에서 찍은 셀카와 투샷이 담겼다.",
+      "두 사람은 지난 7월 열애 사실을 알린 바 있다."
+    ],
+    "title": "\"셀카 와장창 찍었어요\"... 아옳이, 파리 투샷 공개",
+    "body": "유튜버 아옳이가 남자친구이자 한의사인 김형배와 파리에서 찍은 사진을 공개했습니다.\n\n아옳이는 지난 25일 자신의 채널에 \"한 달 전에 예약한 파리 핫플 레스토랑, 너무 예뻐서 셀카 와장창 찍었어요\"라는 글과 함께 사진 여러 장을 올렸습니다.\n\n사진 속 아옳이는 파리의 건물을 배경으로 김형배의 품에 안겨 브이 포즈를 취했습니다. 아옳이는 짙은 베이지 컬러 니트를, 김형배는 브라운 컬러 니트를 입었습니다.\n\n네티즌들은 \"디즈니 왕자 공주\" 등의 반응을 보였습니다.\n\n아옳이는 지난 7월 연인의 얼굴을 가린 사진으로 열애 사실을 알렸으며, 이후 김형배와 함께 찍은 사진을 게재하며 공개 연애를 이어가고 있습니다.",
+    "hashtags": [
+      "#아옳이",
+      "#김형배",
+      "#아옳이김형배",
+      "#유튜버아옳이",
+      "#파리",
+      "#파리여행",
+      "#커플스타그램",
+      "#연예뉴스",
+      "#헤럴드뮤즈"
+    ],
+    "photo_queries": [
+      "아옳이",
+      "김형배"
+    ],
+    "person": "아옳이",
+    "scene_queries": [
+      "Paris restaurant street",
+      "Eiffel Tower Paris winter"
+    ],
+    "fact_checked": true,
+    "press": "헤럴드뮤즈",
+    "url": "https://m.entertain.naver.com/relationship/article/112/0003814534",
+    "source_title": "아옳이♥김형배, 현실판 디즈니 왕자와 공주..벌써 신혼여행 분위기 물씬",
+    "issue_no": 231
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-120745-m-ch3/_src.jpg",
+    "credit": "헤럴드뮤즈 All Rights Reserved",
+    "license": "",
+    "page": "https://m.entertain.naver.com/relationship/article/112/0003814534",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
