@@ -1,0 +1,68 @@
+{
+  "id": "20261127-124847-m-ch1",
+  "created": "2026-11-27T12:48:47.604037+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/FIc6DPpf",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-124847-m-ch1/01.jpg",
+    "docs/posts/20261127-124847-m-ch1/02.jpg"
+  ],
+  "caption": "📌 '결성 30주년' 아시안 쿵푸 제너레이션, 내년 5월 내한 단독 공연\n\n일본 록 밴드 아시안 쿵푸 제너레이션이 결성 30주년을 기념해 내한 단독 공연을 개최합니다. 27일 라이브 엔터테인먼트 브랜드 리벳(LIVET)에 따르면 이들은 내년 5월 22일 경기 고양시 킨텍스 10홀에서 ‘ASIAN KUNG-FU GENERATION 30th Anniversary Extra Show in Korea’를 개최합니다.\n\n이번 공연은 30년간의 음악 여정을 담은 단독 공연입니다. 아시안 쿵푸 제너레이션은 내년 1월 27일 11번째 정규앨범을 발매하며, 일본 전국 홀 투어와 아레나 공연을 진행한 뒤 한국 팬들과 만날 예정입니다.\n\n사진 출처: 스포츠월드. All rights reserved.\n\n#아시안쿵푸제너레이션 #ASIANIKUNGFUGENERATION #내한공연 #락밴드 #공연 #음악 #내년5월 #킨텍스 #락 #일본밴드",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "아시안 쿵푸 제너레이션",
+    "headline_bottom": "내년 5월 내한",
+    "subline": "결성 30주년 기념 단독 공연 개최",
+    "card_summary": [
+      "결성 30주년 기념 내한 단독 공연을 연다.",
+      "내년 5월 22일 경기 고양 킨텍스 10홀에서 열린다.",
+      "30년간의 음악 여정을 담은 단독 공연이다.",
+      "내년 1월 27일 11번째 정규앨범을 발매한다."
+    ],
+    "title": "'결성 30주년' 아시안 쿵푸 제너레이션, 내년 5월 내한 단독 공연",
+    "body": "일본 록 밴드 아시안 쿵푸 제너레이션이 결성 30주년을 기념해 내한 단독 공연을 개최합니다. 27일 라이브 엔터테인먼트 브랜드 리벳(LIVET)에 따르면 이들은 내년 5월 22일 경기 고양시 킨텍스 10홀에서 ‘ASIAN KUNG-FU GENERATION 30th Anniversary Extra Show in Korea’를 개최합니다.\n\n이번 공연은 30년간의 음악 여정을 담은 단독 공연입니다. 아시안 쿵푸 제너레이션은 내년 1월 27일 11번째 정규앨범을 발매하며, 일본 전국 홀 투어와 아레나 공연을 진행한 뒤 한국 팬들과 만날 예정입니다.",
+    "hashtags": [
+      "#아시안쿵푸제너레이션",
+      "#ASIANIKUNGFUGENERATION",
+      "#내한공연",
+      "#락밴드",
+      "#공연",
+      "#음악",
+      "#내년5월",
+      "#킨텍스",
+      "#락",
+      "#일본밴드"
+    ],
+    "photo_queries": [
+      "아시안 쿵푸 제너레이션",
+      "ASIAN KUNG-FU GENERATION"
+    ],
+    "person": "아시안 쿵푸 제너레이션",
+    "scene_queries": [
+      "rock band concert stage",
+      "live music performance lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/396/0000762147",
+    "source_title": "‘결성 30주년’ 日 록밴드 아시안 쿵푸 제너레이션, 내년 5월 내한 단독 공연",
+    "issue_no": 234
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-124847-m-ch1/_src.jpg",
+    "credit": "스포츠월드. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/396/0000762147",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
