@@ -1,0 +1,57 @@
+{
+  "id": "20261127-123958-c-ch3",
+  "created": "2026-11-27T12:39:58.730677+09:00",
+  "status": "awaiting",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-27T14:00:00+00:00",
+  "poll": null,
+  "images": [
+    "docs/posts/20261127-123958-c-ch3/01.jpg",
+    "docs/posts/20261127-123958-c-ch3/02.jpg",
+    "docs/posts/20261127-123958-c-ch3/03.jpg",
+    "docs/posts/20261127-123958-c-ch3/04.jpg",
+    "docs/posts/20261127-123958-c-ch3/05.jpg"
+  ],
+  "caption": "📌 주우재, 구해줘! 홈즈서 증권가 범죄자 찾아 나서\n\n사진 출처: 구해줘! 홈즈 방송 캡처\n\n#주우재 #구해줘홈즈 #구해줘!홈즈 #주우재증권가 #증권가 #증권가범죄자 #예능 #구해줘홈즈주우재",
+  "story": {
+    "tag": "예능",
+    "headline_top": "주우재, 증권가 추적",
+    "headline_bottom": "증권가 현장 출동",
+    "subline": "구해줘! 홈즈 속 놀란 표정 포착",
+    "title": "주우재, 구해줘! 홈즈서 증권가 범죄자 찾아 나서",
+    "body": "주우재가 '구해줘! 홈즈'에서 증권가 범죄자를 찾아 나섰습니다.\n\n주우재는 검은 별무늬 비니와 데님 재킷 차림으로 현장에 함께했습니다. 흰 재킷의 여성과 나란히 앉아 이야기를 나누던 중 깜짝 놀란 표정을 지었습니다.\n\n자신의 머리에 '빵꾸(?)'가 난 것 같다는 재치 있는 한마디도 남겼습니다. 😄 증권가 추적 현장에서 보여준 주우재의 유쾌한 모습이 반가웠습니다.",
+    "hashtags": [
+      "#주우재",
+      "#구해줘홈즈",
+      "#구해줘!홈즈",
+      "#주우재증권가",
+      "#증권가",
+      "#증권가범죄자",
+      "#예능",
+      "#구해줘홈즈주우재"
+    ],
+    "person": "주우재",
+    "confirmed": true,
+    "card_summary": [],
+    "photo_queries": [],
+    "scene_queries": [],
+    "ok": true,
+    "press": "",
+    "url": "",
+    "source_title": "구해줘! 홈즈 SNS",
+    "issue_no": 232,
+    "multi": true
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-123958-c-ch3/_src.jpg",
+    "credit": "구해줘! 홈즈 방송 캡처",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon",
+  "preview_msg": 1241
+}
