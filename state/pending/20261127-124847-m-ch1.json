@@ -1,8 +1,8 @@
 {
   "id": "20261127-124847-m-ch1",
   "created": "2026-11-27T12:48:47.604037+09:00",
-  "status": "publishing",
-  "attempts": 0,
+  "status": "published",
+  "attempts": 1,
   "manual": true,
   "publish_at": "",
   "poll": null,
@@ -65,5 +65,7 @@
   },
   "channel": "ch1",
   "channel_handle": "ibduck_music",
-  "claimed": "2026-11-27T03:49:12.758166+00:00"
+  "claimed": "2026-11-27T03:49:12.758166+00:00",
+  "permalink": "https://www.instagram.com/p/DgOwKhJDaFu/",
+  "done": "2026-11-27T03:49:44.005325+00:00"
 }
