@@ -1,0 +1,68 @@
+{
+  "id": "20261127-204917-m-ch2",
+  "created": "2026-11-27T20:49:17.932330+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/xtN2toss",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-204917-m-ch2/01.jpg",
+    "docs/posts/20261127-204917-m-ch2/02.jpg"
+  ],
+  "caption": "📌 정국, 위블로 새 캠페인 화보 공개\n\n그룹 방탄소년단 정국이 스위스 워치 브랜드 위블로의 새 캠페인 화보를 공개했습니다. 위블로는 27일 글로벌 앰버서더 정국과 함께한 '클래식 퓨전 트리뷰토(Classic Fusion Tributo)' 비주얼을 선보였습니다.\n\n공개된 화보에서 정국은 짙은 네이비 오버핏 재킷 안에 흰 민소매 티셔츠만 걸친 채 정면을 바라보고 있습니다. 젖은 듯 내린 앞머리와 입술 피어싱으로 반항적인 분위기를 연출했습니다.\n\n왼손목에 찬 옐로우 골드 시계와 오른손 손등의 'ARMY' 타투도 눈에 띕니다.\n\n'클래식 퓨전 트리뷰토'는 1980년 골드 케이스와 러버 스트랩을 처음 결합했던 위블로 오리지널 모델을 현대적으로 재해석한 라인입니다. 옐로우 골드와 화이트 골드 두 가지 버전으로 출시되며, 공식 판매처 및 온라인 스토어에서 판매합니다.\n\n사진 출처: 스포츠경향. All rights reserved.\n\n#정국 #Jungkook #BTS #방탄소년단 #위블로 #Hublot #클래식퓨전트리뷰토 #ClassicFusionTributo #HublotAmbassador #ARMY",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "정국, '위블로' 캠페인",
+    "headline_bottom": "새 캠페인 화보 공개",
+    "subline": "위블로 클래식 퓨전 트리뷰토 비주얼",
+    "card_summary": [
+      "정국이 스위스 워치 브랜드 위블로 화보를 공개했다.",
+      "위블로는 27일 '클래식 퓨전 트리뷰토' 비주얼을 선보였다.",
+      "화보에는 옐로우 골드 시계와 'ARMY' 타투가 담겼다.",
+      "해당 라인은 옐로우·화이트 골드 두 버전으로 출시된다."
+    ],
+    "title": "정국, 위블로 새 캠페인 화보 공개",
+    "body": "그룹 방탄소년단 정국이 스위스 워치 브랜드 위블로의 새 캠페인 화보를 공개했습니다. 위블로는 27일 글로벌 앰버서더 정국과 함께한 '클래식 퓨전 트리뷰토(Classic Fusion Tributo)' 비주얼을 선보였습니다.\n\n공개된 화보에서 정국은 짙은 네이비 오버핏 재킷 안에 흰 민소매 티셔츠만 걸친 채 정면을 바라보고 있습니다. 젖은 듯 내린 앞머리와 입술 피어싱으로 반항적인 분위기를 연출했습니다.\n\n왼손목에 찬 옐로우 골드 시계와 오른손 손등의 'ARMY' 타투도 눈에 띕니다.\n\n'클래식 퓨전 트리뷰토'는 1980년 골드 케이스와 러버 스트랩을 처음 결합했던 위블로 오리지널 모델을 현대적으로 재해석한 라인입니다. 옐로우 골드와 화이트 골드 두 가지 버전으로 출시되며, 공식 판매처 및 온라인 스토어에서 판매합니다.",
+    "hashtags": [
+      "#정국",
+      "#Jungkook",
+      "#BTS",
+      "#방탄소년단",
+      "#위블로",
+      "#Hublot",
+      "#클래식퓨전트리뷰토",
+      "#ClassicFusionTributo",
+      "#HublotAmbassador",
+      "#ARMY"
+    ],
+    "photo_queries": [
+      "정국",
+      "Jungkook"
+    ],
+    "person": "정국",
+    "scene_queries": [
+      "luxury watch close up",
+      "gold watch on wrist"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/144/0001152076",
+    "source_title": "손등엔 ARMY, 손목엔 위블로…BTS 정국, ‘으른 섹시’ 아우라",
+    "issue_no": 254
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-204917-m-ch2/_src.jpg",
+    "credit": "스포츠경향. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/144/0001152076",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
