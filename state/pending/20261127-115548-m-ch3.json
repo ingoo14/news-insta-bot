@@ -1,0 +1,67 @@
+{
+  "id": "20261127-115548-m-ch3",
+  "created": "2026-11-27T11:55:48.077260+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-27T05:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/home/article/109/0005645902",
+  "force": false,
+  "images": [
+    "docs/posts/20261127-115548-m-ch3/01.jpg",
+    "docs/posts/20261127-115548-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"성숙해진 분위기\"... 지나, 근황 공개\n\n가수 지나가 개인 SNS를 통해 한층 성숙해진 분위기와 과감한 패션을 공개했습니다.\n\n공개된 사진에서 지나는 무스탕 재킷에 흰색 카고 팬츠를 매치했고, 차분한 색감의 롱코트를 입은 모습도 담겼습니다. 복부가 드러나는 크롭 니트에 짧은 하의, 롱부츠를 매치하며 과감한 스타일링도 소화했습니다.\n\n긴 웨이브 헤어와 자신감 넘치는 포즈가 더해져 화보를 연상케 했습니다. 활동 공백이 무색할 만큼 여전한 패션 감각을 뽐냈고, 데뷔 초와는 또 다른 성숙한 분위기도 눈길을 끌었습니다.\n\n지나는 앞서 녹음실에서 헤드폰을 착용한 사진을 공개하며 음악 작업을 암시한 바 있습니다. 꾸준히 SNS로 일상을 공유하고 있습니다.\n\n지나는 2010년 데뷔해 '꺼져 줄게 잘 살아', 'Black & White', 'Top Girl' 등의 히트곡으로 사랑받았습니다. 2016년 성매매 관련 법률 위반 혐의로 벌금형을 선고받은 뒤 국내 연예계 활동을 중단했고, 이후 약 10년의 공백기를 보내고 있습니다.\n\n사진 출처: OSEN. All rights reserved.\n\n#지나 #G.NA #지나근황 #가수지나 #지나SNS #TopGirl #BlackAndWhite #연예뉴스 #핫피플",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "지나, '성숙해진 근황'",
+    "headline_bottom": "SNS 스타일 공개",
+    "subline": "녹음실 사진도 함께 공개",
+    "card_summary": [
+      "가수 지나가 26일 개인 SNS를 통해 근황을 전했다.",
+      "무스탕, 롱코트, 크롭 니트 등 다양한 스타일 공개.",
+      "앞서 녹음실에서 헤드폰을 착용한 사진도 공개했다."
+    ],
+    "title": "\"성숙해진 분위기\"... 지나, 근황 공개",
+    "body": "가수 지나가 개인 SNS를 통해 한층 성숙해진 분위기와 과감한 패션을 공개했습니다.\n\n공개된 사진에서 지나는 무스탕 재킷에 흰색 카고 팬츠를 매치했고, 차분한 색감의 롱코트를 입은 모습도 담겼습니다. 복부가 드러나는 크롭 니트에 짧은 하의, 롱부츠를 매치하며 과감한 스타일링도 소화했습니다.\n\n긴 웨이브 헤어와 자신감 넘치는 포즈가 더해져 화보를 연상케 했습니다. 활동 공백이 무색할 만큼 여전한 패션 감각을 뽐냈고, 데뷔 초와는 또 다른 성숙한 분위기도 눈길을 끌었습니다.\n\n지나는 앞서 녹음실에서 헤드폰을 착용한 사진을 공개하며 음악 작업을 암시한 바 있습니다. 꾸준히 SNS로 일상을 공유하고 있습니다.\n\n지나는 2010년 데뷔해 '꺼져 줄게 잘 살아', 'Black & White', 'Top Girl' 등의 히트곡으로 사랑받았습니다. 2016년 성매매 관련 법률 위반 혐의로 벌금형을 선고받은 뒤 국내 연예계 활동을 중단했고, 이후 약 10년의 공백기를 보내고 있습니다.",
+    "hashtags": [
+      "#지나",
+      "#G.NA",
+      "#지나근황",
+      "#가수지나",
+      "#지나SNS",
+      "#TopGirl",
+      "#BlackAndWhite",
+      "#연예뉴스",
+      "#핫피플",
+      "#OSEN"
+    ],
+    "photo_queries": [
+      "지나",
+      "G.NA"
+    ],
+    "person": "지나",
+    "scene_queries": [
+      "recording studio headphones",
+      "Seoul street fashion portrait"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/home/article/109/0005645902",
+    "source_title": "'10년 공백' 지나, 몰라보게 달라진 얼굴? 확 달라진 분위기보니 [핫피플]",
+    "issue_no": 225
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261127-115548-m-ch3/_src.jpg",
+    "credit": "OSEN. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/home/article/109/0005645902",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
