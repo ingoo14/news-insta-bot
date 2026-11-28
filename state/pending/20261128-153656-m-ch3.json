@@ -1,0 +1,72 @@
+{
+  "id": "20261128-153656-m-ch3",
+  "created": "2026-11-28T15:36:56.721194+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-29T05:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/music/article/112/0003814665",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-153656-m-ch3/01.jpg",
+    "docs/posts/20261128-153656-m-ch3/02.jpg"
+  ],
+  "caption": "📌 지효, 2027 비냐 델 마르 페스티벌 출격… K-팝 솔로 최초\n\n트와이스 지효가 2027년 2월 22~27일(현지 시각) 칠레 비냐 델 마르에서 열리는 ‘2027 비냐 델 마르 페스티벌’ 출연을 확정했습니다.\n\n이 페스티벌은 1960년 처음 개최돼 67년의 역사와 전통을 자랑하는 라틴아메리카 대표 뮤직 페스티벌입니다. 전 세계 정상급 아티스트들이 거쳐 간 무대이기도 합니다.\n\n지효는 K-팝 솔로 아티스트 최초로 정식 초청됐습니다.\n\n지효는 이번 페스티벌에서 폭발적인 에너지와 압도적인 무대 장악력을 앞세워 현지 관객들을 사로잡겠다는 각오입니다.\n\n한편 지효는 최근 EMITHAUS(이밋하우스)를 설립했습니다.\n\n사진 출처: 비냐 델 마르 페스티벌 주최 제공\n\n#지효 #트와이스 #TWICE #JIHYO #비냐델마르페스티벌 #VinaDelMarFestival #K팝 #케이팝 #페스티벌 #솔로아티스트 #이밋하우스 #EMITHAUS",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "지효, ‘비냐 델 마르’",
+    "headline_bottom": "K-팝 솔로 최초 출격",
+    "subline": "K-팝 솔로 아티스트 최초 초청",
+    "card_summary": [
+      "지효가 2027 비냐 델 마르 페스티벌 출연을 확정했다.",
+      "2027년 2월 22~27일 칠레에서 열린다.",
+      "1960년 처음 열린 라틴아메리카 대표 뮤직 페스티벌이다.",
+      "지효는 K-팝 솔로 아티스트 최초로 정식 초청됐다."
+    ],
+    "title": "지효, 2027 비냐 델 마르 페스티벌 출격… K-팝 솔로 최초",
+    "body": "트와이스 지효가 2027년 2월 22~27일(현지 시각) 칠레 비냐 델 마르에서 열리는 ‘2027 비냐 델 마르 페스티벌’ 출연을 확정했습니다.\n\n이 페스티벌은 1960년 처음 개최돼 67년의 역사와 전통을 자랑하는 라틴아메리카 대표 뮤직 페스티벌입니다. 전 세계 정상급 아티스트들이 거쳐 간 무대이기도 합니다.\n\n지효는 K-팝 솔로 아티스트 최초로 정식 초청됐습니다.\n\n지효는 이번 페스티벌에서 폭발적인 에너지와 압도적인 무대 장악력을 앞세워 현지 관객들을 사로잡겠다는 각오입니다.\n\n한편 지효는 최근 EMITHAUS(이밋하우스)를 설립했습니다.",
+    "hashtags": [
+      "#지효",
+      "#트와이스",
+      "#TWICE",
+      "#JIHYO",
+      "#비냐델마르페스티벌",
+      "#VinaDelMarFestival",
+      "#K팝",
+      "#케이팝",
+      "#페스티벌",
+      "#솔로아티스트",
+      "#이밋하우스",
+      "#EMITHAUS"
+    ],
+    "photo_queries": [
+      "지효",
+      "Jihyo",
+      "트와이스",
+      "TWICE"
+    ],
+    "person": "지효",
+    "scene_queries": [
+      "Vina del Mar festival Chile",
+      "concert stage lights"
+    ],
+    "fact_checked": true,
+    "press": "헤럴드뮤즈",
+    "url": "https://m.entertain.naver.com/music/article/112/0003814665",
+    "source_title": "트와이스 지효, ‘2027 비냐 델 마르 페스티벌’ 출격..K-팝 솔로 아티스트 최초(공식)",
+    "issue_no": 274
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-153656-m-ch3/_src.jpg",
+    "credit": "비냐 델 마르 페스티벌 주최 제공",
+    "license": "",
+    "page": "https://m.entertain.naver.com/music/article/112/0003814665",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
