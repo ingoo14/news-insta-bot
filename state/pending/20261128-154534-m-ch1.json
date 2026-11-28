@@ -1,0 +1,68 @@
+{
+  "id": "20261128-154534-m-ch1",
+  "created": "2026-11-28T15:45:34.886743+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-28T08:00:00+00:00",
+  "poll": null,
+  "src_url": "https://naver.me/G3vCmjDF",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-154534-m-ch1/01.jpg",
+    "docs/posts/20261128-154534-m-ch1/02.jpg"
+  ],
+  "caption": "📌 “떴다 하면 조회수 1위”… 베이비몬스터 MAMA 무대\n\n베이비몬스터가 ‘2026 MAMA AWARDS’ 무대 영상으로 또 다시 조회수 1위에 올랐습니다. 28일 현재 Mnet 공식 유튜브 채널에 게재된 이 무대는 718만 뷰를 기록했으며, 시상식 전체 무대 중 1위입니다.\n\n베이비몬스터는 연말 무대에 오를 때마다 뜨거운 화제성을 증명해 왔습니다. 지난해 ‘2025 MAMA’에서는 스페셜 스테이지와 본무대가 조회수 1, 2위를 차지했고, ‘2024 SBS 가요대전’, ‘2025 SBS 가요대전’, ‘2026 SBS 가요대전 Summer’에서도 전체 무대 조회수 1위를 기록했습니다.\n\n올해 ‘춤 (CHOOM)’, ‘SUGAR HONEY ICE TEA’, ‘I LIKE IT’, ‘MOON’, ‘DESERVE’로 활동한 베이비몬스터는 음악방송에 출연할 때마다 최고 조회수를 기록해 주목을 받았습니다.\n\n이번 MAMA에서는 고음이 이어지는 발라드곡 ‘DESERVE’를 완벽한 라이브로 소화했고, ‘춤 (CHOOM)’ 무대에서는 80명의 댄서와 함께 압도적 스케일의 퍼포먼스를 선보였습니다.\n\n사진 출처: OSEN. All rights reserved.\n\n#베이비몬스터 #BABYMONSTER #2026MAMA #MAMAAWARDS #춤CHOOM #DESERVE #SUGARHONEYICETEA #ILIKEIT #MOON #SBS가요대전 #YG엔터테인먼트",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "베이비몬스터 조회수 1위",
+    "headline_bottom": "MAMA 무대 1위",
+    "subline": "2026 MAMA 무대 718만 뷰",
+    "card_summary": [
+      "베이비몬스터 ‘2026 MAMA’ 무대 718만 뷰",
+      "Mnet 채널 기준 시상식 전체 무대 중 1위",
+      "연말 무대·음악방송마다 최고 조회수 기록"
+    ],
+    "title": "“떴다 하면 조회수 1위”… 베이비몬스터 MAMA 무대",
+    "body": "베이비몬스터가 ‘2026 MAMA AWARDS’ 무대 영상으로 또 다시 조회수 1위에 올랐습니다. 28일 현재 Mnet 공식 유튜브 채널에 게재된 이 무대는 718만 뷰를 기록했으며, 시상식 전체 무대 중 1위입니다.\n\n베이비몬스터는 연말 무대에 오를 때마다 뜨거운 화제성을 증명해 왔습니다. 지난해 ‘2025 MAMA’에서는 스페셜 스테이지와 본무대가 조회수 1, 2위를 차지했고, ‘2024 SBS 가요대전’, ‘2025 SBS 가요대전’, ‘2026 SBS 가요대전 Summer’에서도 전체 무대 조회수 1위를 기록했습니다.\n\n올해 ‘춤 (CHOOM)’, ‘SUGAR HONEY ICE TEA’, ‘I LIKE IT’, ‘MOON’, ‘DESERVE’로 활동한 베이비몬스터는 음악방송에 출연할 때마다 최고 조회수를 기록해 주목을 받았습니다.\n\n이번 MAMA에서는 고음이 이어지는 발라드곡 ‘DESERVE’를 완벽한 라이브로 소화했고, ‘춤 (CHOOM)’ 무대에서는 80명의 댄서와 함께 압도적 스케일의 퍼포먼스를 선보였습니다.",
+    "hashtags": [
+      "#베이비몬스터",
+      "#BABYMONSTER",
+      "#2026MAMA",
+      "#MAMAAWARDS",
+      "#춤CHOOM",
+      "#DESERVE",
+      "#SUGARHONEYICETEA",
+      "#ILIKEIT",
+      "#MOON",
+      "#SBS가요대전",
+      "#YG엔터테인먼트"
+    ],
+    "photo_queries": [
+      "베이비몬스터",
+      "BABYMONSTER"
+    ],
+    "person": "베이비몬스터",
+    "scene_queries": [
+      "MAMA awards stage lights",
+      "concert stage performance dancers"
+    ],
+    "fact_checked": true,
+    "press": "OSEN",
+    "url": "https://m.entertain.naver.com/now/article/109/0005646457",
+    "source_title": "베이비몬스터 떴다하면 조회수 1위..‘2026 MAMA’도 정상 찍었다",
+    "issue_no": 277
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-154534-m-ch1/_src.jpg",
+    "credit": "OSEN. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/109/0005646457",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
