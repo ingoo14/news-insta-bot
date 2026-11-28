@@ -1,0 +1,68 @@
+{
+  "id": "20261128-132938-m-ch2",
+  "created": "2026-11-28T13:29:38.795049+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/F05Cx21V",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-132938-m-ch2/01.jpg",
+    "docs/posts/20261128-132938-m-ch2/02.jpg"
+  ],
+  "caption": "📌 \"K팝 최초 헤드라이너\"... 엔하이픈, 유럽 축제 무대에 선다\n\n그룹 엔하이픈이 유럽 대표 음악 축제 '매드 쿨 2027'의 헤드라이너로 나섭니다. 2027년 7월 스페인 마드리드에서 열리는 'Mad Cool by Zurich 2027'에 출연하며, 축제 3일 차인 7월 9일 무대에 오릅니다.\n\n소속사 빌리프랩에 따르면 엔하이픈은 이번 행사에 참가하는 유일한 K팝 아티스트입니다. K팝 그룹이 헤드라이너에 이름을 올린 것은 이번이 처음입니다.\n\n'매드 쿨'은 2016년 시작된 유럽의 대형 음악 축제로, 록·팝·인디·일렉트로닉 등 다양한 장르의 라인업으로 알려져 있습니다. 엔하이픈은 앞서 일본 '서머소닉'과 미국 '코첼라 밸리 뮤직 앤드 아츠 페스티벌' 등 글로벌 음악 축제 무대에 올랐습니다.\n\n엔하이픈의 유럽 투어 'ENHYPEN WORLD TOUR 'BLOOD SAGA'' 유럽 공연은 팬들의 성원에 힘입어 베를린과 런던 공연을 추가로 열었습니다.\n\n한편 엔하이픈은 지난 23일 스핀오프 싱글 'THE SIN : PARALLEL WORLD'를 발매했으며, 타이틀곡 'I Want You'로 활동을 이어가고 있습니다.\n\n사진 출처: 빌리프랩\n\n#엔하이픈 #ENHYPEN #매드쿨 #MadCool #매드쿨2027 #MadCoolbyZurich2027 #유럽페스티벌 #헤드라이너 #IWantYou #BLOODSAGA #THESIN",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "엔하이픈, ‘헤드라이너’",
+    "headline_bottom": "매드 쿨 2027 출격",
+    "subline": "K팝 그룹 최초 헤드라이너 발탁",
+    "card_summary": [
+      "엔하이픈은 2027년 7월 마드리드 축제에 출연한다.",
+      "K팝 그룹 최초로 헤드라이너에 이름을 올렸다.",
+      "축제 3일 차인 7월 9일 무대에 오른다."
+    ],
+    "title": "\"K팝 최초 헤드라이너\"... 엔하이픈, 유럽 축제 무대에 선다",
+    "body": "그룹 엔하이픈이 유럽 대표 음악 축제 '매드 쿨 2027'의 헤드라이너로 나섭니다. 2027년 7월 스페인 마드리드에서 열리는 'Mad Cool by Zurich 2027'에 출연하며, 축제 3일 차인 7월 9일 무대에 오릅니다.\n\n소속사 빌리프랩에 따르면 엔하이픈은 이번 행사에 참가하는 유일한 K팝 아티스트입니다. K팝 그룹이 헤드라이너에 이름을 올린 것은 이번이 처음입니다.\n\n'매드 쿨'은 2016년 시작된 유럽의 대형 음악 축제로, 록·팝·인디·일렉트로닉 등 다양한 장르의 라인업으로 알려져 있습니다. 엔하이픈은 앞서 일본 '서머소닉'과 미국 '코첼라 밸리 뮤직 앤드 아츠 페스티벌' 등 글로벌 음악 축제 무대에 올랐습니다.\n\n엔하이픈의 유럽 투어 'ENHYPEN WORLD TOUR 'BLOOD SAGA'' 유럽 공연은 팬들의 성원에 힘입어 베를린과 런던 공연을 추가로 열었습니다.\n\n한편 엔하이픈은 지난 23일 스핀오프 싱글 'THE SIN : PARALLEL WORLD'를 발매했으며, 타이틀곡 'I Want You'로 활동을 이어가고 있습니다.",
+    "hashtags": [
+      "#엔하이픈",
+      "#ENHYPEN",
+      "#매드쿨",
+      "#MadCool",
+      "#매드쿨2027",
+      "#MadCoolbyZurich2027",
+      "#유럽페스티벌",
+      "#헤드라이너",
+      "#IWantYou",
+      "#BLOODSAGA",
+      "#THESIN"
+    ],
+    "photo_queries": [
+      "엔하이픈",
+      "ENHYPEN"
+    ],
+    "person": "엔하이픈",
+    "scene_queries": [
+      "Madrid music festival stage night",
+      "concert stage lights crowd"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/030/0003490854",
+    "source_title": "엔하이픈, 유럽 페스티벌 헤드라이너…'매드 쿨 2027' 출격",
+    "issue_no": 265
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-132938-m-ch2/_src.jpg",
+    "credit": "빌리프랩",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/030/0003490854",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
