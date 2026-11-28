@@ -1,0 +1,67 @@
+{
+  "id": "20261128-132722-m-ch2",
+  "created": "2026-11-28T13:27:22.097559+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/5UVlpSDB",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-132722-m-ch2/01.jpg",
+    "docs/posts/20261128-132722-m-ch2/02.jpg"
+  ],
+  "caption": "📌 조유리, 핑크 헤어로 연말 화보 공개\n\n패션 매거진 데이즈드가 조유리와 함께한 12월호 화보를 공개했습니다. 'The Gift is ME!'를 콘셉트로 한 이번 화보에서 조유리는 연말 선물이 된 듯한 모습으로 다양한 매력을 보여줬습니다.\n\n핑크 헤어와 글리터 메이크업에 리본 장식과 스티커, 개성 있는 포인트 메이크업을 더해 키치하면서도 사랑스러운 분위기를 완성했습니다.\n\n인터뷰에서 조유리는 그동안 해보지 않은 분위기라 더 재미있었다고 밝혔습니다. 보는 사람들에게도 새로운 모습으로 다가가길 바란다고 전했습니다.\n\n팬들에게는 앨범과 작품으로 좋은 모습을 빨리 보여주고 싶다는 마음을 전했습니다.\n\n한편 조유리는 최근 넷플릭스 영화 '가능한 사랑'과 단편 영화 '보통 꿈' 등에 출연하며 배우로서 활동 영역을 넓혀가고 있습니다.\n\n사진 출처: 데이즈드\n\n#조유리 #YUJU #데이즈드 #Dazed #핑크헤어 #화보 #연말화보 #넷플릭스 #가능한사랑 #보통꿈",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "조유리, ‘핑크 헤어’",
+    "headline_bottom": "연말 화보 공개",
+    "subline": "데이즈드 12월호 화보 공개",
+    "card_summary": [
+      "조유리가 데이즈드 12월호 화보에 등장했다.",
+      "핑크 헤어와 글리터 메이크업으로 색다른 모습을 보여줬다.",
+      "조유리는 넷플릭스 영화 '가능한 사랑' 등에 출연했다."
+    ],
+    "title": "조유리, 핑크 헤어로 연말 화보 공개",
+    "body": "패션 매거진 데이즈드가 조유리와 함께한 12월호 화보를 공개했습니다. 'The Gift is ME!'를 콘셉트로 한 이번 화보에서 조유리는 연말 선물이 된 듯한 모습으로 다양한 매력을 보여줬습니다.\n\n핑크 헤어와 글리터 메이크업에 리본 장식과 스티커, 개성 있는 포인트 메이크업을 더해 키치하면서도 사랑스러운 분위기를 완성했습니다.\n\n인터뷰에서 조유리는 그동안 해보지 않은 분위기라 더 재미있었다고 밝혔습니다. 보는 사람들에게도 새로운 모습으로 다가가길 바란다고 전했습니다.\n\n팬들에게는 앨범과 작품으로 좋은 모습을 빨리 보여주고 싶다는 마음을 전했습니다.\n\n한편 조유리는 최근 넷플릭스 영화 '가능한 사랑'과 단편 영화 '보통 꿈' 등에 출연하며 배우로서 활동 영역을 넓혀가고 있습니다.",
+    "hashtags": [
+      "#조유리",
+      "#YUJU",
+      "#데이즈드",
+      "#Dazed",
+      "#핑크헤어",
+      "#화보",
+      "#연말화보",
+      "#넷플릭스",
+      "#가능한사랑",
+      "#보통꿈"
+    ],
+    "photo_queries": [
+      "조유리",
+      "YUJU"
+    ],
+    "person": "조유리",
+    "scene_queries": [
+      "pink hair fashion photoshoot",
+      "glitter makeup studio portrait"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/030/0003490859",
+    "source_title": "조유리, '핑크 헤어' 변신?!…연말 선물 비주얼 [화보]",
+    "issue_no": 263
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-132722-m-ch2/_src.jpg",
+    "credit": "데이즈드",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/030/0003490859",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch2",
+  "channel_handle": "greenlight_music"
+}
