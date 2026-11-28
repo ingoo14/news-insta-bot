@@ -1,7 +1,7 @@
 {
   "id": "20261128-133436-m-ch1",
   "created": "2026-11-28T13:34:36.861216+09:00",
-  "status": "pending",
+  "status": "publishing",
   "attempts": 0,
   "manual": true,
   "publish_at": "",
@@ -66,5 +66,6 @@
     "kind": "기사 사진"
   },
   "channel": "ch1",
-  "channel_handle": "ibduck_music"
+  "channel_handle": "ibduck_music",
+  "claimed": "2026-11-28T04:35:00.328282+00:00"
 }
