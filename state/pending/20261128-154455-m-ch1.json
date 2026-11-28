@@ -1,0 +1,68 @@
+{
+  "id": "20261128-154455-m-ch1",
+  "created": "2026-11-28T15:44:55.404874+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-28T08:00:00+00:00",
+  "poll": null,
+  "src_url": "https://naver.me/Ge7qecah",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-154455-m-ch1/01.jpg",
+    "docs/posts/20261128-154455-m-ch1/02.jpg"
+  ],
+  "caption": "📌 빅오션, god 명곡 '촛불하나' 리메이크 발표\n\n세계 최초 수어 아이돌 빅오션(찬연, PJ, 지석)이 god의 명곡 '촛불하나'를 리메이크한 디지털 싱글 '촛불하나(Make a wish)'를 오늘(28일) 오후 6시 각종 음원 사이트를 통해 발표합니다.\n\n'Make a wish'는 '소원을 빌다'라는 뜻의 부제로, 간절히 바라던 데뷔의 꿈을 이룬 빅오션처럼 이 노래를 듣는 사람들도 저마다의 소원을 이루어 가기를 바라는 마음을 담았습니다.\n\n편곡은 빅오션의 'ATTENTION', 'FADE OUT'을 함께 작업한 우영수 작가와 Solshine이 맡았습니다. 원곡의 희망찬 에너지는 살리고 모던 R&B 사운드로 새롭게 풀어내 빅오션만의 감성을 더했습니다.\n\n퍼포먼스는 세븐틴 '손오공', 방탄소년단(BTS) 'I NEED U' 등을 만든 최영준 안무가의 팀 TEAM SAME이 참여했습니다. 빅오션의 메인댄서이자 리더인 지석도 직접 참여했습니다.\n\n빅오션은 오늘 독일 최대 규모의 팝컬처 페스티벌 'CCON I COMIC CON STUTTGART 2026'(코믹 콘 슈투트가르트 2026)에 출연합니다.\n\n사진 출처: MBC연예. All rights reserved.\n\n#빅오션 #BigOcean #god #촛불하나 #Makeawish #세계최초수어아이돌 #지석 #찬연 #PJ #코믹콘슈투트가르트2026",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "빅오션, '촛불하나'",
+    "headline_bottom": "오늘 디지털 싱글 발표",
+    "subline": "god 명곡 '촛불하나' 리메이크",
+    "card_summary": [
+      "빅오션이 디지털 싱글 '촛불하나'를 발표한다.",
+      "god의 명곡 '촛불하나'를 리메이크한 곡이다.",
+      "편곡은 우영수 작가와 Solshine이 맡았다.",
+      "빅오션은 오늘 독일 최대 팝컬처 페스티벌에 출연한다."
+    ],
+    "title": "빅오션, god 명곡 '촛불하나' 리메이크 발표",
+    "body": "세계 최초 수어 아이돌 빅오션(찬연, PJ, 지석)이 god의 명곡 '촛불하나'를 리메이크한 디지털 싱글 '촛불하나(Make a wish)'를 오늘(28일) 오후 6시 각종 음원 사이트를 통해 발표합니다.\n\n'Make a wish'는 '소원을 빌다'라는 뜻의 부제로, 간절히 바라던 데뷔의 꿈을 이룬 빅오션처럼 이 노래를 듣는 사람들도 저마다의 소원을 이루어 가기를 바라는 마음을 담았습니다.\n\n편곡은 빅오션의 'ATTENTION', 'FADE OUT'을 함께 작업한 우영수 작가와 Solshine이 맡았습니다. 원곡의 희망찬 에너지는 살리고 모던 R&B 사운드로 새롭게 풀어내 빅오션만의 감성을 더했습니다.\n\n퍼포먼스는 세븐틴 '손오공', 방탄소년단(BTS) 'I NEED U' 등을 만든 최영준 안무가의 팀 TEAM SAME이 참여했습니다. 빅오션의 메인댄서이자 리더인 지석도 직접 참여했습니다.\n\n빅오션은 오늘 독일 최대 규모의 팝컬처 페스티벌 'CCON I COMIC CON STUTTGART 2026'(코믹 콘 슈투트가르트 2026)에 출연합니다.",
+    "hashtags": [
+      "#빅오션",
+      "#BigOcean",
+      "#god",
+      "#촛불하나",
+      "#Makeawish",
+      "#세계최초수어아이돌",
+      "#지석",
+      "#찬연",
+      "#PJ",
+      "#코믹콘슈투트가르트2026"
+    ],
+    "photo_queries": [
+      "빅오션",
+      "Big Ocean"
+    ],
+    "person": "빅오션",
+    "scene_queries": [
+      "Comic Con Stuttgart 2026",
+      "R&B music stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/408/0000329420",
+    "source_title": "빅오션, 오늘(28일) god 명곡 ‘촛불하나’ 발표",
+    "issue_no": 276
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-154455-m-ch1/_src.jpg",
+    "credit": "MBC연예. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/408/0000329420",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
