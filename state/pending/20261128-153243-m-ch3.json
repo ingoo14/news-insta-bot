@@ -1,0 +1,70 @@
+{
+  "id": "20261128-153243-m-ch3",
+  "created": "2026-11-28T15:32:43.038220+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-29T00:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/ranking/article/109/0005646290",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-153243-m-ch3/01.jpg",
+    "docs/posts/20261128-153243-m-ch3/02.jpg"
+  ],
+  "caption": "📌 '젖몸살이 왔어여'… 아야네, 둘째 출산 후 근황\n\n가수 겸 뮤지컬 배우 이지훈의 아내 아야네가 둘째 출산 후 산후조리 일상을 SNS에 공개했습니다.\n\n아야네는 편안한 환자복 차림으로 소파에 앉아 양손으로 눈가를 가린 사진과 함께 ‘젖몸살이 왔어여…’라는 글을 올렸습니다. 눈물 이모티콘도 덧붙였습니다.\n\n이어 ‘오늘부터 관리 시작’이라며 미역국과 생선구이, 각종 반찬으로 구성된 식단을 공개했습니다.\n\n남편 이지훈은 소파에 앉아 갓 태어난 둘째를 품에 안고 젖병을 물리는 모습을 보여줬습니다. 한 손으로 아이를 받치고 다른 손으로 젖병을 잡은 모습이었습니다.\n\n이지훈과 아야네는 14세의 나이 차이를 극복하고 2021년 결혼했습니다. 이후 첫째 딸을 품에 안은 데 이어 최근 둘째를 출산했습니다.\n\n사진 출처: OSEN. All rights reserved.\n\n#이지훈 #아야네 #Ayane #LeeJihoon #둘째출산 #산후조리 #젖몸살 #육아일상 #연예뉴스 #부부일상",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "아야네, '산후조리 일상'",
+    "headline_bottom": "둘째 출산 후 근황",
+    "subline": "둘째 출산 후 산후관리 근황",
+    "card_summary": [
+      "아야네가 SNS에 젖몸살로 인한 고충을 토로했다.",
+      "산후 관리를 시작하며 미역국 등 식단을 공개했다.",
+      "이지훈은 갓 태어난 둘째를 안고 젖병을 물렸다.",
+      "두 사람은 2021년 결혼해 두 아이의 부모가 됐다."
+    ],
+    "title": "'젖몸살이 왔어여'… 아야네, 둘째 출산 후 근황",
+    "body": "가수 겸 뮤지컬 배우 이지훈의 아내 아야네가 둘째 출산 후 산후조리 일상을 SNS에 공개했습니다.\n\n아야네는 편안한 환자복 차림으로 소파에 앉아 양손으로 눈가를 가린 사진과 함께 ‘젖몸살이 왔어여…’라는 글을 올렸습니다. 눈물 이모티콘도 덧붙였습니다.\n\n이어 ‘오늘부터 관리 시작’이라며 미역국과 생선구이, 각종 반찬으로 구성된 식단을 공개했습니다.\n\n남편 이지훈은 소파에 앉아 갓 태어난 둘째를 품에 안고 젖병을 물리는 모습을 보여줬습니다. 한 손으로 아이를 받치고 다른 손으로 젖병을 잡은 모습이었습니다.\n\n이지훈과 아야네는 14세의 나이 차이를 극복하고 2021년 결혼했습니다. 이후 첫째 딸을 품에 안은 데 이어 최근 둘째를 출산했습니다.",
+    "hashtags": [
+      "#이지훈",
+      "#아야네",
+      "#Ayane",
+      "#LeeJihoon",
+      "#둘째출산",
+      "#산후조리",
+      "#젖몸살",
+      "#육아일상",
+      "#연예뉴스",
+      "#부부일상"
+    ],
+    "photo_queries": [
+      "이지훈",
+      "Lee Ji-hoon",
+      "아야네",
+      "Ayane"
+    ],
+    "person": "이지훈",
+    "scene_queries": [
+      "newborn baby bottle feeding",
+      "Korean postpartum meal soup"
+    ],
+    "fact_checked": true,
+    "press": "OSEN",
+    "url": "https://m.entertain.naver.com/ranking/article/109/0005646290",
+    "source_title": "‘둘째 출산’ 아야네, 결국 젖몸살에 눈물…♥이지훈은 ‘경력직 아빠’ 포스",
+    "issue_no": 272
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-153243-m-ch3/_src.jpg",
+    "credit": "OSEN. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/ranking/article/109/0005646290",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
