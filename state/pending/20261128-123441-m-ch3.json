@@ -1,7 +1,7 @@
 {
   "id": "20261128-123441-m-ch3",
   "created": "2026-11-28T12:34:41.270998+09:00",
-  "status": "pending",
+  "status": "publishing",
   "attempts": 0,
   "manual": true,
   "publish_at": "2026-11-28T09:00:00+00:00",
@@ -64,5 +64,6 @@
     "kind": "기사 사진"
   },
   "channel": "ch3",
-  "channel_handle": "gaem_seong_1spoon"
+  "channel_handle": "gaem_seong_1spoon",
+  "claimed": "2026-11-28T09:01:30.422260+00:00"
 }
