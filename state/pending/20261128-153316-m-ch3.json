@@ -1,0 +1,71 @@
+{
+  "id": "20261128-153316-m-ch3",
+  "created": "2026-11-28T15:33:16.544432+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-29T01:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/music/article/440/0000054495",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-153316-m-ch3/01.jpg",
+    "docs/posts/20261128-153316-m-ch3/02.jpg"
+  ],
+  "caption": "📌 아이브 가을, 일본 인기곡 '만찬가' 커버\n\n아이브 가을이 일본 싱어송라이터 츠키(tuki.)의 곡 '만찬가'를 커버한 영상을 공개했습니다. 소속사 스타쉽엔터테인먼트가 아이브 공식 유튜브 채널을 통해 '晩餐歌(만찬가) Covered by IVE GAEUL' 영상을 올렸습니다.\n\n사랑과 이별의 복잡한 감정을 담은 이 곡을 가을이 부드럽고 개성 있는 음색으로 표현했습니다. 영상에서는 스쿨룩 스타일링과 빈티지한 화면 연출이 더해졌습니다.\n\n한편 아이브는 정규 2집 타이틀곡 'BANG BANG(뱅뱅)'으로 2026 멜론뮤직어워드 대상인 '올해의 베스트송'을 수상했습니다. 2026 MAMA AWARDS에서는 2관왕에 올랐습니다.\n\n지난달 발매한 미니앨범 'Looks Can Kill(룩스 캔 킬)'은 미국 빌보드와 일본 오리콘 주요 차트에 이름을 올렸습니다.\n\n아이브는 2027년 1월 29일부터 31일까지 서울 올림픽공원 KSPO DOME에서 두 번째 월드 투어 'SHOW WHAT I AM(쇼 왓 아이 엠)' 앙코르 콘서트를 개최합니다.\n\n사진 출처: 티브이데일리. All rights reserved.\n\n#아이브 #IVE #가을 #GAEUL #만찬가 #츠키 #tuki #BANGBANG #LooksCanKill #MAMAAWARDS #SHOWWHATIAM",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "아이브 가을, '만찬가'",
+    "headline_bottom": "커버 영상 공개",
+    "subline": "츠키의 '만찬가'를 감성적으로 커버",
+    "card_summary": [
+      "가을이 츠키의 곡 '만찬가'를 커버했다.",
+      "아이브 공식 유튜브 채널에 영상이 공개됐다.",
+      "아이브는 '뱅뱅'으로 멜론뮤직어워드 대상을 받았다.",
+      "2027년 1월 29~31일 올림픽공원 앙코르 콘서트 예정."
+    ],
+    "title": "아이브 가을, 일본 인기곡 '만찬가' 커버",
+    "body": "아이브 가을이 일본 싱어송라이터 츠키(tuki.)의 곡 '만찬가'를 커버한 영상을 공개했습니다. 소속사 스타쉽엔터테인먼트가 아이브 공식 유튜브 채널을 통해 '晩餐歌(만찬가) Covered by IVE GAEUL' 영상을 올렸습니다.\n\n사랑과 이별의 복잡한 감정을 담은 이 곡을 가을이 부드럽고 개성 있는 음색으로 표현했습니다. 영상에서는 스쿨룩 스타일링과 빈티지한 화면 연출이 더해졌습니다.\n\n한편 아이브는 정규 2집 타이틀곡 'BANG BANG(뱅뱅)'으로 2026 멜론뮤직어워드 대상인 '올해의 베스트송'을 수상했습니다. 2026 MAMA AWARDS에서는 2관왕에 올랐습니다.\n\n지난달 발매한 미니앨범 'Looks Can Kill(룩스 캔 킬)'은 미국 빌보드와 일본 오리콘 주요 차트에 이름을 올렸습니다.\n\n아이브는 2027년 1월 29일부터 31일까지 서울 올림픽공원 KSPO DOME에서 두 번째 월드 투어 'SHOW WHAT I AM(쇼 왓 아이 엠)' 앙코르 콘서트를 개최합니다.",
+    "hashtags": [
+      "#아이브",
+      "#IVE",
+      "#가을",
+      "#GAEUL",
+      "#만찬가",
+      "#츠키",
+      "#tuki",
+      "#BANGBANG",
+      "#LooksCanKill",
+      "#MAMAAWARDS",
+      "#SHOWWHATIAM"
+    ],
+    "photo_queries": [
+      "아이브",
+      "IVE",
+      "가을",
+      "GAEUL"
+    ],
+    "person": "아이브",
+    "scene_queries": [
+      "concert stage lights",
+      "Seoul Olympic Park KSPO DOME"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/music/article/440/0000054495",
+    "source_title": "아이브 가을, '만찬가' 커버 홀리죠?",
+    "issue_no": 272
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-153316-m-ch3/_src.jpg",
+    "credit": "티브이데일리. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/music/article/440/0000054495",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
