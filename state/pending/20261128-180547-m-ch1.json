@@ -1,0 +1,67 @@
+{
+  "id": "20261128-180547-m-ch1",
+  "created": "2026-11-28T18:05:47.274204+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/Gow4kgCu",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-180547-m-ch1/01.jpg",
+    "docs/posts/20261128-180547-m-ch1/02.jpg"
+  ],
+  "caption": "📌 키스오브라이프, 첫 겨울 싱글 'Greedy' 메들리 영상 공개\n\n키스오브라이프가 지난 25일 첫 겨울 디지털 싱글 'Greedy'를 발매했습니다. 이번 앨범은 소중한 사람과 함께하는 평범한 일상 속 따뜻하고 순수한 사랑을 로맨틱한 감성으로 풀어낸 작품입니다.\n\n그룹은 지난 27일 공식 채널을 통해 이 싱글의 메들리 영상을 공개했습니다. 영상 속 멤버들은 크리스마스 분위기가 담긴 호텔 로비를 배경으로 밴드 사운드에 맞춰 연말 무드를 전했습니다.\n\n메들리에는 경쾌한 매력의 'December Glow', 성숙한 감성의 R&B 트랙 'Imperfect Christmas', 크리스마스의 설렘을 담은 타이틀곡 'Greedy'가 차례로 담겼습니다.\n\n앨범은 크리스마스를 배경으로 한 각기 다른 사랑 이야기를 섬세하게 그렸습니다.\n\n사진 출처: JTBC. All rights reserved.\n\n#키스오브라이프 #KISSOFLIFE #Greedy #DecemberGlow #ImperfectChristmas #크리스마스 #겨울싱글 #신곡 #케이팝 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "키스오브라이프, ‘겨울’",
+    "headline_bottom": "첫 겨울 싱글 공개",
+    "subline": "첫 겨울 싱글 'Greedy' 메들리 영상 공개",
+    "card_summary": [
+      "키스오브라이프가 첫 겨울 디지털 싱글 'Greedy'를 발매했다.",
+      "지난 27일 공식 채널에 메들리 영상을 공개했다.",
+      "호텔 로비를 배경으로 크리스마스 무드를 담았다."
+    ],
+    "title": "키스오브라이프, 첫 겨울 싱글 'Greedy' 메들리 영상 공개",
+    "body": "키스오브라이프가 지난 25일 첫 겨울 디지털 싱글 'Greedy'를 발매했습니다. 이번 앨범은 소중한 사람과 함께하는 평범한 일상 속 따뜻하고 순수한 사랑을 로맨틱한 감성으로 풀어낸 작품입니다.\n\n그룹은 지난 27일 공식 채널을 통해 이 싱글의 메들리 영상을 공개했습니다. 영상 속 멤버들은 크리스마스 분위기가 담긴 호텔 로비를 배경으로 밴드 사운드에 맞춰 연말 무드를 전했습니다.\n\n메들리에는 경쾌한 매력의 'December Glow', 성숙한 감성의 R&B 트랙 'Imperfect Christmas', 크리스마스의 설렘을 담은 타이틀곡 'Greedy'가 차례로 담겼습니다.\n\n앨범은 크리스마스를 배경으로 한 각기 다른 사랑 이야기를 섬세하게 그렸습니다.",
+    "hashtags": [
+      "#키스오브라이프",
+      "#KISSOFLIFE",
+      "#Greedy",
+      "#DecemberGlow",
+      "#ImperfectChristmas",
+      "#크리스마스",
+      "#겨울싱글",
+      "#신곡",
+      "#케이팝",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "키스오브라이프",
+      "KISS OF LIFE"
+    ],
+    "person": "키스오브라이프",
+    "scene_queries": [
+      "Christmas hotel lobby decoration",
+      "winter night city christmas lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/437/0000522926",
+    "source_title": "키스오브라이프, '서머 퀸'은 잊어라…겨울 감성 제대로",
+    "issue_no": 279
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-180547-m-ch1/_src.jpg",
+    "credit": "JTBC. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/437/0000522926",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
