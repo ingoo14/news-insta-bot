@@ -1,0 +1,68 @@
+{
+  "id": "20261128-133255-m-ch1",
+  "created": "2026-11-28T13:32:55.654513+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/GkINYvUC",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-133255-m-ch1/01.jpg",
+    "docs/posts/20261128-133255-m-ch1/02.jpg"
+  ],
+  "caption": "📌 \"진솔한 대화 끝 전속계약 종료\"... 황민현, 플레디스 떠난다\n\n가수 겸 배우 황민현이 플레디스 엔터테인먼트를 떠납니다. 플레디스 엔터테인먼트는 11월 28일 공식 채널을 통해 황민현의 전속 계약이 12월 14일부로 종료된다고 밝혔습니다.\n\n황민현은 2012년 뉴이스트로 데뷔한 뒤 두 차례 재계약을 거쳐 14년간 플레디스와 함께해 왔습니다. 뉴이스트 활동은 물론 Mnet '프로듀스 101' 출연, 프로젝트 그룹 워너원, 솔로 활동과 배우 활동까지 이어갔습니다.\n\n플레디스 측은 황민현과 향후 활동 방향과 미래에 대해 오랜 시간 대화를 나눈 뒤, 충분한 논의 끝에 전속 계약을 종료하기로 합의했다고 전했습니다.\n\n회사는 황민현이 예정된 일정을 소화하며 플레디스 소속 아티스트로서의 활동을 마무리할 예정이라고 밝혔습니다.\n\n\n#황민현 #HwangMinhyun #플레디스엔터테인먼트 #Pledis #뉴이스트 #NUEST #워너원 #WannaOne #프로듀스101 #전속계약",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "황민현, 플레디스 떠난다",
+    "headline_bottom": "12월 14일 계약 종료",
+    "subline": "14년 함께한 플레디스와 전속 계약 종료",
+    "card_summary": [
+      "황민현이 플레디스 엔터테인먼트를 떠난다.",
+      "플레디스는 11월 28일 공식 채널로 이를 알렸다.",
+      "전속 계약은 12월 14일부로 종료된다.",
+      "황민현은 2012년 뉴이스트로 데뷔해 14년간 함께했다."
+    ],
+    "title": "\"진솔한 대화 끝 전속계약 종료\"... 황민현, 플레디스 떠난다",
+    "body": "가수 겸 배우 황민현이 플레디스 엔터테인먼트를 떠납니다. 플레디스 엔터테인먼트는 11월 28일 공식 채널을 통해 황민현의 전속 계약이 12월 14일부로 종료된다고 밝혔습니다.\n\n황민현은 2012년 뉴이스트로 데뷔한 뒤 두 차례 재계약을 거쳐 14년간 플레디스와 함께해 왔습니다. 뉴이스트 활동은 물론 Mnet '프로듀스 101' 출연, 프로젝트 그룹 워너원, 솔로 활동과 배우 활동까지 이어갔습니다.\n\n플레디스 측은 황민현과 향후 활동 방향과 미래에 대해 오랜 시간 대화를 나눈 뒤, 충분한 논의 끝에 전속 계약을 종료하기로 합의했다고 전했습니다.\n\n회사는 황민현이 예정된 일정을 소화하며 플레디스 소속 아티스트로서의 활동을 마무리할 예정이라고 밝혔습니다.",
+    "hashtags": [
+      "#황민현",
+      "#HwangMinhyun",
+      "#플레디스엔터테인먼트",
+      "#Pledis",
+      "#뉴이스트",
+      "#NUEST",
+      "#워너원",
+      "#WannaOne",
+      "#프로듀스101",
+      "#전속계약"
+    ],
+    "photo_queries": [
+      "황민현",
+      "Hwang Min-hyun"
+    ],
+    "person": "황민현",
+    "scene_queries": [
+      "Seoul office building exterior",
+      "concert stage lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/609/0001192106",
+    "source_title": "황민현, 14년만 플레디스 떠난다 “진솔한 대화 끝 전속계약 종료” [전문]",
+    "issue_no": 267
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-133255-m-ch1/_src.jpg",
+    "credit": "",
+    "license": "",
+    "page": "",
+    "source": "",
+    "kind": "직접 전송"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
