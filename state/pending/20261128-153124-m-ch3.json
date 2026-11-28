@@ -1,0 +1,71 @@
+{
+  "id": "20261128-153124-m-ch3",
+  "created": "2026-11-28T15:31:24.312713+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-28T13:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/ranking/article/312/0000786508",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-153124-m-ch3/01.jpg",
+    "docs/posts/20261128-153124-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"2년 남았어\"… 타블로, 딸 하루의 미국 대학 시점 공개\n\n그룹 에픽하이 타블로가 딸 하루의 미국 대학 입학 시점을 밝혔습니다. 26일 '에픽하이' 채널에 올라온 영상 \"존박 디스 비상 대책 회의\"에서 나온 이야기입니다.\n\n영상에서 멤버들은 존박의 디스곡을 두고 이야기하다 가죽 재킷 가격을 화제로 하루를 언급했습니다. 타블로는 하루가 재킷을 입어본 뒤 가격을 알게 됐던 날을 떠올렸습니다.\n\n투컷이 하루가 곧 대학생이 된다고 말하자, 타블로는 입학까지 2년이 남았다고 바로잡았습니다.\n\n하루는 지난 6월 SM엔터테인먼트 소속 라이즈의 두 번째 미니앨범 '투(II)' 타이틀곡 '두 유어 댄스(Do your dance)' 작사에 단독으로 이름을 올렸습니다. 타블로는 당시 팬 소통 플랫폼에서 'SM 블라인드 심사' 관련 질문에 답했습니다.\n\n타블로는 앞서 유튜브 채널에서 하루와 통화하며 하루의 유창한 영어 실력을 공개했고, 하루가 현재 SAT와 AP 시험을 준비하고 있다고 전했습니다.\n\n사진 출처: 타블로 SNS\n\n#타블로 #Tablo #에픽하이 #EpikHigh #하루 #라이즈 #RIIZE #SM엔터테인먼트 #강혜정 #투컷 #존박 #슈퍼맨이돌아왔다",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "타블로, 딸 하루 '작사'",
+    "headline_bottom": "미국 대학 2년 남아",
+    "subline": "딸 하루의 미국 대학 입학 시점 공개",
+    "card_summary": [
+      "타블로가 딸 하루의 미국 대학 입학 시점을 밝혔다.",
+      "하루는 6월 라이즈 '투' 타이틀곡을 단독 작사했다.",
+      "현재 SAT와 AP 시험을 준비하고 있다."
+    ],
+    "title": "\"2년 남았어\"… 타블로, 딸 하루의 미국 대학 시점 공개",
+    "body": "그룹 에픽하이 타블로가 딸 하루의 미국 대학 입학 시점을 밝혔습니다. 26일 '에픽하이' 채널에 올라온 영상 \"존박 디스 비상 대책 회의\"에서 나온 이야기입니다.\n\n영상에서 멤버들은 존박의 디스곡을 두고 이야기하다 가죽 재킷 가격을 화제로 하루를 언급했습니다. 타블로는 하루가 재킷을 입어본 뒤 가격을 알게 됐던 날을 떠올렸습니다.\n\n투컷이 하루가 곧 대학생이 된다고 말하자, 타블로는 입학까지 2년이 남았다고 바로잡았습니다.\n\n하루는 지난 6월 SM엔터테인먼트 소속 라이즈의 두 번째 미니앨범 '투(II)' 타이틀곡 '두 유어 댄스(Do your dance)' 작사에 단독으로 이름을 올렸습니다. 타블로는 당시 팬 소통 플랫폼에서 'SM 블라인드 심사' 관련 질문에 답했습니다.\n\n타블로는 앞서 유튜브 채널에서 하루와 통화하며 하루의 유창한 영어 실력을 공개했고, 하루가 현재 SAT와 AP 시험을 준비하고 있다고 전했습니다.",
+    "hashtags": [
+      "#타블로",
+      "#Tablo",
+      "#에픽하이",
+      "#EpikHigh",
+      "#하루",
+      "#라이즈",
+      "#RIIZE",
+      "#SM엔터테인먼트",
+      "#강혜정",
+      "#투컷",
+      "#존박",
+      "#슈퍼맨이돌아왔다"
+    ],
+    "photo_queries": [
+      "타블로",
+      "Tablo",
+      "에픽하이",
+      "Epik High"
+    ],
+    "person": "타블로",
+    "scene_queries": [
+      "university campus United States",
+      "SAT exam study desk"
+    ],
+    "fact_checked": true,
+    "press": "텐아시아",
+    "url": "https://m.entertain.naver.com/ranking/article/312/0000786508",
+    "source_title": "'강혜정♥' 타블로, 자식농사 대박 났다…SM 작사가 딸, 美 대학 \"2년 남아\"",
+    "issue_no": 271
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-153124-m-ch3/_src.jpg",
+    "credit": "타블로 SNS",
+    "license": "",
+    "page": "https://m.entertain.naver.com/ranking/article/312/0000786508",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
