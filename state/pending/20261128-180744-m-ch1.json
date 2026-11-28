@@ -1,0 +1,69 @@
+{
+  "id": "20261128-180744-m-ch1",
+  "created": "2026-11-28T18:07:44.092620+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/5nh25YZX",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-180744-m-ch1/01.jpg",
+    "docs/posts/20261128-180744-m-ch1/02.jpg"
+  ],
+  "caption": "📌 \"All I Want Is Christmas\"... 적재, 선미·샘 킴과 캐럴 발매\n\n가수 적재가 크리스마스 캐럴 디지털 싱글 'All I Want Is Christmas'를 발매합니다.\n\n적재는 28일 공식 SNS를 통해 발매를 예고하는 포스터를 공개했습니다. 포스터에 따르면 곡은 11월 30일 오후 6시에 발매됩니다.\n\n포스터에는 영화 '나 홀로 집에' 속 케빈을 떠올리게 하는 놀란 포즈의 적재가 담겼습니다. 적재의 양옆으로는 가수 선미와 샘 킴이 함께 등장했습니다.\n\n적재는 지난 10월 27일 싱글 '틀려도되'를 발매한 뒤 약 한 달 만에 크리스마스 캐럴을 내게 됐습니다.\n\n사진 출처: JTBC. All rights reserved.\n\n#적재 #Jukjae #선미 #SUNMI #샘킴 #SamKim #크리스마스캐럴 #AllIWantIsChristmas #틀려도되 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "적재, '크리스마스 캐럴'",
+    "headline_bottom": "11월 30일 발매",
+    "subline": "선미·샘 킴과 함께한 디지털 싱글",
+    "card_summary": [
+      "적재가 크리스마스 캐럴 디지털 싱글을 발매한다.",
+      "포스터에 선미와 샘 킴이 함께 등장했다.",
+      "곡은 11월 30일 오후 6시 발매 예정이다."
+    ],
+    "title": "\"All I Want Is Christmas\"... 적재, 선미·샘 킴과 캐럴 발매",
+    "body": "가수 적재가 크리스마스 캐럴 디지털 싱글 'All I Want Is Christmas'를 발매합니다.\n\n적재는 28일 공식 SNS를 통해 발매를 예고하는 포스터를 공개했습니다. 포스터에 따르면 곡은 11월 30일 오후 6시에 발매됩니다.\n\n포스터에는 영화 '나 홀로 집에' 속 케빈을 떠올리게 하는 놀란 포즈의 적재가 담겼습니다. 적재의 양옆으로는 가수 선미와 샘 킴이 함께 등장했습니다.\n\n적재는 지난 10월 27일 싱글 '틀려도되'를 발매한 뒤 약 한 달 만에 크리스마스 캐럴을 내게 됐습니다.",
+    "hashtags": [
+      "#적재",
+      "#Jukjae",
+      "#선미",
+      "#SUNMI",
+      "#샘킴",
+      "#SamKim",
+      "#크리스마스캐럴",
+      "#AllIWantIsChristmas",
+      "#틀려도되",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "적재",
+      "Jukjae",
+      "선미",
+      "Sunmi"
+    ],
+    "person": "적재",
+    "scene_queries": [
+      "Christmas lights night Seoul",
+      "winter Christmas carol snow"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/437/0000522915",
+    "source_title": "적재, 선미·샘 킴과 크리스마스 캐럴 낸다",
+    "issue_no": 280
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-180744-m-ch1/_src.jpg",
+    "credit": "JTBC. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/437/0000522915",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
