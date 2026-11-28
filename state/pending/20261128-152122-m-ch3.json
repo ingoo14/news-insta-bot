@@ -1,0 +1,69 @@
+{
+  "id": "20261128-152122-m-ch3",
+  "created": "2026-11-28T15:21:22.175561+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-28T11:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/music/article/109/0005646260",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-152122-m-ch3/01.jpg",
+    "docs/posts/20261128-152122-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"얌전하게 택시 타고 가더라\"… 쌈디, 성시경과 관계 회복\n\n래퍼 사이먼 도미닉(쌈디)이 성시경과 관계를 회복한 근황을 전했습니다. 27일 방송된 KBS 2TV '성시경의 고막남친'에 출연해 달라진 음주 습관을 공개했습니다.\n\n성시경은 한동안 만나지 못했던 쌈디의 달라진 모습에 주목했습니다. 성시경이 헬스, 복싱, 격투기를 시작한 이유를 묻자 쌈디는 술을 잘 마시기 위해서라고 답해 웃음을 줬습니다.\n\n두 사람은 우연히 다시 만난 자리에서 관계를 회복했습니다. 쌈디가 먼저 다가와 밥만 먹어도 좋으니 한 번 만나달라고 했다고 전했습니다.\n\n이후 두 사람은 성시경의 집에서 2차까지 자리를 이어갔습니다. 성시경은 쌈디가 택시를 타고 얌전히 귀가했다고 말하면서도 계속 지켜보겠다고 덧붙였습니다.\n\n쌈디는 이제 술자리에서 끝까지 달리지 않으려 한다며, 적당히 마신 뒤 어느 정도 취하면 집으로 돌아가겠다고 말했습니다.\n\n사진 출처: OSEN. All rights reserved.\n\n#쌈디 #사이먼도미닉 #SimonDominic #성시경 #SungSiKyung #고막남친 #성시경의고막남친 #KBS #예능 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "예능",
+    "headline_top": "쌈디, 성시경과 관계 회복",
+    "headline_bottom": "달라진 음주 습관 공개",
+    "subline": "성시경과 관계 회복, 달라진 귀가 모습",
+    "card_summary": [
+      "사이먼 도미닉이 KBS 2TV '성시경의 고막남친'에 출연했다.",
+      "성시경과 다시 술자리를 갖고 집에서 2차까지 이어갔다.",
+      "성시경은 쌈디가 택시를 타고 얌전히 귀가했다고 전했다."
+    ],
+    "title": "\"얌전하게 택시 타고 가더라\"… 쌈디, 성시경과 관계 회복",
+    "body": "래퍼 사이먼 도미닉(쌈디)이 성시경과 관계를 회복한 근황을 전했습니다. 27일 방송된 KBS 2TV '성시경의 고막남친'에 출연해 달라진 음주 습관을 공개했습니다.\n\n성시경은 한동안 만나지 못했던 쌈디의 달라진 모습에 주목했습니다. 성시경이 헬스, 복싱, 격투기를 시작한 이유를 묻자 쌈디는 술을 잘 마시기 위해서라고 답해 웃음을 줬습니다.\n\n두 사람은 우연히 다시 만난 자리에서 관계를 회복했습니다. 쌈디가 먼저 다가와 밥만 먹어도 좋으니 한 번 만나달라고 했다고 전했습니다.\n\n이후 두 사람은 성시경의 집에서 2차까지 자리를 이어갔습니다. 성시경은 쌈디가 택시를 타고 얌전히 귀가했다고 말하면서도 계속 지켜보겠다고 덧붙였습니다.\n\n쌈디는 이제 술자리에서 끝까지 달리지 않으려 한다며, 적당히 마신 뒤 어느 정도 취하면 집으로 돌아가겠다고 말했습니다.",
+    "hashtags": [
+      "#쌈디",
+      "#사이먼도미닉",
+      "#SimonDominic",
+      "#성시경",
+      "#SungSiKyung",
+      "#고막남친",
+      "#성시경의고막남친",
+      "#KBS",
+      "#예능",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "사이먼 도미닉",
+      "Simon Dominic",
+      "성시경",
+      "Sung Si-kyung"
+    ],
+    "person": "사이먼 도미닉",
+    "scene_queries": [
+      "Korean TV variety show studio",
+      "Seoul radio studio microphone"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/music/article/109/0005646260",
+    "source_title": "연예계 음주운전 파문 속.. \"쌈디, 술자리 후 얌전하게 택시 타고 가\" 눈길 ('고막남친')",
+    "issue_no": 270
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-152122-m-ch3/_src.jpg",
+    "credit": "OSEN. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/music/article/109/0005646260",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
