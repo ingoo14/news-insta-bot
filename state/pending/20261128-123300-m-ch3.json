@@ -1,0 +1,69 @@
+{
+  "id": "20261128-123300-m-ch3",
+  "created": "2026-11-28T12:33:00.843609+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-28T06:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/home/article/076/0004470277",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-123300-m-ch3/01.jpg",
+    "docs/posts/20261128-123300-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"양띠 여성이 당신의 인생을 구한다\"... 전현무 점괘\n\n방송인 전현무가 MBN 예능 '디스이즈 현무로드'에서 배우 이준, 임수향과 함께 중국 푸저우로 미식 여행을 떠난 모습이 그려집니다.\n\n세 사람은 푸저우의 한 공원을 거닐다 현지 전통 역술가와 마주했습니다. 전현무는 자신의 결혼 운을 조심스럽게 물었습니다.\n\n역술가는 \"양띠 여성이 당신의 인생을 구한다\"는 점괘를 내놨습니다. 역술가가 짚은 연하의 양띠 여성은 1979년생, 1991년생, 2003년생에 해당합니다.\n\n전현무는 1977년생으로, 내년이면 50세가 됩니다.\n\n사진 출처: MBN 현무로드\n\n#전현무 #JeonHyunmoo #디스이즈현무로드 #현무로드 #MBN #임수향 #이준 #예능 #푸저우 #중국여행 #역술가",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "예능",
+    "headline_top": "전현무, '양띠 점괘'",
+    "headline_bottom": "27일 MBN 방송",
+    "subline": "중국 푸저우 역술가가 전한 결혼 운",
+    "card_summary": [
+      "방송인 전현무가 MBN '디스이즈 현무로드'에 출연했다.",
+      "중국 푸저우에서 현지 역술가에게 결혼 운을 물었다.",
+      "역술가는 '양띠 여성'이 인생을 구한다는 점괘를 내놨다.",
+      "방송은 27일 MBN에서 전파를 탄다."
+    ],
+    "title": "\"양띠 여성이 당신의 인생을 구한다\"... 전현무 점괘",
+    "body": "방송인 전현무가 MBN 예능 '디스이즈 현무로드'에서 배우 이준, 임수향과 함께 중국 푸저우로 미식 여행을 떠난 모습이 그려집니다.\n\n세 사람은 푸저우의 한 공원을 거닐다 현지 전통 역술가와 마주했습니다. 전현무는 자신의 결혼 운을 조심스럽게 물었습니다.\n\n역술가는 \"양띠 여성이 당신의 인생을 구한다\"는 점괘를 내놨습니다. 역술가가 짚은 연하의 양띠 여성은 1979년생, 1991년생, 2003년생에 해당합니다.\n\n전현무는 1977년생으로, 내년이면 50세가 됩니다.",
+    "hashtags": [
+      "#전현무",
+      "#JeonHyunmoo",
+      "#디스이즈현무로드",
+      "#현무로드",
+      "#MBN",
+      "#임수향",
+      "#이준",
+      "#예능",
+      "#푸저우",
+      "#중국여행",
+      "#역술가"
+    ],
+    "photo_queries": [
+      "전현무",
+      "Jeon Hyun-moo"
+    ],
+    "person": "전현무",
+    "scene_queries": [
+      "Fuzhou China park",
+      "Fuzhou street food travel"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/home/article/076/0004470277",
+    "source_title": "\"연애한지 3년 됐다\" 50세 앞둔 전현무, 새 연인은 14살 연하? '운명의 반려자' 만날까 (현무로드)",
+    "issue_no": 259
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-123300-m-ch3/_src.jpg",
+    "credit": "MBN 현무로드",
+    "license": "",
+    "page": "https://m.entertain.naver.com/home/article/076/0004470277",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
