@@ -1,0 +1,72 @@
+{
+  "id": "20261128-153356-m-ch3",
+  "created": "2026-11-28T15:33:56.245011+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-29T02:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/ranking/article/076/0004470366",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-153356-m-ch3/01.jpg",
+    "docs/posts/20261128-153356-m-ch3/02.jpg"
+  ],
+  "caption": "📌 선예, 막내딸 끼 자랑...A2O 곧잘 따라 해\n\n원더걸스 전 멤버 선예가 27일 유튜브 채널 '차오루'에 게스트로 출연했습니다.\n\n선예는 딸이 셋이라며 14살, 11살, 8살이라고 밝혔습니다. 막내딸은 끼가 많아 A2O를 곧잘 따라 한다고 전했습니다.\n\n선예는 한국에 처음 왔을 때 초등학생이었던 아이들이 아이브를 진짜 좋아했다고 말했습니다. 안유진을 좋아했다고도 덧붙였습니다. 미니앨범 활동 당시 무대를 직접 본 아이들은 깜짝 놀랐고, 그때까지 엄마가 아이돌이었다는 걸 몰랐다고 회상했습니다.\n\n아이들은 한국에 와서 TV를 보며 예쁜 언니들을 보고 엄마가 어떤 일을 했는지 알게 됐다고 합니다. 지금은 뮤지컬을 하는 모습을 보며 '엄마 멋있다'고 해준다고 전했습니다.\n\n사진 출처: 스포츠조선. All rights reserved.\n\n#선예 #Sunye #원더걸스 #WonderGirls #차오루 #A2O #아이브 #IVE #안유진 #AnYujin #뮤지컬 #연예뉴스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "선예, 딸 셋 엄마 근황",
+    "headline_bottom": "8살 막내딸 끼 자랑",
+    "subline": "막내딸이 A2O를 곧잘 따라 한다",
+    "card_summary": [
+      "선예가 유튜브 채널 '차오루'에 게스트로 출연했다.",
+      "선예는 14살, 11살, 8살 딸 셋을 두고 있다고 밝혔다.",
+      "막내딸이 끼가 많아 A2O를 곧잘 따라 한다고 전했다.",
+      "아이는 뮤지컬을 하는 선예를 보고 '엄마 멋있다'고 해준다고 했다."
+    ],
+    "title": "선예, 막내딸 끼 자랑...A2O 곧잘 따라 해",
+    "body": "원더걸스 전 멤버 선예가 27일 유튜브 채널 '차오루'에 게스트로 출연했습니다.\n\n선예는 딸이 셋이라며 14살, 11살, 8살이라고 밝혔습니다. 막내딸은 끼가 많아 A2O를 곧잘 따라 한다고 전했습니다.\n\n선예는 한국에 처음 왔을 때 초등학생이었던 아이들이 아이브를 진짜 좋아했다고 말했습니다. 안유진을 좋아했다고도 덧붙였습니다. 미니앨범 활동 당시 무대를 직접 본 아이들은 깜짝 놀랐고, 그때까지 엄마가 아이돌이었다는 걸 몰랐다고 회상했습니다.\n\n아이들은 한국에 와서 TV를 보며 예쁜 언니들을 보고 엄마가 어떤 일을 했는지 알게 됐다고 합니다. 지금은 뮤지컬을 하는 모습을 보며 '엄마 멋있다'고 해준다고 전했습니다.",
+    "hashtags": [
+      "#선예",
+      "#Sunye",
+      "#원더걸스",
+      "#WonderGirls",
+      "#차오루",
+      "#A2O",
+      "#아이브",
+      "#IVE",
+      "#안유진",
+      "#AnYujin",
+      "#뮤지컬",
+      "#연예뉴스"
+    ],
+    "photo_queries": [
+      "선예",
+      "Sunye",
+      "원더걸스",
+      "Wonder Girls"
+    ],
+    "person": "선예",
+    "scene_queries": [
+      "musical theater stage Seoul",
+      "YouTube studio interview set"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/ranking/article/076/0004470366",
+    "source_title": "선예, 24세 결혼 후 자식농사 성공...8살 딸, 母 닮은 끼 \"A2O 따라해\"",
+    "issue_no": 273
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-153356-m-ch3/_src.jpg",
+    "credit": "스포츠조선. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/ranking/article/076/0004470366",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
