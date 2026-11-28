@@ -1,0 +1,67 @@
+{
+  "id": "20261128-133519-m-ch1",
+  "created": "2026-11-28T13:35:19.875615+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/5p0KMB8v",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-133519-m-ch1/01.jpg",
+    "docs/posts/20261128-133519-m-ch1/02.jpg"
+  ],
+  "caption": "📌 \"K팝 솔로 최초\"... 지효, 비냐 델 마르 페스티벌 출격\n\n트와이스 지효가 '2027 비냐 델 마르 페스티벌' 출연을 확정했습니다. K팝 솔로 아티스트로는 최초로 정식 초청을 받았습니다.\n\n비냐 델 마르 페스티벌은 1960년 처음 열린 라틴아메리카 대표 뮤직 페스티벌로, 67년의 역사를 자랑합니다.\n\n페스티벌은 2027년 2월 22일부터 27일까지 현지시각으로 칠레 비냐 델 마르에서 열립니다. 지효는 이 무대에 솔로 아티스트로 출연합니다.\n\n지효는 최근 JYP엔터테인먼트를 떠나 독립해 이밋하우스(EMITHAUS)를 설립했습니다.\n\n사진 출처: OSEN. All rights reserved.\n\n#지효 #JIHYO #트와이스 #TWICE #비냐델마르페스티벌 #VinadelMarFestival #K팝솔로 #솔로아티스트 #칠레 #이밋하우스",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "음악",
+    "headline_top": "지효, 비냐 델 마르 출격",
+    "headline_bottom": "K팝 솔로 최초 초청",
+    "subline": "2027년 2월 칠레 무대에 선다",
+    "card_summary": [
+      "트와이스 지효가 K팝 솔로 아티스트 최초로 초청됐다.",
+      "2027 비냐 델 마르 페스티벌 출연을 확정했다.",
+      "2027년 2월 22~27일 칠레 비냐 델 마르에서 열린다."
+    ],
+    "title": "\"K팝 솔로 최초\"... 지효, 비냐 델 마르 페스티벌 출격",
+    "body": "트와이스 지효가 '2027 비냐 델 마르 페스티벌' 출연을 확정했습니다. K팝 솔로 아티스트로는 최초로 정식 초청을 받았습니다.\n\n비냐 델 마르 페스티벌은 1960년 처음 열린 라틴아메리카 대표 뮤직 페스티벌로, 67년의 역사를 자랑합니다.\n\n페스티벌은 2027년 2월 22일부터 27일까지 현지시각으로 칠레 비냐 델 마르에서 열립니다. 지효는 이 무대에 솔로 아티스트로 출연합니다.\n\n지효는 최근 JYP엔터테인먼트를 떠나 독립해 이밋하우스(EMITHAUS)를 설립했습니다.",
+    "hashtags": [
+      "#지효",
+      "#JIHYO",
+      "#트와이스",
+      "#TWICE",
+      "#비냐델마르페스티벌",
+      "#VinadelMarFestival",
+      "#K팝솔로",
+      "#솔로아티스트",
+      "#칠레",
+      "#이밋하우스"
+    ],
+    "photo_queries": [
+      "지효",
+      "Jihyo"
+    ],
+    "person": "지효",
+    "scene_queries": [
+      "Vina del Mar festival Chile",
+      "concert stage lights night"
+    ],
+    "fact_checked": true,
+    "press": "OSEN",
+    "url": "https://m.entertain.naver.com/now/article/109/0005646364",
+    "source_title": "트와이스 지효, K팝 솔로 아티스트 최초 '2027 비냐 델 마르 페스티벌' 출격",
+    "issue_no": 268
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-133519-m-ch1/_src.jpg",
+    "credit": "OSEN. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/109/0005646364",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
