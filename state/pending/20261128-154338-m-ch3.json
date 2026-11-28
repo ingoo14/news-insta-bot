@@ -1,0 +1,68 @@
+{
+  "id": "20261128-154338-m-ch3",
+  "created": "2026-11-28T15:43:38.925078+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "2026-11-28T07:00:00+00:00",
+  "poll": null,
+  "src_url": "https://m.entertain.naver.com/now/article/609/0001192119",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-154338-m-ch3/01.jpg",
+    "docs/posts/20261128-154338-m-ch3/02.jpg"
+  ],
+  "caption": "📌 \"내년이 마지노선\"... 솔비, 2세 계획 고백\n\n가수 겸 화가 솔비가 배우 이규한과의 결혼을 앞두고 2세 계획에 대해 이야기했습니다.\n\n지난 11월 27일 ‘마이스킨’ 채널에 공개된 ‘솔비 얼굴 전격 분석’ 영상에는 역술가 박성준이 출연해 솔비의 관상을 풀이했습니다. 이 자리에서 솔비는 자신의 2세 계획을 밝혔습니다.\n\n솔비는 “저도 내년이 마지노선이라고 생각한다”고 말했습니다.\n\n솔비와 이규한은 2027년 4월 25일 서울 종로구 모처에서 야외 결혼식을 올릴 예정입니다.\n\n사진 출처: 솔비 소셜미디어\n\n#솔비 #이규한 #마이스킨 #2세계획 #결혼 #야외결혼식 #연예뉴스 #Solbi #LeeKyuHan",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "솔비, '2세 계획' 고백",
+    "headline_bottom": "2027년 4월 결혼식",
+    "subline": "이규한과 2027년 4월 야외 결혼 예정",
+    "card_summary": [
+      "솔비가 배우 이규한과 결혼을 앞두고 있다.",
+      "2027년 4월 25일 서울 종로구에서 야외 결혼식 예정이다.",
+      "솔비는 ‘마이스킨’ 채널 영상에서 2세 계획을 밝혔다."
+    ],
+    "title": "\"내년이 마지노선\"... 솔비, 2세 계획 고백",
+    "body": "가수 겸 화가 솔비가 배우 이규한과의 결혼을 앞두고 2세 계획에 대해 이야기했습니다.\n\n지난 11월 27일 ‘마이스킨’ 채널에 공개된 ‘솔비 얼굴 전격 분석’ 영상에는 역술가 박성준이 출연해 솔비의 관상을 풀이했습니다. 이 자리에서 솔비는 자신의 2세 계획을 밝혔습니다.\n\n솔비는 “저도 내년이 마지노선이라고 생각한다”고 말했습니다.\n\n솔비와 이규한은 2027년 4월 25일 서울 종로구 모처에서 야외 결혼식을 올릴 예정입니다.",
+    "hashtags": [
+      "#솔비",
+      "#이규한",
+      "#마이스킨",
+      "#2세계획",
+      "#결혼",
+      "#야외결혼식",
+      "#연예뉴스",
+      "#Solbi",
+      "#LeeKyuHan"
+    ],
+    "photo_queries": [
+      "솔비",
+      "Solbi",
+      "이규한",
+      "Lee Kyu-han"
+    ],
+    "person": "솔비",
+    "scene_queries": [
+      "outdoor wedding ceremony Seoul",
+      "Jongno Seoul street"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/609/0001192119",
+    "source_title": "솔비, ♥이규한과 4월 결혼 앞두고 2세 계획 고백 “내년이 마지노선”(마이스킨)",
+    "issue_no": 275
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-154338-m-ch3/_src.jpg",
+    "credit": "솔비 소셜미디어",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/609/0001192119",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch3",
+  "channel_handle": "gaem_seong_1spoon"
+}
