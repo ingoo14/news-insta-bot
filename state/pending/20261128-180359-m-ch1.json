@@ -1,0 +1,67 @@
+{
+  "id": "20261128-180359-m-ch1",
+  "created": "2026-11-28T18:03:59.102767+09:00",
+  "status": "pending",
+  "attempts": 0,
+  "manual": true,
+  "publish_at": "",
+  "poll": null,
+  "src_url": "https://naver.me/GhwFC0BH",
+  "force": false,
+  "images": [
+    "docs/posts/20261128-180359-m-ch1/01.jpg",
+    "docs/posts/20261128-180359-m-ch1/02.jpg"
+  ],
+  "caption": "📌 추성훈, 은퇴전 마치고 팬들에게 감사 인사\n\n전 이종격투기 선수 추성훈이 28일 자신의 유튜브 채널에 영상을 올려 마지막 은퇴 경기를 마친 소회와 응원해 준 팬들에 대한 감사를 전했습니다.\n\n추성훈은 지난 21일 서울 고척스카이돔에서 열린 '블랙컴뱃 17'에서 크리스 리벤과 은퇴전을 치렀습니다. 아쉽게 판정패했습니다. 그는 22년간의 종합격투기 선수 생활을 마무리했습니다.\n\n그는 가족의 응원과 함께 팬들과 구독자들의 응원 덕분에 마지막까지 링 위에 서 있을 수 있었다고 말했습니다.\n\n후배 선수들을 위해 파이트머니 전액을 기부하겠다는 뜻도 전했습니다.\n\n향후 활동에 대해서는 앞으로 무엇을 할지 모르겠다면서도, 팬들이 좋아하는 것과 본인이 할 수 있는 것을 찾아 보겠다고 했습니다. 직접 만나는 이벤트도 만들 수 있으면 해 보겠다며, 내년에 최대한 빨리 팬들 앞에 나타나겠다고 인사했습니다.\n\n사진 출처: 스포츠조선. All rights reserved.\n\n#추성훈 #Choo Sung-hoon #블랙컴뱃 #블랙컴뱃17 #크리스리벤 #Chris Leben #은퇴전 #종합격투기 #파이트머니기부 #추성훈유튜브",
+  "story": {
+    "ok": true,
+    "reason": "",
+    "tag": "연예",
+    "headline_top": "추성훈, '은퇴 소회'",
+    "headline_bottom": "팬들에게 감사 인사",
+    "subline": "은퇴전 파이트머니 전액 기부 뜻 밝혀",
+    "card_summary": [
+      "추성훈이 28일 자신의 유튜브 채널에 영상을 올렸다.",
+      "21일 '블랙컴뱃 17'에서 크리스 리벤과 은퇴전을 치렀다.",
+      "파이트머니 전액을 후배 선수들에게 기부하겠다고 밝혔다."
+    ],
+    "title": "추성훈, 은퇴전 마치고 팬들에게 감사 인사",
+    "body": "전 이종격투기 선수 추성훈이 28일 자신의 유튜브 채널에 영상을 올려 마지막 은퇴 경기를 마친 소회와 응원해 준 팬들에 대한 감사를 전했습니다.\n\n추성훈은 지난 21일 서울 고척스카이돔에서 열린 '블랙컴뱃 17'에서 크리스 리벤과 은퇴전을 치렀습니다. 아쉽게 판정패했습니다. 그는 22년간의 종합격투기 선수 생활을 마무리했습니다.\n\n그는 가족의 응원과 함께 팬들과 구독자들의 응원 덕분에 마지막까지 링 위에 서 있을 수 있었다고 말했습니다.\n\n후배 선수들을 위해 파이트머니 전액을 기부하겠다는 뜻도 전했습니다.\n\n향후 활동에 대해서는 앞으로 무엇을 할지 모르겠다면서도, 팬들이 좋아하는 것과 본인이 할 수 있는 것을 찾아 보겠다고 했습니다. 직접 만나는 이벤트도 만들 수 있으면 해 보겠다며, 내년에 최대한 빨리 팬들 앞에 나타나겠다고 인사했습니다.",
+    "hashtags": [
+      "#추성훈",
+      "#Choo Sung-hoon",
+      "#블랙컴뱃",
+      "#블랙컴뱃17",
+      "#크리스리벤",
+      "#Chris Leben",
+      "#은퇴전",
+      "#종합격투기",
+      "#파이트머니기부",
+      "#추성훈유튜브"
+    ],
+    "photo_queries": [
+      "추성훈",
+      "Choo Sung-hoon"
+    ],
+    "person": "추성훈",
+    "scene_queries": [
+      "Gocheok Sky Dome Seoul",
+      "mixed martial arts octagon lights"
+    ],
+    "fact_checked": true,
+    "press": "entertain.naver.com",
+    "url": "https://m.entertain.naver.com/now/article/076/0004470499",
+    "source_title": "추성훈, 22년 만 은퇴에 울컥 \"앞으로 뭘 해야할지 모르겠어\"",
+    "issue_no": 278
+  },
+  "photo": {
+    "path": "/home/runner/work/news-insta-bot/news-insta-bot/docs/posts/20261128-180359-m-ch1/_src.jpg",
+    "credit": "스포츠조선. All rights reserved.",
+    "license": "",
+    "page": "https://m.entertain.naver.com/now/article/076/0004470499",
+    "source": "",
+    "kind": "기사 사진"
+  },
+  "channel": "ch1",
+  "channel_handle": "ibduck_music"
+}
